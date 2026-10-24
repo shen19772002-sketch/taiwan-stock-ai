@@ -88,6 +88,7 @@ python -m ruff check src tests scripts
 - [部署與歷史保存](docs/deployment.md)
 - [開發驗證紀錄](docs/validation.md)
 - [下週交易日與啟用檢查](docs/market-readiness.md)
+- [GitHub 遠端部署驗證與待啟用 Pages](docs/deployment-validation.md)
 
 2026-10-24 已完成兩市場各 69 個交易日回補、134,446 筆去重行情、15 檔實際研究名單及桌面／手機圖表驗證。本次名單資料日為 2026-10-22；遠端部署狀態與測試證據見驗證文件。可用 `python scripts/validate_research.py` 重驗現有研究快照；瀏覽器完整檢查使用 `python scripts/browser_smoke.py --require-research`。
 

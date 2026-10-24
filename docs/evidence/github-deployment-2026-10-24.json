@@ -1,0 +1,452 @@
+{
+  "history_restore": {
+    "status": "passed",
+    "branch": "market-data",
+    "commit": "2b952b8216175273096fb86ba5862ab4f78d01af",
+    "files_checked": 220,
+    "tables": {
+      "observations": 152307,
+      "runs": 4,
+      "signals": 0
+    },
+    "sqlite_check": "integrity_check and complete SQL dump identical; backup file headers may differ"
+  },
+  "official_sources": {
+    "data_branch_commit": "dcefd1c45d28668e071974d8d7cb8cdd6819a474",
+    "manifest_path": "data/raw/20261024T154639301433Z/manifest.json",
+    "sources": [
+      {
+        "id": "twse_companies",
+        "http_status": 200,
+        "status": "ok",
+        "data_date": "2026-10-23",
+        "accepted_rows": null,
+        "rejected_rows": null,
+        "error": null,
+        "sha256": "2cc1a5284efa6835f6e779c87a8b6419bf50f1b0ab48d8a2a8a04fe50c5e1df8"
+      },
+      {
+        "id": "tpex_companies",
+        "http_status": 200,
+        "status": "ok",
+        "data_date": "2026-10-24",
+        "accepted_rows": null,
+        "rejected_rows": null,
+        "error": null,
+        "sha256": "93993d91f490a613c32b3ea3bf897f4cc9fed457edfdce9142209a0016b08884"
+      },
+      {
+        "id": "twse_quotes",
+        "http_status": 200,
+        "status": "waiting",
+        "data_date": "2026-10-22",
+        "accepted_rows": 1081,
+        "rejected_rows": 7,
+        "error": "7 筆資料日期或必要欄位不完整",
+        "sha256": "279454be41ee236def2c7bea080d7339633320c7f8bd21838b51e8ccc31273be"
+      },
+      {
+        "id": "twse_dated_quotes",
+        "http_status": 200,
+        "status": "ok",
+        "data_date": "2026-10-22",
+        "accepted_rows": null,
+        "rejected_rows": null,
+        "error": null,
+        "sha256": "af36edfc75c706c96d6eb958247a1fcdf84ad53b96694685f83d2ffbc385e818"
+      },
+      {
+        "id": "tpex_quotes",
+        "http_status": 200,
+        "status": "waiting",
+        "data_date": "2026-10-22",
+        "accepted_rows": 868,
+        "rejected_rows": 24,
+        "error": "24 筆資料日期或必要欄位不完整",
+        "sha256": "ddc08c4711de348b2403ff97a1d53e6a174cedd3fae8ef4b9b9e77b5f1562643"
+      },
+      {
+        "id": "twse_valuations",
+        "http_status": 200,
+        "status": "ok",
+        "data_date": "2026-10-22",
+        "accepted_rows": 1084,
+        "rejected_rows": 0,
+        "error": null,
+        "sha256": "91e30e46425d29cc75d85108a207474483fa6cb4e9bb33c43cb00994d935a2e8"
+      },
+      {
+        "id": "twse_dated_valuations",
+        "http_status": 200,
+        "status": "ok",
+        "data_date": "2026-10-22",
+        "accepted_rows": null,
+        "rejected_rows": null,
+        "error": null,
+        "sha256": "bec0dc65bf48dc6ffbc1f906ffc8352724fd8b5115a92f4e1332957fa19ea355"
+      },
+      {
+        "id": "tpex_valuations",
+        "http_status": 200,
+        "status": "ok",
+        "data_date": "2026-10-22",
+        "accepted_rows": 891,
+        "rejected_rows": 0,
+        "error": null,
+        "sha256": "00766976e2296b5b819d7152b839a42ff8120fb59f2561a55a3d56af4774d310"
+      },
+      {
+        "id": "twse_calendar",
+        "http_status": 200,
+        "status": "ok",
+        "data_date": "2026-12-25",
+        "accepted_rows": null,
+        "rejected_rows": null,
+        "error": null,
+        "sha256": "7644c1a8af784c09f54670fd7413f536b13eb76c54d658058e8873d1aee32117"
+      }
+    ],
+    "report": {
+      "as_of": "2026-10-24",
+      "generated_at": "2026-10-24T15:46:53.290295+00:00",
+      "data_date": "2026-10-22",
+      "phase": "manual",
+      "status": "non_trading_day"
+    },
+    "candidates": 0
+  },
+  "ci": {
+    "conclusion": "success",
+    "databaseId": 40108465240,
+    "headSha": "fe548adf1b032f1dfcb7f3d92d0eb49468d942ed",
+    "jobs": [
+      {
+        "completedAt": "2026-10-24T15:46:26Z",
+        "conclusion": "success",
+        "databaseId": 120914983886,
+        "name": "test (3.12)",
+        "startedAt": "2026-10-24T15:45:59Z",
+        "status": "completed",
+        "steps": [
+          {
+            "conclusion": "success",
+            "name": "Set up job",
+            "number": 1,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run actions/checkout@v4",
+            "number": 2,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run actions/setup-python@v5",
+            "number": 3,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run python -m pip install -r requirements.lock -e .",
+            "number": 4,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run python -m ruff check src tests scripts",
+            "number": 5,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run python -m pytest -q",
+            "number": 6,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Build truthful empty-state report without network",
+            "number": 7,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run actions/upload-artifact@v4",
+            "number": 8,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Post Run actions/setup-python@v5",
+            "number": 15,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Post Run actions/checkout@v4",
+            "number": 16,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Complete job",
+            "number": 17,
+            "status": "completed"
+          }
+        ],
+        "url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40108465240/job/120914983886"
+      },
+      {
+        "completedAt": "2026-10-24T15:46:26Z",
+        "conclusion": "success",
+        "databaseId": 120914983960,
+        "name": "test (3.11)",
+        "startedAt": "2026-10-24T15:45:59Z",
+        "status": "completed",
+        "steps": [
+          {
+            "conclusion": "success",
+            "name": "Set up job",
+            "number": 1,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run actions/checkout@v4",
+            "number": 2,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run actions/setup-python@v5",
+            "number": 3,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run python -m pip install -r requirements.lock -e .",
+            "number": 4,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run python -m ruff check src tests scripts",
+            "number": 5,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run python -m pytest -q",
+            "number": 6,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Build truthful empty-state report without network",
+            "number": 7,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run actions/upload-artifact@v4",
+            "number": 8,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Post Run actions/setup-python@v5",
+            "number": 15,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Post Run actions/checkout@v4",
+            "number": 16,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Complete job",
+            "number": 17,
+            "status": "completed"
+          }
+        ],
+        "url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40108465240/job/120914983960"
+      }
+    ],
+    "status": "completed",
+    "url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40108465240"
+  },
+  "research": {
+    "conclusion": "failure",
+    "databaseId": 40108480764,
+    "headSha": "fe548adf1b032f1dfcb7f3d92d0eb49468d942ed",
+    "jobs": [
+      {
+        "completedAt": "2026-10-24T15:47:28Z",
+        "conclusion": "success",
+        "databaseId": 120915032377,
+        "name": "research",
+        "startedAt": "2026-10-24T15:46:12Z",
+        "status": "completed",
+        "steps": [
+          {
+            "conclusion": "success",
+            "name": "Set up job",
+            "number": 1,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run actions/checkout@v4",
+            "number": 2,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run actions/setup-python@v5",
+            "number": 3,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run python -m pip install -r requirements.lock -e .",
+            "number": 4,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Restore permanent data branch",
+            "number": 5,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Optional initial historical warmup",
+            "number": 6,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Probe official sources for manual validation",
+            "number": 7,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Collect and generate research",
+            "number": 8,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Verify database before archive",
+            "number": 9,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Save permanent research history",
+            "number": 10,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Retain recovery artifact even if publication fails",
+            "number": 11,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run actions/upload-pages-artifact@v3",
+            "number": 12,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Downloadable report while Pages is being configured",
+            "number": 13,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Post Run actions/setup-python@v5",
+            "number": 25,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Post Run actions/checkout@v4",
+            "number": 26,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Complete job",
+            "number": 27,
+            "status": "completed"
+          }
+        ],
+        "url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40108480764/job/120915032377"
+      },
+      {
+        "completedAt": "2026-10-24T15:47:34Z",
+        "conclusion": "failure",
+        "databaseId": 120915321622,
+        "name": "deploy",
+        "startedAt": "2026-10-24T15:47:30Z",
+        "status": "completed",
+        "steps": [
+          {
+            "conclusion": "success",
+            "name": "Set up job",
+            "number": 1,
+            "status": "completed"
+          },
+          {
+            "conclusion": "failure",
+            "name": "Run actions/configure-pages@v5",
+            "number": 2,
+            "status": "completed"
+          },
+          {
+            "conclusion": "skipped",
+            "name": "Run actions/deploy-pages@v4",
+            "number": 3,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Complete job",
+            "number": 4,
+            "status": "completed"
+          }
+        ],
+        "url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40108480764/job/120915321622"
+      }
+    ],
+    "status": "completed",
+    "url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40108480764"
+  },
+  "artifacts": [
+    {
+      "id": 12565716348,
+      "name": "research-report-40108480764",
+      "size_in_bytes": 3904756,
+      "expired": false
+    },
+    {
+      "id": 12565616853,
+      "name": "github-pages",
+      "size_in_bytes": 3899675,
+      "expired": false
+    },
+    {
+      "id": 12564654700,
+      "name": "research-state-40108480764-1",
+      "size_in_bytes": 65389200,
+      "expired": false
+    }
+  ]
+}
