@@ -1,0 +1,118 @@
+name: Daily Taiwan stock research
+
+on:
+  schedule:
+    # UTC; phase below follows the scheduled slot even if the runner starts late.
+    - cron: '20 0 * * 1-5'
+    - cron: '30 4 * * 1-5'
+    - cron: '30 7 * * 1-5'
+    - cron: '30 10 * * 1-5'
+    - cron: '30 12 * * 1-5'
+  workflow_dispatch:
+    inputs:
+      phase:
+        description: Research phase (intraday has no live-price provider in V1)
+        required: true
+        default: manual
+        type: choice
+        options: [auto, preopen, intraday, postclose, final, manual]
+      history_days:
+        description: Initial official history backfill (0 skips; first run use 100 calendar days)
+        required: false
+        default: 0
+        type: number
+
+permissions:
+  contents: read
+
+# Never cancel a run while its persistent history is being written.
+concurrency:
+  group: taiwan-stock-research-and-history
+  cancel-in-progress: false
+
+jobs:
+  research:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: requirements.lock
+      - run: python -m pip install -r requirements.lock -e .
+      - name: Restore permanent data branch
+        id: restore
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: >-
+          python scripts/persist_data.py restore
+          --repository "$GITHUB_REPOSITORY"
+          --state-dir "$RUNNER_TEMP/market-data-checkout"
+          --data-dir data
+      - name: Optional initial historical warmup
+        env:
+          HISTORY_DAYS: ${{ inputs.history_days || '0' }}
+        run: |
+          python - <<'PY'
+          import os
+          import subprocess
+          import sys
+          from datetime import datetime, timedelta
+          from zoneinfo import ZoneInfo
+          days = int(os.environ['HISTORY_DAYS'])
+          if not 0 <= days <= 120:
+              raise SystemExit('history_days must be between 0 and 120')
+          if days:
+              end = datetime.now(ZoneInfo('Asia/Taipei')).date() - timedelta(days=1)
+              subprocess.run([sys.executable, '-m', 'taiwan_stock_ai', 'backfill',
+                              '--start', (end - timedelta(days=days - 1)).isoformat(),
+                              '--end', end.isoformat(), '--data-dir', 'data'], check=True)
+          PY
+      - name: Collect and generate research
+        id: research
+        env:
+          RESEARCH_PHASE: ${{ inputs.phase || (github.event.schedule == '20 0 * * 1-5' && 'preopen') || (github.event.schedule == '30 4 * * 1-5' && 'intraday') || (github.event.schedule == '30 7 * * 1-5' && 'postclose') || 'final' }}
+        run: >-
+          python -m taiwan_stock_ai run
+          --phase "$RESEARCH_PHASE" --data-dir data --output site
+      - name: Verify database before archive
+        run: python -m taiwan_stock_ai check-db --data-dir data
+      - name: Save permanent research history
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: >-
+          python scripts/persist_data.py save
+          --repository "$GITHUB_REPOSITORY"
+          --state-dir "$RUNNER_TEMP/market-data-checkout"
+          --data-dir data
+      - name: Retain recovery artifact even if publication fails
+        if: always() && steps.restore.outcome == 'success'
+        uses: actions/upload-artifact@v4
+        with:
+          name: research-state-${{ github.run_id }}-${{ github.run_attempt }}
+          path: data/
+          retention-days: 30
+          if-no-files-found: warn
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site/
+
+  deploy:
+    needs: research
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/configure-pages@v5
+      - uses: actions/deploy-pages@v4
+        id: deployment

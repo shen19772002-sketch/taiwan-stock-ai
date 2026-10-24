@@ -1,0 +1,40 @@
+name: Tests and static report
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python: ['3.11', '3.12']
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+          cache: pip
+          cache-dependency-path: requirements.lock
+      - run: python -m pip install -r requirements.lock -e .
+      - run: python -m ruff check src tests scripts
+      - run: python -m pytest -q
+      - name: Build truthful empty-state report without network
+        run: |
+          python -m taiwan_stock_ai run --offline --phase manual --data-dir data --output site
+          python -m taiwan_stock_ai check-db --data-dir data
+          test -s site/index.html
+      - uses: actions/upload-artifact@v4
+        with:
+          name: offline-report-python-${{ matrix.python }}
+          path: site/
+          retention-days: 7

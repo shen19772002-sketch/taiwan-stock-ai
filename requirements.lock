@@ -1,0 +1,23 @@
+# Runtime and development versions verified on Python 3.12.
+# Install: python -m pip install -r requirements.lock -e .
+certifi==2026.10.19
+charset-normalizer==3.5.2
+idna==3.20
+iniconfig==2.3.1
+Jinja2==3.1.6
+MarkupSafe==3.0.4
+narwhals==2.27.1
+numpy==2.2.6
+packaging==26.3
+pandas==2.2.3
+plotly==6.3.0
+pluggy==1.7.0
+Pygments==2.21.0
+pytest==8.4.2
+python-dateutil==3.0.0
+pytz==2026.5
+requests==2.32.5
+ruff==0.13.3
+six==1.17.0
+tzdata==2026.5
+urllib3==2.8.0
