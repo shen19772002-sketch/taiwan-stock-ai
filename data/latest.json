@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-24T15:44:05.055022+00:00",
+  "generated_at": "2026-10-24T15:46:53.290295+00:00",
   "as_of": "2026-10-24",
   "data_date": "2026-10-22",
   "phase": "manual",
@@ -204029,6 +204029,13 @@
     ]
   },
   "history": [
+    {
+      "id": "5ddde5e05b679348225718f64dc2c8df7183e356a68afa3ebdffa15748b3f09a",
+      "as_of": "2026-10-24",
+      "generated_at": "2026-10-24T15:44:05.055022+00:00",
+      "status": "non_trading_day",
+      "candidate_count": 0
+    },
     {
       "id": "1b09e60b1f1bb40fe39d2fdbcbf59518a71df88b3ea34132884489e7c72bc2eb",
       "as_of": "2026-10-22",
