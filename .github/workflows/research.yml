@@ -21,6 +21,11 @@ on:
         required: false
         default: 0
         type: number
+      probe_sources:
+        description: Verify official API access from this runner (also on holidays)
+        required: false
+        default: false
+        type: boolean
 
 permissions:
   contents: read
@@ -74,6 +79,9 @@ jobs:
                               '--start', (end - timedelta(days=days - 1)).isoformat(),
                               '--end', end.isoformat(), '--data-dir', 'data'], check=True)
           PY
+      - name: Probe official sources for manual validation
+        if: ${{ inputs.probe_sources }}
+        run: python -m taiwan_stock_ai probe --data-dir data
       - name: Collect and generate research
         id: research
         env:
@@ -102,6 +110,12 @@ jobs:
       - uses: actions/upload-pages-artifact@v3
         with:
           path: site/
+      - name: Downloadable report while Pages is being configured
+        uses: actions/upload-artifact@v4
+        with:
+          name: research-report-${{ github.run_id }}
+          path: site/
+          retention-days: 30
 
   deploy:
     needs: research

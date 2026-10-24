@@ -8,6 +8,10 @@
 4. 在 **Actions → Tests and static report** 執行 CI，確認測試通過。
 5. 在 **Actions → Daily Taiwan stock research → Run workflow** 選 `manual`。檢查資料來源結果、`market-data` 分支與 Pages deployment 結果。GitHub 會提供實際 Pages 網址。
 
+首次遠端驗證可勾選 `probe_sources`，即使當天休市也會測試 runner 到官方 API 的連線並保存原始回應。這個探測不將休市日變成交易日，不回填預測。若沒有任何可驗證行情，探測步驟會失敗，先檢查來源再重試。一般排程不啟用額外探測。
+
+每次研究另保留 30 天 `research-report-*` 網頁 artifact。Pages 尚未啟用時，可從 Actions 執行頁下載、解壓後開啟 `index.html` 查看完整靜態報告；網站所有必要圖表資產均已打包。自選股儲存仍依瀏覽器與來源網址區隔，不跨裝置同步。
+
 官方公開資料不需要 API 金鑰。GitHub 自動提供工作流程的 `GITHUB_TOKEN`；不需要另貼個人權杖。程式透過短暫的 Git askpass 讀取環境權杖，Git remote URL 與檔案不含權杖。未實作的 AI API、授權即時行情不得以假的 token 或行情取代。
 
 ## 排程
