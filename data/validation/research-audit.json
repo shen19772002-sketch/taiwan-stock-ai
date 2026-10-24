@@ -1,0 +1,241 @@
+{
+  "status": "passed",
+  "report_sha256": "7b82361828d4f2f4f94450c46e27c88a38ddbda6574d14360d7be6856a8332ac",
+  "generated_at": "2026-10-24T09:37:51.609705+00:00",
+  "as_of": "2026-10-22",
+  "data_date": "2026-10-22",
+  "candidate_count": 15,
+  "market": {
+    "status": "ok",
+    "trend": "偏弱",
+    "advancers": 391,
+    "decliners": 1419,
+    "breadth": 0.3712606837606838,
+    "covered_stocks": 1949,
+    "comparable_stocks": 1948,
+    "comparison_label": "漲跌僅比較有前一筆已保存收盤價的股票；缺少歷史不視為平盤",
+    "technical_ready": 1872,
+    "turnover": 1069367953271.0,
+    "label": "本系統涵蓋普通股之等權市場廣度；非官方指數"
+  },
+  "market_coverage": {
+    "TWSE": {
+      "stocks": 1081,
+      "classified": 1081,
+      "industry_scored": 1074,
+      "eligible": 204,
+      "selected": 12
+    },
+    "TPEX": {
+      "stocks": 868,
+      "classified": 868,
+      "industry_scored": 824,
+      "eligible": 127,
+      "selected": 3
+    }
+  },
+  "checks": [
+    "stored real prices",
+    "same-date positive PE",
+    "distinct 60-bar history",
+    "independent SMA20/SMA60",
+    "no future dates or unavailable observations",
+    "legal price ticks",
+    "net reward/risk including fees/tax/slippage",
+    "raw response SHA-256",
+    "ranking order",
+    "TWSE and TPEx industry coverage"
+  ],
+  "sources": {
+    "https://openapi.twse.com.tw/v1/exchangeReport/STOCK_DAY_ALL": {
+      "sha256": "279454be41ee236def2c7bea080d7339633320c7f8bd21838b51e8ccc31273be",
+      "raw_path": "/workspace/taiwan-stock-ai/data/raw/20261024T093724395906Z/twse_quotes.json"
+    },
+    "https://www.tpex.org.tw/openapi/v1/tpex_mainboard_daily_close_quotes": {
+      "sha256": "ddc08c4711de348b2403ff97a1d53e6a174cedd3fae8ef4b9b9e77b5f1562643",
+      "raw_path": "/workspace/taiwan-stock-ai/data/raw/20261024T093724395906Z/tpex_quotes.json"
+    }
+  },
+  "candidates": [
+    {
+      "rank": 1,
+      "market": "TWSE",
+      "symbol": "2006",
+      "name": "東和鋼鐵",
+      "date": "2026-10-22",
+      "close": 93.2,
+      "bars": 69,
+      "score": 84.85,
+      "coverage": 0.9,
+      "net_risk_reward": 2.061
+    },
+    {
+      "rank": 2,
+      "market": "TWSE",
+      "symbol": "2031",
+      "name": "新光鋼",
+      "date": "2026-10-22",
+      "close": 48.2,
+      "bars": 69,
+      "score": 83.92,
+      "coverage": 0.9,
+      "net_risk_reward": 2.029
+    },
+    {
+      "rank": 3,
+      "market": "TWSE",
+      "symbol": "2027",
+      "name": "大成鋼",
+      "date": "2026-10-22",
+      "close": 50.6,
+      "bars": 69,
+      "score": 82.33,
+      "coverage": 0.9,
+      "net_risk_reward": 2.012
+    },
+    {
+      "rank": 4,
+      "market": "TWSE",
+      "symbol": "5469",
+      "name": "瀚宇博",
+      "date": "2026-10-22",
+      "close": 80.2,
+      "bars": 69,
+      "score": 80.96,
+      "coverage": 0.9,
+      "net_risk_reward": 2.0
+    },
+    {
+      "rank": 5,
+      "market": "TPEX",
+      "symbol": "3114",
+      "name": "好德",
+      "date": "2026-10-22",
+      "close": 39.55,
+      "bars": 69,
+      "score": 80.89,
+      "coverage": 0.9,
+      "net_risk_reward": 2.004
+    },
+    {
+      "rank": 6,
+      "market": "TWSE",
+      "symbol": "1735",
+      "name": "日勝化",
+      "date": "2026-10-22",
+      "close": 23.3,
+      "bars": 69,
+      "score": 79.75,
+      "coverage": 0.9,
+      "net_risk_reward": 2.01
+    },
+    {
+      "rank": 7,
+      "market": "TWSE",
+      "symbol": "1102",
+      "name": "亞泥",
+      "date": "2026-10-22",
+      "close": 38.55,
+      "bars": 69,
+      "score": 79.74,
+      "coverage": 0.9,
+      "net_risk_reward": 2.016
+    },
+    {
+      "rank": 8,
+      "market": "TWSE",
+      "symbol": "9933",
+      "name": "中鼎",
+      "date": "2026-10-22",
+      "close": 44.65,
+      "bars": 69,
+      "score": 79.04,
+      "coverage": 0.9,
+      "net_risk_reward": 2.02
+    },
+    {
+      "rank": 9,
+      "market": "TWSE",
+      "symbol": "2010",
+      "name": "春源",
+      "date": "2026-10-22",
+      "close": 23.1,
+      "bars": 69,
+      "score": 78.65,
+      "coverage": 0.9,
+      "net_risk_reward": 2.009
+    },
+    {
+      "rank": 10,
+      "market": "TWSE",
+      "symbol": "1103",
+      "name": "嘉泥",
+      "date": "2026-10-22",
+      "close": 13.6,
+      "bars": 69,
+      "score": 77.62,
+      "coverage": 0.9,
+      "net_risk_reward": 2.058
+    },
+    {
+      "rank": 11,
+      "market": "TWSE",
+      "symbol": "1615",
+      "name": "大山",
+      "date": "2026-10-22",
+      "close": 47.85,
+      "bars": 69,
+      "score": 77.61,
+      "coverage": 0.9,
+      "net_risk_reward": 2.019
+    },
+    {
+      "rank": 12,
+      "market": "TPEX",
+      "symbol": "5009",
+      "name": "榮剛",
+      "date": "2026-10-22",
+      "close": 33.95,
+      "bars": 69,
+      "score": 77.0,
+      "coverage": 0.9,
+      "net_risk_reward": 2.005
+    },
+    {
+      "rank": 13,
+      "market": "TPEX",
+      "symbol": "6028",
+      "name": "公勝保經",
+      "date": "2026-10-22",
+      "close": 107.5,
+      "bars": 68,
+      "score": 75.53,
+      "coverage": 0.9,
+      "net_risk_reward": 2.043
+    },
+    {
+      "rank": 14,
+      "market": "TWSE",
+      "symbol": "3673",
+      "name": "TPK-KY",
+      "date": "2026-10-22",
+      "close": 73.0,
+      "bars": 69,
+      "score": 75.48,
+      "coverage": 0.9,
+      "net_risk_reward": 2.008
+    },
+    {
+      "rank": 15,
+      "market": "TWSE",
+      "symbol": "2013",
+      "name": "中鋼構",
+      "date": "2026-10-22",
+      "close": 41.55,
+      "bars": 69,
+      "score": 75.42,
+      "coverage": 0.9,
+      "net_risk_reward": 2.011
+    }
+  ]
+}

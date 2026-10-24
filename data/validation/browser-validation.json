@@ -1,0 +1,55 @@
+{
+  "status": "passed",
+  "report_sha256": "7b82361828d4f2f4f94450c46e27c88a38ddbda6574d14360d7be6856a8332ac",
+  "checks": [
+    {
+      "viewport": "desktop",
+      "width": 1440,
+      "height": 1000,
+      "data_date": "2026-10-22",
+      "candidates": 15,
+      "chart_industries": 10,
+      "errors": [],
+      "checks": [
+        "navigation",
+        "responsive layout",
+        "persistent local watchlist",
+        "stock details",
+        "search",
+        "shortlist provenance",
+        "risk plans",
+        "Plotly values"
+      ]
+    },
+    {
+      "viewport": "android",
+      "width": 390,
+      "height": 844,
+      "data_date": "2026-10-22",
+      "candidates": 15,
+      "chart_industries": 10,
+      "errors": [],
+      "checks": [
+        "navigation",
+        "responsive layout",
+        "persistent local watchlist",
+        "stock details",
+        "search",
+        "shortlist provenance",
+        "risk plans",
+        "Plotly values"
+      ]
+    }
+  ],
+  "chart_geometry": "plot canvas matches responsive container; no clipped plot",
+  "screenshots": [
+    "data/validation/screenshots/android-industry.png",
+    "data/validation/screenshots/android-strategy.png",
+    "data/validation/screenshots/android-viewport.png",
+    "data/validation/screenshots/android.png",
+    "data/validation/screenshots/desktop-industry.png",
+    "data/validation/screenshots/desktop-strategy.png",
+    "data/validation/screenshots/desktop-viewport.png",
+    "data/validation/screenshots/desktop.png"
+  ]
+}

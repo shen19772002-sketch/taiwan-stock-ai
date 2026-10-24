@@ -1,0 +1,114 @@
+{
+  "verified_at": "2026-10-24T04:21:38.382525+00:00",
+  "status": "passed",
+  "scope": "local bare Git archive of frozen real SQLite plus validation manifest; complete raw response folder not copied in this smoke",
+  "workspace": "/tmp/taiwan-stock-real-archive-thobfj9b",
+  "source_snapshot": {
+    "tables": {
+      "observations": 148383,
+      "runs": 3,
+      "signals": 0
+    },
+    "logical_sha256": {
+      "observations": "bbaef446123e250740daadd48d41cf1bea1b5747daffa1f4755e6548df4f83f4",
+      "runs": "2b43d4ff5ff0b2160c6d70862749a1a6827fa07da5cfd93a59311d4cc42bef75",
+      "signals": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "integrity": "ok",
+    "quote_stock_days": 134446,
+    "coverage": [
+      {
+        "kind": "fundamentals",
+        "market": "TPEX",
+        "distinct_dates": 1,
+        "rows": 2673,
+        "first_date": "2026-10-22",
+        "last_date": "2026-10-22"
+      },
+      {
+        "kind": "fundamentals",
+        "market": "TWSE",
+        "distinct_dates": 1,
+        "rows": 4336,
+        "first_date": "2026-10-22",
+        "last_date": "2026-10-22"
+      },
+      {
+        "kind": "quotes",
+        "market": "TPEX",
+        "distinct_dates": 69,
+        "rows": 62346,
+        "first_date": "2026-07-15",
+        "last_date": "2026-10-22"
+      },
+      {
+        "kind": "quotes",
+        "market": "TWSE",
+        "distinct_dates": 69,
+        "rows": 79028,
+        "first_date": "2026-07-15",
+        "last_date": "2026-10-22"
+      }
+    ]
+  },
+  "restored": {
+    "tables": {
+      "observations": 148383,
+      "runs": 3,
+      "signals": 0
+    },
+    "logical_sha256": {
+      "observations": "bbaef446123e250740daadd48d41cf1bea1b5747daffa1f4755e6548df4f83f4",
+      "runs": "2b43d4ff5ff0b2160c6d70862749a1a6827fa07da5cfd93a59311d4cc42bef75",
+      "signals": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "integrity": "ok",
+    "quote_stock_days": 134446,
+    "coverage": [
+      {
+        "kind": "fundamentals",
+        "market": "TPEX",
+        "distinct_dates": 1,
+        "rows": 2673,
+        "first_date": "2026-10-22",
+        "last_date": "2026-10-22"
+      },
+      {
+        "kind": "fundamentals",
+        "market": "TWSE",
+        "distinct_dates": 1,
+        "rows": 4336,
+        "first_date": "2026-10-22",
+        "last_date": "2026-10-22"
+      },
+      {
+        "kind": "quotes",
+        "market": "TPEX",
+        "distinct_dates": 69,
+        "rows": 62346,
+        "first_date": "2026-07-15",
+        "last_date": "2026-10-22"
+      },
+      {
+        "kind": "quotes",
+        "market": "TWSE",
+        "distinct_dates": 69,
+        "rows": 79028,
+        "first_date": "2026-07-15",
+        "last_date": "2026-10-22"
+      }
+    ]
+  },
+  "first_save_changed": true,
+  "unchanged_save_noop": true,
+  "chunk_count": 1,
+  "chunk_sizes": [
+    24096080
+  ],
+  "database_bytes": 115019776,
+  "compressed_bytes": 24096080,
+  "archive_database_sha256": "a878b956a877dd3974c12b1d354dbc1f8637deb7f815275a307a1e327fb11fad",
+  "compressed_sha256": "1799bd168459d2c22afc35851b2d0190fe8870ec4df27af316085d8a4a4520c4",
+  "elapsed_seconds": 12.41,
+  "remote_publication": false
+}
