@@ -135,7 +135,7 @@ def run(data_dir: Path, output: Path, phase: str = "manual", as_of: date | None 
             notices.append("尚未接入官方法人買賣明細；法人評分維持缺值，完整法人報告待後續擴充。")
         if phase == "final":
             notices.append("晚間更新會重試官方資料；final 是排程階段，並不表示所有資料已公布。")
-        if not analysis["candidates"]:
+        if not analysis["candidates"] and status != "non_trading_day":
             notices.append("目前無符合完整選股條件的標的；需要至少 60 筆完整歷史、正本益比及技術條件。")
         report = {
             "schema_version": 1, "generated_at": now.isoformat(), "as_of": as_of.isoformat(),
