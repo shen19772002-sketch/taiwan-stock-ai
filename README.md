@@ -2,6 +2,8 @@
 
 以 **TWSE／TPEx 官方盤後資料**建立的繁體中文研究網站。Python 收集與分析，GitHub Actions 每日更新，GitHub Pages 展示。V1 的「AI 選股」是可解釋規則模型，尚未啟用大型語言模型。
 
+**研究網站：[開啟台股 AI 研究報告](https://shen19772002-sketch.github.io/taiwan-stock-ai/)**。2026-10-25 已完成正式 Pages 部署；實際行情日與研究日分開顯示，休市不產生當日新選股訊號。
+
 ## 功能
 
 - 上市／上櫃普通股行情、產業分類、PE／PB／殖利率；來源、日期與完整性可追溯。
@@ -88,7 +90,7 @@ python -m ruff check src tests scripts
 - [部署與歷史保存](docs/deployment.md)
 - [開發驗證紀錄](docs/validation.md)
 - [下週交易日與啟用檢查](docs/market-readiness.md)
-- [GitHub 遠端部署驗證與待啟用 Pages](docs/deployment-validation.md)
+- [GitHub 遠端部署與正式網站驗證](docs/deployment-validation.md)
 
 2026-10-24 已完成兩市場各 69 個交易日回補、134,446 筆去重行情、15 檔實際研究名單及桌面／手機圖表驗證。本次名單資料日為 2026-10-22；遠端部署狀態與測試證據見驗證文件。可用 `python scripts/validate_research.py` 重驗現有研究快照；瀏覽器完整檢查使用 `python scripts/browser_smoke.py --require-research`。
 

@@ -1,0 +1,515 @@
+{
+  "verified_at": "2026-10-25T04:21:33.643448+00:00",
+  "url": "https://shen19772002-sketch.github.io/taiwan-stock-ai/",
+  "http_status": 200,
+  "live_report_matches_rendered_archive": true,
+  "rendering_difference": "sources.safe_url is derived metadata; all other data exactly matches archived report",
+  "report_sha256": "8878a2ddb31f4554b0e71a436b81ff3133b06a9a7299ff890b5cff1f3c079ab3",
+  "archive_commit": "bbb07d4f7dd6642448c1f6e8de0d8d008c5ea91d",
+  "report": {
+    "as_of": "2026-10-25",
+    "data_date": "2026-10-22",
+    "generated_at": "2026-10-25T04:19:17.238100+00:00",
+    "status": "non_trading_day",
+    "phase": "manual"
+  },
+  "candidate_count": 0,
+  "history_count": 7,
+  "pages": {
+    "build_type": "workflow",
+    "html_url": "https://shen19772002-sketch.github.io/taiwan-stock-ai/",
+    "public": true,
+    "status": null
+  },
+  "workflow": {
+    "conclusion": "success",
+    "databaseId": 40161425495,
+    "headSha": "26f50c445c7a9117054a50fe695ffd12dde65d19",
+    "jobs": [
+      {
+        "completedAt": "2026-10-25T04:19:52Z",
+        "conclusion": "success",
+        "databaseId": 121073624341,
+        "name": "research",
+        "startedAt": "2026-10-25T04:18:54Z",
+        "status": "completed",
+        "steps": [
+          {
+            "conclusion": "success",
+            "name": "Set up job",
+            "number": 1,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run actions/checkout@v4",
+            "number": 2,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run actions/setup-python@v5",
+            "number": 3,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run python -m pip install -r requirements.lock -e .",
+            "number": 4,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Restore permanent data branch",
+            "number": 5,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Optional initial historical warmup",
+            "number": 6,
+            "status": "completed"
+          },
+          {
+            "conclusion": "skipped",
+            "name": "Probe official sources for manual validation",
+            "number": 7,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Collect and generate research",
+            "number": 8,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Verify database before archive",
+            "number": 9,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Save permanent research history",
+            "number": 10,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Retain recovery artifact even if publication fails",
+            "number": 11,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run actions/upload-pages-artifact@v3",
+            "number": 12,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Downloadable report while Pages is being configured",
+            "number": 13,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Post Run actions/setup-python@v5",
+            "number": 25,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Post Run actions/checkout@v4",
+            "number": 26,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Complete job",
+            "number": 27,
+            "status": "completed"
+          }
+        ],
+        "url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40161425495/job/121073624341"
+      },
+      {
+        "completedAt": "2026-10-25T04:20:06Z",
+        "conclusion": "success",
+        "databaseId": 121073805546,
+        "name": "deploy",
+        "startedAt": "2026-10-25T04:19:55Z",
+        "status": "completed",
+        "steps": [
+          {
+            "conclusion": "success",
+            "name": "Set up job",
+            "number": 1,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run actions/configure-pages@v5",
+            "number": 2,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run actions/deploy-pages@v4",
+            "number": 3,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Complete job",
+            "number": 4,
+            "status": "completed"
+          }
+        ],
+        "url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40161425495/job/121073805546"
+      }
+    ],
+    "status": "completed",
+    "url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40161425495"
+  },
+  "assets": [
+    {
+      "path": "assets/app.js",
+      "http_status": 200,
+      "sha256": "6e27d8adf13e2c07fdcd66894b078b03ee2d44838ace3fa3dcfbf77ac15461be",
+      "matches_tested_source": true
+    },
+    {
+      "path": "assets/style.css",
+      "http_status": 200,
+      "sha256": "05b973881cd49619d5421bc118130442065b4a8f8a3f614078d66d3afb8ed48b",
+      "matches_tested_source": true
+    },
+    {
+      "path": "assets/plotly.min.js",
+      "http_status": 200,
+      "sha256": "122e3be346d66616944d0b83eaaf7242581508c3c1cfa0995a17af0d83eff770",
+      "matches_tested_source": true
+    }
+  ],
+  "ci": {
+    "conclusion": "success",
+    "databaseId": 40161419830,
+    "headSha": "26f50c445c7a9117054a50fe695ffd12dde65d19",
+    "jobs": [
+      {
+        "completedAt": "2026-10-25T04:19:16Z",
+        "conclusion": "success",
+        "databaseId": 121073605251,
+        "name": "test (3.12)",
+        "startedAt": "2026-10-25T04:18:48Z",
+        "status": "completed",
+        "steps": [
+          {
+            "conclusion": "success",
+            "name": "Set up job",
+            "number": 1,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run actions/checkout@v4",
+            "number": 2,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run actions/setup-python@v5",
+            "number": 3,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run python -m pip install -r requirements.lock -e .",
+            "number": 4,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run python -m ruff check src tests scripts",
+            "number": 5,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run python -m pytest -q",
+            "number": 6,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Build truthful empty-state report without network",
+            "number": 7,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run actions/upload-artifact@v4",
+            "number": 8,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Post Run actions/setup-python@v5",
+            "number": 15,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Post Run actions/checkout@v4",
+            "number": 16,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Complete job",
+            "number": 17,
+            "status": "completed"
+          }
+        ],
+        "url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40161419830/job/121073605251"
+      },
+      {
+        "completedAt": "2026-10-25T04:19:13Z",
+        "conclusion": "success",
+        "databaseId": 121073605456,
+        "name": "test (3.11)",
+        "startedAt": "2026-10-25T04:18:48Z",
+        "status": "completed",
+        "steps": [
+          {
+            "conclusion": "success",
+            "name": "Set up job",
+            "number": 1,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run actions/checkout@v4",
+            "number": 2,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run actions/setup-python@v5",
+            "number": 3,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run python -m pip install -r requirements.lock -e .",
+            "number": 4,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run python -m ruff check src tests scripts",
+            "number": 5,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run python -m pytest -q",
+            "number": 6,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Build truthful empty-state report without network",
+            "number": 7,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run actions/upload-artifact@v4",
+            "number": 8,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Post Run actions/setup-python@v5",
+            "number": 15,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Post Run actions/checkout@v4",
+            "number": 16,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Complete job",
+            "number": 17,
+            "status": "completed"
+          }
+        ],
+        "url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40161419830/job/121073605456"
+      }
+    ],
+    "status": "completed",
+    "url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40161419830"
+  },
+  "initial_browser_validation": {
+    "status": "passed_with_direct_browser_tls_limitation",
+    "checked_at": "2026-10-25T04:16:39.480177+00:00",
+    "url": "https://shen19772002-sketch.github.io/taiwan-stock-ai/",
+    "mode": "Verified HTTPS download with default certificate validation; local browser renders exact downloaded bytes",
+    "direct_https_browser": {
+      "status": "blocked",
+      "reason": "ERR_CERT_AUTHORITY_INVALID in container Chromium; TLS validation was not disabled"
+    },
+    "https_files": [
+      {
+        "path": "index.html",
+        "http_status": 200,
+        "bytes": 6244552,
+        "sha256": "3938817ec76a482ac6f7a1b72cd488cc08837c782c7acca1baf0be5db8e6f618"
+      },
+      {
+        "path": "assets/style.css",
+        "http_status": 200,
+        "bytes": 16161,
+        "sha256": "05b973881cd49619d5421bc118130442065b4a8f8a3f614078d66d3afb8ed48b"
+      },
+      {
+        "path": "assets/app.js",
+        "http_status": 200,
+        "bytes": 17317,
+        "sha256": "6e27d8adf13e2c07fdcd66894b078b03ee2d44838ace3fa3dcfbf77ac15461be"
+      },
+      {
+        "path": "assets/plotly.min.js",
+        "http_status": 200,
+        "bytes": 4763993,
+        "sha256": "122e3be346d66616944d0b83eaaf7242581508c3c1cfa0995a17af0d83eff770"
+      },
+      {
+        "path": "assets/report.json",
+        "http_status": 200,
+        "bytes": 7025303,
+        "sha256": "d560398f61c1e79bacad6cad4322e59ec04aabe4d137053106e5a9e865bf72fe"
+      },
+      {
+        "path": "history/d6ef473e0d0a5304f3db4f30c96b431020382360bba4cc0e407fbca8428049ff.json",
+        "http_status": 200,
+        "bytes": 4578446,
+        "sha256": "d6ef473e0d0a5304f3db4f30c96b431020382360bba4cc0e407fbca8428049ff"
+      }
+    ],
+    "viewports": [
+      {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000,
+        "embedded_report_matches_json": true,
+        "chart_industries": 10,
+        "plotly_values_and_geometry": "passed",
+        "history_link": "passed",
+        "js_errors": []
+      },
+      {
+        "name": "android",
+        "width": 390,
+        "height": 844,
+        "embedded_report_matches_json": true,
+        "chart_industries": 10,
+        "plotly_values_and_geometry": "passed",
+        "history_link": "passed",
+        "js_errors": []
+      }
+    ],
+    "history_check": {
+      "id": "d6ef473e0d0a5304f3db4f30c96b431020382360bba4cc0e407fbca8428049ff",
+      "status": "passed",
+      "total_history_entries": 6
+    },
+    "smoke_exit_code": 0,
+    "smoke_results": [
+      {
+        "viewport": "desktop",
+        "width": 1440,
+        "height": 1000,
+        "data_date": "2026-10-22",
+        "candidates": 0,
+        "chart_industries": 0,
+        "errors": [],
+        "checks": [
+          "navigation",
+          "responsive layout",
+          "persistent local watchlist",
+          "stock details",
+          "search"
+        ]
+      },
+      {
+        "viewport": "android",
+        "width": 390,
+        "height": 844,
+        "data_date": "2026-10-22",
+        "candidates": 0,
+        "chart_industries": 0,
+        "errors": [],
+        "checks": [
+          "navigation",
+          "responsive layout",
+          "persistent local watchlist",
+          "stock details",
+          "search"
+        ]
+      }
+    ]
+  },
+  "initial_browser_validation_run_id": 40111009704,
+  "final_notice_validation": {
+    "status": "passed",
+    "verified_at": "2026-10-25T04:20:57.678064+00:00",
+    "url": "https://shen19772002-sketch.github.io/taiwan-stock-ai/",
+    "tls_validation": "requests default verification enabled",
+    "workflow": {
+      "id": 40161425495,
+      "head_sha": "26f50c445c7a9117054a50fe695ffd12dde65d19",
+      "conclusion": "success",
+      "url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40161425495"
+    },
+    "report": {
+      "as_of": "2026-10-25",
+      "data_date": "2026-10-22",
+      "generated_at": "2026-10-25T04:19:17.238100+00:00",
+      "status": "non_trading_day",
+      "phase": "manual"
+    },
+    "candidates": 0,
+    "notices": [
+      "非交易日：跳過當日交易分析，保留最近可驗證的歷史行情。",
+      "來源表保留最後一次擷取狀態與時間；本次沒有重新驗證官方來源。",
+      "最新可驗證交易日期為 2026-10-22；本報告日期為 2026-10-25。",
+      "尚未接入官方法人買賣明細；法人評分維持缺值，完整法人報告待後續擴充。"
+    ],
+    "checks": {
+      "misleading_notice_absent_html": true,
+      "misleading_notice_absent_report": true,
+      "non_trading_notice_present": true,
+      "embedded_report_equals_json": true
+    },
+    "files": [
+      {
+        "path": "index.html",
+        "http_status": 200,
+        "sha256": "da8bc2d8b9cc1424ff667d0df67bf7ee037df6b2ba3d1a24908c9a3955d1eeb0",
+        "bytes": 6244401
+      },
+      {
+        "path": "assets/report.json",
+        "http_status": 200,
+        "sha256": "8878a2ddb31f4554b0e71a436b81ff3133b06a9a7299ff890b5cff1f3c079ab3",
+        "bytes": 7025428
+      }
+    ]
+  }
+}
