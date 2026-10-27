@@ -15,6 +15,8 @@
 
 GitHub 排程可能延遲或漏跑，不能保證準點。排隊延遲不改變原 cron 所指定的研究階段。盤前只使用研究日之前的盤後行情；即使手動在收盤後執行，也不混入當日收盤價。手動執行時間會如實列示，不能視為當天 08:20 已發布的預測。
 
+排程透過 `research_schedule.py` 讀取該 GitHub run 原始 `created_at`，推算建立時間之前最近一次符合 cron 的台灣研究日；跨午夜延遲與稍後重新執行不使用新的執行日期。GitHub 沒有提供精確的原訂觸發時間，因此這是明確的日期歸屬規則，並非準點保證。日期查詢失敗會記錄並重試，不能猜成當日。手動執行仍使用當日日期。
+
 先查官方行事曆與兩交易所臨時休市公告；確認休市時不執行當日行情收集、選股模型或新增交易訊號，保留歷史資料並發布休市狀態。來源缺失時不將「沒有行情」當作已確認休市。
 
 法人使用 TWSE T86 與 TPEx 三大法人明細，以實際交易日、股數與完整性判定。尚未公布、部分市場落後或行情／估值未齊全時，報告保留等待／部分資料狀態；18:30、20:30 再收集。超過最後一次排程才公布的資料會在次日或手動 `final` 更新，不保證公布後立即觸發。
@@ -57,3 +59,20 @@ GitHub 排程可能延遲或漏跑，不能保證準點。排隊延遲不改變�
 - `research-state-*`：還原成功後保留 30 天復原 artifact；`research-report-*`：分析成功後保留 30 天網頁 artifact。
 
 Artifacts 是短期故障復原用途，永久歷史仍由 `market-data` 保存。不要刪除或重設此分支。
+
+## 本次修改範圍
+
+| 檔案 | 變更 |
+| --- | --- |
+| `.github/workflows/research.yml` | 明列台灣時區、真實入口、分階段排程、重試及診斷 artifact |
+| `scripts/run_research.py` | 保存各次程序輸出、exit code、超時與有限重試 |
+| `scripts/research_schedule.py` | 以原始 GitHub run 推算跨午夜排程日期 |
+| `scripts/persist_data.py` | 推送失敗後重試未推送提交，避免誤判為已保存 |
+| `src/taiwan_stock_ai/pipeline.py` | 休市前置判斷、盤前日期限制、法人狀態、原始報告重用及各頁輸出 |
+| `src/taiwan_stock_ai/providers.py` | 官方臨時休市公告、TWSE／TPEx 法人，以及最新有效來源選擇 |
+| `src/taiwan_stock_ai/storage.py` | 保留歷史的 schema migration、語意去重、各階段最新選取指標 |
+| `src/taiwan_stock_ai/cli.py` | 輸出階段、來源品質與法人日期供執行紀錄核對 |
+| `src/taiwan_stock_ai/site.py`、`templates/index.html`、`static/app.js`、`static/style.css` | 獨立盤前／盤後／晚間頁、法人狀態與歷史階段標示；後三者同在套件目錄 |
+| `tests/test_run_research.py`、`test_research_schedule.py`、`test_storage.py`、`test_site.py`、`test_pipeline.py`、`test_providers.py`、`test_persistence.py`、`test_market_readiness.py` | 重試、日期、去重、並行保存、來源、網頁及休市回歸測試；皆在 `tests/` |
+
+安裝依賴與既有七個網頁功能保留。驗證結果見 [2026-10-28 每日排程驗證](daily-automation-validation.md)。

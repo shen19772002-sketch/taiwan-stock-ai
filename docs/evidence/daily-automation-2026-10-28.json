@@ -1,0 +1,1152 @@
+{
+  "verified_on": "2026-10-28",
+  "timezone": "Asia/Taipei",
+  "implementation_commit": "a1ee01839b228674fe39c7abf442193327281b21",
+  "scheduled_date_fix": "01e72cc",
+  "local_final_tests": {
+    "pytest_passed": 220,
+    "ruff": "passed",
+    "actionlint": "passed"
+  },
+  "github_runs": [
+    {
+      "id": 40508055797,
+      "event": "push",
+      "created_at": "2026-10-27T12:58:35Z",
+      "updated_at": "2026-10-27T12:59:21Z",
+      "head_sha": "a1ee01839b228674fe39c7abf442193327281b21",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40508055797",
+      "jobs": [
+        {
+          "name": "test (3.11)",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "test (3.12)",
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ],
+      "reports": [
+        {
+          "status": "waiting",
+          "as_of": "2026-10-27",
+          "phase": "manual",
+          "generated_at": "2026-10-27T12:59:06.224966+00:00",
+          "data_date": null,
+          "institutional_status": {
+            "market_dates": {
+              "TPEX": null,
+              "TWSE": null
+            },
+            "required_date": null,
+            "status": "waiting"
+          },
+          "sources": [],
+          "candidates": 0,
+          "site": "site",
+          "notices": [
+            "離線模式：僅使用本機已保存資料，沒有發出行情更新請求。",
+            "交易日曆尚未完整驗證；不把缺少行情當成已確認休市。",
+            "上市／上櫃行情尚未完整涵蓋，排行僅能代表已取得且通過檢查的範圍。",
+            "對應行情日期的上市／上櫃法人明細尚未完整取得；缺值不補零，18:30、20:30 再更新。",
+            "目前無符合完整選股條件的標的；需要至少 60 筆完整歷史、正本益比及技術條件。"
+          ]
+        },
+        {
+          "status": "waiting",
+          "as_of": "2026-10-27",
+          "phase": "manual",
+          "generated_at": "2026-10-27T12:59:15.947781+00:00",
+          "data_date": null,
+          "institutional_status": {
+            "market_dates": {
+              "TPEX": null,
+              "TWSE": null
+            },
+            "required_date": null,
+            "status": "waiting"
+          },
+          "sources": [],
+          "candidates": 0,
+          "site": "site",
+          "notices": [
+            "離線模式：僅使用本機已保存資料，沒有發出行情更新請求。",
+            "交易日曆尚未完整驗證；不把缺少行情當成已確認休市。",
+            "上市／上櫃行情尚未完整涵蓋，排行僅能代表已取得且通過檢查的範圍。",
+            "對應行情日期的上市／上櫃法人明細尚未完整取得；缺值不補零，18:30、20:30 再更新。",
+            "目前無符合完整選股條件的標的；需要至少 60 筆完整歷史、正本益比及技術條件。"
+          ]
+        }
+      ],
+      "tests": [
+        "2026-10-27T12:59:05.7281595Z 208 passed in 5.84s",
+        "2026-10-27T12:59:15.5833787Z 208 passed in 12.51s"
+      ]
+    },
+    {
+      "id": 40508103038,
+      "event": "workflow_dispatch",
+      "created_at": "2026-10-27T12:58:55Z",
+      "updated_at": "2026-10-27T13:01:54Z",
+      "head_sha": "a1ee01839b228674fe39c7abf442193327281b21",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40508103038",
+      "jobs": [
+        {
+          "name": "research",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "deploy",
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ],
+      "reports": [
+        {
+          "status": "partial",
+          "as_of": "2026-10-27",
+          "phase": "preopen",
+          "generated_at": "2026-10-27T12:59:35.298205+00:00",
+          "data_date": "2026-10-22",
+          "institutional_status": {
+            "market_dates": {
+              "TPEX": null,
+              "TWSE": null
+            },
+            "required_date": "2026-10-22",
+            "status": "waiting"
+          },
+          "sources": [
+            {
+              "id": "twse_companies",
+              "status": "ok",
+              "data_date": "2026-10-26",
+              "error": null
+            },
+            {
+              "id": "tpex_companies",
+              "status": "ok",
+              "data_date": "2026-10-27",
+              "error": null
+            },
+            {
+              "id": "twse_quotes",
+              "status": "waiting",
+              "data_date": "2026-10-22",
+              "error": "7 筆資料日期或必要欄位不完整"
+            },
+            {
+              "id": "twse_dated_quotes",
+              "status": "waiting",
+              "data_date": "2026-10-27",
+              "error": "2 筆資料日期或必要欄位不完整"
+            },
+            {
+              "id": "tpex_quotes",
+              "status": "waiting",
+              "data_date": "2026-10-27",
+              "error": "23 筆資料日期或必要欄位不完整"
+            },
+            {
+              "id": "twse_valuations",
+              "status": "ok",
+              "data_date": "2026-10-22",
+              "error": null
+            },
+            {
+              "id": "twse_dated_valuations",
+              "status": "ok",
+              "data_date": "2026-10-27",
+              "error": null
+            },
+            {
+              "id": "tpex_valuations",
+              "status": "ok",
+              "data_date": "2026-10-27",
+              "error": null
+            },
+            {
+              "id": "twse_institutions",
+              "status": "ok",
+              "data_date": "2026-10-27",
+              "error": null
+            },
+            {
+              "id": "tpex_institutions",
+              "status": "ok",
+              "data_date": "2026-10-27",
+              "error": null
+            },
+            {
+              "id": "twse_calendar",
+              "status": "ok",
+              "data_date": "2026-12-25",
+              "error": null
+            },
+            {
+              "id": "twse_market_notices",
+              "status": "ok",
+              "data_date": "2026-10-27",
+              "error": null
+            },
+            {
+              "id": "tpex_market_notices",
+              "status": "ok",
+              "data_date": "2026-10-27",
+              "error": null
+            }
+          ],
+          "candidates": 15,
+          "site": "site",
+          "notices": [
+            "最新可驗證交易日期為 2026-10-22；本報告日期為 2026-10-27。",
+            "盤前分析只採用報告日期之前的盤後資料；手動或延遲執行也不混入當日收盤價。",
+            "對應行情日期的上市／上櫃法人明細尚未完整取得；缺值不補零，18:30、20:30 再更新。"
+          ]
+        }
+      ],
+      "tests": []
+    },
+    {
+      "id": 40508387091,
+      "event": "workflow_dispatch",
+      "created_at": "2026-10-27T13:00:57Z",
+      "updated_at": "2026-10-27T13:04:00Z",
+      "head_sha": "a1ee01839b228674fe39c7abf442193327281b21",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40508387091",
+      "jobs": [
+        {
+          "name": "research",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "deploy",
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ],
+      "reports": [
+        {
+          "status": "partial",
+          "as_of": "2026-10-27",
+          "phase": "postclose",
+          "generated_at": "2026-10-27T13:02:52.658318+00:00",
+          "data_date": "2026-10-27",
+          "institutional_status": {
+            "market_dates": {
+              "TPEX": "2026-10-27",
+              "TWSE": "2026-10-27"
+            },
+            "required_date": "2026-10-27",
+            "status": "ready"
+          },
+          "sources": [
+            {
+              "id": "twse_companies",
+              "status": "ok",
+              "data_date": "2026-10-26",
+              "error": null
+            },
+            {
+              "id": "tpex_companies",
+              "status": "ok",
+              "data_date": "2026-10-27",
+              "error": null
+            },
+            {
+              "id": "twse_quotes",
+              "status": "waiting",
+              "data_date": "2026-10-22",
+              "error": "7 筆資料日期或必要欄位不完整"
+            },
+            {
+              "id": "twse_dated_quotes",
+              "status": "waiting",
+              "data_date": "2026-10-27",
+              "error": "2 筆資料日期或必要欄位不完整"
+            },
+            {
+              "id": "tpex_quotes",
+              "status": "waiting",
+              "data_date": "2026-10-27",
+              "error": "23 筆資料日期或必要欄位不完整"
+            },
+            {
+              "id": "twse_valuations",
+              "status": "ok",
+              "data_date": "2026-10-22",
+              "error": null
+            },
+            {
+              "id": "twse_dated_valuations",
+              "status": "ok",
+              "data_date": "2026-10-27",
+              "error": null
+            },
+            {
+              "id": "tpex_valuations",
+              "status": "ok",
+              "data_date": "2026-10-27",
+              "error": null
+            },
+            {
+              "id": "twse_institutions",
+              "status": "ok",
+              "data_date": "2026-10-27",
+              "error": null
+            },
+            {
+              "id": "tpex_institutions",
+              "status": "ok",
+              "data_date": "2026-10-27",
+              "error": null
+            },
+            {
+              "id": "twse_calendar",
+              "status": "ok",
+              "data_date": "2026-12-25",
+              "error": null
+            },
+            {
+              "id": "twse_market_notices",
+              "status": "ok",
+              "data_date": "2026-10-27",
+              "error": null
+            },
+            {
+              "id": "tpex_market_notices",
+              "status": "ok",
+              "data_date": "2026-10-27",
+              "error": null
+            }
+          ],
+          "candidates": 15,
+          "site": "site",
+          "notices": []
+        }
+      ],
+      "tests": []
+    },
+    {
+      "id": 40508746454,
+      "event": "workflow_dispatch",
+      "created_at": "2026-10-27T13:03:34Z",
+      "updated_at": "2026-10-27T13:05:45Z",
+      "head_sha": "a1ee01839b228674fe39c7abf442193327281b21",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40508746454",
+      "jobs": [
+        {
+          "name": "research",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "deploy",
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ],
+      "reports": [
+        {
+          "status": "partial",
+          "as_of": "2026-10-27",
+          "phase": "final",
+          "generated_at": "2026-10-27T13:04:45.021746+00:00",
+          "data_date": "2026-10-27",
+          "institutional_status": {
+            "market_dates": {
+              "TPEX": "2026-10-27",
+              "TWSE": "2026-10-27"
+            },
+            "required_date": "2026-10-27",
+            "status": "ready"
+          },
+          "sources": [
+            {
+              "id": "twse_companies",
+              "status": "ok",
+              "data_date": "2026-10-26",
+              "error": null
+            },
+            {
+              "id": "tpex_companies",
+              "status": "ok",
+              "data_date": "2026-10-27",
+              "error": null
+            },
+            {
+              "id": "twse_quotes",
+              "status": "waiting",
+              "data_date": "2026-10-22",
+              "error": "7 筆資料日期或必要欄位不完整"
+            },
+            {
+              "id": "twse_dated_quotes",
+              "status": "waiting",
+              "data_date": "2026-10-27",
+              "error": "2 筆資料日期或必要欄位不完整"
+            },
+            {
+              "id": "tpex_quotes",
+              "status": "waiting",
+              "data_date": "2026-10-27",
+              "error": "23 筆資料日期或必要欄位不完整"
+            },
+            {
+              "id": "twse_valuations",
+              "status": "ok",
+              "data_date": "2026-10-22",
+              "error": null
+            },
+            {
+              "id": "twse_dated_valuations",
+              "status": "ok",
+              "data_date": "2026-10-27",
+              "error": null
+            },
+            {
+              "id": "tpex_valuations",
+              "status": "ok",
+              "data_date": "2026-10-27",
+              "error": null
+            },
+            {
+              "id": "twse_institutions",
+              "status": "ok",
+              "data_date": "2026-10-27",
+              "error": null
+            },
+            {
+              "id": "tpex_institutions",
+              "status": "ok",
+              "data_date": "2026-10-27",
+              "error": null
+            },
+            {
+              "id": "twse_calendar",
+              "status": "ok",
+              "data_date": "2026-12-25",
+              "error": null
+            },
+            {
+              "id": "twse_market_notices",
+              "status": "ok",
+              "data_date": "2026-10-27",
+              "error": null
+            },
+            {
+              "id": "tpex_market_notices",
+              "status": "ok",
+              "data_date": "2026-10-27",
+              "error": null
+            }
+          ],
+          "candidates": 15,
+          "site": "site",
+          "notices": [
+            "晚間更新會重試官方資料；final 是排程階段，並不表示所有資料已公布。"
+          ]
+        }
+      ],
+      "tests": []
+    }
+  ],
+  "history_preservation": {
+    "baseline_commit": "23b0c7e8fbd0bce9a957046bd049f40f2521dfa0",
+    "before_tree": "23b0c7e8fbd0bce9a957046bd049f40f2521dfa0",
+    "after_tree": "df7110693240b4cf598ae1684a26aa4af7d90ded",
+    "before_immutable_files": 264,
+    "after_immutable_files": 359,
+    "before_reports": 13,
+    "after_reports": 18,
+    "changed_or_missing": []
+  },
+  "public_pages": {
+    "verified_at_utc": "2026-10-27T22:26:13.152696+00:00",
+    "verified_at_taipei": "2026-10-28T06:26:13.152696+08:00",
+    "public_base_url": "https://shen19772002-sketch.github.io/taiwan-stock-ai/",
+    "https_verification": "Python requests with default certificate validation; no TLS verification bypass",
+    "browser_validation_scope": "The exact HTTPS-downloaded bytes are served locally for Chromium UI checks; this does not assert Chromium direct HTTPS trust in the container.",
+    "files": [
+      {
+        "path": "index.html",
+        "status": 200,
+        "bytes": 6366346,
+        "sha256": "97a69878a1754ae235d89ba0fb39f125cd8163e9498308f44c788e2e7ae93b60",
+        "content_type": "text/html; charset=utf-8",
+        "etag": "W/\"6ae0ea06-61248a\""
+      },
+      {
+        "path": "preopen.html",
+        "status": 200,
+        "bytes": 6310504,
+        "sha256": "3f12e8c3cbd5a64b110be8df67230bf583ce4fe61a03e585cb733f4021f7e13e",
+        "content_type": "text/html; charset=utf-8",
+        "etag": "W/\"6ae0ea05-604a68\""
+      },
+      {
+        "path": "postclose.html",
+        "status": 200,
+        "bytes": 6366544,
+        "sha256": "347953f7e433dce0c5f6358fe5c5176e9892c7a3e696da66ad6fbcb835df58b2",
+        "content_type": "text/html; charset=utf-8",
+        "etag": "W/\"6ae0ea05-612550\""
+      },
+      {
+        "path": "final.html",
+        "status": 200,
+        "bytes": 6366351,
+        "sha256": "3be4d82ff9ad41b35118a9242a6572b2a6741e7c95ca4a951743d916a2f9696d",
+        "content_type": "text/html; charset=utf-8",
+        "etag": "W/\"6ae0ea05-61248f\""
+      },
+      {
+        "path": "assets/report.json",
+        "status": 200,
+        "bytes": 7149691,
+        "sha256": "9bec77d76fe29cc2f8b42e52f8369c9f69c0d49bf872ce04ab186f78c3397478",
+        "content_type": "application/json; charset=utf-8",
+        "etag": "W/\"6ae0ea05-6d187b\""
+      },
+      {
+        "path": "assets/preopen.json",
+        "status": 200,
+        "bytes": 7094284,
+        "sha256": "f293426cd134812fd2eef9e8f8afed92bccd7713033febfd38a219ba177fed52",
+        "content_type": "application/json; charset=utf-8",
+        "etag": "W/\"6ae0ea05-6c400c\""
+      },
+      {
+        "path": "assets/postclose.json",
+        "status": 200,
+        "bytes": 7149691,
+        "sha256": "9bec77d76fe29cc2f8b42e52f8369c9f69c0d49bf872ce04ab186f78c3397478",
+        "content_type": "application/json; charset=utf-8",
+        "etag": "W/\"6ae0ea05-6d187b\""
+      },
+      {
+        "path": "assets/final.json",
+        "status": 200,
+        "bytes": 7149691,
+        "sha256": "9bec77d76fe29cc2f8b42e52f8369c9f69c0d49bf872ce04ab186f78c3397478",
+        "content_type": "application/json; charset=utf-8",
+        "etag": "W/\"6ae0ea05-6d187b\""
+      },
+      {
+        "path": "assets/app.js",
+        "status": 200,
+        "bytes": 17805,
+        "sha256": "506646e9e7ae68f0b8726be6e84de59c0df10bd3c210da7b9f78be0c16617069",
+        "content_type": "application/javascript; charset=utf-8",
+        "etag": "W/\"6ae0ea06-458d\""
+      },
+      {
+        "path": "assets/style.css",
+        "status": 200,
+        "bytes": 17256,
+        "sha256": "e17b42201f71acb6a058a1d50f4f8a9c53d13e16f15d2178c4e70fffa3476cf5",
+        "content_type": "text/css; charset=utf-8",
+        "etag": "W/\"6ae0ea05-4368\""
+      },
+      {
+        "path": "assets/plotly.min.js",
+        "status": 200,
+        "bytes": 4763993,
+        "sha256": "122e3be346d66616944d0b83eaaf7242581508c3c1cfa0995a17af0d83eff770",
+        "content_type": "application/javascript; charset=utf-8",
+        "etag": "W/\"6ae0ea05-48b159\""
+      }
+    ],
+    "pages": [
+      {
+        "page": "index",
+        "phase": "final",
+        "as_of": "2026-10-28",
+        "data_date": "2026-10-27",
+        "generated_at": "2026-10-27T18:11:09.405384+00:00",
+        "status": "partial",
+        "candidates": 15,
+        "institutional_status": {
+          "market_dates": {
+            "TPEX": "2026-10-27",
+            "TWSE": "2026-10-27"
+          },
+          "required_date": "2026-10-27",
+          "status": "ready"
+        },
+        "embedded_equals_download": true,
+        "phase_navigation_links": true
+      },
+      {
+        "page": "preopen",
+        "phase": "preopen",
+        "as_of": "2026-10-27",
+        "data_date": "2026-10-22",
+        "generated_at": "2026-10-27T12:59:35.298205+00:00",
+        "status": "partial",
+        "candidates": 15,
+        "institutional_status": {
+          "market_dates": {
+            "TPEX": null,
+            "TWSE": null
+          },
+          "required_date": "2026-10-22",
+          "status": "waiting"
+        },
+        "embedded_equals_download": true,
+        "phase_navigation_links": true
+      },
+      {
+        "page": "postclose",
+        "phase": "final",
+        "as_of": "2026-10-28",
+        "data_date": "2026-10-27",
+        "generated_at": "2026-10-27T18:11:09.405384+00:00",
+        "status": "partial",
+        "candidates": 15,
+        "institutional_status": {
+          "market_dates": {
+            "TPEX": "2026-10-27",
+            "TWSE": "2026-10-27"
+          },
+          "required_date": "2026-10-27",
+          "status": "ready"
+        },
+        "embedded_equals_download": true,
+        "phase_navigation_links": true
+      },
+      {
+        "page": "final",
+        "phase": "final",
+        "as_of": "2026-10-28",
+        "data_date": "2026-10-27",
+        "generated_at": "2026-10-27T18:11:09.405384+00:00",
+        "status": "partial",
+        "candidates": 15,
+        "institutional_status": {
+          "market_dates": {
+            "TPEX": "2026-10-27",
+            "TWSE": "2026-10-27"
+          },
+          "required_date": "2026-10-27",
+          "status": "ready"
+        },
+        "embedded_equals_download": true,
+        "phase_navigation_links": true
+      }
+    ],
+    "postclose_browser": [
+      {
+        "viewport": "desktop",
+        "width": 1440,
+        "height": 1000,
+        "data_date": "2026-10-27",
+        "candidates": 15,
+        "chart_industries": 10,
+        "errors": [],
+        "checks": [
+          "navigation",
+          "responsive layout",
+          "persistent local watchlist",
+          "stock details",
+          "search",
+          "shortlist provenance",
+          "risk plans",
+          "Plotly values"
+        ]
+      },
+      {
+        "viewport": "android",
+        "width": 390,
+        "height": 844,
+        "data_date": "2026-10-27",
+        "candidates": 15,
+        "chart_industries": 10,
+        "errors": [],
+        "checks": [
+          "navigation",
+          "responsive layout",
+          "persistent local watchlist",
+          "stock details",
+          "search",
+          "shortlist provenance",
+          "risk plans",
+          "Plotly values"
+        ]
+      }
+    ],
+    "phase_browser": {
+      "base_url": "http://127.0.0.1:8766/",
+      "scope": "Exact public HTTPS-downloaded files served locally; no TLS bypass used.",
+      "checks": [
+        "phase navigation",
+        "embedded JSON matches downloadable report",
+        "original report dates/phases",
+        "cross-page browser-only watchlist",
+        "responsive width",
+        "preopen shortlist provenance",
+        "preopen Plotly values",
+        "JavaScript errors"
+      ],
+      "results": [
+        {
+          "viewport": "desktop",
+          "width": 1440,
+          "height": 1000,
+          "preopen_chart_industries": 10,
+          "preopen_shortlist_contract": true,
+          "pages": [
+            {
+              "page": "postclose",
+              "phase": "final",
+              "as_of": "2026-10-28",
+              "data_date": "2026-10-27",
+              "status": "partial",
+              "candidates": 15,
+              "download_matches_embedded": true,
+              "watchlist_persisted": true,
+              "horizontal_overflow": false
+            },
+            {
+              "page": "final",
+              "phase": "final",
+              "as_of": "2026-10-28",
+              "data_date": "2026-10-27",
+              "status": "partial",
+              "candidates": 15,
+              "download_matches_embedded": true,
+              "watchlist_persisted": true,
+              "horizontal_overflow": false
+            },
+            {
+              "page": "index",
+              "phase": "final",
+              "as_of": "2026-10-28",
+              "data_date": "2026-10-27",
+              "status": "partial",
+              "candidates": 15,
+              "download_matches_embedded": true,
+              "watchlist_persisted": true,
+              "horizontal_overflow": false
+            },
+            {
+              "page": "preopen",
+              "phase": "preopen",
+              "as_of": "2026-10-27",
+              "data_date": "2026-10-22",
+              "status": "partial",
+              "candidates": 15,
+              "download_matches_embedded": true,
+              "watchlist_persisted": true,
+              "horizontal_overflow": false
+            }
+          ],
+          "errors": []
+        },
+        {
+          "viewport": "android",
+          "width": 390,
+          "height": 844,
+          "preopen_chart_industries": 10,
+          "preopen_shortlist_contract": true,
+          "pages": [
+            {
+              "page": "postclose",
+              "phase": "final",
+              "as_of": "2026-10-28",
+              "data_date": "2026-10-27",
+              "status": "partial",
+              "candidates": 15,
+              "download_matches_embedded": true,
+              "watchlist_persisted": true,
+              "horizontal_overflow": false
+            },
+            {
+              "page": "final",
+              "phase": "final",
+              "as_of": "2026-10-28",
+              "data_date": "2026-10-27",
+              "status": "partial",
+              "candidates": 15,
+              "download_matches_embedded": true,
+              "watchlist_persisted": true,
+              "horizontal_overflow": false
+            },
+            {
+              "page": "index",
+              "phase": "final",
+              "as_of": "2026-10-28",
+              "data_date": "2026-10-27",
+              "status": "partial",
+              "candidates": 15,
+              "download_matches_embedded": true,
+              "watchlist_persisted": true,
+              "horizontal_overflow": false
+            },
+            {
+              "page": "preopen",
+              "phase": "preopen",
+              "as_of": "2026-10-27",
+              "data_date": "2026-10-22",
+              "status": "partial",
+              "candidates": 15,
+              "download_matches_embedded": true,
+              "watchlist_persisted": true,
+              "horizontal_overflow": false
+            }
+          ],
+          "errors": []
+        }
+      ]
+    },
+    "downloaded_files_unchanged_after_browser": true
+  },
+  "public_archive_match": [
+    {
+      "page": "report",
+      "report_id": "227ad6773f34aa19326fcbb469b1d3b1f60aa5ca031a5ba011edecf06706b91c",
+      "archive_path": "data/reports/2026-10-28-final-227ad6773f34aa19.json",
+      "matches_immutable_archive": true
+    },
+    {
+      "page": "preopen",
+      "report_id": "55b29840a6cef6c45b0e66889bdff66dad0e5cda221dce4dc1c9958b985491e8",
+      "archive_path": "data/reports/2026-10-27-preopen-55b29840a6cef6c4.json",
+      "matches_immutable_archive": true
+    },
+    {
+      "page": "postclose",
+      "report_id": "227ad6773f34aa19326fcbb469b1d3b1f60aa5ca031a5ba011edecf06706b91c",
+      "archive_path": "data/reports/2026-10-28-final-227ad6773f34aa19.json",
+      "matches_immutable_archive": true
+    },
+    {
+      "page": "final",
+      "report_id": "227ad6773f34aa19326fcbb469b1d3b1f60aa5ca031a5ba011edecf06706b91c",
+      "archive_path": "data/reports/2026-10-28-final-227ad6773f34aa19.json",
+      "matches_immutable_archive": true
+    }
+  ],
+  "final_ci": {
+    "run_id": 40595229544,
+    "url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40595229544",
+    "commit": "01e72cc0eb41735a11dbf726efa030c4fc081c35",
+    "conclusion": "success",
+    "test_results": [
+      "2026-10-27T22:30:02.3579534Z 220 passed in 3.79s",
+      "2026-10-27T22:30:07.9556152Z 220 passed in 5.26s"
+    ]
+  },
+  "final_runtime": {
+    "id": 40595295538,
+    "html_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40595295538",
+    "head_sha": "01e72cc0eb41735a11dbf726efa030c4fc081c35",
+    "event": "workflow_dispatch",
+    "created_at": "2026-10-27T22:30:11Z",
+    "updated_at": "2026-10-27T22:33:09Z",
+    "status": "completed",
+    "conclusion": "success",
+    "jobs": [
+      {
+        "name": "research",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "name": "deploy",
+        "status": "completed",
+        "conclusion": "success"
+      }
+    ],
+    "artifacts": [
+      {
+        "name": "research-logs-40595295538-1",
+        "size_in_bytes": 4386,
+        "expired": false
+      },
+      {
+        "name": "research-report-40595295538",
+        "size_in_bytes": 12453198,
+        "expired": false
+      },
+      {
+        "name": "research-state-40595295538-1",
+        "size_in_bytes": 95238253,
+        "expired": false
+      },
+      {
+        "name": "github-pages",
+        "size_in_bytes": 12431582,
+        "expired": false
+      }
+    ],
+    "report": {
+      "phase": "preopen",
+      "as_of": "2026-10-28",
+      "data_date": "2026-10-27",
+      "generated_at": "2026-10-27T22:31:04.198522+00:00",
+      "status": "partial",
+      "institutional_status": {
+        "market_dates": {
+          "TPEX": "2026-10-27",
+          "TWSE": "2026-10-27"
+        },
+        "required_date": "2026-10-27",
+        "status": "ready"
+      },
+      "candidates": 15
+    },
+    "public_preopen_matches_archive": true,
+    "report_id": "ec31e726abb18d4f5bc31cbadb297209d7018240798754e9e3cd7a49d65cb5c3"
+  },
+  "workflow": {
+    "state": "active",
+    "path": ".github/workflows/research.yml",
+    "timezone": "Asia/Taipei",
+    "utc_cron": [
+      "20 0 * * 1-5",
+      "30 4 * * 1-5",
+      "30 7 * * 1-5",
+      "30 10 * * 1-5",
+      "30 12 * * 1-5"
+    ]
+  },
+  "final_public_pages": {
+    "verified_at_utc": "2026-10-27T22:34:10.918866+00:00",
+    "verified_at_taipei": "2026-10-28T06:34:10.918866+08:00",
+    "public_base_url": "https://shen19772002-sketch.github.io/taiwan-stock-ai/",
+    "https_verification": "Python requests with default certificate validation; no TLS verification bypass",
+    "browser_validation_scope": "The exact HTTPS-downloaded bytes are served locally for Chromium UI checks; this does not assert Chromium direct HTTPS trust in the container.",
+    "files": [
+      {
+        "path": "index.html",
+        "status": 200,
+        "bytes": 6336544,
+        "sha256": "a621eb5f81b386151e0a6ec1392f8d75fb3dd4feb9d16cb84f924cc2b35412ee",
+        "content_type": "text/html; charset=utf-8",
+        "etag": "W/\"6ae1269d-60b020\""
+      },
+      {
+        "path": "preopen.html",
+        "status": 200,
+        "bytes": 6336547,
+        "sha256": "77e22456cf93ab39a5746a666057d3505e9a6d8e4eebf0e7a35256f7fc3997ce",
+        "content_type": "text/html; charset=utf-8",
+        "etag": "W/\"6ae1269d-60b023\""
+      },
+      {
+        "path": "postclose.html",
+        "status": 200,
+        "bytes": 6366544,
+        "sha256": "347953f7e433dce0c5f6358fe5c5176e9892c7a3e696da66ad6fbcb835df58b2",
+        "content_type": "text/html; charset=utf-8",
+        "etag": "W/\"6ae1269d-612550\""
+      },
+      {
+        "path": "final.html",
+        "status": 200,
+        "bytes": 6366351,
+        "sha256": "3be4d82ff9ad41b35118a9242a6572b2a6741e7c95ca4a951743d916a2f9696d",
+        "content_type": "text/html; charset=utf-8",
+        "etag": "W/\"6ae1269d-61248f\""
+      },
+      {
+        "path": "assets/report.json",
+        "status": 200,
+        "bytes": 7125821,
+        "sha256": "961f617e9c7b95aa91c7f5f55e25ef5ff1d539d55e8e4dca5d024736f811356f",
+        "content_type": "application/json; charset=utf-8",
+        "etag": "W/\"6ae1269d-6cbb3d\""
+      },
+      {
+        "path": "assets/preopen.json",
+        "status": 200,
+        "bytes": 7125821,
+        "sha256": "961f617e9c7b95aa91c7f5f55e25ef5ff1d539d55e8e4dca5d024736f811356f",
+        "content_type": "application/json; charset=utf-8",
+        "etag": "W/\"6ae1269d-6cbb3d\""
+      },
+      {
+        "path": "assets/postclose.json",
+        "status": 200,
+        "bytes": 7149691,
+        "sha256": "9bec77d76fe29cc2f8b42e52f8369c9f69c0d49bf872ce04ab186f78c3397478",
+        "content_type": "application/json; charset=utf-8",
+        "etag": "W/\"6ae1269d-6d187b\""
+      },
+      {
+        "path": "assets/final.json",
+        "status": 200,
+        "bytes": 7149691,
+        "sha256": "9bec77d76fe29cc2f8b42e52f8369c9f69c0d49bf872ce04ab186f78c3397478",
+        "content_type": "application/json; charset=utf-8",
+        "etag": "W/\"6ae1269d-6d187b\""
+      },
+      {
+        "path": "assets/app.js",
+        "status": 200,
+        "bytes": 17805,
+        "sha256": "506646e9e7ae68f0b8726be6e84de59c0df10bd3c210da7b9f78be0c16617069",
+        "content_type": "application/javascript; charset=utf-8",
+        "etag": "W/\"6ae1269d-458d\""
+      },
+      {
+        "path": "assets/style.css",
+        "status": 200,
+        "bytes": 17256,
+        "sha256": "e17b42201f71acb6a058a1d50f4f8a9c53d13e16f15d2178c4e70fffa3476cf5",
+        "content_type": "text/css; charset=utf-8",
+        "etag": "W/\"6ae1269d-4368\""
+      },
+      {
+        "path": "assets/plotly.min.js",
+        "status": 200,
+        "bytes": 4763993,
+        "sha256": "122e3be346d66616944d0b83eaaf7242581508c3c1cfa0995a17af0d83eff770",
+        "content_type": "application/javascript; charset=utf-8",
+        "etag": "W/\"6ae1269d-48b159\""
+      }
+    ],
+    "pages": [
+      {
+        "page": "index",
+        "phase": "preopen",
+        "as_of": "2026-10-28",
+        "data_date": "2026-10-27",
+        "generated_at": "2026-10-27T22:31:04.198522+00:00",
+        "status": "partial",
+        "candidates": 15,
+        "institutional_status": {
+          "market_dates": {
+            "TPEX": "2026-10-27",
+            "TWSE": "2026-10-27"
+          },
+          "required_date": "2026-10-27",
+          "status": "ready"
+        },
+        "embedded_equals_download": true,
+        "phase_navigation_links": true
+      },
+      {
+        "page": "preopen",
+        "phase": "preopen",
+        "as_of": "2026-10-28",
+        "data_date": "2026-10-27",
+        "generated_at": "2026-10-27T22:31:04.198522+00:00",
+        "status": "partial",
+        "candidates": 15,
+        "institutional_status": {
+          "market_dates": {
+            "TPEX": "2026-10-27",
+            "TWSE": "2026-10-27"
+          },
+          "required_date": "2026-10-27",
+          "status": "ready"
+        },
+        "embedded_equals_download": true,
+        "phase_navigation_links": true
+      },
+      {
+        "page": "postclose",
+        "phase": "final",
+        "as_of": "2026-10-28",
+        "data_date": "2026-10-27",
+        "generated_at": "2026-10-27T18:11:09.405384+00:00",
+        "status": "partial",
+        "candidates": 15,
+        "institutional_status": {
+          "market_dates": {
+            "TPEX": "2026-10-27",
+            "TWSE": "2026-10-27"
+          },
+          "required_date": "2026-10-27",
+          "status": "ready"
+        },
+        "embedded_equals_download": true,
+        "phase_navigation_links": true
+      },
+      {
+        "page": "final",
+        "phase": "final",
+        "as_of": "2026-10-28",
+        "data_date": "2026-10-27",
+        "generated_at": "2026-10-27T18:11:09.405384+00:00",
+        "status": "partial",
+        "candidates": 15,
+        "institutional_status": {
+          "market_dates": {
+            "TPEX": "2026-10-27",
+            "TWSE": "2026-10-27"
+          },
+          "required_date": "2026-10-27",
+          "status": "ready"
+        },
+        "embedded_equals_download": true,
+        "phase_navigation_links": true
+      }
+    ],
+    "comparison_with_previous_snapshot": {
+      "previous_verified_at_taipei": "2026-10-28T06:26:13.152696+08:00",
+      "postclose_json_unchanged": true,
+      "shared_assets_unchanged": [
+        "assets/app.js",
+        "assets/style.css",
+        "assets/plotly.min.js"
+      ],
+      "new_preopen_as_of": "2026-10-28",
+      "new_preopen_data_date": "2026-10-27"
+    },
+    "preopen_browser": [
+      {
+        "viewport": "desktop",
+        "width": 1440,
+        "height": 1000,
+        "data_date": "2026-10-27",
+        "candidates": 15,
+        "chart_industries": 10,
+        "errors": [],
+        "checks": [
+          "navigation",
+          "responsive layout",
+          "persistent local watchlist",
+          "stock details",
+          "search",
+          "shortlist provenance",
+          "risk plans",
+          "Plotly values"
+        ]
+      },
+      {
+        "viewport": "android",
+        "width": 390,
+        "height": 844,
+        "data_date": "2026-10-27",
+        "candidates": 15,
+        "chart_industries": 10,
+        "errors": [],
+        "checks": [
+          "navigation",
+          "responsive layout",
+          "persistent local watchlist",
+          "stock details",
+          "search",
+          "shortlist provenance",
+          "risk plans",
+          "Plotly values"
+        ]
+      }
+    ]
+  }
+}

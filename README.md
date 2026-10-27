@@ -4,6 +4,8 @@
 
 **研究網站：[開啟台股 AI 研究報告](https://shen19772002-sketch.github.io/taiwan-stock-ai/)**。2026-10-25 已完成正式 Pages 部署；實際行情日與研究日分開顯示，休市不產生當日新選股訊號。
 
+每日自動更新：[盤前研究](https://shen19772002-sketch.github.io/taiwan-stock-ai/preopen.html)（08:20）、[盤後研究](https://shen19772002-sketch.github.io/taiwan-stock-ai/postclose.html)（15:30，18:30／20:30 補充）；時間皆為台灣平日排程，GitHub 實際啟動可能延遲。[手動執行、歷史保存與診斷方式](docs/daily-automation.md)。
+
 ## 功能
 
 - 上市／上櫃普通股行情、產業分類、PE／PB／殖利率；來源、日期與完整性可追溯。
