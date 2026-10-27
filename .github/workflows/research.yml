@@ -2,7 +2,10 @@ name: Daily Taiwan stock research
 
 on:
   schedule:
-    # UTC; phase below follows the scheduled slot even if the runner starts late.
+    # GitHub cron uses UTC. Asia/Taipei is UTC+8 and has no daylight saving.
+    # Phase follows the scheduled slot even if GitHub starts the runner late.
+    # 08:20 preopen; 12:30 existing intraday availability check; 15:30 postclose;
+    # 18:30 and 20:30 refresh officially published institutional data.
     - cron: '20 0 * * 1-5'
     - cron: '30 4 * * 1-5'
     - cron: '30 7 * * 1-5'
@@ -30,6 +33,10 @@ on:
 permissions:
   contents: read
 
+env:
+  TZ: Asia/Taipei
+  PYTHONUNBUFFERED: '1'
+
 # Never cancel a run while its persistent history is being written.
 concurrency:
   group: taiwan-stock-research-and-history
@@ -45,17 +52,25 @@ jobs:
       - uses: actions/checkout@v4
         with:
           persist-credentials: false
+      - name: Initialize diagnostics
+        run: |
+          mkdir -p run-logs
+          date -u > run-logs/job-started.txt
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
           cache: pip
           cache-dependency-path: requirements.lock
-      - run: python -m pip install -r requirements.lock -e .
+      - name: Install pinned dependencies
+        run: >-
+          python scripts/run_research.py --label install --attempts 2 --timeout 300 --
+          python -m pip install -r requirements.lock -e .
       - name: Restore permanent data branch
         id: restore
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: >-
+          python scripts/run_research.py --label restore --attempts 1 --timeout 600 --
           python scripts/persist_data.py restore
           --repository "$GITHUB_REPOSITORY"
           --state-dir "$RUNNER_TEMP/market-data-checkout"
@@ -81,20 +96,26 @@ jobs:
           PY
       - name: Probe official sources for manual validation
         if: ${{ inputs.probe_sources }}
-        run: python -m taiwan_stock_ai probe --data-dir data
+        run: >-
+          python scripts/run_research.py --label probe --attempts 2 --timeout 600 --
+          python -m taiwan_stock_ai probe --data-dir data
       - name: Collect and generate research
         id: research
         env:
           RESEARCH_PHASE: ${{ inputs.phase || (github.event.schedule == '20 0 * * 1-5' && 'preopen') || (github.event.schedule == '30 4 * * 1-5' && 'intraday') || (github.event.schedule == '30 7 * * 1-5' && 'postclose') || 'final' }}
         run: >-
+          python scripts/run_research.py --label research --attempts 3 --timeout 600 --
           python -m taiwan_stock_ai run
           --phase "$RESEARCH_PHASE" --data-dir data --output site
       - name: Verify database before archive
-        run: python -m taiwan_stock_ai check-db --data-dir data
+        run: >-
+          python scripts/run_research.py --label integrity --attempts 1 --timeout 120 --
+          python -m taiwan_stock_ai check-db --data-dir data
       - name: Save permanent research history
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: >-
+          python scripts/run_research.py --label archive --attempts 3 --timeout 600 --
           python scripts/persist_data.py save
           --repository "$GITHUB_REPOSITORY"
           --state-dir "$RUNNER_TEMP/market-data-checkout"
@@ -107,10 +128,36 @@ jobs:
           path: data/
           retention-days: 30
           if-no-files-found: warn
+      - name: Summarize command outcomes
+        if: always()
+        run: |
+          python - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+          with open(os.environ['GITHUB_STEP_SUMMARY'], 'a', encoding='utf-8') as summary:
+              summary.write('### Research command results\n\n')
+              summary.write('A successful command may report waiting for official data or a closed market.\n\n')
+              summary.write('| Command | Attempts | Final exit code |\n| --- | ---: | ---: |\n')
+              for path in sorted(Path('run-logs').glob('*.json')):
+                  item = json.loads(path.read_text(encoding='utf-8'))
+                  summary.write(f"| {item['label']} | {len(item['attempts'])} | {item.get('exit_code', 'interrupted')} |\n")
+              summary.write('\nDownload the research-logs artifact for all attempt logs. '
+                            'Setup failures also remain in this Actions run log.\n')
+          PY
+      - name: Retain diagnostics even when setup or restore fails
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: research-logs-${{ github.run_id }}-${{ github.run_attempt }}
+          path: run-logs/
+          retention-days: 90
+          if-no-files-found: warn
       - uses: actions/upload-pages-artifact@v3
         with:
           path: site/
-      - name: Downloadable report while Pages is being configured
+      - name: Downloadable research pages
+        if: always() && steps.research.outcome == 'success'
         uses: actions/upload-artifact@v4
         with:
           name: research-report-${{ github.run_id }}

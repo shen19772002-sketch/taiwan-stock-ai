@@ -57,6 +57,34 @@ def test_network_or_missing_remote_is_not_a_new_empty_branch(tmp_path):
     assert not (tmp_path / "state").exists()
 
 
+def test_retry_pushes_pending_commit_after_transient_failure(tmp_path, monkeypatch):
+    remote = remote_repo(tmp_path)
+    state, data = tmp_path / "state", tmp_path / "data"
+    archive.restore(remote, state, data)
+    seed_data(data)
+    real_git = archive.git
+    attempts = []
+
+    def interrupted_push(*args, **kwargs):
+        if args[0] == "push":
+            attempts.append(args)
+            if len(attempts) == 1:
+                raise RuntimeError("Git push failed (synthetic temporary network failure)")
+        return real_git(*args, **kwargs)
+
+    monkeypatch.setattr(archive, "git", interrupted_push)
+    with pytest.raises(RuntimeError, match="push failed"):
+        archive.save(state, data)
+    pending = real_git("rev-parse", "HEAD", cwd=state).stdout.strip()
+    assert archive.save(state, data)
+    assert len(attempts) == 2
+    assert real_git("rev-parse", "HEAD", cwd=state).stdout.strip() == pending
+    archive.restore(remote, tmp_path / "verified", tmp_path / "verified-data")
+    with sqlite3.connect(tmp_path / "verified-data" / "market.sqlite3") as db:
+        assert db.execute("SELECT value FROM fixture").fetchall() == [(1,)]
+    assert not archive.save(state, data)
+
+
 def test_restore_preserves_existing_local_data(tmp_path):
     data = tmp_path / "data"
     seed_data(data)

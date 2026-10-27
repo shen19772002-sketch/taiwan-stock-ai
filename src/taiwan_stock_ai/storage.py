@@ -12,13 +12,34 @@ def canonical(value: object) -> str:
     return json.dumps(value, ensure_ascii=False, sort_keys=True, allow_nan=False, separators=(",", ":"))
 
 
+def report_fingerprint(report: dict) -> str:
+    """Identify research content independently of when the same inputs were fetched.
+
+    Raw response bytes and acquisition timestamps remain in the immutable first
+    report and in the raw archive. They are not new research versions. Values,
+    model rules, data dates, availability/quality statuses and errors still are.
+    """
+    def content(value):
+        if isinstance(value, dict):
+            return {key: content(item) for key, item in value.items()
+                    if key not in {"fetched_at", "raw_path", "sha256"}}
+        if isinstance(value, list):
+            return [content(item) for item in value]
+        return value
+
+    meaningful = {key: value for key, value in report.items()
+                  if key not in {"generated_at", "history"}}
+    meaningful.setdefault("phase", "manual")
+    return hashlib.sha256(("report-content-v1:" + canonical(content(meaningful))).encode()).hexdigest()
+
+
 class Store:
     """Raw revisions are immutable; queries choose the latest known revision."""
 
     def __init__(self, path: str | Path):
         self.path = Path(path)
         self.path.parent.mkdir(parents=True, exist_ok=True)
-        self.db = sqlite3.connect(self.path)
+        self.db = sqlite3.connect(self.path, timeout=30)
         self.db.row_factory = sqlite3.Row
         self.db.executescript("""
             PRAGMA foreign_keys=ON;
@@ -38,8 +59,49 @@ class Store:
                 available_at TEXT NOT NULL, payload TEXT NOT NULL,
                 UNIQUE(date,market,symbol)
             );
-            PRAGMA user_version=1;
+            CREATE TABLE IF NOT EXISTS report_versions (
+                as_of TEXT NOT NULL, phase TEXT NOT NULL, fingerprint TEXT NOT NULL,
+                run_id TEXT NOT NULL REFERENCES runs(id),
+                PRIMARY KEY(as_of,phase,fingerprint)
+            );
+            CREATE TABLE IF NOT EXISTS phase_heads (
+                phase TEXT PRIMARY KEY, as_of TEXT NOT NULL, selected_at TEXT NOT NULL,
+                run_id TEXT NOT NULL REFERENCES runs(id)
+            );
         """)
+        self._migrate_report_versions()
+
+    def _migrate_report_versions(self) -> None:
+        """Index old immutable reports once, retaining every old row and signal."""
+        with self.db:
+            self.db.execute("BEGIN IMMEDIATE")
+            version = self.db.execute("PRAGMA user_version").fetchone()[0]
+            if version >= 3:
+                return
+            if version < 2:
+                # The first known report wins for duplicate legacy content. Later
+                # legacy copies remain readable; migration never rewrites evidence.
+                for row in self.db.execute("SELECT id,payload FROM runs ORDER BY generated_at,rowid"):
+                    report = json.loads(row["payload"])
+                    self.db.execute("INSERT OR IGNORE INTO report_versions VALUES (?,?,?,?)",
+                                    (report["as_of"], report.get("phase", "manual"),
+                                     report_fingerprint(report), row["id"]))
+            # Before v3 no selection pointer existed. Seed the latest report per
+            # phase, with trading date taking precedence over a later backfill.
+            for row in self.db.execute("SELECT id,payload FROM runs ORDER BY as_of,generated_at,rowid"):
+                self._select_phase_report(json.loads(row["payload"]), row["id"])
+            self.db.execute("PRAGMA user_version=3")
+
+    def _select_phase_report(self, report: dict, run_id: str) -> None:
+        """Advance the display pointer using the invocation, not first publication."""
+        phase = report.get("phase", "manual")
+        self.db.execute("""
+            INSERT INTO phase_heads (phase,as_of,selected_at,run_id) VALUES (?,?,?,?)
+            ON CONFLICT(phase) DO UPDATE SET
+                as_of=excluded.as_of, selected_at=excluded.selected_at, run_id=excluded.run_id
+            WHERE excluded.as_of > phase_heads.as_of
+               OR (excluded.as_of = phase_heads.as_of AND excluded.selected_at >= phase_heads.selected_at)
+        """, (phase, report["as_of"], report["generated_at"], run_id))
 
     def __enter__(self):
         return self
@@ -79,9 +141,24 @@ class Store:
     def save_report(self, report: dict, record_signals: bool = True) -> str:
         payload = canonical(report)
         run_id = hashlib.sha256(payload.encode()).hexdigest()
+        key = (report["as_of"], report.get("phase", "manual"), report_fingerprint(report))
         with self.db:
+            # Serialize the lookup and insert across processes. The unique key
+            # also protects this invariant from other writers of this schema.
+            self.db.execute("BEGIN IMMEDIATE")
+            existing = self.db.execute(
+                "SELECT run_id FROM report_versions WHERE as_of=? AND phase=? AND fingerprint=?", key,
+            ).fetchone()
+            if existing:
+                # Do not attach forecasts retroactively to an earlier display-
+                # only report. A new report and its signals commit atomically.
+                # An A -> B -> A recovery selects the original A without adding
+                # duplicate evidence or pretending it was first published now.
+                self._select_phase_report(report, existing["run_id"])
+                return existing["run_id"]
             self.db.execute("INSERT OR IGNORE INTO runs VALUES (?,?,?,?,?)",
                             (run_id, report["as_of"], report["generated_at"], report["status"], payload))
+            self.db.execute("INSERT INTO report_versions VALUES (?,?,?,?)", (*key, run_id))
             if record_signals:
                 for stock in report["analysis"]["candidates"]:
                     if stock["date"] != report["as_of"]:
@@ -90,7 +167,26 @@ class Store:
                     self.db.execute("INSERT OR IGNORE INTO signals VALUES (?,?,?,?,?,?,?)",
                                     (key, run_id, stock["date"], stock["market"], stock["symbol"],
                                      report["generated_at"], canonical(stock)))
+            self._select_phase_report(report, run_id)
         return run_id
+
+    def get_report(self, run_id: str) -> dict | None:
+        row = self.db.execute("SELECT payload FROM runs WHERE id=?", (run_id,)).fetchone()
+        return json.loads(row["payload"]) if row else None
+
+    def latest_phase_reports(self) -> dict[str, dict]:
+        """Return independently retained phase reports without rewriting payloads."""
+        rows = self.db.execute("""
+            SELECT phase_heads.phase,runs.payload FROM phase_heads
+            JOIN runs ON runs.id=phase_heads.run_id
+            WHERE phase_heads.phase IN ('preopen','postclose','final')
+        """)
+        return {row["phase"]: json.loads(row["payload"]) for row in rows}
+
+    def phase_selection_times(self) -> dict[str, str]:
+        """Expose current selection times separately from immutable publication times."""
+        rows = self.db.execute("SELECT phase,selected_at FROM phase_heads")
+        return {row["phase"]: row["selected_at"] for row in rows}
 
     def signals(self, as_of: str) -> list[dict]:
         rows = self.db.execute("SELECT * FROM signals WHERE date<=? ORDER BY date,market,symbol", (as_of,))
@@ -104,10 +200,19 @@ class Store:
             report = json.loads(row["payload"])
             results.append({"id": row["id"], "as_of": report["as_of"],
                             "generated_at": report["generated_at"], "status": report["status"],
+                            "phase": report.get("phase", "manual"),
                             "candidate_count": len(report["analysis"]["candidates"])})
         return results
 
     def latest_sources(self) -> list[dict]:
+        for row in self.db.execute("""
+            SELECT runs.payload FROM phase_heads JOIN runs ON runs.id=phase_heads.run_id
+            ORDER BY phase_heads.as_of DESC,phase_heads.selected_at DESC
+        """):
+            sources = json.loads(row["payload"]).get("sources", [])
+            if sources:
+                return sources
+        # Legacy reports without a usable source-bearing head remain available.
         for row in self.db.execute("SELECT payload FROM runs ORDER BY generated_at DESC"):
             sources = json.loads(row["payload"]).get("sources", [])
             if sources:

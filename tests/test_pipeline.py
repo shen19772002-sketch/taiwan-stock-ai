@@ -102,3 +102,64 @@ def test_missing_database_check_fails(tmp_path):
     with pytest.raises(SystemExit) as error:
         main(["check-db", "--data-dir", str(tmp_path / "missing")])
     assert error.value.code == 2
+
+
+def test_confirmed_holiday_preflight_skips_collection_and_analysis(tmp_path, monkeypatch):
+    monkeypatch.setattr("taiwan_stock_ai.pipeline.collect_calendar", lambda *_: {
+        "calendar": {"status": "verified", "trading_day": False, "reason": "synthetic holiday"},
+        "sources": [],
+    })
+    monkeypatch.setattr("taiwan_stock_ai.pipeline.collect", forbidden_collector)
+    monkeypatch.setattr("taiwan_stock_ai.pipeline.analyze", forbidden_collector)
+    report = run(tmp_path / "data", tmp_path / "site", phase="postclose", now=NOW)
+    assert report["status"] == "non_trading_day"
+    assert report["analysis"]["candidates"] == []
+
+
+def test_preopen_excludes_same_day_closing_data_even_when_run_late(tmp_path, monkeypatch):
+    def collector(as_of, raw_dir):
+        result = blocked_collector(as_of, raw_dir)
+        result["quotes"] = [{"market": "TWSE", "symbol": "9999", "date": day,
+                             "close": price, "fetched_at": NOW.isoformat()}
+                            for day, price in [("2025-01-03", 100), ("2025-01-06", 200)]]
+        return result
+
+    def inspect(quotes, fundamentals, institutions, as_of):
+        assert as_of == "2025-01-03"
+        assert [q["close"] for q in quotes] == [100]
+        return {"market": {}, "candidates": [], "stocks": [], "industries": [], "themes": []}
+
+    monkeypatch.setattr("taiwan_stock_ai.pipeline.analyze", inspect)
+    report = run(tmp_path / "data", tmp_path / "site", phase="preopen", collector=collector, now=NOW)
+    assert report["data_date"] == "2025-01-03"
+
+
+def test_repeat_run_keeps_original_report_file_and_phase_pages(tmp_path):
+    data, site = tmp_path / "data", tmp_path / "site"
+    first = run(data, site, phase="preopen", collector=blocked_collector, now=NOW)
+    original_files = {p.name: p.read_bytes() for p in (data / "reports").glob("*.json")}
+    repeated = run(data, site, phase="preopen", collector=blocked_collector,
+                   now=NOW.replace(minute=35))
+    assert repeated == first
+    assert {p.name: p.read_bytes() for p in (data / "reports").glob("*.json")} == original_files
+    with Store(data / "market.sqlite3") as store:
+        assert len(store.history()) == 1
+    run(data, site, phase="postclose", collector=blocked_collector, now=NOW.replace(minute=40))
+    assert json.loads((site / "assets/preopen.json").read_text())["generated_at"] == first["generated_at"]
+    assert json.loads((site / "assets/postclose.json").read_text())["phase"] == "postclose"
+    assert all((data / "reports" / name).read_bytes() == value for name, value in original_files.items())
+
+
+def test_past_holiday_does_not_display_analysis_from_later_report(tmp_path):
+    data = tmp_path / "data"
+    with Store(data / "market.sqlite3") as store:
+        store.ingest("quotes", [{"market": "TWSE", "symbol": "9999", "date": "2025-01-03",
+                                 "close": 100, "fetched_at": NOW.isoformat()}], "2025-01-06")
+        store.save_report({"as_of": "2025-01-06", "generated_at": NOW.isoformat(),
+                           "phase": "postclose", "status": "ready", "analysis": {
+                               "as_of": "2025-01-06", "candidates": [],
+                               "stocks": [{"symbol": "9999", "close": 999}]}})
+    report = run(data, tmp_path / "site", phase="postclose", as_of=date(2025, 1, 5), now=NOW)
+    assert report["status"] == "non_trading_day"
+    assert report["analysis"]["stocks"] == []
+    assert report["data_date"] == "2025-01-03"

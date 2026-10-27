@@ -56,6 +56,7 @@ python -m taiwan_stock_ai run --phase manual
 ```bash
 python -m taiwan_stock_ai probe
 python -m taiwan_stock_ai run --phase preopen
+python -m taiwan_stock_ai run --phase postclose
 python -m taiwan_stock_ai run --phase final
 python -m taiwan_stock_ai run --offline
 python -m taiwan_stock_ai check-db
@@ -87,6 +88,7 @@ python -m ruff check src tests scripts
 - [系統架構與時序](docs/architecture.md)
 - [官方 API 實測](docs/api-validation.md)
 - [評分、價位與風險模型](docs/models.md)
+- [每日盤前／盤後設定與驗證](docs/daily-automation.md)
 - [部署與歷史保存](docs/deployment.md)
 - [開發驗證紀錄](docs/validation.md)
 - [下週交易日與啟用檢查](docs/market-readiness.md)
@@ -96,4 +98,4 @@ python -m ruff check src tests scripts
 
 測試中的合成資料不會作為行情備援或網頁展示。瀏覽器驗證另安裝 `python -m pip install -e '.[browser]'`，啟動本機網站後執行 `python scripts/browser_smoke.py --chromium /path/to/chromium`。
 
-V1 尚無完整法人明細、財報公布時點、除權息還原與下市資料，不宣稱完整獲利品質或歷史超額績效。先補齊這些資料，再擴充正式回測、樣本外驗證、新聞題材與深度 AI 研究。
+已接入 TWSE T86／TPEx 三大法人明細，依實際日期與完整性使用。V1 尚無完整財報公布時點、除權息還原與下市資料，不宣稱完整獲利品質或歷史超額績效。先補齊這些資料，再擴充正式回測、樣本外驗證、新聞題材與深度 AI 研究。

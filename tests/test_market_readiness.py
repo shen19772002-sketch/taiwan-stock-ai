@@ -11,7 +11,7 @@ import json
 import pytest
 
 from taiwan_stock_ai.pipeline import run
-from taiwan_stock_ai.providers import parse_calendar
+from taiwan_stock_ai.providers import ENDPOINTS, parse_calendar
 from taiwan_stock_ai.storage import Store
 
 
@@ -163,6 +163,37 @@ def test_cached_calendar_never_certifies_tuesday_open(tmp_path, calendar_rows):
                  now=datetime(2026, 10, 27, 4, 30, tzinfo=timezone.utc))
     assert report["status"] == "waiting"
     assert report["calendar"]["trading_day"] is None
+
+
+def test_retained_emergency_closure_skips_intraday_analysis(tmp_path, monkeypatch):
+    data_dir = tmp_path / "data"
+    responses = {
+        "twse_market_notices": {"data": [[2, "臺灣證券交易所集中交易市場115年10月23日休市一天",
+                                          "115年10月22日", "test-notice"]]},
+        "tpex_market_notices": {"release": [{"id": 23117,
+            "title": "115/10/22 因颱風過境，台北市政府宣布10月23日全日停止上班，櫃檯買賣有價證券市場及衍生性金融商品市場休市一日"}]},
+    }
+    sources = []
+    for source_id, payload in responses.items():
+        path = data_dir / "raw" / "closure-fixture" / f"{source_id}.json"
+        path.parent.mkdir(parents=True, exist_ok=True)
+        raw = json.dumps(payload, ensure_ascii=False).encode()
+        path.write_bytes(raw)
+        sources.append({"id": source_id, "url": ENDPOINTS[source_id], "status": "ok",
+                        "fetched_at": "2026-10-22T12:00:00+00:00", "raw_path": str(path),
+                        "sha256": hashlib.sha256(raw).hexdigest(), "row_count": 1,
+                        "data_date": "2026-10-22", "error": None})
+    with Store(data_dir / "market.sqlite3") as store:
+        store.save_report({"as_of": "2026-10-22", "generated_at": "2026-10-22T12:01:00+00:00",
+                           "status": "waiting", "sources": sources, "analysis": {"candidates": []}})
+    def forbidden(*args, **kwargs):
+        raise AssertionError("Confirmed emergency holiday must not run the model")
+    monkeypatch.setattr("taiwan_stock_ai.pipeline.analyze", forbidden)
+    report = run(data_dir, tmp_path / "site", phase="intraday", collector=forbidden,
+                 now=datetime(2026, 10, 23, 4, 30, tzinfo=timezone.utc))
+    assert report["status"] == "non_trading_day"
+    assert report["calendar"]["source_mode"] == "retained"
+    assert len(report["calendar"]["evidence"]) == 2
 
 
 @pytest.mark.parametrize("quote_day,expected_signals", [("2026-10-22", 0), ("2026-10-27", 1)])

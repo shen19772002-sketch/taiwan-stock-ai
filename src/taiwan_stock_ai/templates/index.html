@@ -5,14 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="台股盤後研究：官方市場資料、可解釋選股規則、產業相對強弱與歷史訊號追蹤。">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'">
-  <title>台股 AI 智慧研究｜每日投資研究室</title>
+  <title>台股 AI 智慧研究｜{{ {'preopen':'盤前研究','postclose':'盤後研究','final':'完整資料更新'}.get(page, '最新研究') }}</title>
   <link rel="stylesheet" href="assets/style.css">
   <script src="assets/plotly.min.js" defer></script>
   <script src="assets/app.js" defer></script>
 </head>
 <body>
   {% set a = report.analysis %}
-  {% set source_names = {'twse_companies':'TWSE 上市公司名單','tpex_companies':'TPEx 上櫃公司名單','twse_quotes':'TWSE 上市盤後行情','tpex_quotes':'TPEx 上櫃盤後行情','twse_valuations':'TWSE 估值指標','tpex_valuations':'TPEx 估值指標','twse_dated_quotes':'TWSE 有日期行情備援','twse_dated_valuations':'TWSE 有日期估值備援','twse_calendar':'TWSE 官方行事曆'} %}
+  {% set source_names = {'twse_companies':'TWSE 上市公司名單','tpex_companies':'TPEx 上櫃公司名單','twse_quotes':'TWSE 上市盤後行情','tpex_quotes':'TPEx 上櫃盤後行情','twse_valuations':'TWSE 估值指標','tpex_valuations':'TPEx 估值指標','twse_dated_quotes':'TWSE 有日期行情備援','twse_dated_valuations':'TWSE 有日期估值備援','twse_calendar':'TWSE 官方行事曆','twse_institutions':'TWSE 三大法人買賣超','tpex_institutions':'TPEx 三大法人買賣超','twse_market_notices':'TWSE 市場休市公告','tpex_market_notices':'TPEx 市場休市公告'} %}
   {% set market = a.market %}
   {% set phase_labels = {'preopen':'盤前研究','intraday':'盤中排程','postclose':'盤後初報','final':'完整資料更新','manual':'手動研究'} %}
   {% set status_labels = {'ready':'分析完成','partial':'資料尚未齊全','waiting':'等待官方資料','non_trading_day':'非交易日'} %}
@@ -37,6 +37,14 @@
       <div class="sidebar-note"><span class="tiny-label">研究原則</span><p>讓每個判斷，都有可追溯的依據。</p><span>官方資料 · 規則透明 · 風險優先</span></div>
     </aside>
     <main>
+      <nav class="phase-nav" aria-label="研究報告時段">
+        {% for slug, label, schedule in [('index', '最新研究', '最近執行結果'), ('preopen', '盤前研究', '平日 08:20'), ('postclose', '盤後研究', '平日 15:30'), ('final', '完整資料更新', '平日 18:30／20:30')] %}
+        <a href="{{ slug }}.html"{% if page == slug %} aria-current="page"{% endif %}><span>{{ label }}</span><small>{{ schedule }}</small></a>
+        {% endfor %}
+      </nav>
+      <p class="phase-schedule-note">排程時間為台灣時間；遇官方休市日跳過交易分析，實際啟動時間可能因 GitHub 排程延遲。</p>
+      {% if is_postclose_supplement %}<div class="notice">本頁顯示最新盤後補充報告（完整資料更新）；原始報告仍依各次記錄保留。資料是否齊全，請見本次狀態與官方來源明細。</div>{% endif %}
+      {% if phase_is_stale %}<div class="notice">此頁保留最近一次{{ phase_labels.get(report.phase, report.phase) }}：{{ report.as_of }}。最新排程基準日為 {{ latest_as_of }}；請以本頁標示的行情交易日與更新時間判讀。</div>{% endif %}
       <section id="overview" class="section hero-section">
         <div class="eyebrow">每日投資研究室 / {{ phase_labels.get(report.phase, report.phase) }}</div>
         <div class="section-heading hero-heading"><div><h1>看見市場脈動，<br><span>建立自己的研究判斷。</span></h1><p class="hero-description">從上市、上櫃官方盤後資料出發，追蹤產業強弱、選股依據與可驗證的策略。</p></div><div class="report-date"><span>研究基準日</span><strong>{{ report.as_of or '等待資料' }}</strong><span class="badge status-{{ report.status }}">{{ status_labels.get(report.status, report.status) }}</span></div></div>
@@ -44,6 +52,16 @@
         {% if report.phase == 'intraday' %}<div class="notice">V1.0 尚未啟用授權盤中資料來源。此頁僅呈現最後可驗證的盤後資料，12:30 排程不產生即時報價。</div>{% endif %}
         {% if report.status != 'ready' %}<div class="notice">{{ '今天不產生新的交易訊號；保留最近可驗證的研究內容。' if report.status == 'non_trading_day' else '部分官方資料或歷史觀測尚未齊全。缺漏欄位保持空白，選股與策略會等待所需資料完成。' }}</div>{% endif %}
         {% for notice in report.get('notices', []) %}<div class="notice">{{ notice }}</div>{% endfor %}
+        {% if report.get('institutional_status') %}
+        {% set institutions = report.institutional_status %}
+        <div class="institution-status" aria-label="法人資料完整性">
+          <span>法人資料 <b>{{ '與行情日對齊' if institutions.status == 'ready' else '資料待齊' }}</b></span>
+          <span>行情基準：{{ institutions.required_date or '等待可驗證行情' }}</span>
+          <span>上市：{{ institutions.get('market_dates', {}).get('TWSE') or '尚未取得' }}</span>
+          <span>上櫃：{{ institutions.get('market_dates', {}).get('TPEX') or '尚未取得' }}</span>
+          {% if institutions.status != 'ready' %}<small>缺漏資料不視為買賣超零；官方資料公布後由後續排程補充。</small>{% endif %}
+        </div>
+        {% endif %}
         <div class="metric-grid">
           <article class="metric-card"><span class="tiny-label">市場趨勢</span><strong>{{ market.get('trend') or '等待判讀' }}</strong><small>依已累積價格與市場廣度判讀</small></article>
           <article class="metric-card"><span class="tiny-label">可驗證股票</span><strong>{{ market.get('covered_stocks', a.stocks|length)|number(0) }}<em>檔</em></strong><small>上市與上櫃普通股觀測範圍</small></article>
@@ -82,8 +100,8 @@
       </section>
 
       <section id="reports" class="section">
-        <div class="section-heading"><div><div class="eyebrow">EVIDENCE OVER TIME</div><h2>每日研究報告與歷史績效</h2><p>保存當時的訊號，等待後續行情驗證。</p></div><a href="assets/report.json" download="taiwan-stock-research.json" class="secondary-button">下載研究資料 ↓</a></div>
-        <div class="split-grid"><article class="panel"><div class="panel-heading"><h3>今日研究摘要</h3><span class="tiny-label">{{ report.as_of }}</span></div><div class="report-prose"><p>本次為「{{ phase_labels.get(report.phase, report.phase) }}」，狀態：{{ status_labels.get(report.status, report.status) }}。目前可驗證 {{ market.get('covered_stocks', a.stocks|length)|number(0) }} 檔股票，{{ market.get('technical_ready', 0)|number(0) }} 檔具備技術分析所需歷史。</p><p>市場趨勢判讀：{{ market.get('trend') or '等待足夠資料' }}。本次篩選 {{ a.candidates|length }} 檔研究標的{% if a.candidates %}，包括 {% for stock in a.candidates[:5] %}{{ stock.name }}（{{ stock.symbol }}）{{ '、' if not loop.last else '' }}{% endfor %}{% endif %}。</p>{% if a.industries %}<p>產業相對強弱觀察：{% for sector in a.industries[:3] %}{{ sector.industry }}{{ '、' if not loop.last else '' }}{% endfor %}。成交熱度僅作為研究代理指標。</p>{% endif %}<ul class="readable-list">{% for limitation in a.limitations %}<li>{{ limitation }}</li>{% endfor %}</ul><p>研究名單及策略應配合資料時間、成本假設與失效條件評估；系統不執行真實交易。</p></div></article><article class="panel"><div class="panel-heading"><h3>訊號追蹤</h3><span class="badge">歷史驗證</span></div><div id="performance-summary"></div><p class="method-note">固定持有期追蹤，非策略成交回測。以訊號記錄後第一筆完整開盤資料模擬進場，觀察 5／20 筆交易資料；納入雙邊手續費、賣出證交稅與滑價。尚未完成的訊號不列入勝率。</p><div class="table-scroll"><table><thead><tr><th>研究日期</th><th>狀態</th><th>研究檔數</th></tr></thead><tbody id="history-body"></tbody></table></div></article></div>
+        <div class="section-heading"><div><div class="eyebrow">EVIDENCE OVER TIME</div><h2>每日研究報告與歷史績效</h2><p>保存當時的訊號，等待後續行情驗證。</p></div><a href="assets/{{ data_file }}" download="taiwan-stock-{{ page }}-research.json" class="secondary-button">下載研究資料 ↓</a></div>
+        <div class="split-grid"><article class="panel"><div class="panel-heading"><h3>今日研究摘要</h3><span class="tiny-label">{{ report.as_of }}</span></div><div class="report-prose"><p>本次為「{{ phase_labels.get(report.phase, report.phase) }}」，狀態：{{ status_labels.get(report.status, report.status) }}。目前可驗證 {{ market.get('covered_stocks', a.stocks|length)|number(0) }} 檔股票，{{ market.get('technical_ready', 0)|number(0) }} 檔具備技術分析所需歷史。</p><p>市場趨勢判讀：{{ market.get('trend') or '等待足夠資料' }}。本次篩選 {{ a.candidates|length }} 檔研究標的{% if a.candidates %}，包括 {% for stock in a.candidates[:5] %}{{ stock.name }}（{{ stock.symbol }}）{{ '、' if not loop.last else '' }}{% endfor %}{% endif %}。</p>{% if a.industries %}<p>產業相對強弱觀察：{% for sector in a.industries[:3] %}{{ sector.industry }}{{ '、' if not loop.last else '' }}{% endfor %}。成交熱度僅作為研究代理指標。</p>{% endif %}<ul class="readable-list">{% for limitation in a.limitations %}<li>{{ limitation }}</li>{% endfor %}</ul><p>研究名單及策略應配合資料時間、成本假設與失效條件評估；系統不執行真實交易。</p></div></article><article class="panel"><div class="panel-heading"><h3>訊號追蹤</h3><span class="badge">歷史驗證</span></div><div id="performance-summary"></div><p class="method-note">固定持有期追蹤，非策略成交回測。以訊號記錄後第一筆完整開盤資料模擬進場，觀察 5／20 筆交易資料；納入雙邊手續費、賣出證交稅與滑價。尚未完成的訊號不列入勝率。</p><div class="table-scroll"><table><thead><tr><th>研究日期</th><th>時段</th><th>記錄時間（台灣）</th><th>狀態</th><th>研究檔數</th></tr></thead><tbody id="history-body"></tbody></table></div></article></div>
         <article class="panel performance-records"><div class="panel-heading"><h3>逐筆訊號觀察紀錄</h3><span class="muted">原始訊號保留 · 最多顯示最近 100 筆</span></div><div class="table-scroll"><table><thead><tr><th>股票</th><th>訊號日</th><th>模擬進場日</th><th>觀察結束日</th><th>持有期</th><th>淨報酬</th><th>狀態</th></tr></thead><tbody id="performance-records"></tbody></table></div></article>
       </section>
 

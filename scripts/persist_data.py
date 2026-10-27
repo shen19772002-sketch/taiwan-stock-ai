@@ -246,8 +246,15 @@ def save(state: Path, data: Path, env: dict | None = None, *, chunk_size: int = 
     git("add", "--all", "--", "data", ARCHIVE_DIR, "README.md", cwd=state, env=env)
     staged = git("diff", "--cached", "--quiet", cwd=state, env=env, allowed=(0, 1))
     if staged.returncode == 0:
-        return False
-    git("commit", "-m", "Archive daily research observations and reports", cwd=state, env=env)
+        # A previous attempt may have committed locally before its push failed.
+        # A clean index alone is not evidence that the remote archive is saved.
+        head = git("rev-parse", "HEAD", cwd=state, env=env).stdout.strip()
+        remote_head = git("rev-parse", "--verify", f"refs/remotes/origin/{BRANCH}",
+                          cwd=state, env=env, allowed=(0, 128))
+        if remote_head.returncode == 0 and remote_head.stdout.strip() == head:
+            return False
+    else:
+        git("commit", "-m", "Archive daily research observations and reports", cwd=state, env=env)
     # A concurrently changed remote is rejected. Never rebase/force a stale database.
     git("push", "origin", f"HEAD:refs/heads/{BRANCH}", cwd=state, env=env)
     return True

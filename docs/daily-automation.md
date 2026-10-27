@@ -1,0 +1,59 @@
+# 每日盤前與盤後自動分析
+
+本設定沿用既有 `taiwan_stock_ai` 分析、SQLite、歷史資料分支及 GitHub Pages，不另建專案，不提供真實交易下單。
+
+## 自動執行時間
+
+工作流程為 `.github/workflows/research.yml` 的 **Daily Taiwan stock research**。執行環境設定 `TZ=Asia/Taipei`；GitHub cron 使用 UTC，因此以下時間已換算為 UTC+8。
+
+| 台灣時間，週一至週五 | UTC cron | phase | 網頁 |
+| --- | --- | --- | --- |
+| 08:20 | `20 0 * * 1-5` | `preopen` | `preopen.html` |
+| 12:30（保留既有功能） | `30 4 * * 1-5` | `intraday` | 首頁顯示既有盤後資料，不宣稱即時報價 |
+| 15:30 | `30 7 * * 1-5` | `postclose` | `postclose.html` |
+| 18:30、20:30 | `30 10 * * 1-5`、`30 12 * * 1-5` | `final` | 更新盤後頁及 `final.html` |
+
+GitHub 排程可能延遲或漏跑，不能保證準點。排隊延遲不改變原 cron 所指定的研究階段。盤前只使用研究日之前的盤後行情；即使手動在收盤後執行，也不混入當日收盤價。手動執行時間會如實列示，不能視為當天 08:20 已發布的預測。
+
+先查官方行事曆與兩交易所臨時休市公告；確認休市時不執行當日行情收集、選股模型或新增交易訊號，保留歷史資料並發布休市狀態。來源缺失時不將「沒有行情」當作已確認休市。
+
+法人使用 TWSE T86 與 TPEx 三大法人明細，以實際交易日、股數與完整性判定。尚未公布、部分市場落後或行情／估值未齊全時，報告保留等待／部分資料狀態；18:30、20:30 再收集。超過最後一次排程才公布的資料會在次日或手動 `final` 更新，不保證公布後立即觸發。
+
+## 手動執行
+
+開啟 [Daily Taiwan stock research](https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/workflows/research.yml)，按 **Run workflow**：
+
+1. Branch 選 `main`。
+2. 盤前選 `phase=preopen`；盤後選 `phase=postclose`；補法人資料選 `phase=final`。
+3. 本專案已保存歷史，`history_days=0`；一般更新不需勾選 `probe_sources`。
+4. 按 Run workflow，等待 `research` 與 `deploy` 兩個工作完成。
+
+實際分析入口是 `python -m taiwan_stock_ai run --phase preopen` 或 `--phase postclose`；工作流程經 `scripts/run_research.py` 執行此入口，沒有示範行情替代。
+
+## 查看報告
+
+- [最新研究首頁](https://shen19772002-sketch.github.io/taiwan-stock-ai/)
+- [盤前研究](https://shen19772002-sketch.github.io/taiwan-stock-ai/preopen.html)
+- [盤後研究及晚間補充](https://shen19772002-sketch.github.io/taiwan-stock-ai/postclose.html)
+- [晚間完整資料更新](https://shen19772002-sketch.github.io/taiwan-stock-ai/final.html)
+
+各頁顯示研究日、實際行情日、原始產生時間及來源狀態。晚間報告較新時，盤後頁顯示「盤後補充」，原始盤後報告仍在歷史中。沒有該階段報告時顯示等待，不借用其他階段內容。自選股仍只保存在瀏覽器，不上傳個人持股。
+
+## 歷史、去重與重試
+
+每次先還原遠端 `market-data`，完成分析及 SQLite 檢查後存回，再發布網頁。完整觀測、原始回應、歷史報告與最初預測持續保留；新增版本不刪除舊版。網站提供近期歷史及各時段頁面所引用的報告，完整封存留在資料分支。
+
+相同研究日、階段及研究內容重跑時重用原報告 ID，保留原產生時間。擷取時間、原始檔路徑及歷史清單變化不製造新報告；行情、法人、分析或來源品質有實質變化才新增版本。當日預測從次日開始列入績效快照，不以重跑改寫初始預測。
+
+官方網路暫時失敗最多請求兩次；分析程序、封存程序最多三次，間隔 20 秒並設超時。正常產生等待資料或休市頁的 exit 0 不會反覆重跑。還原失敗停止，不建立空歷史覆蓋遠端；應查看原因後重新執行整個 workflow。推送暫時失敗可重試同一已提交快照；遠端歷史衝突仍拒絕覆蓋，不使用 force push。
+
+## 成功／失敗紀錄
+
+在同一 Actions 頁面選一次執行：
+
+- `research`／`deploy` 的綠色勾表示程序與部署成功；仍需看報告資料日期及來源完整性。
+- 執行頁 Summary 顯示每個程序嘗試次數與最終 exit code；展開失敗步驟可讀錯誤。
+- `research-logs-執行ID-嘗試次數`：90 天內保留每次嘗試 stdout／stderr 及 JSON 結果。初始化或還原失敗也會嘗試上傳診斷。
+- `research-state-*`：還原成功後保留 30 天復原 artifact；`research-report-*`：分析成功後保留 30 天網頁 artifact。
+
+Artifacts 是短期故障復原用途，永久歷史仍由 `market-data` 保存。不要刪除或重設此分支。

@@ -48,7 +48,11 @@ def main(argv=None) -> int:
     if args.command == "run":
         report = run(args.data_dir, args.output, args.phase, args.as_of, args.offline)
         print(json.dumps({"status": report["status"], "as_of": report["as_of"],
+                          "phase": report["phase"], "generated_at": report["generated_at"],
                           "data_date": report["data_date"],
+                          "institutional_status": report.get("institutional_status"),
+                          "sources": [{k: s.get(k) for k in ("id", "status", "data_date", "error")}
+                                      for s in report["sources"]],
                           "candidates": len(report["analysis"]["candidates"]),
                           "site": str(args.output), "notices": report["notices"]}, ensure_ascii=False))
         return 0

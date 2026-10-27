@@ -10,6 +10,7 @@
   const number = (value, digits = 2) => value !== null && value !== undefined && Number.isFinite(Number(value)) ? Number(value).toLocaleString("zh-TW", {minimumFractionDigits: digits, maximumFractionDigits: digits}) : "—";
   const percent = (value, digits = 1) => value !== null && value !== undefined && Number.isFinite(Number(value)) ? `${number(Number(value) * 100, digits)}%` : "—";
   const labels = {ready: "分析完成", partial: "資料尚未齊全", waiting: "等待資料", non_trading_day: "非交易日", pending: "待後續驗證", completed: "已完成觀察", evaluated: "已完成觀察", excluded_unadjusted: "未調整異常，排除"};
+  const phaseLabels = {preopen: "盤前研究", intraday: "盤中排程", postclose: "盤後初報", final: "完整資料更新", manual: "手動研究"};
   const storageKey = "taiwan-stock-ai-watchlist-v1";
   let watchlist = readWatchlist();
 
@@ -182,14 +183,17 @@
       if (/^[a-f0-9]{64}$/.test(item.id || "")) {
         const link = el("a", `${item.as_of} ↓`);
         link.href = `history/${item.id}.json`;
-        link.setAttribute("download", `research-${item.as_of}.json`);
+        link.setAttribute("download", `research-${item.as_of}-${item.phase || "manual"}.json`);
         dateCell.append(link);
       } else dateCell.textContent = item.as_of || item.date || "—";
+      cell(row, phaseLabels[item.phase] || item.phase || "未記錄時段");
+      const recorded = item.generated_at ? new Date(item.generated_at) : null;
+      cell(row, recorded && Number.isFinite(recorded.getTime()) ? recorded.toLocaleString("zh-TW", {timeZone: "Asia/Taipei", hour12: false}) : "—");
       cell(row, labels[item.status] || item.status || "已儲存");
       cell(row, number(item.candidate_count ?? item.candidates_count, 0));
       body.append(row);
     });
-    if (!history.length) { const row = el("tr"); const empty = cell(row, "尚無歷史研究紀錄。", "empty-cell"); empty.colSpan = 3; body.append(row); }
+    if (!history.length) { const row = el("tr"); const empty = cell(row, "尚無歷史研究紀錄。", "empty-cell"); empty.colSpan = 5; body.append(row); }
     const recordsBody = $("performance-records");
     const records = performance.records || [];
     records.slice(-100).reverse().forEach(item => {

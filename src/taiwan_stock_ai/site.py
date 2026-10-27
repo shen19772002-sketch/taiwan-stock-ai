@@ -59,16 +59,8 @@ def _safe_url(value: Any) -> str:
         return ""
 
 
-def render_site(report: dict, output_dir: Path) -> None:
-    """Write an offline-capable dashboard; no external CDN or API key required.
-
-    ``report`` must contain only public research data. Personal watchlists and
-    position costs are stored by the browser, never included in report.json.
-    """
-    root = Path(__file__).parent
-    output_dir = Path(output_dir)
-    assets = output_dir / "assets"
-    assets.mkdir(parents=True, exist_ok=True)
+def _prepare_report(report: dict) -> dict:
+    """Copy and normalize render data without changing the stored report."""
     clean_report = _clean(report)
     analysis = clean_report.setdefault("analysis", {})
     for field in ("candidates", "stocks", "industries", "themes", "limitations"):
@@ -83,6 +75,56 @@ def render_site(report: dict, output_dir: Path) -> None:
     clean_report.setdefault("data_mode", "盤後資料")
     for source in clean_report["sources"]:
         source["safe_url"] = _safe_url(source.get("url"))
+    return clean_report
+
+
+def _pending_phase(phase: str) -> dict:
+    label = {"preopen": "盤前研究", "postclose": "盤後研究", "final": "完整資料更新"}[phase]
+    return {
+        "schema_version": 1,
+        "phase": phase,
+        "status": "waiting",
+        "as_of": None,
+        "data_date": None,
+        "generated_at": None,
+        "notices": [f"尚未產生{label}報告。排程或手動執行完成後會更新此頁。"],
+    }
+
+
+def _report_order(report: dict, selected_at: str | None = None) -> tuple[str, float]:
+    """Prefer the most recently selected phase head, preserving report timestamps."""
+    try:
+        timestamp = datetime.fromisoformat(str(selected_at or report.get("generated_at", "")).replace("Z", "+00:00"))
+        seconds = timestamp.timestamp() if timestamp.tzinfo is not None else 0.0
+    except (ValueError, OverflowError):
+        seconds = 0.0
+    return str(report.get("as_of") or ""), seconds
+
+
+def render_site(
+    report: dict,
+    output_dir: Path,
+    phase_reports: dict[str, dict] | None = None,
+    phase_selection_times: dict[str, str] | None = None,
+) -> None:
+    """Write the latest report and independently retained phase dashboards.
+
+    ``phase_reports`` contains each phase's latest stored report. Postclose also
+    shows newer final supplements under their original phase label. A missing
+    phase is shown as waiting; preopen never borrows postclose market analysis.
+    ``phase_selection_times`` orders deduplicated phase heads by last selection,
+    so a reused older report can correctly supersede an intervening supplement.
+    All reports contain public research data only. Personal watchlists and
+    position costs stay in the browser across these same-origin pages.
+    """
+    root = Path(__file__).parent
+    output_dir = Path(output_dir)
+    assets = output_dir / "assets"
+    assets.mkdir(parents=True, exist_ok=True)
+    retained = dict(phase_reports or {})
+    selected_times = phase_selection_times or {}
+    if report.get("phase") in {"preopen", "postclose", "final"}:
+        retained.setdefault(report["phase"], report)
     environment = Environment(
         loader=FileSystemLoader(root / "templates"),
         autoescape=select_autoescape(("html", "xml")),
@@ -90,10 +132,42 @@ def render_site(report: dict, output_dir: Path) -> None:
     environment.filters["number"] = _number
     environment.filters["taipei"] = _local_time
     template = environment.get_template("index.html")
-    (output_dir / "index.html").write_text(template.render(report=clean_report), encoding="utf-8")
-    (assets / "report.json").write_text(
-        json.dumps(clean_report, ensure_ascii=False, allow_nan=False, indent=2), encoding="utf-8"
-    )
+    for page in ("index", "preopen", "postclose", "final"):
+        selected = report if page == "index" else retained.get(page)
+        if page != "index" and selected is not None and selected.get("phase") != page:
+            selected = None
+        supplement = retained.get("final")
+        if (
+            page == "postclose" and supplement is not None and supplement.get("phase") == "final"
+            and (
+                selected is None
+                or _report_order(supplement, selected_times.get("final"))
+                > _report_order(selected, selected_times.get("postclose"))
+            )
+        ):
+            selected = supplement
+        if selected is None:
+            selected = _pending_phase(page)
+        clean_report = _prepare_report(selected)
+        data_file = "report.json" if page == "index" else f"{page}.json"
+        (output_dir / f"{page}.html").write_text(
+            template.render(
+                report=clean_report,
+                page=page,
+                data_file=data_file,
+                is_postclose_supplement=page == "postclose" and clean_report.get("phase") == "final",
+                latest_as_of=report.get("as_of"),
+                phase_is_stale=(
+                    page != "index" and bool(clean_report.get("as_of"))
+                    and bool(report.get("as_of"))
+                    and clean_report["as_of"] < report["as_of"]
+                ),
+            ),
+            encoding="utf-8",
+        )
+        (assets / data_file).write_text(
+            json.dumps(clean_report, ensure_ascii=False, allow_nan=False, indent=2), encoding="utf-8"
+        )
     for filename in ("style.css", "app.js"):
         shutil.copyfile(root / "static" / filename, assets / filename)
     (assets / "plotly.min.js").write_text(get_plotlyjs(), encoding="utf-8")

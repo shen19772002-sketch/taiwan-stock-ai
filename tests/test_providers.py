@@ -7,8 +7,8 @@ import pytest
 import requests
 
 from taiwan_stock_ai.providers import (
-    ENDPOINTS, collect, number, parse_calendar, parse_companies,
-    parse_date, parse_fundamentals, parse_quotes, fetch_response,
+    ENDPOINTS, collect, collect_calendar, number, parse_calendar, parse_companies,
+    parse_date, parse_fundamentals, parse_institutions, parse_market_calendar, parse_quotes, fetch_response,
 )
 
 
@@ -164,6 +164,31 @@ def test_dated_twse_fallback_is_used_when_openapi_omits_date(tmp_path):
     assert source["status"] == "waiting" and source["rejected_rows"] == 1
 
 
+@pytest.mark.parametrize("kind,field", [("quotes", "quotes"), ("valuations", "fundamentals")])
+@pytest.mark.parametrize("new_date,expected", [("20260105", "dated"), ("20260102", "primary"),
+                                             (None, "primary"), ("20260106", "primary")])
+def test_freshest_verified_twse_source_wins_without_duplicate_rows(tmp_path, kind, field, new_date, expected):
+    class FreshnessSession(FakeSession):
+        def get(self, url, **kwargs):
+            if url == ENDPOINTS[f"twse_{kind}"]:
+                return FakeResponse([quote() if kind == "quotes" else {
+                    "Code": "1234", "Date": "1150102", "PEratio": "10", "PBratio": "1", "DividendYield": "3"}])
+            if url == ENDPOINTS[f"twse_dated_{kind}"]:
+                row = quote() if kind == "quotes" else {
+                    "Code": "1234", "PEratio": "10", "PBratio": "1", "DividendYield": "3"}
+                row.pop("Date", None)
+                return FakeResponse({"date": new_date, "data": [row]})
+            return super().get(url, **kwargs)
+
+    result = collect(date(2026, 1, 5), tmp_path, session=FreshnessSession())
+    assert len(result[field]) == 1
+    source_id = f"twse_dated_{kind}" if expected == "dated" else f"twse_{kind}"
+    assert result[field][0]["source"] == ENDPOINTS[source_id]
+    assert result[field][0]["date"] == ("2026-01-05" if expected == "dated" else "2026-01-02")
+    primary = next(s for s in result["sources"] if s["id"] == f"twse_{kind}")
+    assert primary["accepted_rows"] == 1
+
+
 def test_calendar_does_not_infer_weekday_session_from_partial_holiday_list():
     payload = [{"Date": "20260101", "Name": "開國紀念日"}]
     assert parse_calendar(payload, date(2026, 1, 1), "source")["trading_day"] is False
@@ -229,3 +254,115 @@ def test_weekend_remains_nontrading_on_total_source_failure(tmp_path):
     assert result["quotes"] == []
     assert result["calendar"]["trading_day"] is False
     assert all(s["status"] == "error" for s in result["sources"])
+
+
+def institution(**changes):
+    return {"SecuritiesCompanyCode": "1234", "Date": "1150102",
+            "Foreign Investors include Mainland Area Investors (Foreign Dealers excluded)-Difference": "-1,200",
+            "SecuritiesInvestmentTrustCompanies-Difference": "200",
+            "Dealers-Difference": "0", "TotalDifference": "-1,000", **changes}
+
+
+def test_official_institutional_shares_keep_date_sign_and_zero():
+    records, rejected = parse_institutions([institution()], "TPEX", COMPANIES,
+                                           ENDPOINTS["tpex_institutions"], FETCHED, date(2026, 1, 5))
+    assert rejected == 0
+    row = records[0]
+    assert row["date"] == "2026-01-02"
+    assert row["net_buy"] == -1000 and row["foreign_net"] == -1200
+    assert row["investment_trust_net"] == 200 and row["dealer_net"] == 0
+    assert row["unit"] == "shares" and row["complete"] is True
+
+
+@pytest.mark.parametrize("changes", [{"Date": ""}, {"Date": "1150106"},
+                                    {"TotalDifference": "--"}, {"Dealers-Difference": ""},
+                                    {"TotalDifference": "0.5"}])
+def test_missing_future_or_noninteger_institution_data_is_not_fabricated(changes):
+    records, rejected = parse_institutions([institution(**changes)], "TPEX", COMPANIES,
+                                           "source", FETCHED, date(2026, 1, 5))
+    assert records == [] and rejected == 1
+
+
+def test_twse_institutional_envelope_and_company_scope():
+    fields = ["證券代號", "外陸資買賣超股數(不含外資自營商)", "投信買賣超股數", "自營商買賣超股數", "三大法人買賣超股數"]
+    payload = {"date": "20260102", "fields": fields,
+               "data": [["1234", "1500", "200", "-300", "1400"],
+                        ["006208", "1500", "200", "-300", "1400"]]}
+    records, rejected = parse_institutions(payload, "TWSE", COMPANIES, "source", FETCHED, date(2026, 1, 5))
+    assert len(records) == 1 and rejected == 0
+    assert records[0]["net_buy"] == 1400 and records[0]["date"] == "2026-01-02"
+
+
+def closure_responses():
+    # Actual official announcement titles and publication date, not price fixtures.
+    return {"twse_market_notices": {"data": [[2, "臺灣證券交易所集中交易市場115年10月23日休市一天",
+                                               "115年10月22日", "notice-id"]]},
+            "tpex_market_notices": {"release": [{"id": 23117,
+                "title": "115/10/22 因颱風過境，台北市政府宣布10月23日全日停止上班，櫃檯買賣有價證券市場及衍生性金融商品市場休市一日"}]}}
+
+
+def test_two_exchange_emergency_closures_are_verified_for_exact_date_only():
+    calendar = parse_market_calendar(closure_responses(), date(2026, 10, 23))
+    assert calendar["trading_day"] is False
+    assert set(calendar["market_closures"]) == {"TWSE", "TPEX"}
+    assert parse_market_calendar(closure_responses(), date(2026, 10, 27))["trading_day"] is None
+
+
+@pytest.mark.parametrize("change", ["single_exchange", "future_publication", "partial_day", "cancelled", "company", "ambiguous_year"])
+def test_emergency_calendar_requires_full_market_scope_and_known_dates(change):
+    responses = closure_responses()
+    tpex = responses["tpex_market_notices"]["release"][0]
+    if change == "single_exchange":
+        del responses["tpex_market_notices"]
+    elif change == "future_publication":
+        tpex["title"] = tpex["title"].replace("115/10/22", "115/10/24")
+    elif change == "partial_day":
+        tpex["title"] += "，僅下午休市"
+    elif change == "cancelled":
+        tpex["title"] += "，取消休市並照常交易"
+    elif change == "company":
+        tpex["title"] = "115/10/22 個別公司股票10月23日停止交易一日"
+    else:
+        tpex["title"] = tpex["title"].replace("115/10/22", "114/10/22")
+    assert parse_market_calendar(responses, date(2026, 10, 23))["trading_day"] is None
+
+
+def test_calendar_preflight_preserves_evidence_without_requesting_quotes_and_is_reused(tmp_path):
+    class CalendarSession(FakeSession):
+        calls = []
+
+        def get(self, url, **kwargs):
+            self.calls.append(url)
+            if url == ENDPOINTS["twse_calendar"]:
+                return FakeResponse([])
+            for source_id, payload in closure_responses().items():
+                if url == ENDPOINTS[source_id]:
+                    return FakeResponse(payload)
+            return super().get(url, **kwargs)
+
+    session = CalendarSession()
+    preflight = collect_calendar(date(2026, 10, 23), tmp_path, session=session)
+    assert len(session.calls) == 3
+    assert preflight["calendar"]["trading_day"] is False
+    assert all(source.get("sha256") for source in preflight["sources"])
+    result = collect(date(2026, 10, 23), tmp_path, session=session, calendar_result=preflight)
+    assert len(session.calls) == len(ENDPOINTS)
+    assert result["calendar"] == preflight["calendar"]
+    assert len(result["sources"]) == len(ENDPOINTS)
+
+
+def test_collection_saves_real_institution_source_rows(tmp_path):
+    class InstitutionSession(FakeSession):
+        def get(self, url, **kwargs):
+            if url == ENDPOINTS["twse_institutions"]:
+                return FakeResponse({"date": "20260102", "data": [{"證券代號": "1234",
+                    "外陸資買賣超股數(不含外資自營商)": "1000", "投信買賣超股數": "0",
+                    "自營商買賣超股數": "-500", "三大法人買賣超股數": "500"}]})
+            return super().get(url, **kwargs)
+
+    result = collect(date(2026, 1, 5), tmp_path, session=InstitutionSession())
+    assert len(result["institutions"]) == 1
+    assert result["institutions"][0]["date"] == "2026-01-02"
+    source = next(s for s in result["sources"] if s["id"] == "twse_institutions")
+    assert source["status"] == "ok" and source["data_date"] == "2026-01-02"
+    assert source["accepted_rows"] == 1 and source["rejected_rows"] == 0
