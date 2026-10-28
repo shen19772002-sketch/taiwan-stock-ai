@@ -207488,42 +207488,21 @@
   },
   "as_of": "2026-10-28",
   "calendar": {
-    "date": "2026-10-28",
-    "holiday_dates": [
-      "2026-01-01",
-      "2026-02-12",
-      "2026-02-13",
-      "2026-02-15",
-      "2026-02-16",
-      "2026-02-17",
-      "2026-02-18",
-      "2026-02-19",
-      "2026-02-20",
-      "2026-02-27",
-      "2026-02-28",
-      "2026-04-03",
-      "2026-04-04",
-      "2026-04-05",
-      "2026-04-06",
-      "2026-05-01",
-      "2026-06-19",
-      "2026-09-25",
-      "2026-09-28",
-      "2026-10-09",
-      "2026-10-10",
-      "2026-10-25",
-      "2026-10-26",
-      "2026-12-25"
-    ],
-    "reason": "官方當日成交行情已確認交易",
-    "source": "https://openapi.twse.com.tw/v1/holidaySchedule/holidaySchedule",
-    "status": "verified",
-    "trading_day": true
+    "status": "unknown",
+    "trading_day": null
   },
   "data_date": "2026-10-28",
   "data_mode": "盤後資料",
-  "generated_at": "2026-10-28T10:43:59.090288+00:00",
+  "generated_at": "2026-10-28T10:46:20.068471+00:00",
   "history": [
+    {
+      "as_of": "2026-10-28",
+      "candidate_count": 15,
+      "generated_at": "2026-10-28T10:43:59.090288+00:00",
+      "id": "b1bc95c86eab099b0c7a1f175029a5fb7181172a8d0426af5677a65f7b17481f",
+      "phase": "postclose",
+      "status": "partial"
+    },
     {
       "as_of": "2026-10-28",
       "candidate_count": 15,
@@ -207741,7 +207720,11 @@
     "required_date": "2026-10-28",
     "status": "ready"
   },
-  "notices": [],
+  "notices": [
+    "V1.0 尚未接入有授權的盤中來源；12:30 僅呈現已保存的盤後資料，不更新即時行情。",
+    "來源表保留最後一次擷取狀態與時間；本次沒有重新驗證官方來源。",
+    "交易日曆尚未完整驗證；不把缺少行情當成已確認休市。"
+  ],
   "performance": {
     "average_return": null,
     "evaluated": 0,
@@ -208090,9 +208073,9 @@
     "total_signals": 15,
     "win_rate": null
   },
-  "phase": "postclose",
+  "phase": "intraday",
   "schema_version": 1,
-  "source_mode": "fetched",
+  "source_mode": "retained",
   "sources": [
     {
       "data_date": "2026-10-27",
@@ -208267,5 +208250,5 @@
       "url": "https://www.tpex.org.tw/data/home/news_zh.json"
     }
   ],
-  "status": "partial"
+  "status": "waiting"
 }
