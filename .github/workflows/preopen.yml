@@ -1,0 +1,19 @@
+name: 手動盤前分析
+
+on:
+  workflow_dispatch:
+
+# The called workflow narrows these permissions for each research/deploy job.
+permissions:
+  contents: write
+  actions: read
+  pages: write
+  id-token: write
+
+jobs:
+  research:
+    uses: ./.github/workflows/research.yml
+    with:
+      phase: preopen
+      history_days: 0
+      probe_sources: false

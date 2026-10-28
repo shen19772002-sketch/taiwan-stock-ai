@@ -1,6 +1,23 @@
 name: Daily Taiwan stock research
 
 on:
+  workflow_call:
+    inputs:
+      phase:
+        description: Research phase supplied by a fixed manual entry point
+        required: false
+        default: manual
+        type: string
+      history_days:
+        description: Optional historical warmup; normal manual entries keep zero
+        required: false
+        default: 0
+        type: number
+      probe_sources:
+        description: Optional independent official API probe
+        required: false
+        default: false
+        type: boolean
   schedule:
     # GitHub cron uses UTC. Asia/Taipei is UTC+8 and has no daylight saving.
     # Phase follows the scheduled slot even if GitHub starts the runner late.

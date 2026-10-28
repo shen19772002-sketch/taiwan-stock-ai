@@ -42,7 +42,13 @@
         <a href="{{ slug }}.html"{% if page == slug %} aria-current="page"{% endif %}><span>{{ label }}</span><small>{{ schedule }}</small></a>
         {% endfor %}
       </nav>
-      <p class="phase-schedule-note">排程時間為台灣時間；遇官方休市日跳過交易分析，實際啟動時間可能因 GitHub 排程延遲。</p>
+      <p class="phase-schedule-note">排程時間為台灣時間；遇官方休市日跳過交易分析，實際啟動時間可能因 GitHub 排程延遲。<a class="text-link" href="https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/workflows/research.yml?query=event%3Aschedule" target="_blank" rel="noopener noreferrer">查看自動執行紀錄 ↗</a></p>
+      <div class="manual-run" role="group" aria-label="手動更新研究">
+        <strong>手動更新</strong>
+        <a class="secondary-button" href="https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/workflows/preopen.yml" target="_blank" rel="noopener noreferrer">手動盤前分析 ↗</a>
+        <a class="secondary-button" href="https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/workflows/postclose.yml" target="_blank" rel="noopener noreferrer">手動盤後分析 ↗</a>
+        <p>登入 GitHub 後，按「Run workflow」，再按綠色「Run workflow」即可，不用填參數。執行完成後重新整理報告。</p>
+      </div>
       {% if is_postclose_supplement %}<div class="notice">本頁顯示最新盤後補充報告（完整資料更新）；原始報告仍依各次記錄保留。資料是否齊全，請見本次狀態與官方來源明細。</div>{% endif %}
       {% if phase_is_stale %}<div class="notice">此頁保留最近一次{{ phase_labels.get(report.phase, report.phase) }}：{{ report.as_of }}。最新排程基準日為 {{ latest_as_of }}；請以本頁標示的行情交易日與更新時間判讀。</div>{% endif %}
       <section id="overview" class="section hero-section">

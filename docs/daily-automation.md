@@ -23,7 +23,14 @@ GitHub 排程可能延遲或漏跑，不能保證準點。排隊延遲不改變�
 
 ## 手動執行
 
-開啟 [Daily Taiwan stock research](https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/workflows/research.yml)，按 **Run workflow**：
+最簡單的方法：開啟研究網站頂端的 **手動盤前分析** 或 **手動盤後分析**，也可以直接開啟：
+
+- [手動盤前分析](https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/workflows/preopen.yml)
+- [手動盤後分析](https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/workflows/postclose.yml)
+
+登入有執行權限的 GitHub 帳號，按 **Run workflow → 綠色 Run workflow**。保留預設 `main` 分支即可，**不用選 phase、不用填 history_days、不用勾選其他參數**。完成後重新整理研究頁面。兩個入口共用原本的分析、歷史保存、重試及部署程序。
+
+需要晚間補充、回補歷史或檢查來源時，仍可使用進階入口 [Daily Taiwan stock research](https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/workflows/research.yml)，按 **Run workflow**：
 
 1. Branch 選 `main`。
 2. 盤前選 `phase=preopen`；盤後選 `phase=postclose`；補法人資料選 `phase=final`。
@@ -65,6 +72,7 @@ Artifacts 是短期故障復原用途，永久歷史仍由 `market-data` 保存�
 | 檔案 | 變更 |
 | --- | --- |
 | `.github/workflows/research.yml` | 明列台灣時區、真實入口、分階段排程、重試及診斷 artifact |
+| `.github/workflows/preopen.yml`、`.github/workflows/postclose.yml` | 免填參數的手動入口，共用 `research.yml` |
 | `scripts/run_research.py` | 保存各次程序輸出、exit code、超時與有限重試 |
 | `scripts/research_schedule.py` | 以原始 GitHub run 推算跨午夜排程日期 |
 | `scripts/persist_data.py` | 推送失敗後重試未推送提交，避免誤判為已保存 |

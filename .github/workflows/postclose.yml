@@ -1,0 +1,19 @@
+name: 手動盤後分析
+
+on:
+  workflow_dispatch:
+
+# Serialization and retries are shared with the existing scheduled workflow.
+permissions:
+  contents: write
+  actions: read
+  pages: write
+  id-token: write
+
+jobs:
+  research:
+    uses: ./.github/workflows/research.yml
+    with:
+      phase: postclose
+      history_days: 0
+      probe_sources: false
