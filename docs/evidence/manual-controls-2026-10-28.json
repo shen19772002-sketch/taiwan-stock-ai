@@ -1,0 +1,2658 @@
+{
+  "checked_at_utc": "2026-10-28T07:41:40.370390+00:00",
+  "repository": "shen19772002-sketch/taiwan-stock-ai",
+  "manual_controls_commit": "112004107e603b454865018f1a8e3f225f46ef62",
+  "queue_fix_commit": "f9a81d0ef10413430223145cf3b8b698c4431fd5",
+  "workflow_states": [
+    {
+      "name": "Tests and static report",
+      "path": ".github/workflows/ci.yml",
+      "state": "active",
+      "html_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/blob/main/.github/workflows/ci.yml"
+    },
+    {
+      "name": "手動盤後分析",
+      "path": ".github/workflows/postclose.yml",
+      "state": "active",
+      "html_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/blob/main/.github/workflows/postclose.yml"
+    },
+    {
+      "name": "手動盤前分析",
+      "path": ".github/workflows/preopen.yml",
+      "state": "active",
+      "html_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/blob/main/.github/workflows/preopen.yml"
+    },
+    {
+      "name": "Daily Taiwan stock research",
+      "path": ".github/workflows/research.yml",
+      "state": "active",
+      "html_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/blob/main/.github/workflows/research.yml"
+    }
+  ],
+  "initial_automatic_audit": {
+    "checked_at_utc": "2026-10-28T05:46:18.686503+00:00",
+    "workflow": {
+      "id": 395219087,
+      "name": "Daily Taiwan stock research",
+      "path": ".github/workflows/research.yml",
+      "state": "active",
+      "html_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/blob/main/.github/workflows/research.yml"
+    },
+    "repository": {
+      "default_branch": "main",
+      "archived": false,
+      "disabled": false,
+      "private": false
+    },
+    "schedule_runs_created_since_2026_10_28_0000_utc": {
+      "total_count": 0,
+      "runs": []
+    },
+    "schedule_runs_created_since_taipei_2026_10_28_0000": {
+      "total_count": 1,
+      "runs": [
+        {
+          "id": 40557421175,
+          "event": "schedule",
+          "status": "completed",
+          "conclusion": "success",
+          "created_at": "2026-10-27T18:10:10Z",
+          "run_started_at": "2026-10-27T18:10:10Z",
+          "updated_at": "2026-10-27T18:14:09Z",
+          "head_sha": "a1ee01839b228674fe39c7abf442193327281b21",
+          "html_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40557421175",
+          "created_at_taipei": "2026-10-28T02:10:10+08:00"
+        }
+      ]
+    },
+    "latest_schedule_runs": [
+      {
+        "id": 40557421175,
+        "event": "schedule",
+        "status": "completed",
+        "conclusion": "success",
+        "created_at": "2026-10-27T18:10:10Z",
+        "run_started_at": "2026-10-27T18:10:10Z",
+        "updated_at": "2026-10-27T18:14:09Z",
+        "head_sha": "a1ee01839b228674fe39c7abf442193327281b21",
+        "html_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40557421175",
+        "created_at_taipei": "2026-10-28T02:10:10+08:00"
+      },
+      {
+        "id": 40536008427,
+        "event": "schedule",
+        "status": "completed",
+        "conclusion": "success",
+        "created_at": "2026-10-27T15:56:43Z",
+        "run_started_at": "2026-10-27T15:56:43Z",
+        "updated_at": "2026-10-27T15:58:57Z",
+        "head_sha": "a1ee01839b228674fe39c7abf442193327281b21",
+        "html_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40536008427",
+        "created_at_taipei": "2026-10-27T23:56:43+08:00"
+      },
+      {
+        "id": 40512249660,
+        "event": "schedule",
+        "status": "completed",
+        "conclusion": "success",
+        "created_at": "2026-10-27T13:27:54Z",
+        "run_started_at": "2026-10-27T13:27:54Z",
+        "updated_at": "2026-10-27T13:32:31Z",
+        "head_sha": "a1ee01839b228674fe39c7abf442193327281b21",
+        "html_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40512249660",
+        "created_at_taipei": "2026-10-27T21:27:54+08:00"
+      },
+      {
+        "id": 40484807477,
+        "event": "schedule",
+        "status": "completed",
+        "conclusion": "success",
+        "created_at": "2026-10-27T09:58:01Z",
+        "run_started_at": "2026-10-27T09:58:01Z",
+        "updated_at": "2026-10-27T09:59:29Z",
+        "head_sha": "8fdff1a2aa4d1b8ba6f0bc5c2a92dcca7655291e",
+        "html_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40484807477",
+        "created_at_taipei": "2026-10-27T17:58:01+08:00"
+      },
+      {
+        "id": 40454195685,
+        "event": "schedule",
+        "status": "completed",
+        "conclusion": "success",
+        "created_at": "2026-10-27T05:14:37Z",
+        "run_started_at": "2026-10-27T05:14:37Z",
+        "updated_at": "2026-10-27T05:17:27Z",
+        "head_sha": "8fdff1a2aa4d1b8ba6f0bc5c2a92dcca7655291e",
+        "html_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40454195685",
+        "created_at_taipei": "2026-10-27T13:14:37+08:00"
+      }
+    ],
+    "verified_run_report_summaries": [
+      {
+        "run_id": 40557421175,
+        "event": "schedule",
+        "created_at": "2026-10-27T18:10:10Z",
+        "conclusion": "success",
+        "url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40557421175",
+        "reports": [
+          {
+            "phase": "final",
+            "as_of": "2026-10-28",
+            "data_date": "2026-10-27",
+            "generated_at": "2026-10-27T18:11:09.405384+00:00",
+            "status": "partial",
+            "candidates": 15,
+            "institutional_status": {
+              "market_dates": {
+                "TPEX": "2026-10-27",
+                "TWSE": "2026-10-27"
+              },
+              "required_date": "2026-10-27",
+              "status": "ready"
+            }
+          }
+        ]
+      },
+      {
+        "run_id": 40595295538,
+        "event": "workflow_dispatch",
+        "created_at": "2026-10-27T22:30:11Z",
+        "conclusion": "success",
+        "url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40595295538",
+        "reports": [
+          {
+            "phase": "preopen",
+            "as_of": "2026-10-28",
+            "data_date": "2026-10-27",
+            "generated_at": "2026-10-27T22:31:04.198522+00:00",
+            "status": "partial",
+            "candidates": 15,
+            "institutional_status": {
+              "market_dates": {
+                "TPEX": "2026-10-27",
+                "TWSE": "2026-10-27"
+              },
+              "required_date": "2026-10-27",
+              "status": "ready"
+            }
+          }
+        ]
+      }
+    ],
+    "remote_main_cron": [
+      "20 0 * * 1-5",
+      "30 4 * * 1-5",
+      "30 7 * * 1-5",
+      "30 10 * * 1-5",
+      "30 12 * * 1-5"
+    ],
+    "remote_manual_trigger_present": true,
+    "conclusion": "Workflow is enabled and has prior successful schedule events; no schedule event has been created for the 2026-10-28 morning/noon slots by the audit time. Current preopen report was manually dispatched. The API evidence does not establish why those slots have not triggered."
+  },
+  "latest_schedule_runs": [
+    {
+      "id": 40640531976,
+      "event": "schedule",
+      "run_attempt": 2,
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-28T05:52:49Z",
+      "updated_at": "2026-10-28T07:30:16Z",
+      "html_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40640531976"
+    },
+    {
+      "id": 40557421175,
+      "event": "schedule",
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-27T18:10:10Z",
+      "updated_at": "2026-10-27T18:14:09Z",
+      "html_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40557421175"
+    },
+    {
+      "id": 40536008427,
+      "event": "schedule",
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-27T15:56:43Z",
+      "updated_at": "2026-10-27T15:58:57Z",
+      "html_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40536008427"
+    },
+    {
+      "id": 40512249660,
+      "event": "schedule",
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-27T13:27:54Z",
+      "updated_at": "2026-10-27T13:32:31Z",
+      "html_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40512249660"
+    },
+    {
+      "id": 40484807477,
+      "event": "schedule",
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-27T09:58:01Z",
+      "updated_at": "2026-10-27T09:59:29Z",
+      "html_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40484807477"
+    },
+    {
+      "id": 40454195685,
+      "event": "schedule",
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-27T05:14:37Z",
+      "updated_at": "2026-10-27T05:17:27Z",
+      "html_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40454195685"
+    },
+    {
+      "id": 40381191133,
+      "event": "schedule",
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-26T18:49:38Z",
+      "updated_at": "2026-10-26T18:51:25Z",
+      "html_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40381191133"
+    },
+    {
+      "id": 40363055174,
+      "event": "schedule",
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-26T16:51:05Z",
+      "updated_at": "2026-10-26T16:52:41Z",
+      "html_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40363055174"
+    },
+    {
+      "id": 40339763734,
+      "event": "schedule",
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "failure",
+      "created_at": "2026-10-26T14:27:06Z",
+      "updated_at": "2026-10-26T14:28:37Z",
+      "html_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40339763734"
+    },
+    {
+      "id": 40307074497,
+      "event": "schedule",
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-26T10:23:45Z",
+      "updated_at": "2026-10-26T10:24:53Z",
+      "html_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40307074497"
+    }
+  ],
+  "canceled_run_recovery": {
+    "original_attempt": {
+      "run_id": 40640531976,
+      "attempt": 1,
+      "conclusion": "cancelled",
+      "jobs_started": 0,
+      "explanation": "A later manual test replaced this pending run under the old single-pending policy."
+    },
+    "retry_requested_manually": true,
+    "recovered_attempt": {
+      "id": 40640531976,
+      "event": "schedule",
+      "run_attempt": 2,
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-28T05:52:49Z",
+      "run_started_at": "2026-10-28T07:28:09Z",
+      "updated_at": "2026-10-28T07:30:16Z",
+      "html_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40640531976",
+      "head_sha": "112004107e603b454865018f1a8e3f225f46ef62",
+      "log_summaries": [
+        {
+          "phase": "preopen",
+          "as_of": "2026-10-28",
+          "scheduled_for": "2026-10-28T00:20:00+00:00",
+          "run_created_at": "2026-10-28T05:52:49+00:00",
+          "date_basis": "latest matching cron slot before original GitHub run creation"
+        },
+        {
+          "status": "partial",
+          "as_of": "2026-10-28",
+          "phase": "preopen",
+          "generated_at": "2026-10-28T07:29:06.073323+00:00",
+          "data_date": "2026-10-27",
+          "institutional_status": {
+            "market_dates": {
+              "TPEX": "2026-10-27",
+              "TWSE": "2026-10-27"
+            },
+            "required_date": "2026-10-27",
+            "status": "ready"
+          },
+          "sources": [
+            {
+              "id": "twse_companies",
+              "status": "ok",
+              "data_date": "2026-10-27",
+              "error": null
+            },
+            {
+              "id": "tpex_companies",
+              "status": "ok",
+              "data_date": "2026-10-27",
+              "error": null
+            },
+            {
+              "id": "twse_quotes",
+              "status": "waiting",
+              "data_date": "2026-10-27",
+              "error": "2 筆資料日期或必要欄位不完整"
+            },
+            {
+              "id": "twse_dated_quotes",
+              "status": "waiting",
+              "data_date": "2026-10-28",
+              "error": "3 筆資料日期或必要欄位不完整"
+            },
+            {
+              "id": "tpex_quotes",
+              "status": "waiting",
+              "data_date": "2026-10-27",
+              "error": "23 筆資料日期或必要欄位不完整"
+            },
+            {
+              "id": "twse_valuations",
+              "status": "ok",
+              "data_date": "2026-10-27",
+              "error": null
+            },
+            {
+              "id": "twse_dated_valuations",
+              "status": "ok",
+              "data_date": "2026-10-27",
+              "error": null
+            },
+            {
+              "id": "tpex_valuations",
+              "status": "ok",
+              "data_date": "2026-10-27",
+              "error": null
+            },
+            {
+              "id": "twse_institutions",
+              "status": "ok",
+              "data_date": "2026-10-27",
+              "error": null
+            },
+            {
+              "id": "tpex_institutions",
+              "status": "ok",
+              "data_date": "2026-10-27",
+              "error": null
+            },
+            {
+              "id": "twse_calendar",
+              "status": "ok",
+              "data_date": "2026-12-25",
+              "error": null
+            },
+            {
+              "id": "twse_market_notices",
+              "status": "ok",
+              "data_date": "2026-10-28",
+              "error": null
+            },
+            {
+              "id": "tpex_market_notices",
+              "status": "ok",
+              "data_date": "2026-10-28",
+              "error": null
+            }
+          ],
+          "candidates": 15,
+          "site": "site",
+          "notices": [
+            "最新可驗證交易日期為 2026-10-27；本報告日期為 2026-10-28。",
+            "盤前分析只採用報告日期之前的盤後資料；手動或延遲執行也不混入當日收盤價。"
+          ]
+        }
+      ]
+    }
+  },
+  "initial_manual_runs": [
+    {
+      "id": 40640428790,
+      "event": "workflow_dispatch",
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-28T05:51:42Z",
+      "run_started_at": "2026-10-28T05:51:42Z",
+      "updated_at": "2026-10-28T05:53:58Z",
+      "html_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40640428790",
+      "head_sha": "112004107e603b454865018f1a8e3f225f46ef62",
+      "integrity_verified": true,
+      "reports": [
+        {
+          "status": "partial",
+          "as_of": "2026-10-28",
+          "phase": "preopen",
+          "generated_at": "2026-10-28T05:52:55.058221+00:00",
+          "data_date": "2026-10-27",
+          "institutional_status": {
+            "market_dates": {
+              "TPEX": "2026-10-27",
+              "TWSE": "2026-10-27"
+            },
+            "required_date": "2026-10-27",
+            "status": "ready"
+          },
+          "candidates": 15,
+          "site": "site"
+        }
+      ]
+    },
+    {
+      "id": 40640580217,
+      "event": "workflow_dispatch",
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-28T05:53:19Z",
+      "run_started_at": "2026-10-28T05:53:19Z",
+      "updated_at": "2026-10-28T05:56:16Z",
+      "html_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40640580217",
+      "head_sha": "112004107e603b454865018f1a8e3f225f46ef62",
+      "integrity_verified": true,
+      "reports": [
+        {
+          "status": "partial",
+          "as_of": "2026-10-28",
+          "phase": "postclose",
+          "generated_at": "2026-10-28T05:54:51.653595+00:00",
+          "data_date": "2026-10-28",
+          "institutional_status": {
+            "market_dates": {
+              "TPEX": "2026-10-27",
+              "TWSE": "2026-10-27"
+            },
+            "required_date": "2026-10-28",
+            "status": "waiting"
+          },
+          "candidates": 0,
+          "site": "site"
+        }
+      ]
+    }
+  ],
+  "queue_verification": {
+    "repository": "shen19772002-sketch/taiwan-stock-ai",
+    "source_sha": "f9a81d0ef10413430223145cf3b8b698c4431fd5",
+    "run_ids": [
+      40650629242,
+      40650666743,
+      40650670348
+    ],
+    "snapshots": [
+      {
+        "observed_at": "2026-10-28T07:32:40.483018+00:00",
+        "runs": [
+          {
+            "id": 40650629242,
+            "name": "手動盤前分析",
+            "event": "workflow_dispatch",
+            "status": "in_progress",
+            "conclusion": null,
+            "created_at": "2026-10-28T07:31:26Z",
+            "updated_at": "2026-10-28T07:31:30Z",
+            "run_started_at": "2026-10-28T07:31:26Z",
+            "run_attempt": 1,
+            "head_sha": "f9a81d0ef10413430223145cf3b8b698c4431fd5",
+            "html_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40650629242",
+            "jobs": [
+              {
+                "id": 122689605110,
+                "name": "research / research",
+                "status": "in_progress",
+                "conclusion": null,
+                "started_at": "2026-10-28T07:31:30Z",
+                "completed_at": null
+              }
+            ]
+          },
+          {
+            "id": 40650666743,
+            "name": "手動盤前分析",
+            "event": "workflow_dispatch",
+            "status": "pending",
+            "conclusion": null,
+            "created_at": "2026-10-28T07:31:47Z",
+            "updated_at": "2026-10-28T07:31:48Z",
+            "run_started_at": "2026-10-28T07:31:47Z",
+            "run_attempt": 1,
+            "head_sha": "f9a81d0ef10413430223145cf3b8b698c4431fd5",
+            "html_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40650666743",
+            "jobs": [
+              {
+                "id": 122689723860,
+                "name": "research / research",
+                "status": "pending",
+                "conclusion": null,
+                "started_at": "2026-10-28T07:31:48Z",
+                "completed_at": null
+              }
+            ]
+          },
+          {
+            "id": 40650670348,
+            "name": "手動盤後分析",
+            "event": "workflow_dispatch",
+            "status": "pending",
+            "conclusion": null,
+            "created_at": "2026-10-28T07:31:49Z",
+            "updated_at": "2026-10-28T07:31:51Z",
+            "run_started_at": "2026-10-28T07:31:49Z",
+            "run_attempt": 1,
+            "head_sha": "f9a81d0ef10413430223145cf3b8b698c4431fd5",
+            "html_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40650670348",
+            "jobs": [
+              {
+                "id": 122689736591,
+                "name": "research / research",
+                "status": "pending",
+                "conclusion": null,
+                "started_at": "2026-10-28T07:31:50Z",
+                "completed_at": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "observed_at": "2026-10-28T07:33:04.338261+00:00",
+        "runs": [
+          {
+            "id": 40650629242,
+            "name": "手動盤前分析",
+            "event": "workflow_dispatch",
+            "status": "in_progress",
+            "conclusion": null,
+            "created_at": "2026-10-28T07:31:26Z",
+            "updated_at": "2026-10-28T07:31:30Z",
+            "run_started_at": "2026-10-28T07:31:26Z",
+            "run_attempt": 1,
+            "head_sha": "f9a81d0ef10413430223145cf3b8b698c4431fd5",
+            "html_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40650629242",
+            "jobs": [
+              {
+                "id": 122689605110,
+                "name": "research / research",
+                "status": "in_progress",
+                "conclusion": null,
+                "started_at": "2026-10-28T07:31:30Z",
+                "completed_at": null
+              }
+            ]
+          },
+          {
+            "id": 40650666743,
+            "name": "手動盤前分析",
+            "event": "workflow_dispatch",
+            "status": "pending",
+            "conclusion": null,
+            "created_at": "2026-10-28T07:31:47Z",
+            "updated_at": "2026-10-28T07:31:48Z",
+            "run_started_at": "2026-10-28T07:31:47Z",
+            "run_attempt": 1,
+            "head_sha": "f9a81d0ef10413430223145cf3b8b698c4431fd5",
+            "html_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40650666743",
+            "jobs": [
+              {
+                "id": 122689723860,
+                "name": "research / research",
+                "status": "pending",
+                "conclusion": null,
+                "started_at": "2026-10-28T07:31:48Z",
+                "completed_at": null
+              }
+            ]
+          },
+          {
+            "id": 40650670348,
+            "name": "手動盤後分析",
+            "event": "workflow_dispatch",
+            "status": "pending",
+            "conclusion": null,
+            "created_at": "2026-10-28T07:31:49Z",
+            "updated_at": "2026-10-28T07:31:51Z",
+            "run_started_at": "2026-10-28T07:31:49Z",
+            "run_attempt": 1,
+            "head_sha": "f9a81d0ef10413430223145cf3b8b698c4431fd5",
+            "html_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40650670348",
+            "jobs": [
+              {
+                "id": 122689736591,
+                "name": "research / research",
+                "status": "pending",
+                "conclusion": null,
+                "started_at": "2026-10-28T07:31:50Z",
+                "completed_at": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "observed_at": "2026-10-28T07:33:28.113457+00:00",
+        "runs": [
+          {
+            "id": 40650629242,
+            "name": "手動盤前分析",
+            "event": "workflow_dispatch",
+            "status": "in_progress",
+            "conclusion": null,
+            "created_at": "2026-10-28T07:31:26Z",
+            "updated_at": "2026-10-28T07:31:30Z",
+            "run_started_at": "2026-10-28T07:31:26Z",
+            "run_attempt": 1,
+            "head_sha": "f9a81d0ef10413430223145cf3b8b698c4431fd5",
+            "html_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40650629242",
+            "jobs": [
+              {
+                "id": 122689605110,
+                "name": "research / research",
+                "status": "in_progress",
+                "conclusion": null,
+                "started_at": "2026-10-28T07:31:30Z",
+                "completed_at": null
+              }
+            ]
+          },
+          {
+            "id": 40650666743,
+            "name": "手動盤前分析",
+            "event": "workflow_dispatch",
+            "status": "pending",
+            "conclusion": null,
+            "created_at": "2026-10-28T07:31:47Z",
+            "updated_at": "2026-10-28T07:31:48Z",
+            "run_started_at": "2026-10-28T07:31:47Z",
+            "run_attempt": 1,
+            "head_sha": "f9a81d0ef10413430223145cf3b8b698c4431fd5",
+            "html_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40650666743",
+            "jobs": [
+              {
+                "id": 122689723860,
+                "name": "research / research",
+                "status": "pending",
+                "conclusion": null,
+                "started_at": "2026-10-28T07:31:48Z",
+                "completed_at": null
+              }
+            ]
+          },
+          {
+            "id": 40650670348,
+            "name": "手動盤後分析",
+            "event": "workflow_dispatch",
+            "status": "pending",
+            "conclusion": null,
+            "created_at": "2026-10-28T07:31:49Z",
+            "updated_at": "2026-10-28T07:31:51Z",
+            "run_started_at": "2026-10-28T07:31:49Z",
+            "run_attempt": 1,
+            "head_sha": "f9a81d0ef10413430223145cf3b8b698c4431fd5",
+            "html_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40650670348",
+            "jobs": [
+              {
+                "id": 122689736591,
+                "name": "research / research",
+                "status": "pending",
+                "conclusion": null,
+                "started_at": "2026-10-28T07:31:50Z",
+                "completed_at": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "observed_at": "2026-10-28T07:33:52.082820+00:00",
+        "runs": [
+          {
+            "id": 40650629242,
+            "name": "手動盤前分析",
+            "event": "workflow_dispatch",
+            "status": "in_progress",
+            "conclusion": null,
+            "created_at": "2026-10-28T07:31:26Z",
+            "updated_at": "2026-10-28T07:31:30Z",
+            "run_started_at": "2026-10-28T07:31:26Z",
+            "run_attempt": 1,
+            "head_sha": "f9a81d0ef10413430223145cf3b8b698c4431fd5",
+            "html_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40650629242",
+            "jobs": [
+              {
+                "id": 122689605110,
+                "name": "research / research",
+                "status": "in_progress",
+                "conclusion": null,
+                "started_at": "2026-10-28T07:31:30Z",
+                "completed_at": null
+              }
+            ]
+          },
+          {
+            "id": 40650666743,
+            "name": "手動盤前分析",
+            "event": "workflow_dispatch",
+            "status": "pending",
+            "conclusion": null,
+            "created_at": "2026-10-28T07:31:47Z",
+            "updated_at": "2026-10-28T07:31:48Z",
+            "run_started_at": "2026-10-28T07:31:47Z",
+            "run_attempt": 1,
+            "head_sha": "f9a81d0ef10413430223145cf3b8b698c4431fd5",
+            "html_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40650666743",
+            "jobs": [
+              {
+                "id": 122689723860,
+                "name": "research / research",
+                "status": "pending",
+                "conclusion": null,
+                "started_at": "2026-10-28T07:31:48Z",
+                "completed_at": null
+              }
+            ]
+          },
+          {
+            "id": 40650670348,
+            "name": "手動盤後分析",
+            "event": "workflow_dispatch",
+            "status": "pending",
+            "conclusion": null,
+            "created_at": "2026-10-28T07:31:49Z",
+            "updated_at": "2026-10-28T07:31:51Z",
+            "run_started_at": "2026-10-28T07:31:49Z",
+            "run_attempt": 1,
+            "head_sha": "f9a81d0ef10413430223145cf3b8b698c4431fd5",
+            "html_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40650670348",
+            "jobs": [
+              {
+                "id": 122689736591,
+                "name": "research / research",
+                "status": "pending",
+                "conclusion": null,
+                "started_at": "2026-10-28T07:31:50Z",
+                "completed_at": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "observed_at": "2026-10-28T07:34:16.672342+00:00",
+        "runs": [
+          {
+            "id": 40650629242,
+            "name": "手動盤前分析",
+            "event": "workflow_dispatch",
+            "status": "in_progress",
+            "conclusion": null,
+            "created_at": "2026-10-28T07:31:26Z",
+            "updated_at": "2026-10-28T07:31:30Z",
+            "run_started_at": "2026-10-28T07:31:26Z",
+            "run_attempt": 1,
+            "head_sha": "f9a81d0ef10413430223145cf3b8b698c4431fd5",
+            "html_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40650629242",
+            "jobs": [
+              {
+                "id": 122689605110,
+                "name": "research / research",
+                "status": "in_progress",
+                "conclusion": null,
+                "started_at": "2026-10-28T07:31:30Z",
+                "completed_at": null
+              }
+            ]
+          },
+          {
+            "id": 40650666743,
+            "name": "手動盤前分析",
+            "event": "workflow_dispatch",
+            "status": "pending",
+            "conclusion": null,
+            "created_at": "2026-10-28T07:31:47Z",
+            "updated_at": "2026-10-28T07:31:48Z",
+            "run_started_at": "2026-10-28T07:31:47Z",
+            "run_attempt": 1,
+            "head_sha": "f9a81d0ef10413430223145cf3b8b698c4431fd5",
+            "html_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40650666743",
+            "jobs": [
+              {
+                "id": 122689723860,
+                "name": "research / research",
+                "status": "pending",
+                "conclusion": null,
+                "started_at": "2026-10-28T07:31:48Z",
+                "completed_at": null
+              }
+            ]
+          },
+          {
+            "id": 40650670348,
+            "name": "手動盤後分析",
+            "event": "workflow_dispatch",
+            "status": "pending",
+            "conclusion": null,
+            "created_at": "2026-10-28T07:31:49Z",
+            "updated_at": "2026-10-28T07:31:51Z",
+            "run_started_at": "2026-10-28T07:31:49Z",
+            "run_attempt": 1,
+            "head_sha": "f9a81d0ef10413430223145cf3b8b698c4431fd5",
+            "html_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40650670348",
+            "jobs": [
+              {
+                "id": 122689736591,
+                "name": "research / research",
+                "status": "pending",
+                "conclusion": null,
+                "started_at": "2026-10-28T07:31:50Z",
+                "completed_at": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "observed_at": "2026-10-28T07:34:40.566733+00:00",
+        "runs": [
+          {
+            "id": 40650629242,
+            "name": "手動盤前分析",
+            "event": "workflow_dispatch",
+            "status": "queued",
+            "conclusion": null,
+            "created_at": "2026-10-28T07:31:26Z",
+            "updated_at": "2026-10-28T07:34:39Z",
+            "run_started_at": "2026-10-28T07:31:26Z",
+            "run_attempt": 1,
+            "head_sha": "f9a81d0ef10413430223145cf3b8b698c4431fd5",
+            "html_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40650629242",
+            "jobs": [
+              {
+                "id": 122689605110,
+                "name": "research / research",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-10-28T07:31:30Z",
+                "completed_at": "2026-10-28T07:34:36Z"
+              },
+              {
+                "id": 122690675496,
+                "name": "research / deploy",
+                "status": "in_progress",
+                "conclusion": null,
+                "started_at": "2026-10-28T07:34:40Z",
+                "completed_at": null
+              }
+            ]
+          },
+          {
+            "id": 40650666743,
+            "name": "手動盤前分析",
+            "event": "workflow_dispatch",
+            "status": "pending",
+            "conclusion": null,
+            "created_at": "2026-10-28T07:31:47Z",
+            "updated_at": "2026-10-28T07:31:48Z",
+            "run_started_at": "2026-10-28T07:31:47Z",
+            "run_attempt": 1,
+            "head_sha": "f9a81d0ef10413430223145cf3b8b698c4431fd5",
+            "html_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40650666743",
+            "jobs": [
+              {
+                "id": 122689723860,
+                "name": "research / research",
+                "status": "pending",
+                "conclusion": null,
+                "started_at": "2026-10-28T07:31:48Z",
+                "completed_at": null
+              }
+            ]
+          },
+          {
+            "id": 40650670348,
+            "name": "手動盤後分析",
+            "event": "workflow_dispatch",
+            "status": "pending",
+            "conclusion": null,
+            "created_at": "2026-10-28T07:31:49Z",
+            "updated_at": "2026-10-28T07:31:51Z",
+            "run_started_at": "2026-10-28T07:31:49Z",
+            "run_attempt": 1,
+            "head_sha": "f9a81d0ef10413430223145cf3b8b698c4431fd5",
+            "html_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40650670348",
+            "jobs": [
+              {
+                "id": 122689736591,
+                "name": "research / research",
+                "status": "pending",
+                "conclusion": null,
+                "started_at": "2026-10-28T07:31:50Z",
+                "completed_at": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "observed_at": "2026-10-28T07:35:04.371521+00:00",
+        "runs": [
+          {
+            "id": 40650629242,
+            "name": "手動盤前分析",
+            "event": "workflow_dispatch",
+            "status": "completed",
+            "conclusion": "success",
+            "created_at": "2026-10-28T07:31:26Z",
+            "updated_at": "2026-10-28T07:35:00Z",
+            "run_started_at": "2026-10-28T07:31:26Z",
+            "run_attempt": 1,
+            "head_sha": "f9a81d0ef10413430223145cf3b8b698c4431fd5",
+            "html_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40650629242",
+            "jobs": [
+              {
+                "id": 122689605110,
+                "name": "research / research",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-10-28T07:31:30Z",
+                "completed_at": "2026-10-28T07:34:36Z"
+              },
+              {
+                "id": 122690675496,
+                "name": "research / deploy",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-10-28T07:34:40Z",
+                "completed_at": "2026-10-28T07:34:59Z"
+              }
+            ]
+          },
+          {
+            "id": 40650666743,
+            "name": "手動盤前分析",
+            "event": "workflow_dispatch",
+            "status": "in_progress",
+            "conclusion": null,
+            "created_at": "2026-10-28T07:31:47Z",
+            "updated_at": "2026-10-28T07:35:02Z",
+            "run_started_at": "2026-10-28T07:31:47Z",
+            "run_attempt": 1,
+            "head_sha": "f9a81d0ef10413430223145cf3b8b698c4431fd5",
+            "html_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40650666743",
+            "jobs": [
+              {
+                "id": 122689723860,
+                "name": "research / research",
+                "status": "in_progress",
+                "conclusion": null,
+                "started_at": "2026-10-28T07:35:01Z",
+                "completed_at": null
+              }
+            ]
+          },
+          {
+            "id": 40650670348,
+            "name": "手動盤後分析",
+            "event": "workflow_dispatch",
+            "status": "pending",
+            "conclusion": null,
+            "created_at": "2026-10-28T07:31:49Z",
+            "updated_at": "2026-10-28T07:31:51Z",
+            "run_started_at": "2026-10-28T07:31:49Z",
+            "run_attempt": 1,
+            "head_sha": "f9a81d0ef10413430223145cf3b8b698c4431fd5",
+            "html_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40650670348",
+            "jobs": [
+              {
+                "id": 122689736591,
+                "name": "research / research",
+                "status": "pending",
+                "conclusion": null,
+                "started_at": "2026-10-28T07:31:50Z",
+                "completed_at": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "observed_at": "2026-10-28T07:35:28.038848+00:00",
+        "runs": [
+          {
+            "id": 40650629242,
+            "name": "手動盤前分析",
+            "event": "workflow_dispatch",
+            "status": "completed",
+            "conclusion": "success",
+            "created_at": "2026-10-28T07:31:26Z",
+            "updated_at": "2026-10-28T07:35:00Z",
+            "run_started_at": "2026-10-28T07:31:26Z",
+            "run_attempt": 1,
+            "head_sha": "f9a81d0ef10413430223145cf3b8b698c4431fd5",
+            "html_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40650629242",
+            "jobs": [
+              {
+                "id": 122689605110,
+                "name": "research / research",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-10-28T07:31:30Z",
+                "completed_at": "2026-10-28T07:34:36Z"
+              },
+              {
+                "id": 122690675496,
+                "name": "research / deploy",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-10-28T07:34:40Z",
+                "completed_at": "2026-10-28T07:34:59Z"
+              }
+            ]
+          },
+          {
+            "id": 40650666743,
+            "name": "手動盤前分析",
+            "event": "workflow_dispatch",
+            "status": "in_progress",
+            "conclusion": null,
+            "created_at": "2026-10-28T07:31:47Z",
+            "updated_at": "2026-10-28T07:35:02Z",
+            "run_started_at": "2026-10-28T07:31:47Z",
+            "run_attempt": 1,
+            "head_sha": "f9a81d0ef10413430223145cf3b8b698c4431fd5",
+            "html_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40650666743",
+            "jobs": [
+              {
+                "id": 122689723860,
+                "name": "research / research",
+                "status": "in_progress",
+                "conclusion": null,
+                "started_at": "2026-10-28T07:35:01Z",
+                "completed_at": null
+              }
+            ]
+          },
+          {
+            "id": 40650670348,
+            "name": "手動盤後分析",
+            "event": "workflow_dispatch",
+            "status": "pending",
+            "conclusion": null,
+            "created_at": "2026-10-28T07:31:49Z",
+            "updated_at": "2026-10-28T07:31:51Z",
+            "run_started_at": "2026-10-28T07:31:49Z",
+            "run_attempt": 1,
+            "head_sha": "f9a81d0ef10413430223145cf3b8b698c4431fd5",
+            "html_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40650670348",
+            "jobs": [
+              {
+                "id": 122689736591,
+                "name": "research / research",
+                "status": "pending",
+                "conclusion": null,
+                "started_at": "2026-10-28T07:31:50Z",
+                "completed_at": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "observed_at": "2026-10-28T07:35:51.720818+00:00",
+        "runs": [
+          {
+            "id": 40650629242,
+            "name": "手動盤前分析",
+            "event": "workflow_dispatch",
+            "status": "completed",
+            "conclusion": "success",
+            "created_at": "2026-10-28T07:31:26Z",
+            "updated_at": "2026-10-28T07:35:00Z",
+            "run_started_at": "2026-10-28T07:31:26Z",
+            "run_attempt": 1,
+            "head_sha": "f9a81d0ef10413430223145cf3b8b698c4431fd5",
+            "html_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40650629242",
+            "jobs": [
+              {
+                "id": 122689605110,
+                "name": "research / research",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-10-28T07:31:30Z",
+                "completed_at": "2026-10-28T07:34:36Z"
+              },
+              {
+                "id": 122690675496,
+                "name": "research / deploy",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-10-28T07:34:40Z",
+                "completed_at": "2026-10-28T07:34:59Z"
+              }
+            ]
+          },
+          {
+            "id": 40650666743,
+            "name": "手動盤前分析",
+            "event": "workflow_dispatch",
+            "status": "in_progress",
+            "conclusion": null,
+            "created_at": "2026-10-28T07:31:47Z",
+            "updated_at": "2026-10-28T07:35:02Z",
+            "run_started_at": "2026-10-28T07:31:47Z",
+            "run_attempt": 1,
+            "head_sha": "f9a81d0ef10413430223145cf3b8b698c4431fd5",
+            "html_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40650666743",
+            "jobs": [
+              {
+                "id": 122689723860,
+                "name": "research / research",
+                "status": "in_progress",
+                "conclusion": null,
+                "started_at": "2026-10-28T07:35:01Z",
+                "completed_at": null
+              }
+            ]
+          },
+          {
+            "id": 40650670348,
+            "name": "手動盤後分析",
+            "event": "workflow_dispatch",
+            "status": "pending",
+            "conclusion": null,
+            "created_at": "2026-10-28T07:31:49Z",
+            "updated_at": "2026-10-28T07:31:51Z",
+            "run_started_at": "2026-10-28T07:31:49Z",
+            "run_attempt": 1,
+            "head_sha": "f9a81d0ef10413430223145cf3b8b698c4431fd5",
+            "html_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40650670348",
+            "jobs": [
+              {
+                "id": 122689736591,
+                "name": "research / research",
+                "status": "pending",
+                "conclusion": null,
+                "started_at": "2026-10-28T07:31:50Z",
+                "completed_at": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "observed_at": "2026-10-28T07:36:15.363559+00:00",
+        "runs": [
+          {
+            "id": 40650629242,
+            "name": "手動盤前分析",
+            "event": "workflow_dispatch",
+            "status": "completed",
+            "conclusion": "success",
+            "created_at": "2026-10-28T07:31:26Z",
+            "updated_at": "2026-10-28T07:35:00Z",
+            "run_started_at": "2026-10-28T07:31:26Z",
+            "run_attempt": 1,
+            "head_sha": "f9a81d0ef10413430223145cf3b8b698c4431fd5",
+            "html_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40650629242",
+            "jobs": [
+              {
+                "id": 122689605110,
+                "name": "research / research",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-10-28T07:31:30Z",
+                "completed_at": "2026-10-28T07:34:36Z"
+              },
+              {
+                "id": 122690675496,
+                "name": "research / deploy",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-10-28T07:34:40Z",
+                "completed_at": "2026-10-28T07:34:59Z"
+              }
+            ]
+          },
+          {
+            "id": 40650666743,
+            "name": "手動盤前分析",
+            "event": "workflow_dispatch",
+            "status": "in_progress",
+            "conclusion": null,
+            "created_at": "2026-10-28T07:31:47Z",
+            "updated_at": "2026-10-28T07:35:02Z",
+            "run_started_at": "2026-10-28T07:31:47Z",
+            "run_attempt": 1,
+            "head_sha": "f9a81d0ef10413430223145cf3b8b698c4431fd5",
+            "html_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40650666743",
+            "jobs": [
+              {
+                "id": 122689723860,
+                "name": "research / research",
+                "status": "in_progress",
+                "conclusion": null,
+                "started_at": "2026-10-28T07:35:01Z",
+                "completed_at": null
+              }
+            ]
+          },
+          {
+            "id": 40650670348,
+            "name": "手動盤後分析",
+            "event": "workflow_dispatch",
+            "status": "pending",
+            "conclusion": null,
+            "created_at": "2026-10-28T07:31:49Z",
+            "updated_at": "2026-10-28T07:31:51Z",
+            "run_started_at": "2026-10-28T07:31:49Z",
+            "run_attempt": 1,
+            "head_sha": "f9a81d0ef10413430223145cf3b8b698c4431fd5",
+            "html_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40650670348",
+            "jobs": [
+              {
+                "id": 122689736591,
+                "name": "research / research",
+                "status": "pending",
+                "conclusion": null,
+                "started_at": "2026-10-28T07:31:50Z",
+                "completed_at": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "observed_at": "2026-10-28T07:36:39.118312+00:00",
+        "runs": [
+          {
+            "id": 40650629242,
+            "name": "手動盤前分析",
+            "event": "workflow_dispatch",
+            "status": "completed",
+            "conclusion": "success",
+            "created_at": "2026-10-28T07:31:26Z",
+            "updated_at": "2026-10-28T07:35:00Z",
+            "run_started_at": "2026-10-28T07:31:26Z",
+            "run_attempt": 1,
+            "head_sha": "f9a81d0ef10413430223145cf3b8b698c4431fd5",
+            "html_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40650629242",
+            "jobs": [
+              {
+                "id": 122689605110,
+                "name": "research / research",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-10-28T07:31:30Z",
+                "completed_at": "2026-10-28T07:34:36Z"
+              },
+              {
+                "id": 122690675496,
+                "name": "research / deploy",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-10-28T07:34:40Z",
+                "completed_at": "2026-10-28T07:34:59Z"
+              }
+            ]
+          },
+          {
+            "id": 40650666743,
+            "name": "手動盤前分析",
+            "event": "workflow_dispatch",
+            "status": "in_progress",
+            "conclusion": null,
+            "created_at": "2026-10-28T07:31:47Z",
+            "updated_at": "2026-10-28T07:35:02Z",
+            "run_started_at": "2026-10-28T07:31:47Z",
+            "run_attempt": 1,
+            "head_sha": "f9a81d0ef10413430223145cf3b8b698c4431fd5",
+            "html_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40650666743",
+            "jobs": [
+              {
+                "id": 122689723860,
+                "name": "research / research",
+                "status": "in_progress",
+                "conclusion": null,
+                "started_at": "2026-10-28T07:35:01Z",
+                "completed_at": null
+              }
+            ]
+          },
+          {
+            "id": 40650670348,
+            "name": "手動盤後分析",
+            "event": "workflow_dispatch",
+            "status": "pending",
+            "conclusion": null,
+            "created_at": "2026-10-28T07:31:49Z",
+            "updated_at": "2026-10-28T07:31:51Z",
+            "run_started_at": "2026-10-28T07:31:49Z",
+            "run_attempt": 1,
+            "head_sha": "f9a81d0ef10413430223145cf3b8b698c4431fd5",
+            "html_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40650670348",
+            "jobs": [
+              {
+                "id": 122689736591,
+                "name": "research / research",
+                "status": "pending",
+                "conclusion": null,
+                "started_at": "2026-10-28T07:31:50Z",
+                "completed_at": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "observed_at": "2026-10-28T07:37:02.827406+00:00",
+        "runs": [
+          {
+            "id": 40650629242,
+            "name": "手動盤前分析",
+            "event": "workflow_dispatch",
+            "status": "completed",
+            "conclusion": "success",
+            "created_at": "2026-10-28T07:31:26Z",
+            "updated_at": "2026-10-28T07:35:00Z",
+            "run_started_at": "2026-10-28T07:31:26Z",
+            "run_attempt": 1,
+            "head_sha": "f9a81d0ef10413430223145cf3b8b698c4431fd5",
+            "html_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40650629242",
+            "jobs": [
+              {
+                "id": 122689605110,
+                "name": "research / research",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-10-28T07:31:30Z",
+                "completed_at": "2026-10-28T07:34:36Z"
+              },
+              {
+                "id": 122690675496,
+                "name": "research / deploy",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-10-28T07:34:40Z",
+                "completed_at": "2026-10-28T07:34:59Z"
+              }
+            ]
+          },
+          {
+            "id": 40650666743,
+            "name": "手動盤前分析",
+            "event": "workflow_dispatch",
+            "status": "in_progress",
+            "conclusion": null,
+            "created_at": "2026-10-28T07:31:47Z",
+            "updated_at": "2026-10-28T07:35:02Z",
+            "run_started_at": "2026-10-28T07:31:47Z",
+            "run_attempt": 1,
+            "head_sha": "f9a81d0ef10413430223145cf3b8b698c4431fd5",
+            "html_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40650666743",
+            "jobs": [
+              {
+                "id": 122689723860,
+                "name": "research / research",
+                "status": "in_progress",
+                "conclusion": null,
+                "started_at": "2026-10-28T07:35:01Z",
+                "completed_at": null
+              }
+            ]
+          },
+          {
+            "id": 40650670348,
+            "name": "手動盤後分析",
+            "event": "workflow_dispatch",
+            "status": "pending",
+            "conclusion": null,
+            "created_at": "2026-10-28T07:31:49Z",
+            "updated_at": "2026-10-28T07:31:51Z",
+            "run_started_at": "2026-10-28T07:31:49Z",
+            "run_attempt": 1,
+            "head_sha": "f9a81d0ef10413430223145cf3b8b698c4431fd5",
+            "html_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40650670348",
+            "jobs": [
+              {
+                "id": 122689736591,
+                "name": "research / research",
+                "status": "pending",
+                "conclusion": null,
+                "started_at": "2026-10-28T07:31:50Z",
+                "completed_at": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "observed_at": "2026-10-28T07:37:26.662812+00:00",
+        "runs": [
+          {
+            "id": 40650629242,
+            "name": "手動盤前分析",
+            "event": "workflow_dispatch",
+            "status": "completed",
+            "conclusion": "success",
+            "created_at": "2026-10-28T07:31:26Z",
+            "updated_at": "2026-10-28T07:35:00Z",
+            "run_started_at": "2026-10-28T07:31:26Z",
+            "run_attempt": 1,
+            "head_sha": "f9a81d0ef10413430223145cf3b8b698c4431fd5",
+            "html_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40650629242",
+            "jobs": [
+              {
+                "id": 122689605110,
+                "name": "research / research",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-10-28T07:31:30Z",
+                "completed_at": "2026-10-28T07:34:36Z"
+              },
+              {
+                "id": 122690675496,
+                "name": "research / deploy",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-10-28T07:34:40Z",
+                "completed_at": "2026-10-28T07:34:59Z"
+              }
+            ]
+          },
+          {
+            "id": 40650666743,
+            "name": "手動盤前分析",
+            "event": "workflow_dispatch",
+            "status": "in_progress",
+            "conclusion": null,
+            "created_at": "2026-10-28T07:31:47Z",
+            "updated_at": "2026-10-28T07:35:02Z",
+            "run_started_at": "2026-10-28T07:31:47Z",
+            "run_attempt": 1,
+            "head_sha": "f9a81d0ef10413430223145cf3b8b698c4431fd5",
+            "html_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40650666743",
+            "jobs": [
+              {
+                "id": 122689723860,
+                "name": "research / research",
+                "status": "in_progress",
+                "conclusion": null,
+                "started_at": "2026-10-28T07:35:01Z",
+                "completed_at": null
+              }
+            ]
+          },
+          {
+            "id": 40650670348,
+            "name": "手動盤後分析",
+            "event": "workflow_dispatch",
+            "status": "pending",
+            "conclusion": null,
+            "created_at": "2026-10-28T07:31:49Z",
+            "updated_at": "2026-10-28T07:31:51Z",
+            "run_started_at": "2026-10-28T07:31:49Z",
+            "run_attempt": 1,
+            "head_sha": "f9a81d0ef10413430223145cf3b8b698c4431fd5",
+            "html_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40650670348",
+            "jobs": [
+              {
+                "id": 122689736591,
+                "name": "research / research",
+                "status": "pending",
+                "conclusion": null,
+                "started_at": "2026-10-28T07:31:50Z",
+                "completed_at": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "observed_at": "2026-10-28T07:37:50.471677+00:00",
+        "runs": [
+          {
+            "id": 40650629242,
+            "name": "手動盤前分析",
+            "event": "workflow_dispatch",
+            "status": "completed",
+            "conclusion": "success",
+            "created_at": "2026-10-28T07:31:26Z",
+            "updated_at": "2026-10-28T07:35:00Z",
+            "run_started_at": "2026-10-28T07:31:26Z",
+            "run_attempt": 1,
+            "head_sha": "f9a81d0ef10413430223145cf3b8b698c4431fd5",
+            "html_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40650629242",
+            "jobs": [
+              {
+                "id": 122689605110,
+                "name": "research / research",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-10-28T07:31:30Z",
+                "completed_at": "2026-10-28T07:34:36Z"
+              },
+              {
+                "id": 122690675496,
+                "name": "research / deploy",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-10-28T07:34:40Z",
+                "completed_at": "2026-10-28T07:34:59Z"
+              }
+            ]
+          },
+          {
+            "id": 40650666743,
+            "name": "手動盤前分析",
+            "event": "workflow_dispatch",
+            "status": "completed",
+            "conclusion": "success",
+            "created_at": "2026-10-28T07:31:47Z",
+            "updated_at": "2026-10-28T07:37:45Z",
+            "run_started_at": "2026-10-28T07:31:47Z",
+            "run_attempt": 1,
+            "head_sha": "f9a81d0ef10413430223145cf3b8b698c4431fd5",
+            "html_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40650666743",
+            "jobs": [
+              {
+                "id": 122689723860,
+                "name": "research / research",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-10-28T07:35:01Z",
+                "completed_at": "2026-10-28T07:37:29Z"
+              },
+              {
+                "id": 122691681226,
+                "name": "research / deploy",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-10-28T07:37:33Z",
+                "completed_at": "2026-10-28T07:37:44Z"
+              }
+            ]
+          },
+          {
+            "id": 40650670348,
+            "name": "手動盤後分析",
+            "event": "workflow_dispatch",
+            "status": "in_progress",
+            "conclusion": null,
+            "created_at": "2026-10-28T07:31:49Z",
+            "updated_at": "2026-10-28T07:37:48Z",
+            "run_started_at": "2026-10-28T07:31:49Z",
+            "run_attempt": 1,
+            "head_sha": "f9a81d0ef10413430223145cf3b8b698c4431fd5",
+            "html_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40650670348",
+            "jobs": [
+              {
+                "id": 122689736591,
+                "name": "research / research",
+                "status": "in_progress",
+                "conclusion": null,
+                "started_at": "2026-10-28T07:37:47Z",
+                "completed_at": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "observed_at": "2026-10-28T07:38:14.202059+00:00",
+        "runs": [
+          {
+            "id": 40650629242,
+            "name": "手動盤前分析",
+            "event": "workflow_dispatch",
+            "status": "completed",
+            "conclusion": "success",
+            "created_at": "2026-10-28T07:31:26Z",
+            "updated_at": "2026-10-28T07:35:00Z",
+            "run_started_at": "2026-10-28T07:31:26Z",
+            "run_attempt": 1,
+            "head_sha": "f9a81d0ef10413430223145cf3b8b698c4431fd5",
+            "html_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40650629242",
+            "jobs": [
+              {
+                "id": 122689605110,
+                "name": "research / research",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-10-28T07:31:30Z",
+                "completed_at": "2026-10-28T07:34:36Z"
+              },
+              {
+                "id": 122690675496,
+                "name": "research / deploy",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-10-28T07:34:40Z",
+                "completed_at": "2026-10-28T07:34:59Z"
+              }
+            ]
+          },
+          {
+            "id": 40650666743,
+            "name": "手動盤前分析",
+            "event": "workflow_dispatch",
+            "status": "completed",
+            "conclusion": "success",
+            "created_at": "2026-10-28T07:31:47Z",
+            "updated_at": "2026-10-28T07:37:45Z",
+            "run_started_at": "2026-10-28T07:31:47Z",
+            "run_attempt": 1,
+            "head_sha": "f9a81d0ef10413430223145cf3b8b698c4431fd5",
+            "html_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40650666743",
+            "jobs": [
+              {
+                "id": 122689723860,
+                "name": "research / research",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-10-28T07:35:01Z",
+                "completed_at": "2026-10-28T07:37:29Z"
+              },
+              {
+                "id": 122691681226,
+                "name": "research / deploy",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-10-28T07:37:33Z",
+                "completed_at": "2026-10-28T07:37:44Z"
+              }
+            ]
+          },
+          {
+            "id": 40650670348,
+            "name": "手動盤後分析",
+            "event": "workflow_dispatch",
+            "status": "in_progress",
+            "conclusion": null,
+            "created_at": "2026-10-28T07:31:49Z",
+            "updated_at": "2026-10-28T07:37:48Z",
+            "run_started_at": "2026-10-28T07:31:49Z",
+            "run_attempt": 1,
+            "head_sha": "f9a81d0ef10413430223145cf3b8b698c4431fd5",
+            "html_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40650670348",
+            "jobs": [
+              {
+                "id": 122689736591,
+                "name": "research / research",
+                "status": "in_progress",
+                "conclusion": null,
+                "started_at": "2026-10-28T07:37:47Z",
+                "completed_at": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "observed_at": "2026-10-28T07:38:37.762604+00:00",
+        "runs": [
+          {
+            "id": 40650629242,
+            "name": "手動盤前分析",
+            "event": "workflow_dispatch",
+            "status": "completed",
+            "conclusion": "success",
+            "created_at": "2026-10-28T07:31:26Z",
+            "updated_at": "2026-10-28T07:35:00Z",
+            "run_started_at": "2026-10-28T07:31:26Z",
+            "run_attempt": 1,
+            "head_sha": "f9a81d0ef10413430223145cf3b8b698c4431fd5",
+            "html_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40650629242",
+            "jobs": [
+              {
+                "id": 122689605110,
+                "name": "research / research",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-10-28T07:31:30Z",
+                "completed_at": "2026-10-28T07:34:36Z"
+              },
+              {
+                "id": 122690675496,
+                "name": "research / deploy",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-10-28T07:34:40Z",
+                "completed_at": "2026-10-28T07:34:59Z"
+              }
+            ]
+          },
+          {
+            "id": 40650666743,
+            "name": "手動盤前分析",
+            "event": "workflow_dispatch",
+            "status": "completed",
+            "conclusion": "success",
+            "created_at": "2026-10-28T07:31:47Z",
+            "updated_at": "2026-10-28T07:37:45Z",
+            "run_started_at": "2026-10-28T07:31:47Z",
+            "run_attempt": 1,
+            "head_sha": "f9a81d0ef10413430223145cf3b8b698c4431fd5",
+            "html_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40650666743",
+            "jobs": [
+              {
+                "id": 122689723860,
+                "name": "research / research",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-10-28T07:35:01Z",
+                "completed_at": "2026-10-28T07:37:29Z"
+              },
+              {
+                "id": 122691681226,
+                "name": "research / deploy",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-10-28T07:37:33Z",
+                "completed_at": "2026-10-28T07:37:44Z"
+              }
+            ]
+          },
+          {
+            "id": 40650670348,
+            "name": "手動盤後分析",
+            "event": "workflow_dispatch",
+            "status": "in_progress",
+            "conclusion": null,
+            "created_at": "2026-10-28T07:31:49Z",
+            "updated_at": "2026-10-28T07:37:48Z",
+            "run_started_at": "2026-10-28T07:31:49Z",
+            "run_attempt": 1,
+            "head_sha": "f9a81d0ef10413430223145cf3b8b698c4431fd5",
+            "html_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40650670348",
+            "jobs": [
+              {
+                "id": 122689736591,
+                "name": "research / research",
+                "status": "in_progress",
+                "conclusion": null,
+                "started_at": "2026-10-28T07:37:47Z",
+                "completed_at": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "observed_at": "2026-10-28T07:39:01.998791+00:00",
+        "runs": [
+          {
+            "id": 40650629242,
+            "name": "手動盤前分析",
+            "event": "workflow_dispatch",
+            "status": "completed",
+            "conclusion": "success",
+            "created_at": "2026-10-28T07:31:26Z",
+            "updated_at": "2026-10-28T07:35:00Z",
+            "run_started_at": "2026-10-28T07:31:26Z",
+            "run_attempt": 1,
+            "head_sha": "f9a81d0ef10413430223145cf3b8b698c4431fd5",
+            "html_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40650629242",
+            "jobs": [
+              {
+                "id": 122689605110,
+                "name": "research / research",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-10-28T07:31:30Z",
+                "completed_at": "2026-10-28T07:34:36Z"
+              },
+              {
+                "id": 122690675496,
+                "name": "research / deploy",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-10-28T07:34:40Z",
+                "completed_at": "2026-10-28T07:34:59Z"
+              }
+            ]
+          },
+          {
+            "id": 40650666743,
+            "name": "手動盤前分析",
+            "event": "workflow_dispatch",
+            "status": "completed",
+            "conclusion": "success",
+            "created_at": "2026-10-28T07:31:47Z",
+            "updated_at": "2026-10-28T07:37:45Z",
+            "run_started_at": "2026-10-28T07:31:47Z",
+            "run_attempt": 1,
+            "head_sha": "f9a81d0ef10413430223145cf3b8b698c4431fd5",
+            "html_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40650666743",
+            "jobs": [
+              {
+                "id": 122689723860,
+                "name": "research / research",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-10-28T07:35:01Z",
+                "completed_at": "2026-10-28T07:37:29Z"
+              },
+              {
+                "id": 122691681226,
+                "name": "research / deploy",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-10-28T07:37:33Z",
+                "completed_at": "2026-10-28T07:37:44Z"
+              }
+            ]
+          },
+          {
+            "id": 40650670348,
+            "name": "手動盤後分析",
+            "event": "workflow_dispatch",
+            "status": "in_progress",
+            "conclusion": null,
+            "created_at": "2026-10-28T07:31:49Z",
+            "updated_at": "2026-10-28T07:37:48Z",
+            "run_started_at": "2026-10-28T07:31:49Z",
+            "run_attempt": 1,
+            "head_sha": "f9a81d0ef10413430223145cf3b8b698c4431fd5",
+            "html_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40650670348",
+            "jobs": [
+              {
+                "id": 122689736591,
+                "name": "research / research",
+                "status": "in_progress",
+                "conclusion": null,
+                "started_at": "2026-10-28T07:37:47Z",
+                "completed_at": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "observed_at": "2026-10-28T07:39:25.747853+00:00",
+        "runs": [
+          {
+            "id": 40650629242,
+            "name": "手動盤前分析",
+            "event": "workflow_dispatch",
+            "status": "completed",
+            "conclusion": "success",
+            "created_at": "2026-10-28T07:31:26Z",
+            "updated_at": "2026-10-28T07:35:00Z",
+            "run_started_at": "2026-10-28T07:31:26Z",
+            "run_attempt": 1,
+            "head_sha": "f9a81d0ef10413430223145cf3b8b698c4431fd5",
+            "html_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40650629242",
+            "jobs": [
+              {
+                "id": 122689605110,
+                "name": "research / research",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-10-28T07:31:30Z",
+                "completed_at": "2026-10-28T07:34:36Z"
+              },
+              {
+                "id": 122690675496,
+                "name": "research / deploy",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-10-28T07:34:40Z",
+                "completed_at": "2026-10-28T07:34:59Z"
+              }
+            ]
+          },
+          {
+            "id": 40650666743,
+            "name": "手動盤前分析",
+            "event": "workflow_dispatch",
+            "status": "completed",
+            "conclusion": "success",
+            "created_at": "2026-10-28T07:31:47Z",
+            "updated_at": "2026-10-28T07:37:45Z",
+            "run_started_at": "2026-10-28T07:31:47Z",
+            "run_attempt": 1,
+            "head_sha": "f9a81d0ef10413430223145cf3b8b698c4431fd5",
+            "html_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40650666743",
+            "jobs": [
+              {
+                "id": 122689723860,
+                "name": "research / research",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-10-28T07:35:01Z",
+                "completed_at": "2026-10-28T07:37:29Z"
+              },
+              {
+                "id": 122691681226,
+                "name": "research / deploy",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-10-28T07:37:33Z",
+                "completed_at": "2026-10-28T07:37:44Z"
+              }
+            ]
+          },
+          {
+            "id": 40650670348,
+            "name": "手動盤後分析",
+            "event": "workflow_dispatch",
+            "status": "in_progress",
+            "conclusion": null,
+            "created_at": "2026-10-28T07:31:49Z",
+            "updated_at": "2026-10-28T07:37:48Z",
+            "run_started_at": "2026-10-28T07:31:49Z",
+            "run_attempt": 1,
+            "head_sha": "f9a81d0ef10413430223145cf3b8b698c4431fd5",
+            "html_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40650670348",
+            "jobs": [
+              {
+                "id": 122689736591,
+                "name": "research / research",
+                "status": "in_progress",
+                "conclusion": null,
+                "started_at": "2026-10-28T07:37:47Z",
+                "completed_at": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "observed_at": "2026-10-28T07:39:49.326192+00:00",
+        "runs": [
+          {
+            "id": 40650629242,
+            "name": "手動盤前分析",
+            "event": "workflow_dispatch",
+            "status": "completed",
+            "conclusion": "success",
+            "created_at": "2026-10-28T07:31:26Z",
+            "updated_at": "2026-10-28T07:35:00Z",
+            "run_started_at": "2026-10-28T07:31:26Z",
+            "run_attempt": 1,
+            "head_sha": "f9a81d0ef10413430223145cf3b8b698c4431fd5",
+            "html_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40650629242",
+            "jobs": [
+              {
+                "id": 122689605110,
+                "name": "research / research",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-10-28T07:31:30Z",
+                "completed_at": "2026-10-28T07:34:36Z"
+              },
+              {
+                "id": 122690675496,
+                "name": "research / deploy",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-10-28T07:34:40Z",
+                "completed_at": "2026-10-28T07:34:59Z"
+              }
+            ]
+          },
+          {
+            "id": 40650666743,
+            "name": "手動盤前分析",
+            "event": "workflow_dispatch",
+            "status": "completed",
+            "conclusion": "success",
+            "created_at": "2026-10-28T07:31:47Z",
+            "updated_at": "2026-10-28T07:37:45Z",
+            "run_started_at": "2026-10-28T07:31:47Z",
+            "run_attempt": 1,
+            "head_sha": "f9a81d0ef10413430223145cf3b8b698c4431fd5",
+            "html_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40650666743",
+            "jobs": [
+              {
+                "id": 122689723860,
+                "name": "research / research",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-10-28T07:35:01Z",
+                "completed_at": "2026-10-28T07:37:29Z"
+              },
+              {
+                "id": 122691681226,
+                "name": "research / deploy",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-10-28T07:37:33Z",
+                "completed_at": "2026-10-28T07:37:44Z"
+              }
+            ]
+          },
+          {
+            "id": 40650670348,
+            "name": "手動盤後分析",
+            "event": "workflow_dispatch",
+            "status": "in_progress",
+            "conclusion": null,
+            "created_at": "2026-10-28T07:31:49Z",
+            "updated_at": "2026-10-28T07:39:49Z",
+            "run_started_at": "2026-10-28T07:31:49Z",
+            "run_attempt": 1,
+            "head_sha": "f9a81d0ef10413430223145cf3b8b698c4431fd5",
+            "html_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40650670348",
+            "jobs": [
+              {
+                "id": 122689736591,
+                "name": "research / research",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-10-28T07:37:47Z",
+                "completed_at": "2026-10-28T07:39:44Z"
+              },
+              {
+                "id": 122692466540,
+                "name": "research / deploy",
+                "status": "in_progress",
+                "conclusion": null,
+                "started_at": "2026-10-28T07:39:49Z",
+                "completed_at": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "observed_at": "2026-10-28T07:40:12.918527+00:00",
+        "runs": [
+          {
+            "id": 40650629242,
+            "name": "手動盤前分析",
+            "event": "workflow_dispatch",
+            "status": "completed",
+            "conclusion": "success",
+            "created_at": "2026-10-28T07:31:26Z",
+            "updated_at": "2026-10-28T07:35:00Z",
+            "run_started_at": "2026-10-28T07:31:26Z",
+            "run_attempt": 1,
+            "head_sha": "f9a81d0ef10413430223145cf3b8b698c4431fd5",
+            "html_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40650629242",
+            "jobs": [
+              {
+                "id": 122689605110,
+                "name": "research / research",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-10-28T07:31:30Z",
+                "completed_at": "2026-10-28T07:34:36Z"
+              },
+              {
+                "id": 122690675496,
+                "name": "research / deploy",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-10-28T07:34:40Z",
+                "completed_at": "2026-10-28T07:34:59Z"
+              }
+            ]
+          },
+          {
+            "id": 40650666743,
+            "name": "手動盤前分析",
+            "event": "workflow_dispatch",
+            "status": "completed",
+            "conclusion": "success",
+            "created_at": "2026-10-28T07:31:47Z",
+            "updated_at": "2026-10-28T07:37:45Z",
+            "run_started_at": "2026-10-28T07:31:47Z",
+            "run_attempt": 1,
+            "head_sha": "f9a81d0ef10413430223145cf3b8b698c4431fd5",
+            "html_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40650666743",
+            "jobs": [
+              {
+                "id": 122689723860,
+                "name": "research / research",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-10-28T07:35:01Z",
+                "completed_at": "2026-10-28T07:37:29Z"
+              },
+              {
+                "id": 122691681226,
+                "name": "research / deploy",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-10-28T07:37:33Z",
+                "completed_at": "2026-10-28T07:37:44Z"
+              }
+            ]
+          },
+          {
+            "id": 40650670348,
+            "name": "手動盤後分析",
+            "event": "workflow_dispatch",
+            "status": "completed",
+            "conclusion": "success",
+            "created_at": "2026-10-28T07:31:49Z",
+            "updated_at": "2026-10-28T07:40:03Z",
+            "run_started_at": "2026-10-28T07:31:49Z",
+            "run_attempt": 1,
+            "head_sha": "f9a81d0ef10413430223145cf3b8b698c4431fd5",
+            "html_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40650670348",
+            "jobs": [
+              {
+                "id": 122689736591,
+                "name": "research / research",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-10-28T07:37:47Z",
+                "completed_at": "2026-10-28T07:39:44Z"
+              },
+              {
+                "id": 122692466540,
+                "name": "research / deploy",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-10-28T07:39:49Z",
+                "completed_at": "2026-10-28T07:40:02Z"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "two_pending_observed": true,
+    "all_success": true,
+    "ci": {
+      "id": 40650607195,
+      "status": "completed",
+      "conclusion": "success",
+      "head_sha": "f9a81d0ef10413430223145cf3b8b698c4431fd5",
+      "html_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40650607195",
+      "jobs": [
+        {
+          "id": 122689531271,
+          "name": "test (3.11)",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-10-28T07:31:17Z",
+          "completed_at": "2026-10-28T07:31:46Z"
+        },
+        {
+          "id": 122689531536,
+          "name": "test (3.12)",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-10-28T07:31:17Z",
+          "completed_at": "2026-10-28T07:31:47Z"
+        }
+      ],
+      "check_logs": [
+        {
+          "file": "0_test (3.12).txt",
+          "checks": [
+            "2026-10-28T07:31:38.0014884Z All checks passed!",
+            "2026-10-28T07:31:43.5261176Z 220 passed in 5.03s"
+          ]
+        },
+        {
+          "file": "1_test (3.11).txt",
+          "checks": [
+            "2026-10-28T07:31:36.7272058Z All checks passed!",
+            "2026-10-28T07:31:42.1404777Z 220 passed in 4.90s"
+          ]
+        }
+      ]
+    },
+    "serialization_boundaries": [
+      {
+        "previous_run": 40650629242,
+        "previous_deploy_completed_at": "2026-10-28T07:34:59Z",
+        "next_run": 40650666743,
+        "next_research_started_at": "2026-10-28T07:35:01Z",
+        "serialized": true
+      },
+      {
+        "previous_run": 40650666743,
+        "previous_deploy_completed_at": "2026-10-28T07:37:44Z",
+        "next_run": 40650670348,
+        "next_research_started_at": "2026-10-28T07:37:47Z",
+        "serialized": true
+      }
+    ],
+    "all_research_and_deploy_serialized": true
+  },
+  "queue_run_results": [
+    {
+      "id": 40650629242,
+      "event": "workflow_dispatch",
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-28T07:31:26Z",
+      "run_started_at": "2026-10-28T07:31:26Z",
+      "updated_at": "2026-10-28T07:35:00Z",
+      "html_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40650629242",
+      "head_sha": "f9a81d0ef10413430223145cf3b8b698c4431fd5",
+      "jobs": [
+        {
+          "name": "research / research",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-10-28T07:31:30Z",
+          "completed_at": "2026-10-28T07:34:36Z",
+          "html_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40650629242/job/122689605110"
+        },
+        {
+          "name": "research / deploy",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-10-28T07:34:40Z",
+          "completed_at": "2026-10-28T07:34:59Z",
+          "html_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40650629242/job/122690675496"
+        }
+      ],
+      "reports": [
+        {
+          "status": "partial",
+          "as_of": "2026-10-28",
+          "phase": "preopen",
+          "generated_at": "2026-10-28T07:29:06.073323+00:00",
+          "data_date": "2026-10-27",
+          "institutional_status": {
+            "market_dates": {
+              "TPEX": "2026-10-27",
+              "TWSE": "2026-10-27"
+            },
+            "required_date": "2026-10-27",
+            "status": "ready"
+          },
+          "candidates": 15
+        }
+      ],
+      "integrity_verified": true
+    },
+    {
+      "id": 40650666743,
+      "event": "workflow_dispatch",
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-28T07:31:47Z",
+      "run_started_at": "2026-10-28T07:31:47Z",
+      "updated_at": "2026-10-28T07:37:45Z",
+      "html_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40650666743",
+      "head_sha": "f9a81d0ef10413430223145cf3b8b698c4431fd5",
+      "jobs": [
+        {
+          "name": "research / research",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-10-28T07:35:01Z",
+          "completed_at": "2026-10-28T07:37:29Z",
+          "html_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40650666743/job/122689723860"
+        },
+        {
+          "name": "research / deploy",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-10-28T07:37:33Z",
+          "completed_at": "2026-10-28T07:37:44Z",
+          "html_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40650666743/job/122691681226"
+        }
+      ],
+      "reports": [
+        {
+          "status": "partial",
+          "as_of": "2026-10-28",
+          "phase": "preopen",
+          "generated_at": "2026-10-28T07:29:06.073323+00:00",
+          "data_date": "2026-10-27",
+          "institutional_status": {
+            "market_dates": {
+              "TPEX": "2026-10-27",
+              "TWSE": "2026-10-27"
+            },
+            "required_date": "2026-10-27",
+            "status": "ready"
+          },
+          "candidates": 15
+        }
+      ],
+      "integrity_verified": true
+    },
+    {
+      "id": 40650670348,
+      "event": "workflow_dispatch",
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-28T07:31:49Z",
+      "run_started_at": "2026-10-28T07:31:49Z",
+      "updated_at": "2026-10-28T07:40:03Z",
+      "html_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40650670348",
+      "head_sha": "f9a81d0ef10413430223145cf3b8b698c4431fd5",
+      "jobs": [
+        {
+          "name": "research / research",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-10-28T07:37:47Z",
+          "completed_at": "2026-10-28T07:39:44Z",
+          "html_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40650670348/job/122689736591"
+        },
+        {
+          "name": "research / deploy",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-10-28T07:39:49Z",
+          "completed_at": "2026-10-28T07:40:02Z",
+          "html_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40650670348/job/122692466540"
+        }
+      ],
+      "reports": [
+        {
+          "status": "partial",
+          "as_of": "2026-10-28",
+          "phase": "postclose",
+          "generated_at": "2026-10-28T07:38:40.882885+00:00",
+          "data_date": "2026-10-28",
+          "institutional_status": {
+            "market_dates": {
+              "TPEX": "2026-10-27",
+              "TWSE": "2026-10-27"
+            },
+            "required_date": "2026-10-28",
+            "status": "waiting"
+          },
+          "candidates": 0
+        }
+      ],
+      "integrity_verified": true
+    }
+  ],
+  "ci_checks": [
+    {
+      "file": "0_test (3.12).txt",
+      "checks": [
+        "2026-10-28T07:31:38.0014884Z All checks passed!",
+        "2026-10-28T07:31:43.5261176Z 220 passed in 5.03s"
+      ]
+    },
+    {
+      "file": "1_test (3.11).txt",
+      "checks": [
+        "2026-10-28T07:31:36.7272058Z All checks passed!",
+        "2026-10-28T07:31:42.1404777Z 220 passed in 4.90s"
+      ]
+    }
+  ],
+  "public_site_validation": {
+    "checked_at": "2026-10-28T07:40:30.653793+00:00",
+    "base_url": "https://shen19772002-sketch.github.io/taiwan-stock-ai/",
+    "default_tls_verification": true,
+    "files": {
+      "index.html": {
+        "status": 200,
+        "bytes": 4818978,
+        "sha256": "1b787ce5493fbfcc607fdbd0ade5d3f94fd7f7a8bf911d012f967c677cb5fa6e"
+      },
+      "preopen.html": {
+        "status": 200,
+        "bytes": 6337808,
+        "sha256": "5ebf0eb96d9777e26529a03d98003452657d19bdd368771f477fd984d69b443d"
+      },
+      "postclose.html": {
+        "status": 200,
+        "bytes": 4818985,
+        "sha256": "a8452cc7ec8a09610ade97d8cddc9b2e5021c9518f77bf3daa6b31f15b60514b"
+      },
+      "final.html": {
+        "status": 200,
+        "bytes": 6367238,
+        "sha256": "79c6acbf46eb20a7a29431ae4ccc9a88ccf623b76deb8f581a73c9d05d91c2a5"
+      },
+      "assets/report.json": {
+        "status": 200,
+        "bytes": 5285346,
+        "sha256": "1709b4e74700503a252609e0ac2ef516146720a4d79dca49b3d199cc47e3366f"
+      },
+      "assets/preopen.json": {
+        "status": 200,
+        "bytes": 7126514,
+        "sha256": "3ca4bf4e7813ebae4a9a9f7ce302074fcd5e28bbb9ef424f94febde30d4f1d58"
+      },
+      "assets/postclose.json": {
+        "status": 200,
+        "bytes": 5285346,
+        "sha256": "1709b4e74700503a252609e0ac2ef516146720a4d79dca49b3d199cc47e3366f"
+      },
+      "assets/final.json": {
+        "status": 200,
+        "bytes": 7149691,
+        "sha256": "9bec77d76fe29cc2f8b42e52f8369c9f69c0d49bf872ce04ab186f78c3397478"
+      },
+      "assets/style.css": {
+        "status": 200,
+        "bytes": 17878,
+        "sha256": "f38358c06eb239bb931053c15a902a1cd162b65f8b026397424bb80f1e2d7a09"
+      },
+      "assets/app.js": {
+        "status": 200,
+        "bytes": 17805,
+        "sha256": "506646e9e7ae68f0b8726be6e84de59c0df10bd3c210da7b9f78be0c16617069"
+      },
+      "assets/plotly.min.js": {
+        "status": 200,
+        "bytes": 4763993,
+        "sha256": "122e3be346d66616944d0b83eaaf7242581508c3c1cfa0995a17af0d83eff770"
+      }
+    },
+    "pages": {
+      "index": {
+        "current_date_stocks_by_market": {
+          "TWSE": 1088
+        },
+        "candidate_prices_match_data_date": true,
+        "embedded_matches_json": true,
+        "manual_controls": 2,
+        "automatic_log_link": true,
+        "phase": "postclose",
+        "as_of": "2026-10-28",
+        "data_date": "2026-10-28",
+        "status": "partial",
+        "generated_at": "2026-10-28T07:38:40.882885+00:00",
+        "candidate_count": 0,
+        "institutional_status": {
+          "market_dates": {
+            "TPEX": "2026-10-27",
+            "TWSE": "2026-10-27"
+          },
+          "required_date": "2026-10-28",
+          "status": "waiting"
+        }
+      },
+      "preopen": {
+        "current_date_stocks_by_market": {
+          "TPEX": 871,
+          "TWSE": 1089
+        },
+        "candidate_prices_match_data_date": true,
+        "embedded_matches_json": true,
+        "manual_controls": 2,
+        "automatic_log_link": true,
+        "phase": "preopen",
+        "as_of": "2026-10-28",
+        "data_date": "2026-10-27",
+        "status": "partial",
+        "generated_at": "2026-10-28T07:29:06.073323+00:00",
+        "candidate_count": 15,
+        "institutional_status": {
+          "market_dates": {
+            "TPEX": "2026-10-27",
+            "TWSE": "2026-10-27"
+          },
+          "required_date": "2026-10-27",
+          "status": "ready"
+        }
+      },
+      "postclose": {
+        "current_date_stocks_by_market": {
+          "TWSE": 1088
+        },
+        "candidate_prices_match_data_date": true,
+        "embedded_matches_json": true,
+        "manual_controls": 2,
+        "automatic_log_link": true,
+        "phase": "postclose",
+        "as_of": "2026-10-28",
+        "data_date": "2026-10-28",
+        "status": "partial",
+        "generated_at": "2026-10-28T07:38:40.882885+00:00",
+        "candidate_count": 0,
+        "institutional_status": {
+          "market_dates": {
+            "TPEX": "2026-10-27",
+            "TWSE": "2026-10-27"
+          },
+          "required_date": "2026-10-28",
+          "status": "waiting"
+        }
+      },
+      "final": {
+        "current_date_stocks_by_market": {
+          "TPEX": 871,
+          "TWSE": 1088
+        },
+        "candidate_prices_match_data_date": true,
+        "embedded_matches_json": true,
+        "manual_controls": 2,
+        "automatic_log_link": true,
+        "phase": "final",
+        "as_of": "2026-10-28",
+        "data_date": "2026-10-27",
+        "status": "partial",
+        "generated_at": "2026-10-27T18:11:09.405384+00:00",
+        "candidate_count": 15,
+        "institutional_status": {
+          "market_dates": {
+            "TPEX": "2026-10-27",
+            "TWSE": "2026-10-27"
+          },
+          "required_date": "2026-10-27",
+          "status": "ready"
+        }
+      }
+    },
+    "browser": {
+      "method": "Chromium localhost rendering of exact default-TLS verified public bytes",
+      "checks": [
+        {
+          "viewport": "desktop",
+          "page": "index",
+          "width": 1440,
+          "manual_controls": 2,
+          "minimum_touch_height": 44,
+          "sections": 9,
+          "overflow": false,
+          "page_errors": []
+        },
+        {
+          "viewport": "desktop",
+          "page": "preopen",
+          "width": 1440,
+          "manual_controls": 2,
+          "minimum_touch_height": 44,
+          "sections": 9,
+          "overflow": false,
+          "page_errors": []
+        },
+        {
+          "viewport": "desktop",
+          "page": "postclose",
+          "width": 1440,
+          "manual_controls": 2,
+          "minimum_touch_height": 44,
+          "sections": 9,
+          "overflow": false,
+          "page_errors": []
+        },
+        {
+          "viewport": "desktop",
+          "page": "final",
+          "width": 1440,
+          "manual_controls": 2,
+          "minimum_touch_height": 44,
+          "sections": 9,
+          "overflow": false,
+          "page_errors": []
+        },
+        {
+          "viewport": "android",
+          "page": "index",
+          "width": 390,
+          "manual_controls": 2,
+          "minimum_touch_height": 44,
+          "sections": 9,
+          "overflow": false,
+          "page_errors": []
+        },
+        {
+          "viewport": "android",
+          "page": "preopen",
+          "width": 390,
+          "manual_controls": 2,
+          "minimum_touch_height": 44,
+          "sections": 9,
+          "overflow": false,
+          "page_errors": []
+        },
+        {
+          "viewport": "android",
+          "page": "postclose",
+          "width": 390,
+          "manual_controls": 2,
+          "minimum_touch_height": 44,
+          "sections": 9,
+          "overflow": false,
+          "page_errors": []
+        },
+        {
+          "viewport": "android",
+          "page": "final",
+          "width": 390,
+          "manual_controls": 2,
+          "minimum_touch_height": 44,
+          "sections": 9,
+          "overflow": false,
+          "page_errors": []
+        }
+      ]
+    },
+    "deployment_run": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40650670348",
+    "source_commit": "f9a81d0"
+  },
+  "history_preservation": {
+    "baseline_tree": "033b5b4330dc104088e752f6ce9e7ff557381812",
+    "verified_commit": "75e38cc31e07d8fa6f465633b9bd00995b3c28b7",
+    "baseline_report_count": 19,
+    "current_report_count": 23,
+    "unchanged_baseline_reports": 19,
+    "changed_or_missing": [],
+    "comparison": "Every prior report path exists with identical Git blob SHA."
+  },
+  "queue_documentation": {
+    "url": "https://github.com/github/docs/blob/3869faed240317911b720c484aef61931b8474ec/data/reusables/actions/actions-group-concurrency.md",
+    "actionlint": "v1.7.12 reports only unknown concurrency queue key; GitHub accepted it and actual multi-pending execution is verified."
+  }
+}

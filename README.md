@@ -93,6 +93,7 @@ python -m ruff check src tests scripts
 - [官方 API 實測](docs/api-validation.md)
 - [評分、價位與風險模型](docs/models.md)
 - [每日盤前／盤後設定與驗證](docs/daily-automation.md)
+- [自動執行核對與簡化手動操作驗證](docs/manual-controls-validation.md)
 - [部署與歷史保存](docs/deployment.md)
 - [開發驗證紀錄](docs/validation.md)
 - [下週交易日與啟用檢查](docs/market-readiness.md)
