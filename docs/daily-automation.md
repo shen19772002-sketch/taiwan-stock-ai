@@ -30,6 +30,8 @@ GitHub 排程可能延遲或漏跑，不能保證準點。排隊延遲不改變�
 
 登入有執行權限的 GitHub 帳號，按 **Run workflow → 綠色 Run workflow**。保留預設 `main` 分支即可，**不用選 phase、不用填 history_days、不用勾選其他參數**。完成後重新整理研究頁面。兩個入口共用原本的分析、歷史保存、重試及部署程序。
 
+若顯示等待執行，請等待目前工作完成，不需重複按。自動與手動工作共用同一序列，採用 GitHub 的 `queue: max`，最多保留 100 筆等待工作，避免後送出的手動工作取代已排隊的自動工作；同時只允許一筆工作更新歷史與網站。
+
 需要晚間補充、回補歷史或檢查來源時，仍可使用進階入口 [Daily Taiwan stock research](https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/workflows/research.yml)，按 **Run workflow**：
 
 1. Branch 選 `main`。

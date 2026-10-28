@@ -39,7 +39,7 @@ GitHub 排程可能延遲、取消或在儲存庫長期無活動後停用，因�
 
 需要手動還原時，先準備空的目的目錄，執行 `python scripts/persist_data.py restore --repository OWNER/REPO --state-dir /tmp/research-restore --data-dir recovered-data`；其中 `state-dir` 必須尚不存在，`data-dir` 必須為空。請使用 helper，不要把單一壓縮區塊當成完整資料庫。這個讀取操作不會推送任何變更。
 
-工作流程使用單一 concurrency group 且不中止正在執行的工作。GitHub 同組待執行工作仍可能被新的待執行工作取代；日常資料完整性要以來源 manifest 為準。寫回不用 force push；若遠端意外已有其他更新，保留失敗紀錄與 recovery artifact，重新從最新歷史開始執行，不能以舊 SQLite 強制覆蓋新歷史。原始回應及報告的同名快照不可覆寫。資料分支更新不會觸發 `main` 的 CI，避免循環排程。
+工作流程使用單一 concurrency group、`cancel-in-progress: false` 與 `queue: max`，不中止正在執行的工作，也不以新工作取代同組等待中的工作；最多保留 100 筆待執行工作，超過上限時 GitHub 會取消新增工作。日常資料完整性要以來源 manifest 為準。寫回不用 force push；若遠端意外已有其他更新，保留失敗紀錄與 recovery artifact，重新從最新歷史開始執行，不能以舊 SQLite 強制覆蓋新歷史。原始回應及報告的同名快照不可覆寫。資料分支更新不會觸發 `main` 的 CI，避免循環排程。
 
 `research-state-*` artifact 保留 30 天供短期復原，內含一般 SQLite；它不是永久儲存的替代品。不要刪除或重設 `market-data`。分塊處理了資料庫的單檔大小，但 Git 歷史與原始回應仍會持續長大，應定期檢查分支大小並備份；接近儲存庫容量限制前，應將 `Store` 實作換成 PostgreSQL／物件儲存，將原始回應封存至具有持久保留政策的 bucket。V1 不宣稱 Git 分支適合無限量資料。
 

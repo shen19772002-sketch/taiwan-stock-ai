@@ -54,10 +54,11 @@ env:
   TZ: Asia/Taipei
   PYTHONUNBUFFERED: '1'
 
-# Never cancel a run while its persistent history is being written.
+# Serialize history writes and keep queued manual/scheduled runs (up to 100).
 concurrency:
   group: taiwan-stock-research-and-history
   cancel-in-progress: false
+  queue: max
 
 jobs:
   research:
