@@ -11,7 +11,7 @@ const REPORT_PAGES = new Set(["index.html", "preopen.html", "postclose.html", "f
 const REPORT_JSON = new Set(["assets/report.json", "assets/preopen.json", "assets/postclose.json", "assets/final.json"]);
 const SHELL_FILES = [
   "offline.html", "manifest.webmanifest", "assets/style.css", "assets/app.js",
-  "assets/pwa.js", "assets/plotly.min.js", "assets/icon-192.png",
+  "assets/pwa.js", "assets/ai-view.js", "assets/plotly.min.js", "assets/icon-192.png",
   "assets/icon-512.png", "assets/icon-maskable-512.png",
 ];
 const SHELL_PATHS = new Set(SHELL_FILES);

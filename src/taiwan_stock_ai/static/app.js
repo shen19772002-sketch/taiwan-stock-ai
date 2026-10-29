@@ -5,7 +5,9 @@
   const analysis = report.analysis || {};
   const candidates = analysis.candidates || [];
   const stocks = analysis.stocks || [];
-  const byKey = new Map([...stocks, ...candidates].map(stock => [key(stock), stock]));
+  const aiView = JSON.parse(document.getElementById("ai-view-data")?.textContent || "{}");
+  const byKey = new Map([...stocks, ...candidates, ...(aiView.observations || [])].map(stock => [key(stock), stock]));
+  const watchByKey = new Map([...(report.watchlist_quotes || []), ...stocks, ...candidates].map(stock => [key(stock), stock]));
   const $ = id => document.getElementById(id);
   const number = (value, digits = 2) => value !== null && value !== undefined && Number.isFinite(Number(value)) ? Number(value).toLocaleString("zh-TW", {minimumFractionDigits: digits, maximumFractionDigits: digits}) : "—";
   const percent = (value, digits = 1) => value !== null && value !== undefined && Number.isFinite(Number(value)) ? `${number(Number(value) * 100, digits)}%` : "—";
@@ -42,6 +44,7 @@
     catch (_) { $("watch-feedback").textContent = "瀏覽器無法儲存資料；此次觀察清單只保留到頁面關閉。"; }
     renderWatchlist();
     renderRanking();
+    document.dispatchEvent(new CustomEvent("ai:watch-updated"));
   }
   function renderRanking() {
     const body = $("ranking-body");
@@ -77,6 +80,7 @@
   }
 
   function renderDetail(stock) {
+    if (stock) stock = byKey.get(key(stock)) || stock;
     $("detail-empty").hidden = Boolean(stock);
     $("detail-content").hidden = !stock;
     if (!stock) return;
@@ -84,6 +88,29 @@
     $("detail-name").textContent = `${stock.symbol} ${stock.name}`;
     $("detail-close").textContent = number(stock.close);
     $("detail-date").textContent = `交易日 ${stock.date || "待確認"} · 官方盤後資料 · 新臺幣`;
+    const context = $("detail-ai-context");
+    const evidence = $("detail-ai-evidence");
+    if (context) {
+      context.hidden = false;
+      context.textContent = stock.ai_category
+        ? `AI 主分類：${stock.ai_category} · 分類研究日 ${stock.ai_classification_as_of || report.as_of}。${stock.ai_rationale || ""} 原交易所產業：${stock.official_industry || "未記錄"}。`
+        : "本股來自原始全市場歷史報告；沒有據此宣稱已驗證 AI 業務關聯。";
+    }
+    if (evidence) {
+      evidence.replaceChildren();
+      (stock.ai_evidence || []).forEach(item => {
+        try {
+          const url = new URL(item.url);
+          if (url.protocol !== "https:" || url.username || url.password) return;
+          const link = el("a", `${item.title || "公司業務來源"} ↗`);
+          link.href = url.href; link.target = "_blank"; link.rel = "noopener noreferrer";
+          const line = el("p"); line.append(link);
+          if (item.excerpt) line.append(el("span", `：${item.excerpt}`));
+          evidence.append(line);
+        } catch (_) { /* Invalid evidence is not a navigable link. */ }
+      });
+      evidence.hidden = !evidence.childElementCount;
+    }
     $("detail-quality").hidden = Boolean(stock.eligible && stock.plan);
     $("detail-quality").textContent = asLines(stock.exclusions).join("；") || "歷史、基本面或風險條件尚未齊全，暫不產生操作價位。";
     const plan = stock.plan;
@@ -124,7 +151,7 @@
     body.replaceChildren();
     if (!watchlist.length) { const row = el("tr"); const empty = cell(row, "尚未加入觀察股票。可從研究名單加入，或輸入代號與持股資料。", "empty-cell"); empty.colSpan = 7; body.append(row); return; }
     watchlist.forEach(item => {
-      const stock = byKey.get(key(item));
+      const stock = watchByKey.get(key(item));
       const row = el("tr");
       cell(row, `${item.symbol} ${stock?.name || (item.market === "TPEX" ? "上櫃" : "上市")}`);
       cell(row, number(stock?.close));
@@ -169,6 +196,7 @@
   function renderPerformance() {
     const performance = report.performance || {};
     const container = $("performance-summary");
+    container.append(el("p", report.tracking_scope?.label || "保留原始歷史訊號，包含先前全市場研究；不是 AI 專屬歷史回測。", "method-note"));
     const total = performance.total_signals ?? performance.signals ?? performance.signal_count ?? 0;
     const evaluated = performance.evaluated ?? performance.completed ?? performance.completed_count ?? 0;
     const grid = el("div", null, "performance-grid");
@@ -210,6 +238,19 @@
     if (!records.length) { const row = el("tr"); const empty = cell(row, "尚無可追蹤的原始訊號；不產生模擬績效數字。", "empty-cell"); empty.colSpan = 7; recordsBody.append(row); }
   }
 
+  document.addEventListener("ai:select", event => {
+    const stock = byKey.get(event.detail?.key);
+    if (!stock) return;
+    $("stock-select").value = key(stock);
+    renderDetail(stock);
+    $("stock-detail").scrollIntoView({behavior: "smooth"});
+  });
+  document.addEventListener("ai:watch", event => {
+    const stock = byKey.get(event.detail?.key);
+    if (!stock || watchlist.some(item => key(item) === key(stock)) || watchlist.length >= 200) return;
+    watchlist.push({market: stock.market, symbol: stock.symbol, quantity: 0, cost: 0});
+    saveWatchlist();
+  });
   $("stock-search").addEventListener("input", renderRanking);
   $("stock-select").replaceChildren();
   if (!byKey.size) { const option = el("option", "尚無可驗證股票"); option.value = ""; $("stock-select").append(option); }

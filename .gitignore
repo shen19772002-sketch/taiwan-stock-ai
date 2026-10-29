@@ -7,6 +7,10 @@ __pycache__/
 build/
 dist/
 data/
+# Versioned classification metadata is source; collected market data stays ignored.
+!src/taiwan_stock_ai/data/
+src/taiwan_stock_ai/data/*
+!src/taiwan_stock_ai/data/ai_universe.json
 site/
 .env
 .env.*

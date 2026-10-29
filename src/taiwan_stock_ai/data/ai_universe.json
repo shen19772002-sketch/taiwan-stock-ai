@@ -1,0 +1,978 @@
+{
+  "id": "ai_supply_chain",
+  "version": "2026.10.29.1",
+  "reviewed_at": "2026-10-29",
+  "categories": [
+    {
+      "id": "chip",
+      "name": "晶片與先進製程",
+      "description": "AI 晶片設計、製造及運算相關技術"
+    },
+    {
+      "id": "packaging",
+      "name": "先進封裝與測試",
+      "description": "AI／HPC 晶片的封裝整合與測試"
+    },
+    {
+      "id": "server",
+      "name": "AI 伺服器",
+      "description": "AI 伺服器、機櫃及相關系統整合"
+    },
+    {
+      "id": "cooling",
+      "name": "散熱",
+      "description": "AI 伺服器散熱及液冷相關產品"
+    },
+    {
+      "id": "power",
+      "name": "電源與備援",
+      "description": "AI 資料中心供電、電源及備援"
+    },
+    {
+      "id": "pcb",
+      "name": "PCB 與材料",
+      "description": "AI 伺服器高階板、載板與基材"
+    },
+    {
+      "id": "networking",
+      "name": "高速傳輸與光通訊",
+      "description": "AI 資料中心網路、交換與光傳輸"
+    },
+    {
+      "id": "memory",
+      "name": "記憶體與儲存",
+      "description": "AI 工作負載相關記憶體與儲存"
+    }
+  ],
+  "members": [
+    {
+      "market": "TWSE",
+      "symbol": "2330",
+      "name": "台積電",
+      "category_ids": [
+        "chip"
+      ],
+      "primary_category": "chip",
+      "known_since": "2026-10-29",
+      "rationale": "技術合作方 NVIDIA 的 Blackwell AI 平台官方公告明確記載採用台積電客製化 4NP 製程。",
+      "evidence": [
+        {
+          "url": "https://nvidianews.nvidia.com/news/nvidia-blackwell-platform-arrives-to-power-a-new-era-of-computing",
+          "title": "NVIDIA Blackwell Platform Arrives to Power a New Era of Computing",
+          "kind": "technology_partner",
+          "known_since": "2026-10-29",
+          "reviewed_at": "2026-10-29",
+          "verification_status": "verified",
+          "source_sha256": "e133b0dd42236cdd497e5f859527a19d67b66ad98595cb050300540c1e481fcf",
+          "excerpt": "on parameters, include: World’s Most Powerful Chip — Packed with 208 billion transistors, Blackwell-architecture GPUs are manufactured using a custom-built 4NP TSMC process with two-reticle limit GPU dies connected by 10 TB/second chip-to-chip link into a single, unified GPU. Second-Generation Transformer Engine — Fueled by new micro-tensor scaling support and NVIDIA’s advanced dynamic range managemen",
+          "retrieved_at": "2026-10-29T11:13:27.551416+00:00",
+          "http_status": 200,
+          "verification_run_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40863699264"
+        }
+      ],
+      "company_directory_source": "https://openapi.twse.com.tw/v1/opendata/t187ap03_L",
+      "issuer_homepage": "https://www.tsmc.com"
+    },
+    {
+      "market": "TWSE",
+      "symbol": "2454",
+      "name": "聯發科",
+      "category_ids": [
+        "chip"
+      ],
+      "primary_category": "chip",
+      "known_since": "2026-10-29",
+      "rationale": "公司官方人工智慧技術頁揭露 AI 運算及晶片技術應用。",
+      "evidence": [
+        {
+          "url": "https://www.mediatek.com/technology/artificial-intelligence",
+          "title": "MediaTek | Artificial Intelligence",
+          "known_since": "2026-10-29",
+          "reviewed_at": "2026-10-29",
+          "verification_status": "verified",
+          "source_sha256": "7b99b7a9e8213587959d377e2f1aac9d9c38f90abd2b4ee25b1236f60d15d5d4",
+          "excerpt": "MediaTek | Artificial Intelligence Products Smartphone MediaTek Dimensity 5G MediaTek Helio 4G Smart Home Smart TVs Audio Voice Assistant Devices BLU-RAY, DVD, STB, ODD Networking and Connectivi … Laptops & Tablets Kompanio Tablets NVIDIA RTX Spark™ Dimensity CX Automotive Auto Cockpit Platforms Data Center Data Center Solutions ASIC Consumer ASIC Technology 5G 5G Modems 5G Satellite (NTN) 5G RedCap Modem 5G Progress Artificial Intelligence Generative AI Wi-Fi Wi- … blets Kompanio Tablets NVIDIA RTX Spark™ Dimensity CX Automotive Auto Cockpit Platforms Data Center Data Center Solutions ASIC Consumer ASIC Technology 5G 5G Modems 5G Satellite (NTN) 5G RedCap Modem 5G Progress Artificial Intelligence Generative AI Wi-Fi Wi-Fi 7 Multi-L … Solutions ASIC Consumer ASIC Technology 5G 5G Modems 5G Satellite (NTN) 5G RedCap Modem 5G Progress Artificial Intelligence Generative AI Wi-Fi Wi-Fi 7 Mul",
+          "retrieved_at": "2026-10-29T11:04:07.956568+00:00",
+          "http_status": 200,
+          "verification_run_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40862473447",
+          "kind": "issuer"
+        }
+      ],
+      "company_directory_source": "https://openapi.twse.com.tw/v1/opendata/t187ap03_L",
+      "issuer_homepage": "https://www.mediatek.com"
+    },
+    {
+      "market": "TWSE",
+      "symbol": "3661",
+      "name": "世芯-KY",
+      "category_ids": [
+        "chip"
+      ],
+      "primary_category": "chip",
+      "known_since": "2026-10-29",
+      "rationale": "公司官方 ASIC 設計服務揭露高效能運算（HPC）設計方法；屬 AI 相關運算供應鏈，不表示所有 HPC 業務皆為 AI。",
+      "evidence": [
+        {
+          "url": "https://www.alchip.com/en/ASIC_Turnkey_Solutions/ASIC_Design_Services",
+          "title": "ASIC Design Services - Alchip",
+          "known_since": "2026-10-29",
+          "reviewed_at": "2026-10-29",
+          "verification_status": "verified",
+          "source_sha256": "931fbf4dd9e5ff9f675ae816718a9deec007a952c07e0f74e1c2b40b7829fbc5",
+          "excerpt": " Backend Design Ultra-short TAT (Turn Around Time) Design & Cost Benefits Low Power Solutions Power Efficient HPC Methodology Cuts Power by up to 30% High Performance Solutions Alchip’s integrated design methodology adopts an accurate timing model and a precise clock design approach to avoid ",
+          "retrieved_at": "2026-10-29T11:06:15.644891+00:00",
+          "http_status": 200,
+          "verification_run_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40862756611",
+          "kind": "issuer"
+        }
+      ],
+      "company_directory_source": "https://openapi.twse.com.tw/v1/opendata/t187ap03_L",
+      "issuer_homepage": "https://www.alchip.com"
+    },
+    {
+      "market": "TWSE",
+      "symbol": "3443",
+      "name": "創意",
+      "category_ids": [
+        "chip"
+      ],
+      "primary_category": "chip",
+      "known_since": "2026-10-29",
+      "rationale": "公司官方列出 AI／HPC ASIC 應用、HBM IP 與先進封裝技術。",
+      "evidence": [
+        {
+          "url": "https://www.guc-asic.com/en",
+          "title": "guc",
+          "known_since": "2026-10-29",
+          "reviewed_at": "2026-10-29",
+          "verification_status": "verified",
+          "source_sha256": "6592d6c393004cb38a9cd6b64465c12f00a5dbe96027e93ade81d9dd4496b1b5",
+          "excerpt": "D Interconnect IP HBM IP（High Bandwidth Memory IP） APT（Advanced Package Technology） APT Application AI / HPC AI Application HPC Application Networking Coherent Optical Application Data Center Switch Application Optical Transport Network (OTN) Application Automot … erconnect IP HBM IP（High Bandwidth Memory IP） APT（Advanced Package Technology） APT Application AI / HPC AI Application HPC Application Networking Coherent Optical Application Data Center Switch Application Optical Transport Network (OTN) Application Automotive AD … nnect IP HBM IP（High Bandwidth Memory IP） APT（Advanced Package Technology） APT Application AI / HPC AI Application HPC Application Networking Coherent Optical Application Data Center Switch Application Optical Transport Network (OTN) Application Automotive ADAS  … （High Bandwidth Memory IP） APT（Advanced Package Technology） APT Application AI / HPC AI Application HPC ",
+          "retrieved_at": "2026-10-29T11:04:07.474410+00:00",
+          "http_status": 200,
+          "verification_run_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40862473447",
+          "kind": "issuer"
+        }
+      ],
+      "company_directory_source": "https://openapi.twse.com.tw/v1/opendata/t187ap03_L",
+      "issuer_homepage": "https://www.guc-asic.com"
+    },
+    {
+      "market": "TWSE",
+      "symbol": "3711",
+      "name": "日月光投控",
+      "category_ids": [
+        "packaging"
+      ],
+      "primary_category": "packaging",
+      "known_since": "2026-10-29",
+      "rationale": "官方公告揭露以 PowerSiP 先進封裝與系統整合支援 AI 電力供應。",
+      "evidence": [
+        {
+          "url": "https://www.aseglobal.com/press-room/ase-expands-powersip-platform-for-next-generation-ai-power-delivery",
+          "title": "ASE Expands PowerSiP™ Platform for Next-Generation AI Power Delivery | ASE Holdings",
+          "known_since": "2026-10-29",
+          "reviewed_at": "2026-10-29",
+          "verification_status": "verified",
+          "source_sha256": "e519b1a5e85387a3d2f7fe4fbb85ffdd08f01e9ed79e40fb2c212f525741f54f",
+          "excerpt": "ASE Expands PowerSiP™ Platform for Next-Generation AI Power Delivery | ASE Holdings About Intelligent Technology is Shaping Our Future We combine the strengths and expertise of ASE, SPIL and USI to drive the digit … hip in system integration offers miniaturization, high performance, and superior quality for the 5G/AI era. Overview → Organization Chart Milestones Plants & Offices Press Room ESG Email Subscriptions ESG Making an Impact Collaborating with diverse partners, we  … lerts Overview → Contact English / 繁體中文 News ASE ASE Expands PowerSiP™ Platform for Next-Generation AI Power Delivery October 13, 2026 Vertically integrated 3D SiP modules shorten high-current transmissions path, reducing parasitic routing losses by 50% or more  … ed to enable vertically integrated voltage regulator modules (VRMs) for higher system efficiency in AI data center and high-performance computing applicat",
+          "retrieved_at": "2026-10-29T11:04:07.910423+00:00",
+          "http_status": 200,
+          "verification_run_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40862473447",
+          "kind": "issuer"
+        }
+      ],
+      "company_directory_source": "https://openapi.twse.com.tw/v1/opendata/t187ap03_L",
+      "issuer_homepage": "https://www.aseglobal.com"
+    },
+    {
+      "market": "TWSE",
+      "symbol": "2449",
+      "name": "京元電子",
+      "category_ids": [
+        "packaging"
+      ],
+      "primary_category": "packaging",
+      "known_since": "2026-10-29",
+      "rationale": "公司提供 AI／HPC 相關晶片封裝或測試服務。",
+      "evidence": [
+        {
+          "url": "https://www.kyec.com.tw",
+          "title": "京元電子官方網站",
+          "known_since": "2026-10-29",
+          "reviewed_at": "2026-10-29",
+          "verification_status": "pending",
+          "kind": "issuer"
+        }
+      ],
+      "company_directory_source": "https://openapi.twse.com.tw/v1/opendata/t187ap03_L",
+      "issuer_homepage": "https://www.kyec.com.tw"
+    },
+    {
+      "market": "TWSE",
+      "symbol": "6239",
+      "name": "力成",
+      "category_ids": [
+        "packaging"
+      ],
+      "primary_category": "packaging",
+      "known_since": "2026-10-29",
+      "rationale": "公司提供 AI／HPC 相關晶片封裝或測試服務。",
+      "evidence": [
+        {
+          "url": "https://www.pti.com.tw/",
+          "title": "力成官方網站",
+          "known_since": "2026-10-29",
+          "reviewed_at": "2026-10-29",
+          "verification_status": "pending",
+          "kind": "issuer"
+        }
+      ],
+      "company_directory_source": "https://openapi.twse.com.tw/v1/opendata/t187ap03_L",
+      "issuer_homepage": "https://www.pti.com.tw/"
+    },
+    {
+      "market": "TWSE",
+      "symbol": "2382",
+      "name": "廣達",
+      "category_ids": [
+        "server"
+      ],
+      "primary_category": "server",
+      "known_since": "2026-10-29",
+      "rationale": "公司提供 AI 伺服器或資料中心系統產品。",
+      "evidence": [
+        {
+          "url": "https://www.quantatw.com",
+          "title": "廣達官方網站",
+          "known_since": "2026-10-29",
+          "reviewed_at": "2026-10-29",
+          "verification_status": "pending",
+          "kind": "issuer"
+        }
+      ],
+      "company_directory_source": "https://openapi.twse.com.tw/v1/opendata/t187ap03_L",
+      "issuer_homepage": "https://www.quantatw.com"
+    },
+    {
+      "market": "TWSE",
+      "symbol": "3231",
+      "name": "緯創",
+      "category_ids": [
+        "server"
+      ],
+      "primary_category": "server",
+      "known_since": "2026-10-29",
+      "rationale": "技術合作方 NVIDIA 的 Blackwell AI 平台官方公告將 Wistron 列為相關伺服器供應夥伴；不代表實際出貨或 AI 營收占比。",
+      "evidence": [
+        {
+          "url": "https://nvidianews.nvidia.com/news/nvidia-blackwell-platform-arrives-to-power-a-new-era-of-computing",
+          "title": "NVIDIA Blackwell Platform Arrives to Power a New Era of Computing",
+          "kind": "technology_partner",
+          "known_since": "2026-10-29",
+          "reviewed_at": "2026-10-29",
+          "verification_status": "verified",
+          "source_sha256": "e133b0dd42236cdd497e5f859527a19d67b66ad98595cb050300540c1e481fcf",
+          "excerpt": "expected to deliver a wide range of servers based on Blackwell products, as are Aivres, ASRock Rack , ASUS , Eviden, Foxconn , GIGABYTE , Inventec , Pegatron , QCT , Wistron, Wiwynn and ZT Systems. Additionally, a growing network of software makers, including Ansys , Cadence and Synopsys — global leaders in engineering simulation — will use Blackwell-based processors to accelerate their software for ",
+          "retrieved_at": "2026-10-29T11:13:27.551416+00:00",
+          "http_status": 200,
+          "verification_run_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40863699264"
+        }
+      ],
+      "company_directory_source": "https://openapi.twse.com.tw/v1/opendata/t187ap03_L",
+      "issuer_homepage": "https://www.wistron.com"
+    },
+    {
+      "market": "TWSE",
+      "symbol": "6669",
+      "name": "緯穎",
+      "category_ids": [
+        "server"
+      ],
+      "primary_category": "server",
+      "known_since": "2026-10-29",
+      "rationale": "公司官方 AI Infrastructure 頁揭露 AI 運算基礎設施與機櫃系統整合。",
+      "evidence": [
+        {
+          "url": "https://www.wiwynn.com/solutions/ai-infrastructure",
+          "title": "AI Infrastructure - Wiwynn",
+          "known_since": "2026-10-29",
+          "reviewed_at": "2026-10-29",
+          "verification_status": "verified",
+          "source_sha256": "14aef3d23599ad68cf2786b26135e7ed3396bc171d743a9a04cbca64534e7921",
+          "excerpt": "AI Infrastructure - Wiwynn Skip to the main content. Solutions AI Infrastructure NVIDIA Vera Rubin AMD Helios Data Center Operations Optimization Integrated Infra … AI Infrastructure - Wiwynn Skip to the main content. Solutions AI Infrastructure NVIDIA Vera Rubin AMD Helios Data Center Operations Optimization Integrated Infrastructure Design One-Stop AI Data Center Rack Integration Key C … ructure - Wiwynn Skip to the main content. Solutions AI Infrastructure NVIDIA Vera Rubin AMD Helios Data Center Operations Optimization Integrated Infrastructure Design One-Stop AI Data Center Rack Integration Key Customization Technologies Core Framework Green Innovatio … Vera Rubin AMD Helios Data Center Operations Optimization Integrated Infrastructure Design One-Stop AI Data Center Rack Integration Key Customization Technologies Core Framework Green Innovation Server Chassis Eco-Design Green Materi",
+          "retrieved_at": "2026-10-29T11:04:07.782934+00:00",
+          "http_status": 200,
+          "verification_run_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40862473447",
+          "kind": "issuer"
+        }
+      ],
+      "company_directory_source": "https://openapi.twse.com.tw/v1/opendata/t187ap03_L",
+      "issuer_homepage": "https://www.wiwynn.com"
+    },
+    {
+      "market": "TWSE",
+      "symbol": "2317",
+      "name": "鴻海",
+      "category_ids": [
+        "server"
+      ],
+      "primary_category": "server",
+      "known_since": "2026-10-29",
+      "rationale": "技術合作方 NVIDIA 的 Blackwell AI 平台官方公告將 Foxconn 列為相關伺服器供應夥伴；不代表實際出貨或 AI 營收占比。",
+      "evidence": [
+        {
+          "url": "https://nvidianews.nvidia.com/news/nvidia-blackwell-platform-arrives-to-power-a-new-era-of-computing",
+          "title": "NVIDIA Blackwell Platform Arrives to Power a New Era of Computing",
+          "kind": "technology_partner",
+          "known_since": "2026-10-29",
+          "reviewed_at": "2026-10-29",
+          "verification_status": "verified",
+          "source_sha256": "e133b0dd42236cdd497e5f859527a19d67b66ad98595cb050300540c1e481fcf",
+          "excerpt": "expected to deliver a wide range of servers based on Blackwell products, as are Aivres, ASRock Rack , ASUS , Eviden, Foxconn , GIGABYTE , Inventec , Pegatron , QCT , Wistron, Wiwynn and ZT Systems. Additionally, a growing network of software makers, including Ansys , Cadence and Synopsys — global leaders in engineering simulation — will use Blackwell-based processors to accelerate their software for ",
+          "retrieved_at": "2026-10-29T11:13:27.551416+00:00",
+          "http_status": 200,
+          "verification_run_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40863699264"
+        }
+      ],
+      "company_directory_source": "https://openapi.twse.com.tw/v1/opendata/t187ap03_L",
+      "issuer_homepage": "https://www.honhai.com/zh-tw"
+    },
+    {
+      "market": "TWSE",
+      "symbol": "2356",
+      "name": "英業達",
+      "category_ids": [
+        "server"
+      ],
+      "primary_category": "server",
+      "known_since": "2026-10-29",
+      "rationale": "技術合作方 NVIDIA 的 Blackwell AI 平台官方公告將 Inventec 列為相關伺服器供應夥伴；不代表實際出貨或 AI 營收占比。",
+      "evidence": [
+        {
+          "url": "https://nvidianews.nvidia.com/news/nvidia-blackwell-platform-arrives-to-power-a-new-era-of-computing",
+          "title": "NVIDIA Blackwell Platform Arrives to Power a New Era of Computing",
+          "kind": "technology_partner",
+          "known_since": "2026-10-29",
+          "reviewed_at": "2026-10-29",
+          "verification_status": "verified",
+          "source_sha256": "e133b0dd42236cdd497e5f859527a19d67b66ad98595cb050300540c1e481fcf",
+          "excerpt": "expected to deliver a wide range of servers based on Blackwell products, as are Aivres, ASRock Rack , ASUS , Eviden, Foxconn , GIGABYTE , Inventec , Pegatron , QCT , Wistron, Wiwynn and ZT Systems. Additionally, a growing network of software makers, including Ansys , Cadence and Synopsys — global leaders in engineering simulation — will use Blackwell-based processors to accelerate their software for ",
+          "retrieved_at": "2026-10-29T11:13:27.551416+00:00",
+          "http_status": 200,
+          "verification_run_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40863699264"
+        }
+      ],
+      "company_directory_source": "https://openapi.twse.com.tw/v1/opendata/t187ap03_L",
+      "issuer_homepage": "https://www.inventec.com/"
+    },
+    {
+      "market": "TWSE",
+      "symbol": "2376",
+      "name": "技嘉",
+      "category_ids": [
+        "server"
+      ],
+      "primary_category": "server",
+      "known_since": "2026-10-29",
+      "rationale": "技術合作方 NVIDIA 的 Blackwell AI 平台官方公告將 GIGABYTE 列為相關伺服器供應夥伴；不代表實際出貨或 AI 營收占比。",
+      "evidence": [
+        {
+          "url": "https://nvidianews.nvidia.com/news/nvidia-blackwell-platform-arrives-to-power-a-new-era-of-computing",
+          "title": "NVIDIA Blackwell Platform Arrives to Power a New Era of Computing",
+          "kind": "technology_partner",
+          "known_since": "2026-10-29",
+          "reviewed_at": "2026-10-29",
+          "verification_status": "verified",
+          "source_sha256": "e133b0dd42236cdd497e5f859527a19d67b66ad98595cb050300540c1e481fcf",
+          "excerpt": "expected to deliver a wide range of servers based on Blackwell products, as are Aivres, ASRock Rack , ASUS , Eviden, Foxconn , GIGABYTE , Inventec , Pegatron , QCT , Wistron, Wiwynn and ZT Systems. Additionally, a growing network of software makers, including Ansys , Cadence and Synopsys — global leaders in engineering simulation — will use Blackwell-based processors to accelerate their software for ",
+          "retrieved_at": "2026-10-29T11:13:27.551416+00:00",
+          "http_status": 200,
+          "verification_run_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40863699264"
+        }
+      ],
+      "company_directory_source": "https://openapi.twse.com.tw/v1/opendata/t187ap03_L",
+      "issuer_homepage": "https://www.gigabyte.com"
+    },
+    {
+      "market": "TWSE",
+      "symbol": "2357",
+      "name": "華碩",
+      "category_ids": [
+        "server"
+      ],
+      "primary_category": "server",
+      "known_since": "2026-10-29",
+      "rationale": "公司官方伺服器網站列出 AI Server and Infrastructure Solutions、AI Hub 與企業 AI 基礎設施方案。",
+      "evidence": [
+        {
+          "url": "https://servers.asus.com/",
+          "title": "Your Data Center and Enterprise Solution Provider  | ASUS Servers",
+          "known_since": "2026-10-29",
+          "reviewed_at": "2026-10-29",
+          "verification_status": "verified",
+          "source_sha256": "5c86c1e17c29caec315a41e784828913b2da4963909a50945e300b1f0c519a1c",
+          "excerpt": "Your Data Center and Enterprise Solution Provider | ASUS Servers Skip to main content Sitemap Web Accessibility Policy Close ASUS Infrastructure Solution Solutions Solutions Leverage our innovatio … ies to deploy intelligence and connectivity from core to cloud. View All Solutions Feature Enterprise Agentic AI AIDC ASUS Infrastructure Deployment Center ACC Data Center Edition Liquid-Cooling Solutions ASUS AI Hub ASUS Storage Solutions AI Solutions for Finance AI Server and Infrastructur … ore to cloud. View All Solutions Feature Enterprise Agentic AI AIDC ASUS Infrastructure Deployment Center ACC Data Center Edition Liquid-Cooling Solutions ASUS AI Hub ASUS Storage Solutions AI Solutions for Finance AI Server and Infrastructure Solutions Hybrid Cloud Solutions Intel Intel® Xeon® 6 Sca … ll Solutions Feature Enterprise Agentic AI AIDC ASUS Infrastructure Deployment Center ACC Data Center ",
+          "retrieved_at": "2026-10-29T11:07:58.295277+00:00",
+          "http_status": 200,
+          "verification_run_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40862986627",
+          "kind": "issuer"
+        }
+      ],
+      "company_directory_source": "https://openapi.twse.com.tw/v1/opendata/t187ap03_L",
+      "issuer_homepage": "https://www.asus.com"
+    },
+    {
+      "market": "TWSE",
+      "symbol": "3706",
+      "name": "神達",
+      "category_ids": [
+        "server"
+      ],
+      "primary_category": "server",
+      "known_since": "2026-10-29",
+      "rationale": "官方 AI 伺服器公告揭露搭載 AMD EPYC 及 Instinct 加速器之系統產品。",
+      "evidence": [
+        {
+          "url": "https://www.mitac.com/en-global/news_room/detail/MiTAC_Computing_AI_Server",
+          "title": "MiTAC Computing Leverages Latest AMD Enterprise Technologies Offering Leadership Performance and Den-MiTAC Holdings Corporation",
+          "known_since": "2026-10-29",
+          "reviewed_at": "2026-10-29",
+          "verification_status": "verified",
+          "source_sha256": "004e422184d159f346c7266023ca8f1be86eb260656fbad587420098198fa8a9",
+          "excerpt": "ng the latest AMD EPYC™ 9005 Series CPUs and AMD Instinct™ MI325X accelerators. “AMD is the trusted data center solutions provider of choice for leading enterprises worldwide, whether they are enabling corporate AI initiatives, building large-scale cloud deployments, or  … solutions provider of choice for leading enterprises worldwide, whether they are enabling corporate AI initiatives, building large-scale cloud deployments, or hosting critical business applications on-premises,” said Ravi Kuppuswamy, senior vice president, Serve …  EPYC CPUs provide the performance, flexibility and reliability – with compatibility across the x86 data center ecosystem – to deliver tailored solutions that meet the diverse demands of the modern data center.” \"AMD is driving AI innovation at scale across diverse marke … 6 data center ecosystem – to deliver tailored solutions that meet the diverse demands o",
+          "retrieved_at": "2026-10-29T11:04:09.827722+00:00",
+          "http_status": 200,
+          "verification_run_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40862473447",
+          "kind": "issuer"
+        }
+      ],
+      "company_directory_source": "https://openapi.twse.com.tw/v1/opendata/t187ap03_L",
+      "issuer_homepage": "https://www.mitac.com"
+    },
+    {
+      "market": "TWSE",
+      "symbol": "3017",
+      "name": "奇鋐",
+      "category_ids": [
+        "cooling"
+      ],
+      "primary_category": "cooling",
+      "known_since": "2026-10-29",
+      "rationale": "公司提供 AI 伺服器相關散熱產品。",
+      "evidence": [
+        {
+          "url": "https://www.avc.co",
+          "title": "奇鋐官方網站",
+          "known_since": "2026-10-29",
+          "reviewed_at": "2026-10-29",
+          "verification_status": "pending",
+          "kind": "issuer"
+        }
+      ],
+      "company_directory_source": "https://openapi.twse.com.tw/v1/opendata/t187ap03_L",
+      "issuer_homepage": "https://www.avc.co"
+    },
+    {
+      "market": "TWSE",
+      "symbol": "2308",
+      "name": "台達電",
+      "category_ids": [
+        "power",
+        "cooling"
+      ],
+      "primary_category": "power",
+      "known_since": "2026-10-29",
+      "rationale": "官方資料中心產品頁揭露 AI 基礎設施電源、配電與液冷及氣冷散熱解決方案。",
+      "evidence": [
+        {
+          "url": "https://www.deltaww.com/zh-TW/products/data-center",
+          "title": "產品 - 資料中心 - 台達",
+          "known_since": "2026-10-29",
+          "reviewed_at": "2026-10-29",
+          "verification_status": "verified",
+          "source_sha256": "2007a45b839ec12433a0d064684a6214b43067b88d3e9f814b9fad763682d001",
+          "excerpt": "產品 - 資料中心 - 台達 新聞中心 投資人服務 人力資源 聯絡我們 解決方案 產品 關於台達 企業永續 資料中心 引領資料中心進入人工智慧時代，台達提供高度整合、高效能的基礎設施。 首頁 > 產品 > 資料中心 > 解決方案 汽車與智慧交通 銀行與零售業 化工與自然資源 商業與工業建築 資料中心 電子 食品飲料 醫療照護 物流與倉儲 機械製造 電力與電網 檢視全部 產品服務 零組件 電源及系統 風扇與散熱管理 交通 工業自動化 樓宇自動化 資料中心 通訊 … 服務網 類別清單 電源解決方案 配電系統 液冷及氣冷散熱解決方案 機櫃與配件 環境管理 資料中心網路 最新消息 檢視全部 03/17/2026 台達於 NVIDIA GTC 2026 亮相專為下世代 AI 工廠打造的 800 VDC 解決方案 同步展示以 NVIDIA Omniverse 建構之數位雙生應用 05/21/2025 台達於COMPUTEX 2025聚焦人工智慧與節能永續 AI貨櫃型資料中心及高壓直流電源方案首度亮相 03/20/2025 台達於NVIDIA GTC 2025展示下世代AI資料中心電源與散熱 … TC 2026 亮相專為下世代 AI 工廠打造的 800 VDC 解決方案 同步展示以 NVIDIA Omniverse 建構之數位雙生應用 05/21/2025 台達於COMPUTEX 2025聚焦人工智慧與節能永續 AI貨櫃型資料中心及高壓直流電源方案首度亮相 03/20/2025 台達於NVIDIA GTC 2025展示下世代AI資料中心電源與散熱方案 展區亦同步亮相結合NVIDIA Omniverse與Isaac Sim的AI智能製造方案 檢視全部 產業焦點 檢視全部 10/02/2026 台達於Data Cent … TC 2025展示下世代AI資料中心電源與散熱方案 展區亦同步亮相結合NVIDIA Omniverse與Isaac Sim的AI智能製造方案 檢視全部 產業焦點 檢視全部 10/02/2026 台達於Data Center World Asia 2026展出採用NVI",
+          "retrieved_at": "2026-10-29T11:04:13.178488+00:00",
+          "http_status": 200,
+          "verification_run_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40862473447",
+          "kind": "issuer"
+        }
+      ],
+      "company_directory_source": "https://openapi.twse.com.tw/v1/opendata/t187ap03_L",
+      "issuer_homepage": "https://www.deltaww.com/zh-TW/index"
+    },
+    {
+      "market": "TWSE",
+      "symbol": "2301",
+      "name": "光寶科",
+      "category_ids": [
+        "power"
+      ],
+      "primary_category": "power",
+      "known_since": "2026-10-29",
+      "rationale": "公司提供 AI 資料中心或伺服器相關電源產品。",
+      "evidence": [
+        {
+          "url": "https://www.liteon.com/",
+          "title": "光寶科官方網站",
+          "known_since": "2026-10-29",
+          "reviewed_at": "2026-10-29",
+          "verification_status": "pending",
+          "kind": "issuer"
+        }
+      ],
+      "company_directory_source": "https://openapi.twse.com.tw/v1/opendata/t187ap03_L",
+      "issuer_homepage": "https://www.liteon.com/"
+    },
+    {
+      "market": "TWSE",
+      "symbol": "6282",
+      "name": "康舒",
+      "category_ids": [
+        "power"
+      ],
+      "primary_category": "power",
+      "known_since": "2026-10-29",
+      "rationale": "公司提供 AI 資料中心或伺服器相關電源產品。",
+      "evidence": [
+        {
+          "url": "https://www.acbel.com",
+          "title": "康舒官方網站",
+          "known_since": "2026-10-29",
+          "reviewed_at": "2026-10-29",
+          "verification_status": "pending",
+          "kind": "issuer"
+        }
+      ],
+      "company_directory_source": "https://openapi.twse.com.tw/v1/opendata/t187ap03_L",
+      "issuer_homepage": "https://www.acbel.com"
+    },
+    {
+      "market": "TWSE",
+      "symbol": "6412",
+      "name": "群電",
+      "category_ids": [
+        "power"
+      ],
+      "primary_category": "power",
+      "known_since": "2026-10-29",
+      "rationale": "公司提供 AI 資料中心或伺服器相關電源產品。",
+      "evidence": [
+        {
+          "url": "https://www.chiconypower.com/",
+          "title": "群電官方網站",
+          "known_since": "2026-10-29",
+          "reviewed_at": "2026-10-29",
+          "verification_status": "pending",
+          "kind": "issuer"
+        }
+      ],
+      "company_directory_source": "https://openapi.twse.com.tw/v1/opendata/t187ap03_L",
+      "issuer_homepage": "https://www.chiconypower.com/"
+    },
+    {
+      "market": "TWSE",
+      "symbol": "3037",
+      "name": "欣興",
+      "category_ids": [
+        "pcb"
+      ],
+      "primary_category": "pcb",
+      "known_since": "2026-10-29",
+      "rationale": "公司提供 AI 運算或伺服器相關電路板及材料。",
+      "evidence": [
+        {
+          "url": "https://www.unimicron.com",
+          "title": "欣興官方網站",
+          "known_since": "2026-10-29",
+          "reviewed_at": "2026-10-29",
+          "verification_status": "pending",
+          "kind": "issuer"
+        }
+      ],
+      "company_directory_source": "https://openapi.twse.com.tw/v1/opendata/t187ap03_L",
+      "issuer_homepage": "https://www.unimicron.com"
+    },
+    {
+      "market": "TWSE",
+      "symbol": "2383",
+      "name": "台光電",
+      "category_ids": [
+        "pcb"
+      ],
+      "primary_category": "pcb",
+      "known_since": "2026-10-29",
+      "rationale": "公司官方里程碑揭露 AI／HPC／雲端資料中心相關材料應用。",
+      "evidence": [
+        {
+          "url": "https://www.emctw.com/en-global/about_milestone/index",
+          "title": "EMC",
+          "known_since": "2026-10-29",
+          "reviewed_at": "2026-10-29",
+          "verification_status": "verified",
+          "source_sha256": "77f2282060e8572067602cf6b289418540937d1af9d243ff57d78cd800b7eac3",
+          "excerpt": "EMC has filed more than 250 patents globally, whilst becoming a “technology leader” in Mobile Communications, AI/HPC/Cloud Data Centers, 5G Infrastructure Network, Electric Vehicle (EV) and also Autonomous Driving applications. emc-milestone-main-image.jpg Global Footprint emc-milestone-glob …  has filed more than 250 patents globally, whilst becoming a “technology leader” in Mobile Communications, AI/HPC/Cloud Data Centers, 5G Infrastructure Network, Electric Vehicle (EV) and also Autonomous Driving applications. emc-milestone-main-image.jpg Global Footprint emc-milestone-global-f …  more than 250 patents globally, whilst becoming a “technology leader” in Mobile Communications, AI/HPC/Cloud Data Centers, 5G Infrastructure Network, Electric Vehicle (EV) and also Autonomous Driving applications. emc-milestone-main-image.jpg Global Footprint emc-milestone-global-footprint.jpg Histo",
+          "retrieved_at": "2026-10-29T11:06:17.788498+00:00",
+          "http_status": 200,
+          "verification_run_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40862756611",
+          "kind": "issuer"
+        }
+      ],
+      "company_directory_source": "https://openapi.twse.com.tw/v1/opendata/t187ap03_L",
+      "issuer_homepage": "https://www.emctw.com"
+    },
+    {
+      "market": "TWSE",
+      "symbol": "8046",
+      "name": "南電",
+      "category_ids": [
+        "pcb"
+      ],
+      "primary_category": "pcb",
+      "known_since": "2026-10-29",
+      "rationale": "公司提供 AI 運算或伺服器相關電路板及材料。",
+      "evidence": [
+        {
+          "url": "https://www.nanyapcb.com.tw/nypcb/Chinese/index",
+          "title": "南電官方網站",
+          "known_since": "2026-10-29",
+          "reviewed_at": "2026-10-29",
+          "verification_status": "pending",
+          "kind": "issuer"
+        }
+      ],
+      "company_directory_source": "https://openapi.twse.com.tw/v1/opendata/t187ap03_L",
+      "issuer_homepage": "https://www.nanyapcb.com.tw/nypcb/Chinese/index"
+    },
+    {
+      "market": "TWSE",
+      "symbol": "2368",
+      "name": "金像電",
+      "category_ids": [
+        "pcb"
+      ],
+      "primary_category": "pcb",
+      "known_since": "2026-10-29",
+      "rationale": "公司提供 AI 運算或伺服器相關電路板及材料。",
+      "evidence": [
+        {
+          "url": "https://www.gce.com.tw/",
+          "title": "金像電官方網站",
+          "known_since": "2026-10-29",
+          "reviewed_at": "2026-10-29",
+          "verification_status": "pending",
+          "kind": "issuer"
+        }
+      ],
+      "company_directory_source": "https://openapi.twse.com.tw/v1/opendata/t187ap03_L",
+      "issuer_homepage": "https://www.gce.com.tw/"
+    },
+    {
+      "market": "TWSE",
+      "symbol": "2345",
+      "name": "智邦",
+      "category_ids": [
+        "networking"
+      ],
+      "primary_category": "networking",
+      "known_since": "2026-10-29",
+      "rationale": "官方產品頁揭露 800G AI／ML 網路交換架構。",
+      "evidence": [
+        {
+          "url": "https://www.accton.com/800g-ai-ml-fabrics/",
+          "title": "800G AI/ML Fabrics – Accton Technology",
+          "known_since": "2026-10-29",
+          "reviewed_at": "2026-10-29",
+          "verification_status": "verified",
+          "source_sha256": "bd02ac7b6ef652999bf60bae26df352dbb39ac28df53b6dbe48f09fa2b04f1e9",
+          "excerpt": "800G AI/ML Fabrics – Accton Technology Skip to content Toggle Navigation All-in-One Services Technology #AcctonTrends Newsletter Subscribe! It’s Free! #TechBlog #Techb … /CPLD Development Advanced Mechanical Design Tech Blog Manufacturing Products & Solutions Solutions Data Center Networks Edge Computing Cloud Networks Carrier Access IoT Integration Products 102.4T AI Infrastructure 🆕 800G AI/ML Fabrics Hyper Network Appliance Edge Serve … s Data Center Networks Edge Computing Cloud Networks Carrier Access IoT Integration Products 102.4T AI Infrastructure 🆕 800G AI/ML Fabrics Hyper Network Appliance Edge Server Fiber Optical Transceivers ↗ Edgecore Networks Open Infrastructures ↗ Enterprise Wired/ … ge Computing Cloud Networks Carrier Access IoT Integration Products 102.4T AI Infrastructure 🆕 800G AI/ML Fabrics Hyper Network Appliance Edge Server Fiber Optical Transceivers ↗ Edgecore Net",
+          "retrieved_at": "2026-10-29T11:04:15.194815+00:00",
+          "http_status": 200,
+          "verification_run_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40862473447",
+          "kind": "issuer"
+        }
+      ],
+      "company_directory_source": "https://openapi.twse.com.tw/v1/opendata/t187ap03_L",
+      "issuer_homepage": "https://www.accton.com"
+    },
+    {
+      "market": "TWSE",
+      "symbol": "4967",
+      "name": "十銓",
+      "category_ids": [
+        "memory"
+      ],
+      "primary_category": "memory",
+      "known_since": "2026-10-29",
+      "rationale": "官方產品公告揭露用於本地 AI 創作運算的 T-CREATE EXPERT Ai DDR5 記憶體。",
+      "evidence": [
+        {
+          "url": "https://www.teamgroupinc.com/en/news-detail/t-create-expert-ai-cqdimm-ddr5-desktop-memory__/",
+          "title": "TEAMGROUP’s T-CREATE EXPERT Ai CQDIMM DDR5 Desktop Memory Wins Japan’s GOOD DESIGN AWARD 2026 Advancing Local Computing, Ushering in a New Era of AI Creation-TEAMGROUP",
+          "known_since": "2026-10-29",
+          "reviewed_at": "2026-10-29",
+          "verification_status": "verified",
+          "source_sha256": "22bb1b3f0df692faa636266fb50505c02cd984716f070ee6caff2dcc2b1c4566",
+          "excerpt": "TEAMGROUP’s T-CREATE EXPERT Ai CQDIMM DDR5 Desktop Memory Wins Japan’s GOOD DESIGN AWARD 2026 Advancing Local Computing, Ushering in a New Era of AI Creation-TEAMGROUP SEARCH LANGUAGE Englis … ktop Memory Wins Japan’s GOOD DESIGN AWARD 2026 Advancing Local Computing, Ushering in a New Era of AI Creation-TEAMGROUP SEARCH LANGUAGE English 繁體中文 简体中文 日本語 한국어 Русский Español Deutsch Where to Buy Products Products Memory SSD Memory Cards USB Drives Peripher … ngs & Investor Conference CAREER Recruitment Home Newsroom Company News TEAMGROUP’s T-CREATE EXPERT Ai CQDIMM DDR5 Desktop Memory Wins Japan’s GOOD DESIGN AWARD 2026 Advancing Local Computing, Ushering in a New Era of AI Creation 15.Oct.2026 TEAMGROUP’s T-CREATE … ktop Memory Wins Japan’s GOOD DESIGN AWARD 2026 Advancing Local Computing, Ushering in a New Era of AI Creation 15.Oct.2026 TEAMGROUP’s T-CREATE EXPERT Ai CQDIMM DDR5 Desktop Me",
+          "retrieved_at": "2026-10-29T11:04:14.009464+00:00",
+          "http_status": 200,
+          "verification_run_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40862473447",
+          "kind": "issuer"
+        }
+      ],
+      "company_directory_source": "https://openapi.twse.com.tw/v1/opendata/t187ap03_L",
+      "issuer_homepage": "https://www.teamgroupinc.com"
+    },
+    {
+      "market": "TWSE",
+      "symbol": "2451",
+      "name": "創見",
+      "category_ids": [
+        "memory"
+      ],
+      "primary_category": "memory",
+      "known_since": "2026-10-29",
+      "rationale": "公司提供 AI 工作負載相關記憶體或儲存產品。",
+      "evidence": [
+        {
+          "url": "https://www.transcend-info.com",
+          "title": "創見官方網站",
+          "known_since": "2026-10-29",
+          "reviewed_at": "2026-10-29",
+          "verification_status": "pending",
+          "kind": "issuer"
+        }
+      ],
+      "company_directory_source": "https://openapi.twse.com.tw/v1/opendata/t187ap03_L",
+      "issuer_homepage": "https://www.transcend-info.com"
+    },
+    {
+      "market": "TPEX",
+      "symbol": "5274",
+      "name": "信驊",
+      "category_ids": [
+        "chip"
+      ],
+      "primary_category": "chip",
+      "known_since": "2026-10-29",
+      "rationale": "公司提供 AI／HPC 相關晶片設計或管理技術。",
+      "evidence": [
+        {
+          "url": "https://www.aspeedtech.com",
+          "title": "信驊官方網站",
+          "known_since": "2026-10-29",
+          "reviewed_at": "2026-10-29",
+          "verification_status": "pending",
+          "kind": "issuer"
+        }
+      ],
+      "company_directory_source": "https://www.tpex.org.tw/openapi/v1/mopsfin_t187ap03_O",
+      "issuer_homepage": "https://www.aspeedtech.com"
+    },
+    {
+      "market": "TPEX",
+      "symbol": "3324",
+      "name": "雙鴻",
+      "category_ids": [
+        "cooling"
+      ],
+      "primary_category": "cooling",
+      "known_since": "2026-10-29",
+      "rationale": "公司提供 AI 伺服器相關散熱產品。",
+      "evidence": [
+        {
+          "url": "https://www.auras.com.tw",
+          "title": "雙鴻官方網站",
+          "known_since": "2026-10-29",
+          "reviewed_at": "2026-10-29",
+          "verification_status": "pending",
+          "kind": "issuer"
+        }
+      ],
+      "company_directory_source": "https://www.tpex.org.tw/openapi/v1/mopsfin_t187ap03_O",
+      "issuer_homepage": "https://www.auras.com.tw"
+    },
+    {
+      "market": "TPEX",
+      "symbol": "8299",
+      "name": "群聯",
+      "category_ids": [
+        "memory"
+      ],
+      "primary_category": "memory",
+      "known_since": "2026-10-29",
+      "rationale": "官方公告揭露 Pascari aiDAPTIV 儲存與 AI 部署解決方案。",
+      "evidence": [
+        {
+          "url": "https://www.phison.com/phison-unlocks-a-full-scale-ai-deployment-across-industries-building-an-ecosystem-with-pascari-aidaptiv/",
+          "title": "Phison Unlocks Full-Scale AI Deployment Across Industries – PHISON Electronics Corp.",
+          "known_since": "2026-10-29",
+          "reviewed_at": "2026-10-29",
+          "verification_status": "verified",
+          "source_sha256": "e6c8b093dfa01861e6b1e9b23779c899537ce1e2856508e7fb0debbbea5853d0",
+          "excerpt": "Phison Unlocks Full-Scale AI Deployment Across Industries – PHISON Electronics Corp. Skip to content Application Close Application Open Application Application Embedded Consumer IMAGIN+ ai … ers Service ESG Blog Contact Press Releases June 2, 2026 Twitter Envelope Phison Unlocks Full-Scale AI Deployment Across Industries 2026 Building an Ecosystem with Pascari aiDAPTIV™ TAIPEI, Taiwan — June 2, 2026 — Phison Electronics (8299TT), a global leader in  … and storage solutions, today announced a new strategic initiative at COMPUTEX 2026 under the theme “AI Enabler: Evolving Data Storage Intelligence.” Expanding beyond its role as a storage technology leader, Phison is taking a systems-level approach to AI solutio … anding beyond its role as a storage technology leader, Phison is taking a systems-level approach to AI solutions spanning AI infrastructure, edge AI computing and AI software plat",
+          "retrieved_at": "2026-10-29T11:04:14.945214+00:00",
+          "http_status": 200,
+          "verification_run_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40862473447",
+          "kind": "issuer"
+        }
+      ],
+      "company_directory_source": "https://www.tpex.org.tw/openapi/v1/mopsfin_t187ap03_O",
+      "issuer_homepage": "https://www.phison.com"
+    },
+    {
+      "market": "TPEX",
+      "symbol": "3260",
+      "name": "威剛",
+      "category_ids": [
+        "memory"
+      ],
+      "primary_category": "memory",
+      "known_since": "2026-10-29",
+      "rationale": "官方企業頁揭露 AI 應用的企業級記憶體與儲存業務。",
+      "evidence": [
+        {
+          "url": "https://www.adata.com/global/en/",
+          "title": "ADATA Global | Powering the Future of AI Innovation",
+          "known_since": "2026-10-29",
+          "reviewed_at": "2026-10-29",
+          "verification_status": "verified",
+          "source_sha256": "0b24c729648dfe72e139f3d04befebe2acfb81257e409bdc178dd200c4fadbe5",
+          "excerpt": "ADATA Global | Powering the Future of AI Innovation About Us ESG News Investor Relations English 繁體中文 ADATA believes that innovation stems from the courage to break boundaries and an open mindset that … lutions that combine performance and sustainability, shaping smarter and better experiences for the AI era. The Gaming Innovator in Xtreme Experiences The AI Navigator in Enterprise-grade Memory & Storage The Industrial Pioneer in Embedded Storage Solutions Lead … aping smarter and better experiences for the AI era. The Gaming Innovator in Xtreme Experiences The AI Navigator in Enterprise-grade Memory & Storage The Industrial Pioneer in Embedded Storage Solutions Leading with Innovation ADATA anticipates industry trends a … ress. Unleashing Infinite Possibilities ADATA is committed to advancing system integration, with an AI-powered ecosystem at its core. From cloud to edge, our solutions",
+          "retrieved_at": "2026-10-29T11:04:14.755806+00:00",
+          "http_status": 200,
+          "verification_run_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40862473447",
+          "kind": "issuer"
+        }
+      ],
+      "company_directory_source": "https://www.tpex.org.tw/openapi/v1/mopsfin_t187ap03_O",
+      "issuer_homepage": "https://www.adata.com"
+    },
+    {
+      "market": "TPEX",
+      "symbol": "6274",
+      "name": "台燿",
+      "category_ids": [
+        "pcb"
+      ],
+      "primary_category": "pcb",
+      "known_since": "2026-10-29",
+      "rationale": "公司提供 AI 運算或伺服器相關電路板及材料。",
+      "evidence": [
+        {
+          "url": "https://www.tuc.com.tw",
+          "title": "台燿官方網站",
+          "known_since": "2026-10-29",
+          "reviewed_at": "2026-10-29",
+          "verification_status": "pending",
+          "kind": "issuer"
+        }
+      ],
+      "company_directory_source": "https://www.tpex.org.tw/openapi/v1/mopsfin_t187ap03_O",
+      "issuer_homepage": "https://www.tuc.com.tw"
+    },
+    {
+      "market": "TPEX",
+      "symbol": "3081",
+      "name": "聯亞",
+      "category_ids": [
+        "networking"
+      ],
+      "primary_category": "networking",
+      "known_since": "2026-10-29",
+      "rationale": "公司提供 AI 資料中心相關高速光傳輸產品。",
+      "evidence": [
+        {
+          "url": "https://www.lmoc.com.tw/",
+          "title": "聯亞官方網站",
+          "known_since": "2026-10-29",
+          "reviewed_at": "2026-10-29",
+          "verification_status": "pending",
+          "kind": "issuer"
+        }
+      ],
+      "company_directory_source": "https://www.tpex.org.tw/openapi/v1/mopsfin_t187ap03_O",
+      "issuer_homepage": "https://www.lmoc.com.tw/"
+    },
+    {
+      "market": "TWSE",
+      "symbol": "2421",
+      "name": "建準",
+      "primary_category": "cooling",
+      "category_ids": [
+        "cooling"
+      ],
+      "known_since": "2026-10-29",
+      "rationale": "公司官方新聞揭露專為伺服器與 AI 應用設計的新液冷散熱產品。",
+      "company_directory_source": "https://openapi.twse.com.tw/v1/opendata/t187ap03_L",
+      "issuer_homepage": "https://www.sunon.com",
+      "evidence": [
+        {
+          "url": "https://www.sunon.com/News.aspx?id=C228E60EA86563AB",
+          "title": "建準五大液冷技術亮相 OCP 2026，全面布局 AI 高效能散熱市場",
+          "kind": "issuer",
+          "known_since": "2026-10-29",
+          "reviewed_at": "2026-10-29",
+          "verification_status": "verified",
+          "source_sha256": "7d25574e48f1daf26e8951aac672e70c16eae9a1319549fba97ae851e75169e3",
+          "excerpt": "建準五大液冷技術亮相 OCP 2026，全面布局 AI 高效能散熱市場 NEWSROOM 新聞中心 公司資訊 建準五大液冷技術亮相 OCP 2026，全面布局 AI 高效能散熱市場 2026.10.19 全球散熱領導品牌建準 SUNON 於美國舉行的 OCP Global Summit 2026 上，正式發表全新液冷散熱產品，專為伺服器與 AI 應用設計。 以「Build to Chill」為主題，建準展現持續投入散熱研發的精神，不僅「建造」高效能冷卻系統，更致力於打造引領產業的創新方案。 … 建準五大液冷技術亮相 OCP 2026，全面布局 AI 高效能散熱市場 NEWSROOM 新聞中心 公司資訊 建準五大液冷技術亮相 OCP 2026，全面布局 AI 高效能散熱市場 2026.10.19 全球散熱領導品牌建準 SUNON 於美國舉行的 OCP Global Summit 2026 上，正式發表全新液冷散熱產品，專為伺服器與 AI 應用設計。 以「Build to Chill」為主題，建準展現持續投入散熱研發的精神，不僅「建造」高效能冷卻系統，更致力於打造引領產業的創新方案。 此次發表5大液冷核心產品： 1. 標準品水冷板與新興散熱應用 （Cold Plate and DIMM） 支 … NEWSROOM 新聞中心 公司資訊 建準五大液冷技術亮相 OCP 2026，全面布局 AI 高效能散熱市場 2026.10.19 全球散熱領導品牌建準 SUNON 於美國舉行的 OCP Global Summit 2026 上，正式發表全新液冷散熱產品，專為伺服器與 AI 應用設計。 以「Build to Chill」為主題，建準展現持續投入散熱研發的精神，不僅「建造」高效能冷卻系統，更致力於打造引領產業的創新方案。 此次發表5大液冷核心產品： 1. 標準品水冷板與新興散熱應用 （Cold Plate and DIMM） 支援 Intel／AMD 伺服器平台，緊跟最新晶片規格，持續開發標準化液冷方案，並因應 DIMM 等新興散熱應用 2. 客製化水冷方案（Customized L",
+          "retrieved_at": "2026-10-29T11:11:41.986494+00:00",
+          "http_status": 200,
+          "verification_run_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40863459675"
+        }
+      ]
+    },
+    {
+      "market": "TWSE",
+      "symbol": "3653",
+      "name": "健策",
+      "primary_category": "cooling",
+      "category_ids": [
+        "cooling"
+      ],
+      "known_since": "2026-10-29",
+      "rationale": "公司官方水冷散熱模組頁揭露為 AI 與高效能運算提供液冷散熱方案。",
+      "company_directory_source": "https://openapi.twse.com.tw/v1/opendata/t187ap03_L",
+      "issuer_homepage": "https://www.jentech.com.tw/zh",
+      "evidence": [
+        {
+          "url": "https://www.jentech.com.tw/zh/liquid-cooling-module-1-1",
+          "title": "+水冷散熱模組 | Jentech Precision Industrial CO., LTD",
+          "kind": "issuer",
+          "known_since": "2026-10-29",
+          "reviewed_at": "2026-10-29",
+          "verification_status": "verified",
+          "source_sha256": "3932488d71d8864ea46219bdfc2d92148da128333f72eb3f1d40557e8790b203",
+          "excerpt": "供應鏈管理 社會參與 資訊中心 人力資源 人權政策 加入健策 員工薪資福利 學習發展 員工關懷與回饋 友善職場 招標專區 廢料招標專區 聯絡健策 Search image (4)_edited.jpg 一站式內部開發的 客製化 液冷方案 為高效能運算量身打造 AI 與高效能運算的崛起 隨著 AI 技術快速發展及晶片架構持續微縮，運算功率密度大幅提升，傳統氣冷散熱技術已逐漸面臨效能瓶頸。 面對新世代資料中心對散熱效能提升兩倍的需求，健策精密運用創新流體力學設計與先進材料技術，提供高效能散熱解決方案，確保運算系統的穩定性與能源效率。 1000W+ 單插槽 TDP 支援能力 ​全客製化 針對應用需求量身打造的幾何結構設計 98% 熱量擷取效率 In-House 場內ㄓ 全製程自主掌控 test_edi … 人力資源 人權政策 加入健策 員工薪資福利 學習發展 員工關懷與回饋 友善職場 招標專區 廢料招標專區 聯絡健策 Search image (4)_edited.jpg 一站式內部開發的 客製化 液冷方案 為高效能運算量身打造 AI 與高效能運算的崛起 隨著 AI 技術快速發展及晶片架構持續微縮，運算功率密度大幅提升，傳統氣冷散熱技術已逐漸面臨效能瓶頸。 面對新世代資料中心對散熱效能提升兩倍的需求，健策精密運用創新流體力學設計與先進材料技術，提供高效能散熱解決方案，確保運算系統的穩定性與能源效率。 1000W+ 單插槽 TDP 支援能力 ​全客製化 針對應用需求量身打造的幾何結構設計 98% 熱量擷取效率 In-House 場內ㄓ 全製程自主掌控 test_edited.png 日益提升的散熱需 … 能散熱解決方案，確保運算系統的穩定性與能源效率。 1000W+ 單插槽 TDP 支援能力 ​全客製化 針對應用需求量身打造的幾何結構設計 98% 熱量擷取效率 In-House 場內ㄓ 全製程自主掌控 test_edited.png 日益提升的散熱需求 隨著 AI 晶片需求快速攀升，伺服器運算能力持續提升，導致晶片的熱設計功耗（TDP）幾乎倍增。 傳統氣冷散熱已難以滿足高功耗裝",
+          "retrieved_at": "2026-10-29T11:11:36.997962+00:00",
+          "http_status": 200,
+          "verification_run_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40863459675"
+        }
+      ]
+    },
+    {
+      "market": "TWSE",
+      "symbol": "8996",
+      "name": "高力",
+      "primary_category": "cooling",
+      "category_ids": [
+        "cooling"
+      ],
+      "known_since": "2026-10-29",
+      "rationale": "候選公司；取得 AI 資料中心散熱業務證據後才納入。",
+      "company_directory_source": "https://openapi.twse.com.tw/v1/opendata/t187ap03_L",
+      "issuer_homepage": "https://www.kaori.com.tw/",
+      "evidence": [
+        {
+          "url": "https://www.kaori.com.tw/",
+          "title": "高力官方網站",
+          "kind": "issuer",
+          "known_since": "2026-10-29",
+          "reviewed_at": "2026-10-29",
+          "verification_status": "pending"
+        }
+      ]
+    }
+  ]
+}

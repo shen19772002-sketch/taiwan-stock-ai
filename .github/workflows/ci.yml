@@ -42,12 +42,17 @@ jobs:
       - name: Verify mobile PWA, offline reports and app updates
         if: matrix.python == '3.12'
         run: python scripts/pwa_smoke.py --site site --out pwa-evidence
+      - name: Verify AI research cards, filters and preserved watchlists
+        if: matrix.python == '3.12'
+        run: python scripts/ai_ui_smoke.py --site site --out ai-evidence
       - name: Retain PWA verification evidence
         if: always() && matrix.python == '3.12'
         uses: actions/upload-artifact@v4
         with:
           name: pwa-browser-verification
-          path: pwa-evidence/
+          path: |
+            pwa-evidence/
+            ai-evidence/
           if-no-files-found: ignore
           retention-days: 14
       - uses: actions/upload-artifact@v4

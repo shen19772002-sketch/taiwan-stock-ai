@@ -27,7 +27,7 @@ taiwan-stock-ai = "taiwan_stock_ai.cli:main"
 where = ["src"]
 
 [tool.setuptools.package-data]
-taiwan_stock_ai = ["templates/*.html", "static/*"]
+taiwan_stock_ai = ["templates/*.html", "static/*", "data/*.json"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

@@ -20,6 +20,8 @@ def main(argv=None) -> int:
     daily.add_argument("--as-of", type=date.fromisoformat)
     daily.add_argument("--output", type=Path, default=Path("site"))
     daily.add_argument("--offline", action="store_true", help="只使用已保存真實資料")
+    daily.add_argument("--scope", default="ai", choices=["ai", "all"],
+                       help="研究範圍：預設為具業務依據的 AI 供應鏈；all 保留全市場相容模式")
     probe = sub.add_parser("probe", help="測試官方 API，保存回應與品質資訊")
     probe.add_argument("--as-of", type=date.fromisoformat)
     check = sub.add_parser("check-db", help="檢查既有資料庫完整性")
@@ -46,11 +48,13 @@ def main(argv=None) -> int:
                               "integrity": store.check(), "note": "僅回補指標歷史，不補造過去預測紀錄。"}, ensure_ascii=False))
         return 0 if result["quotes"] else 2
     if args.command == "run":
-        report = run(args.data_dir, args.output, args.phase, args.as_of, args.offline)
+        report = run(args.data_dir, args.output, args.phase, args.as_of, args.offline,
+                     research_scope=args.scope)
         print(json.dumps({"status": report["status"], "as_of": report["as_of"],
                           "phase": report["phase"], "generated_at": report["generated_at"],
                           "data_date": report["data_date"],
                           "institutional_status": report.get("institutional_status"),
+                          "research_scope": report.get("research_scope"),
                           "sources": [{k: s.get(k) for k in ("id", "status", "data_date", "error")}
                                       for s in report["sources"]],
                           "candidates": len(report["analysis"]["candidates"]),

@@ -6,6 +6,8 @@
 
 **PWA 手機版**：用 Android Chrome 開啟研究網站，按 **安裝到手機**；往後從主畫面「台股研究」圖示查看。支援報告更新回饋與有日期標示的離線副本。[安裝與使用方式](docs/pwa.md)。
 
+**AI 供應鏈研究版**：新研究預設聚焦附業務證據的 AI 名單，保留原有資料、歷史與自選股；手機首頁改為分類篩選、個股觀察及整合資料進度。[研究範圍與使用說明](docs/ai-supply-chain.md)。
+
 每日自動更新：[盤前研究](https://shen19772002-sketch.github.io/taiwan-stock-ai/preopen.html)（08:20）、[盤後研究](https://shen19772002-sketch.github.io/taiwan-stock-ai/postclose.html)（15:30，18:30／20:30 補充）；時間皆為台灣平日排程，GitHub 實際啟動可能延遲。[手動執行、歷史保存與診斷方式](docs/daily-automation.md)。
 
 免填參數手動更新：[執行盤前分析](https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/workflows/preopen.yml)／[執行盤後分析](https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/workflows/postclose.yml)。登入 GitHub，按 **Run workflow → 綠色 Run workflow**，完成後重新整理研究網站。

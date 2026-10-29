@@ -15,6 +15,8 @@ from zoneinfo import ZoneInfo
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 from plotly.offline import get_plotlyjs
 
+from .ai_view import build_ai_view
+
 
 def _clean(value: Any) -> Any:
     """Produce strict JSON, treating non-finite statistics as unavailable."""
@@ -161,9 +163,27 @@ def render_site(
         if selected is None:
             selected = _pending_phase(page)
         clean_report = _prepare_report(selected)
+        prior_ai = [candidate for slug, candidate in retained.items()
+                    if slug in {"preopen", "postclose", "final"}
+                    and candidate.get("phase") == slug
+                    and not (slug == "postclose" and supplement is not None
+                             and supplement.get("phase") == "final"
+                             and _report_order(supplement, selected_times.get("final"))
+                             > _report_order(candidate, selected_times.get("postclose")))
+                    and candidate.get("research_scope", {}).get("id") == "ai_supply_chain"
+                    and candidate.get("analysis", {}).get("candidates")
+                    and candidate.get("data_date")
+                    and clean_report.get("data_date")
+                    and candidate["data_date"] < clean_report["data_date"]
+                    and candidate.get("research_scope", {}).get("registry_hash")
+                    == clean_report.get("research_scope", {}).get("registry_hash")]
+        previous = max(prior_ai, key=_report_order) if prior_ai else None
         data_file = "report.json" if page == "index" else f"{page}.json"
         context = {
             "report": clean_report,
+            "ai_view": build_ai_view(clean_report),
+            "last_usable": {"url": f'{previous["phase"]}.html', "date": previous["data_date"],
+                            "phase": previous["phase"], "status": previous["status"]} if previous else None,
             "page": page,
             "data_file": data_file,
             "app_version": app_version,
@@ -191,7 +211,7 @@ def render_site(
         (assets / data_file).write_text(
             json.dumps(clean_report, ensure_ascii=False, allow_nan=False, indent=2), encoding="utf-8"
         )
-    for filename in ("style.css", "app.js", "pwa.js", "icon-192.png", "icon-512.png", "icon-maskable-512.png"):
+    for filename in ("style.css", "app.js", "ai-view.js", "pwa.js", "icon-192.png", "icon-512.png", "icon-maskable-512.png"):
         shutil.copyfile(root / "static" / filename, assets / filename)
     for filename in ("manifest.webmanifest", "offline.html"):
         shutil.copyfile(root / "static" / filename, output_dir / filename)

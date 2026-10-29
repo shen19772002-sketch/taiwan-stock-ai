@@ -4,18 +4,96 @@ from __future__ import annotations
 
 import hashlib
 import json
+import math
 from copy import deepcopy
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
 from .analytics import analyze
+from . import ai_universe
 from .performance import evaluate
 from .providers import CALENDAR_SOURCE_IDS, ENDPOINTS, collect, collect_calendar, parse_market_calendar
 from .site import render_site
 from .storage import Store
 
 TAIPEI = ZoneInfo("Asia/Taipei")
+
+
+def _latest_watchlist_quotes(quotes: list[dict]) -> list[dict]:
+    """Keep verified all-market prices without expanding the research universe.
+
+    Choose the latest observation before checking validity: a newer invalid
+    observation must not silently revive an older price as if it were current.
+    The query that supplies these records already enforces date/known-at bounds.
+    """
+    latest = {}
+    for quote in quotes:
+        key = quote.get("market"), quote.get("symbol")
+        prior = latest.get(key)
+        if prior is None or (quote.get("date", ""), quote.get("fetched_at", "")) >= (
+                prior.get("date", ""), prior.get("fetched_at", "")):
+            latest[key] = quote
+    output = []
+    for key in sorted(latest):
+        quote = latest[key]
+        try:
+            close = float(quote.get("close"))
+        except (TypeError, ValueError):
+            continue
+        if quote.get("complete") is not True or not math.isfinite(close) or close <= 0:
+            continue
+        output.append({field: quote.get(field) for field in (
+            "market", "symbol", "name", "close", "date", "source", "fetched_at", "industry",
+        )})
+    return output
+
+
+def _ai_analysis(quotes: list[dict], fundamentals: list[dict], institutions: list[dict],
+                 research_date: str, data_date: str) -> dict:
+    """Run the existing model on the versioned AI universe, not a top-15 filter.
+
+    Current membership may use older bars for warmup, but it cannot be used for
+    research dates before its evidence became available. One primary category
+    supplies each member's turnover exactly once; secondary tags do not inflate
+    the AI-sector denominator or relative-strength scores.
+    """
+    universe = ai_universe.get_universe(research_date)
+    membership = {(m["market"], m["symbol"]): m for m in universe["members"]}
+    original_industries = {}
+    scoped_quotes = []
+    for quote in ai_universe.filter_records(quotes, research_date):
+        key = quote["market"], quote["symbol"]
+        original_industries[key] = quote.get("industry")
+        scoped_quotes.append({**quote, "industry": membership[key]["category"]})
+    analysis = analyze(scoped_quotes,
+                       ai_universe.filter_records(fundamentals, research_date),
+                       ai_universe.filter_records(institutions, research_date), as_of=data_date)
+    analysis["stocks"] = ai_universe.annotate_stocks(analysis["stocks"], research_date)
+    analysis["candidates"] = ai_universe.annotate_stocks(analysis["candidates"], research_date)
+    for stock in (*analysis["stocks"], *analysis["candidates"]):
+        stock["official_industry"] = original_industries.get((stock["market"], stock["symbol"]))
+    analysis.setdefault("market", {})["label"] = "已納入 AI 供應鏈普通股之等權廣度；非全市場或官方指數"
+    methodology = analysis.setdefault("methodology", {})
+    methodology.update({
+        "version": "1.1.0-ai", "universe": ai_universe.scope_metadata(research_date),
+        "industry": "AI 主分類內等權 20 日動能占 75%、成交額占比變化占 25%；分母僅含同日 AI 股票，非資金淨流入",
+        "market": "僅以有效 AI 成分股計算漲跌家數與均線廣度；非全市場或官方加權指數",
+    })
+    for industry in analysis["industries"]:
+        industry["denominator_label"] = "同日已取得且通過檢查的 AI 成分股成交額"
+        industry["classification_as_of"] = research_date
+    limitations = analysis.setdefault("limitations", [])
+    limitations.extend(universe["limitations"])
+    limitations.append("分類以研究日已知證據為準；目前成分股的回看歷史不代表無倖存者偏誤的歷史成分股回測。")
+    analysis["scope_readiness"] = {
+        "observed_stocks": len(analysis["stocks"]),
+        "current_quotes": sum(stock.get("date") == data_date for stock in analysis["stocks"]),
+        "history_ready": sum(stock.get("indicators") is not None for stock in analysis["stocks"]),
+        "current_valuations": sum(stock.get("fundamental_status") == "current" for stock in analysis["stocks"]),
+        "eligible": len(analysis["candidates"]),
+    }
+    return analysis
 
 
 def resolve_phase(phase: str, now: datetime) -> str:
@@ -69,12 +147,19 @@ def _cached_holiday(sources: list[dict], data_dir: Path, as_of: date, now: datet
 
 
 def run(data_dir: Path, output: Path, phase: str = "manual", as_of: date | None = None,
-        offline: bool = False, collector=None, now: datetime | None = None) -> dict:
+        offline: bool = False, collector=None, now: datetime | None = None,
+        research_scope: str = "all") -> dict:
+    # Keep direct library callers compatible; the public CLI explicitly defaults
+    # to AI, so every existing scheduled and manual Actions entry uses AI scope.
+    if research_scope not in {"ai", "all"}:
+        raise ValueError("research_scope must be ai or all")
     clock_supplied = now is not None
     now = now or datetime.now(timezone.utc)
     as_of = as_of or now.astimezone(TAIPEI).date()
     if as_of > now.astimezone(TAIPEI).date():
         raise ValueError("不可產生未來日期的研究報告")
+    scope = (ai_universe.scope_metadata(as_of.isoformat()) if research_scope == "ai" else
+             {"id": "all_market", "label": "全市場普通股研究", "version": "1.0.0"})
     phase = resolve_phase(phase, now)
     notices = []
     result = {"quotes": [], "fundamentals": [], "institutions": [], "sources": [],
@@ -128,6 +213,9 @@ def run(data_dir: Path, output: Path, phase: str = "manual", as_of: date | None 
                 saved = store.get_report(previous["id"])
                 if (data_date and saved.get("analysis", {}).get("as_of")
                         and saved["analysis"]["as_of"] <= data_date
+                        and saved.get("research_scope", {}).get("id", "all_market") == scope["id"]
+                        and (research_scope != "ai" or saved.get("research_scope", {}).get("registry_hash")
+                             == scope.get("registry_hash"))
                         and datetime.fromisoformat(saved["generated_at"]) <= now):
                     prior = saved
                     break
@@ -140,7 +228,9 @@ def run(data_dir: Path, output: Path, phase: str = "manual", as_of: date | None 
             analysis["candidates"] = []
             notices.append("官方行事曆或休市公告已確認休市；未執行當日選股模型，畫面保留歷史研究。")
         else:
-            analysis = analyze(quotes, fundamentals, institutions, as_of=data_date or as_of.isoformat())
+            analysis = (_ai_analysis(quotes, fundamentals, institutions, as_of.isoformat(),
+                                     data_date or as_of.isoformat()) if research_scope == "ai" else
+                        analyze(quotes, fundamentals, institutions, as_of=data_date or as_of.isoformat()))
         institution_dates = {
             market: max((row["date"] for row in institutions if row["market"] == market
                          and row.get("complete") and row["date"] <= (data_date or cutoff.isoformat())),
@@ -183,12 +273,27 @@ def run(data_dir: Path, output: Path, phase: str = "manual", as_of: date | None 
         if phase == "final":
             notices.append("晚間更新會重試官方資料；final 是排程階段，並不表示所有資料已公布。")
         if not analysis["candidates"] and status != "non_trading_day":
-            notices.append("目前無符合完整選股條件的標的；需要至少 60 筆完整歷史、正本益比及技術條件。")
+            if research_scope == "ai":
+                readiness = analysis.get("scope_readiness", {})
+                notices.append("目前無符合完整條件的 AI 標的；"
+                               f"可觀察 {readiness.get('observed_stocks', 0)} 檔、"
+                               f"技術歷史就緒 {readiness.get('history_ready', 0)} 檔、"
+                               f"同日估值 {readiness.get('current_valuations', 0)} 檔。"
+                               "資料缺漏與未符合趨勢／風險條件分開判讀，不代表必須重新累積 60 日。")
+            else:
+                notices.append("目前無符合完整選股條件的標的；需要至少 60 筆完整歷史、正本益比及技術條件。")
         report = {
             "schema_version": 1, "generated_at": now.isoformat(), "as_of": as_of.isoformat(),
             "data_date": data_date, "phase": phase, "status": status, "data_mode": "盤後資料",
             "sources": result["sources"], "source_mode": source_mode,
             "calendar": calendar, "notices": notices,
+            "research_scope": scope,
+            "watchlist_quotes": _latest_watchlist_quotes(quotes),
+            "tracking_scope": (
+                {"id": "historical_and_ai", "label": "保留原始範圍的歷史訊號與新 AI 訊號；非 AI 專屬回測"}
+                if research_scope == "ai" else
+                {"id": "original_research_scope", "label": "保留各次原始研究範圍的訊號；非 AI 專屬回測"}
+            ),
             "institutional_status": institutional_status,
             "analysis": analysis, "history": store.history(),
             # Today's first forecast cannot yet have forward performance. Keep
@@ -197,6 +302,7 @@ def run(data_dir: Path, output: Path, phase: str = "manual", as_of: date | None 
                                      if signal["signal_date"] < as_of.isoformat()],
                                     quotes, as_of.isoformat()),
         }
+        report["performance"].setdefault("limitations", []).insert(0, report["tracking_scope"]["label"])
         record_signals = (phase in {"postclose", "final", "manual"} and not offline
                           and calendar.get("trading_day") is True
                           and as_of == now.astimezone(TAIPEI).date()

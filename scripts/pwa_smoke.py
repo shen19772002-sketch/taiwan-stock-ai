@@ -122,6 +122,13 @@ def wait_controlled(page):
     page.wait_for_function("() => navigator.serviceWorker.controller !== null", timeout=30000)
 
 
+def set_pwa_tools(page, opened):
+    """Exercise the compact install menu while supporting older saved pages."""
+    tools = page.locator("#pwa-tools")
+    if tools.count() and tools.evaluate("node => node.open") != opened:
+        tools.locator(":scope > summary").click()
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--site", type=Path, required=True)
@@ -183,7 +190,7 @@ def main():
                 wait_controlled(page)
                 assert page.evaluate("document.documentElement.scrollWidth <= innerWidth")
                 assert page.locator("#report-refresh").is_visible()
-                assert page.locator("#pwa-install-help").inner_text()
+                assert page.locator("#pwa-install-help").text_content().strip()
                 scope = page.evaluate("async () => (await navigator.serviceWorker.ready).scope")
                 assert scope == base
                 wait_cached(page, PREFIX + "index.html")
@@ -273,10 +280,12 @@ def main():
                   event.userChoice = Promise.resolve({outcome: 'accepted', platform: 'web'});
                   window.dispatchEvent(event);
                 }""")
+                set_pwa_tools(page, True)
                 page.wait_for_selector("#pwa-install:not([hidden])")
                 page.locator("#pwa-install").click()
                 assert page.evaluate("window.__installCalled") == 1
                 page.evaluate("window.dispatchEvent(new Event('appinstalled'))")
+                set_pwa_tools(page, False)
                 # A changed SW script waits for the user's explicit update choice.
                 page.evaluate("caches.open('unrelated-other-app').then(c => c.put('/other-app/item', new Response('keep'))) ")
                 state.sw_suffix += f"\n// verification update {label}\n"
