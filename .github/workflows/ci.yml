@@ -11,7 +11,8 @@ permissions:
 
 jobs:
   test:
-    runs-on: ubuntu-latest
+    # Keep the pinned Playwright version on its supported runner OS.
+    runs-on: ubuntu-24.04
     strategy:
       fail-fast: false
       matrix:
