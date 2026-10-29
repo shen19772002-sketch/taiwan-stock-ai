@@ -4,6 +4,8 @@
 
 **研究網站：[開啟台股 AI 研究報告](https://shen19772002-sketch.github.io/taiwan-stock-ai/)**。2026-10-25 已完成正式 Pages 部署；實際行情日與研究日分開顯示，休市不產生當日新選股訊號。
 
+**PWA 手機版**：用 Android Chrome 開啟研究網站，按 **安裝到手機**；往後從主畫面「台股研究」圖示查看。支援報告更新回饋與有日期標示的離線副本。[安裝與使用方式](docs/pwa.md)。
+
 每日自動更新：[盤前研究](https://shen19772002-sketch.github.io/taiwan-stock-ai/preopen.html)（08:20）、[盤後研究](https://shen19772002-sketch.github.io/taiwan-stock-ai/postclose.html)（15:30，18:30／20:30 補充）；時間皆為台灣平日排程，GitHub 實際啟動可能延遲。[手動執行、歷史保存與診斷方式](docs/daily-automation.md)。
 
 免填參數手動更新：[執行盤前分析](https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/workflows/preopen.yml)／[執行盤後分析](https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/workflows/postclose.yml)。登入 GitHub，按 **Run workflow → 綠色 Run workflow**，完成後重新整理研究網站。
@@ -94,6 +96,7 @@ python -m ruff check src tests scripts
 - [評分、價位與風險模型](docs/models.md)
 - [每日盤前／盤後設定與驗證](docs/daily-automation.md)
 - [自動執行核對與簡化手動操作驗證](docs/manual-controls-validation.md)
+- [PWA 手機版安裝、更新與離線說明](docs/pwa.md)
 - [部署與歷史保存](docs/deployment.md)
 - [開發驗證紀錄](docs/validation.md)
 - [下週交易日與啟用檢查](docs/market-readiness.md)

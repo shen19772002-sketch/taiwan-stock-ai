@@ -4,3 +4,39 @@
 .institution-status{display:flex;flex-wrap:wrap;gap:7px 20px;padding:12px 16px;margin-bottom:18px;border:1px solid var(--line);border-radius:7px;font-size:11px;color:var(--muted)}.institution-status b{color:var(--text);font-weight:500;margin-left:7px}.institution-status small{flex-basis:100%;font-size:10px}
 .phase-nav{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-bottom:10px}.phase-nav a{display:grid;gap:3px;padding:12px 16px;border:1px solid var(--line);border-radius:9px;background:var(--surface);color:var(--muted)}.phase-nav a:hover,.phase-nav a[aria-current="page"]{color:var(--teal);border-color:#386b5e;background:#17322f}.phase-nav span{font-size:12px;font-weight:600}.phase-nav small{font-size:10px;color:var(--muted)}.phase-schedule-note{font-size:10px;color:var(--muted);margin:0 0 24px}@media(max-width:760px){.phase-nav{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.phase-nav a{padding:10px 12px}.phase-nav span{font-size:11px}.phase-nav small,.phase-schedule-note{font-size:9px}}@media print{.phase-nav,.phase-schedule-note{display:none}}
 .manual-run{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:0 0 24px;padding:15px 16px;border:1px solid var(--line);border-radius:9px;background:var(--surface)}.manual-run strong{font-size:12px;margin-right:6px}.manual-run .secondary-button{display:inline-flex;align-items:center;min-height:44px}.manual-run p{flex-basis:100%;font-size:11px;line-height:1.8;color:var(--muted);margin:0}@media(max-width:760px){.manual-run{padding:12px;gap:8px}.manual-run strong{flex-basis:100%}.manual-run .secondary-button{flex:1;justify-content:center}.manual-run p{font-size:10px}}@media print{.manual-run{display:none}}
+
+/* Installable mobile report reader; all prices retain their original dates. */
+.data-strip{flex-wrap:wrap}
+.data-strip>span:nth-child(2){display:inline}
+.pwa-toolbar{padding:18px;border:1px solid #34574e;border-radius:var(--radius);background:linear-gradient(130deg,#17342f,#121e27);margin-bottom:18px}
+.pwa-title{display:grid;gap:3px;margin-bottom:12px}
+.pwa-title strong{font-size:17px;font-weight:600}
+.pwa-actions,.manual-run-actions{display:flex;flex-wrap:wrap;gap:10px}
+.pwa-actions button{min-height:44px;font-size:12px}
+.pwa-actions .secondary-button{background:var(--surface);color:var(--text)}
+.pwa-actions button:disabled{cursor:wait;opacity:.65}
+.pwa-toolbar p{font-size:12px;color:#b4c8cf;margin:10px 0 0;line-height:1.8;overflow-wrap:anywhere}
+#report-refresh-feedback{color:var(--teal)}
+.pwa-offline{position:sticky;top:96px;z-index:8;background:#342b1b;border-color:var(--amber);color:#ffe0a3;font-size:13px}
+.manual-run{display:block}
+.manual-run summary{cursor:pointer;min-height:44px;display:list-item;padding:10px 0;font-size:12px;color:var(--muted)}
+.manual-run[open] summary{color:var(--teal);margin-bottom:10px}
+.manual-run p{margin-top:12px}
+.mobile-quick-nav{display:none}
+@media(max-width:760px){
+  body{padding-bottom:calc(66px + env(safe-area-inset-bottom))}
+  .topbar{padding-left:max(18px,env(safe-area-inset-left));padding-right:max(18px,env(safe-area-inset-right))}
+  .pwa-toolbar{padding:15px}
+  .pwa-title strong{font-size:16px}
+  .pwa-actions button{flex:1;padding:10px 12px;font-size:12px}
+  .pwa-toolbar p{font-size:11px}
+  .pwa-offline{top:122px;font-size:12px}
+  .manual-run p{font-size:11px}
+  .phase-nav a{min-height:58px}
+  .phase-nav span{font-size:13px}
+  .mobile-quick-nav{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:20;padding:6px max(8px,env(safe-area-inset-right)) calc(6px + env(safe-area-inset-bottom)) max(8px,env(safe-area-inset-left));background:#0e1922;border-top:1px solid #34574e;box-shadow:0 -4px 20px #0005}
+  .mobile-quick-nav a{display:flex;flex:1;align-items:center;justify-content:center;min-height:46px;font-size:13px;border-radius:7px;color:#c5dadf}
+  .mobile-quick-nav a:hover,.mobile-quick-nav a:focus-visible{background:var(--teal-dark);color:var(--teal)}
+  .watch-form input,.watch-form select,.watch-form button,.icon-button{min-height:44px}
+}
+@media print{.pwa-toolbar,.pwa-offline,.manual-run,.mobile-quick-nav{display:none}}

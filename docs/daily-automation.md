@@ -23,7 +23,7 @@ GitHub 排程可能延遲或漏跑，不能保證準點。排隊延遲不改變�
 
 ## 手動執行
 
-最簡單的方法：開啟研究網站頂端的 **手動盤前分析** 或 **手動盤後分析**，也可以直接開啟：
+查看結果可直接開啟手機版的盤前／盤後研究，按 **檢查最新報告** 讀取已發布內容。需要重新計算時，展開 **需要重新分析？**，選擇 **到 GitHub 執行盤前／盤後**，也可以直接開啟：
 
 - [手動盤前分析](https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/workflows/preopen.yml)
 - [手動盤後分析](https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/workflows/postclose.yml)

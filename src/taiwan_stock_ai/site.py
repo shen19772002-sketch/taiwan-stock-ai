@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import hashlib
 import json
 import math
 import shutil
@@ -132,6 +133,17 @@ def render_site(
     environment.filters["number"] = _number
     environment.filters["taipei"] = _local_time
     template = environment.get_template("index.html")
+    # Interface releases and individual report revisions are separate. A new
+    # postclose report must not invalidate an unchanged preopen page or cause a
+    # new service-worker install and Plotly download on every scheduled run.
+    plotly_js = get_plotlyjs()
+    interface_hash = hashlib.sha256((root / "templates/index.html").read_bytes())
+    for path in sorted((root / "static").iterdir()):
+        if path.is_file():
+            interface_hash.update(path.name.encode() + b"\0" + path.read_bytes())
+    interface_hash.update(plotly_js.encode())
+    app_version = interface_hash.hexdigest()[:20]
+    publication = {"schema_version": 1, "app_version": app_version, "pages": {}}
     for page in ("index", "preopen", "postclose", "final"):
         selected = report if page == "index" else retained.get(page)
         if page != "index" and selected is not None and selected.get("phase") != page:
@@ -150,25 +162,43 @@ def render_site(
             selected = _pending_phase(page)
         clean_report = _prepare_report(selected)
         data_file = "report.json" if page == "index" else f"{page}.json"
-        (output_dir / f"{page}.html").write_text(
-            template.render(
-                report=clean_report,
-                page=page,
-                data_file=data_file,
-                is_postclose_supplement=page == "postclose" and clean_report.get("phase") == "final",
-                latest_as_of=report.get("as_of"),
-                phase_is_stale=(
-                    page != "index" and bool(clean_report.get("as_of"))
-                    and bool(report.get("as_of"))
-                    and clean_report["as_of"] < report["as_of"]
-                ),
+        context = {
+            "report": clean_report,
+            "page": page,
+            "data_file": data_file,
+            "app_version": app_version,
+            "is_postclose_supplement": page == "postclose" and clean_report.get("phase") == "final",
+            "latest_as_of": report.get("as_of"),
+            "phase_is_stale": (
+                page != "index" and bool(clean_report.get("as_of"))
+                and bool(report.get("as_of"))
+                and clean_report["as_of"] < report["as_of"]
             ),
+        }
+        revision = hashlib.sha256(json.dumps(
+            context, ensure_ascii=False, allow_nan=False, sort_keys=True, separators=(",", ":")
+        ).encode()).hexdigest()
+        publication["pages"][page] = {
+            "revision": revision,
+            **{key: clean_report.get(key) for key in (
+                "phase", "as_of", "data_date", "generated_at", "status",
+            )},
+        }
+        (output_dir / f"{page}.html").write_text(
+            template.render(**context, page_revision=revision),
             encoding="utf-8",
         )
         (assets / data_file).write_text(
             json.dumps(clean_report, ensure_ascii=False, allow_nan=False, indent=2), encoding="utf-8"
         )
-    for filename in ("style.css", "app.js"):
+    for filename in ("style.css", "app.js", "pwa.js", "icon-192.png", "icon-512.png", "icon-maskable-512.png"):
         shutil.copyfile(root / "static" / filename, assets / filename)
-    (assets / "plotly.min.js").write_text(get_plotlyjs(), encoding="utf-8")
+    for filename in ("manifest.webmanifest", "offline.html"):
+        shutil.copyfile(root / "static" / filename, output_dir / filename)
+    worker = (root / "static/sw.js").read_text(encoding="utf-8")
+    (output_dir / "sw.js").write_text(worker.replace("__PWA_VERSION__", app_version), encoding="utf-8")
+    (assets / "publication.json").write_text(
+        json.dumps(publication, ensure_ascii=False, allow_nan=False, indent=2), encoding="utf-8"
+    )
+    (assets / "plotly.min.js").write_text(plotly_js, encoding="utf-8")
     (output_dir / ".nojekyll").touch()

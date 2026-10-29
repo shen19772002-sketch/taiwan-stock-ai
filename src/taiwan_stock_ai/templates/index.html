@@ -2,15 +2,24 @@
 <html lang="zh-Hant">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0b141b">
+  <meta name="application-name" content="台股研究">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="台股研究">
   <meta name="description" content="台股盤後研究：官方市場資料、可解釋選股規則、產業相對強弱與歷史訊號追蹤。">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; worker-src 'self'; manifest-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'">
   <title>台股 AI 智慧研究｜{{ {'preopen':'盤前研究','postclose':'盤後研究','final':'完整資料更新'}.get(page, '最新研究') }}</title>
-  <link rel="stylesheet" href="assets/style.css">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" type="image/png" href="assets/icon-192.png">
+  <link rel="apple-touch-icon" href="assets/icon-192.png">
+  <link rel="stylesheet" href="assets/style.css?v={{ app_version }}">
   <script src="assets/plotly.min.js" defer></script>
-  <script src="assets/app.js" defer></script>
+  <script src="assets/app.js?v={{ app_version }}" defer></script>
+  <script src="assets/pwa.js?v={{ app_version }}" defer></script>
 </head>
-<body>
+<body data-page="{{ page }}" data-page-revision="{{ page_revision }}">
   {% set a = report.analysis %}
   {% set source_names = {'twse_companies':'TWSE 上市公司名單','tpex_companies':'TPEx 上櫃公司名單','twse_quotes':'TWSE 上市盤後行情','tpex_quotes':'TPEx 上櫃盤後行情','twse_valuations':'TWSE 估值指標','tpex_valuations':'TPEx 估值指標','twse_dated_quotes':'TWSE 有日期行情備援','twse_dated_valuations':'TWSE 有日期估值備援','twse_calendar':'TWSE 官方行事曆','twse_institutions':'TWSE 三大法人買賣超','tpex_institutions':'TPEx 三大法人買賣超','twse_market_notices':'TWSE 市場休市公告','tpex_market_notices':'TPEx 市場休市公告'} %}
   {% set market = a.market %}
@@ -37,18 +46,33 @@
       <div class="sidebar-note"><span class="tiny-label">研究原則</span><p>讓每個判斷，都有可追溯的依據。</p><span>官方資料 · 規則透明 · 風險優先</span></div>
     </aside>
     <main>
+      <div id="pwa-offline" class="notice pwa-offline" role="status" hidden>目前無法確認最新資料；顯示已儲存的報告，請以原行情日期判讀。</div>
+      <div class="pwa-toolbar" role="group" aria-label="手機版與報告更新">
+        <div class="pwa-title"><span class="tiny-label">手機研究工作台</span><strong>開啟就能查看研究結果</strong></div>
+        <div class="pwa-actions">
+          <button id="pwa-install" class="secondary-button" type="button">安裝到手機</button>
+          <button id="report-refresh" class="primary-button" type="button">檢查最新報告</button>
+          <button id="pwa-update" class="secondary-button" type="button" hidden>更新手機版</button>
+        </div>
+        <p id="pwa-install-help">Android 請用 Chrome 開啟本網站，選擇「安裝應用程式」或「新增至主畫面」。</p>
+        <p id="pwa-status" role="status" aria-live="polite">安裝後可從手機主畫面開啟；分析仍由雲端排程執行。</p>
+        <p id="report-refresh-feedback" role="status" aria-live="polite">檢查會讀取最新已發布的報告，不會啟動重新分析。行情日：{{ report.data_date or '等待資料' }}。</p>
+      </div>
       <nav class="phase-nav" aria-label="研究報告時段">
         {% for slug, label, schedule in [('index', '最新研究', '最近執行結果'), ('preopen', '盤前研究', '平日 08:20'), ('postclose', '盤後研究', '平日 15:30'), ('final', '完整資料更新', '平日 18:30／20:30')] %}
         <a href="{{ slug }}.html"{% if page == slug %} aria-current="page"{% endif %}><span>{{ label }}</span><small>{{ schedule }}</small></a>
         {% endfor %}
       </nav>
       <p class="phase-schedule-note">排程時間為台灣時間；遇官方休市日跳過交易分析，實際啟動時間可能因 GitHub 排程延遲。<a class="text-link" href="https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/workflows/research.yml?query=event%3Aschedule" target="_blank" rel="noopener noreferrer">查看自動執行紀錄 ↗</a></p>
-      <div class="manual-run" role="group" aria-label="手動更新研究">
-        <strong>手動更新</strong>
-        <a class="secondary-button" href="https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/workflows/preopen.yml" target="_blank" rel="noopener noreferrer">手動盤前分析 ↗</a>
-        <a class="secondary-button" href="https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/workflows/postclose.yml" target="_blank" rel="noopener noreferrer">手動盤後分析 ↗</a>
-        <p>登入 GitHub 後，按「Run workflow」，再按綠色「Run workflow」即可，不用填參數。執行完成後重新整理報告。</p>
-      </div>
+      <details class="manual-run">
+        <summary>需要重新分析？開啟執行入口</summary>
+        <div class="manual-run-actions" role="group" aria-label="手動更新研究">
+          <a class="secondary-button" href="https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/workflows/preopen.yml" target="_blank" rel="noopener noreferrer">到 GitHub 執行盤前 ↗</a>
+          <a class="secondary-button" href="https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/workflows/postclose.yml" target="_blank" rel="noopener noreferrer">到 GitHub 執行盤後 ↗</a>
+        </div>
+        <p>登入 GitHub 後，按「Run workflow」，再按綠色「Run workflow」，不用填參數。工作需要數分鐘；綠色勾勾表示完成，再回本頁按「檢查最新報告」。等待時不需重複送出。</p>
+        <p>若 GitHub App 點擊沒有回饋，請以 Chrome 開啟 GitHub 網頁操作。這些連結會開啟執行頁面，不會直接啟動分析。</p>
+      </details>
       {% if is_postclose_supplement %}<div class="notice">本頁顯示最新盤後補充報告（完整資料更新）；原始報告仍依各次記錄保留。資料是否齊全，請見本次狀態與官方來源明細。</div>{% endif %}
       {% if phase_is_stale %}<div class="notice">此頁保留最近一次{{ phase_labels.get(report.phase, report.phase) }}：{{ report.as_of }}。最新排程基準日為 {{ latest_as_of }}；請以本頁標示的行情交易日與更新時間判讀。</div>{% endif %}
       <section id="overview" class="section hero-section">
@@ -116,6 +140,7 @@
       <footer><span>台股 AI 智慧投資研究系統 V1.0</span><span>投資研究與模擬用途 · 無自動下單功能</span></footer>
     </main>
   </div>
+  <nav class="mobile-quick-nav" aria-label="手機快捷導覽"><a href="#overview">總覽</a><a href="#ranking">選股</a><a href="#watchlist">自選股</a><a href="#reports">報告</a></nav>
   <script id="report-data" type="application/json">{{ report|tojson }}</script>
 </body>
 </html>

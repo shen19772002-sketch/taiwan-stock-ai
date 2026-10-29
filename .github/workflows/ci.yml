@@ -33,6 +33,22 @@ jobs:
           python -m taiwan_stock_ai run --offline --phase manual --data-dir data --output site
           python -m taiwan_stock_ai check-db --data-dir data
           test -s site/index.html
+      - name: Install Chromium for PWA verification
+        if: matrix.python == '3.12'
+        run: |
+          python -m pip install -e '.[browser]'
+          python -m playwright install --with-deps chromium
+      - name: Verify mobile PWA, offline reports and app updates
+        if: matrix.python == '3.12'
+        run: python scripts/pwa_smoke.py --site site --out pwa-evidence
+      - name: Retain PWA verification evidence
+        if: always() && matrix.python == '3.12'
+        uses: actions/upload-artifact@v4
+        with:
+          name: pwa-browser-verification
+          path: pwa-evidence/
+          if-no-files-found: ignore
+          retention-days: 14
       - uses: actions/upload-artifact@v4
         with:
           name: offline-report-python-${{ matrix.python }}

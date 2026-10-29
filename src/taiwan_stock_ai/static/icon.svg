@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <title>台股智慧研究</title>
+  <rect width="512" height="512" fill="#0b141b"/>
+  <rect x="64" y="64" width="384" height="384" rx="88" fill="#173f3b"/>
+  <circle cx="158" cy="176" r="22" fill="#edc27b"/>
+  <rect x="136" y="270" width="52" height="84" rx="10" fill="#62d3b3"/>
+  <rect x="230" y="222" width="52" height="132" rx="10" fill="#62d3b3"/>
+  <rect x="324" y="166" width="52" height="188" rx="10" fill="#aff5df"/>
+  <rect x="136" y="370" width="240" height="12" rx="6" fill="#62d3b3"/>
+</svg>
