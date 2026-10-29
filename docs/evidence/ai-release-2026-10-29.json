@@ -1,0 +1,2579 @@
+{
+  "checked_at_utc": "2026-10-29T11:48:21.030935+00:00",
+  "implementation_commit": "c3c978654cbdf792d49dd0d02072e8551699f4b0",
+  "unit_tests": {
+    "passed": 260,
+    "ruff": "passed",
+    "javascript_syntax": "passed"
+  },
+  "packaging": {
+    "wheel_contains_registry_and_ai_script": true
+  },
+  "ci": {
+    "conclusion": "success",
+    "createdAt": "2026-10-29T11:36:46Z",
+    "databaseId": 40866724704,
+    "headSha": "c3c978654cbdf792d49dd0d02072e8551699f4b0",
+    "jobs": [
+      {
+        "completedAt": "2026-10-29T11:37:19Z",
+        "conclusion": "success",
+        "databaseId": 123423239278,
+        "name": "test (3.11)",
+        "startedAt": "2026-10-29T11:36:48Z",
+        "status": "completed",
+        "steps": [
+          {
+            "conclusion": "success",
+            "name": "Set up job",
+            "number": 1,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run actions/checkout@v4",
+            "number": 2,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run actions/setup-python@v5",
+            "number": 3,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run python -m pip install -r requirements.lock -e .",
+            "number": 4,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run python -m ruff check src tests scripts",
+            "number": 5,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run python -m pytest -q",
+            "number": 6,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Build truthful empty-state report without network",
+            "number": 7,
+            "status": "completed"
+          },
+          {
+            "conclusion": "skipped",
+            "name": "Install Chromium for PWA verification",
+            "number": 8,
+            "status": "completed"
+          },
+          {
+            "conclusion": "skipped",
+            "name": "Verify mobile PWA, offline reports and app updates",
+            "number": 9,
+            "status": "completed"
+          },
+          {
+            "conclusion": "skipped",
+            "name": "Verify AI research cards, filters and preserved watchlists",
+            "number": 10,
+            "status": "completed"
+          },
+          {
+            "conclusion": "skipped",
+            "name": "Retain PWA verification evidence",
+            "number": 11,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run actions/upload-artifact@v4",
+            "number": 12,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Post Run actions/setup-python@v5",
+            "number": 23,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Post Run actions/checkout@v4",
+            "number": 24,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Complete job",
+            "number": 25,
+            "status": "completed"
+          }
+        ],
+        "url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40866724704/job/123423239278"
+      },
+      {
+        "completedAt": "2026-10-29T11:38:43Z",
+        "conclusion": "success",
+        "databaseId": 123423239574,
+        "name": "test (3.12)",
+        "startedAt": "2026-10-29T11:36:48Z",
+        "status": "completed",
+        "steps": [
+          {
+            "conclusion": "success",
+            "name": "Set up job",
+            "number": 1,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run actions/checkout@v4",
+            "number": 2,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run actions/setup-python@v5",
+            "number": 3,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run python -m pip install -r requirements.lock -e .",
+            "number": 4,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run python -m ruff check src tests scripts",
+            "number": 5,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run python -m pytest -q",
+            "number": 6,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Build truthful empty-state report without network",
+            "number": 7,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Install Chromium for PWA verification",
+            "number": 8,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Verify mobile PWA, offline reports and app updates",
+            "number": 9,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Verify AI research cards, filters and preserved watchlists",
+            "number": 10,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Retain PWA verification evidence",
+            "number": 11,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run actions/upload-artifact@v4",
+            "number": 12,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Post Run actions/setup-python@v5",
+            "number": 23,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Post Run actions/checkout@v4",
+            "number": 24,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Complete job",
+            "number": 25,
+            "status": "completed"
+          }
+        ],
+        "url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40866724704/job/123423239574"
+      }
+    ],
+    "status": "completed",
+    "updatedAt": "2026-10-29T11:38:43Z",
+    "url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40866724704"
+  },
+  "production_runs": {
+    "preopen": {
+      "conclusion": "success",
+      "createdAt": "2026-10-29T11:39:03Z",
+      "databaseId": 40867016653,
+      "headSha": "c3c978654cbdf792d49dd0d02072e8551699f4b0",
+      "jobs": [
+        {
+          "completedAt": "2026-10-29T11:41:41Z",
+          "conclusion": "success",
+          "databaseId": 123424237161,
+          "name": "research / research",
+          "startedAt": "2026-10-29T11:39:06Z",
+          "status": "completed",
+          "steps": [
+            {
+              "conclusion": "success",
+              "name": "Set up job",
+              "number": 1,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run actions/checkout@v4",
+              "number": 2,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Initialize diagnostics",
+              "number": 3,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run actions/setup-python@v5",
+              "number": 4,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Install pinned dependencies",
+              "number": 5,
+              "status": "completed"
+            },
+            {
+              "conclusion": "skipped",
+              "name": "Resolve original scheduled trading session",
+              "number": 6,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Restore permanent data branch",
+              "number": 7,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Optional initial historical warmup",
+              "number": 8,
+              "status": "completed"
+            },
+            {
+              "conclusion": "skipped",
+              "name": "Probe official sources for manual validation",
+              "number": 9,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Collect and generate research",
+              "number": 10,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Verify database before archive",
+              "number": 11,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Save permanent research history",
+              "number": 12,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Retain recovery artifact even if publication fails",
+              "number": 13,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Summarize command outcomes",
+              "number": 14,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Retain diagnostics even when setup or restore fails",
+              "number": 15,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run actions/upload-pages-artifact@v3",
+              "number": 16,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Downloadable research pages",
+              "number": 17,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Run actions/setup-python@v5",
+              "number": 33,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Run actions/checkout@v4",
+              "number": 34,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Complete job",
+              "number": 35,
+              "status": "completed"
+            }
+          ],
+          "url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40867016653/job/123424237161"
+        },
+        {
+          "completedAt": "2026-10-29T11:42:01Z",
+          "conclusion": "success",
+          "databaseId": 123425355770,
+          "name": "research / deploy",
+          "startedAt": "2026-10-29T11:41:45Z",
+          "status": "completed",
+          "steps": [
+            {
+              "conclusion": "success",
+              "name": "Set up job",
+              "number": 1,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run actions/configure-pages@v5",
+              "number": 2,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run actions/deploy-pages@v4",
+              "number": 3,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Complete job",
+              "number": 4,
+              "status": "completed"
+            }
+          ],
+          "url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40867016653/job/123425355770"
+        }
+      ],
+      "status": "completed",
+      "updatedAt": "2026-10-29T11:42:02Z",
+      "url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40867016653"
+    },
+    "postclose": {
+      "conclusion": "success",
+      "createdAt": "2026-10-29T11:39:05Z",
+      "databaseId": 40867021455,
+      "headSha": "c3c978654cbdf792d49dd0d02072e8551699f4b0",
+      "jobs": [
+        {
+          "completedAt": "2026-10-29T11:44:42Z",
+          "conclusion": "success",
+          "databaseId": 123424254998,
+          "name": "research / research",
+          "startedAt": "2026-10-29T11:42:03Z",
+          "status": "completed",
+          "steps": [
+            {
+              "conclusion": "success",
+              "name": "Set up job",
+              "number": 1,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run actions/checkout@v4",
+              "number": 2,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Initialize diagnostics",
+              "number": 3,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run actions/setup-python@v5",
+              "number": 4,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Install pinned dependencies",
+              "number": 5,
+              "status": "completed"
+            },
+            {
+              "conclusion": "skipped",
+              "name": "Resolve original scheduled trading session",
+              "number": 6,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Restore permanent data branch",
+              "number": 7,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Optional initial historical warmup",
+              "number": 8,
+              "status": "completed"
+            },
+            {
+              "conclusion": "skipped",
+              "name": "Probe official sources for manual validation",
+              "number": 9,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Collect and generate research",
+              "number": 10,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Verify database before archive",
+              "number": 11,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Save permanent research history",
+              "number": 12,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Retain recovery artifact even if publication fails",
+              "number": 13,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Summarize command outcomes",
+              "number": 14,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Retain diagnostics even when setup or restore fails",
+              "number": 15,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run actions/upload-pages-artifact@v3",
+              "number": 16,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Downloadable research pages",
+              "number": 17,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Run actions/setup-python@v5",
+              "number": 33,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Run actions/checkout@v4",
+              "number": 34,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Complete job",
+              "number": 35,
+              "status": "completed"
+            }
+          ],
+          "url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40867021455/job/123424254998"
+        },
+        {
+          "completedAt": "2026-10-29T11:44:55Z",
+          "conclusion": "success",
+          "databaseId": 123426665612,
+          "name": "research / deploy",
+          "startedAt": "2026-10-29T11:44:46Z",
+          "status": "completed",
+          "steps": [
+            {
+              "conclusion": "success",
+              "name": "Set up job",
+              "number": 1,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run actions/configure-pages@v5",
+              "number": 2,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run actions/deploy-pages@v4",
+              "number": 3,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Complete job",
+              "number": 4,
+              "status": "completed"
+            }
+          ],
+          "url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40867021455/job/123426665612"
+        }
+      ],
+      "status": "completed",
+      "updatedAt": "2026-10-29T11:44:56Z",
+      "url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40867021455"
+    }
+  },
+  "local_data": {
+    "preopen": {
+      "phase": "preopen",
+      "as_of": "2026-10-29",
+      "data_date": "2026-10-28",
+      "generated_at": "2026-10-29T11:17:24.466350+00:00",
+      "status": "partial",
+      "source_mode": "retained",
+      "institutional_status": {
+        "market_dates": {
+          "TPEX": "2026-10-28",
+          "TWSE": "2026-10-28"
+        },
+        "required_date": "2026-10-28",
+        "status": "ready"
+      },
+      "readiness": {
+        "current_quotes": 20,
+        "current_valuations": 20,
+        "eligible": 4,
+        "history_ready": 20,
+        "observed_stocks": 20
+      },
+      "source_states": [
+        {
+          "id": "twse_companies",
+          "status": "ok",
+          "data_date": "2026-10-28",
+          "error": null
+        },
+        {
+          "id": "tpex_companies",
+          "status": "ok",
+          "data_date": "2026-10-28",
+          "error": null
+        },
+        {
+          "id": "twse_quotes",
+          "status": "waiting",
+          "data_date": "2026-10-28",
+          "error": "3 筆資料日期或必要欄位不完整"
+        },
+        {
+          "id": "twse_dated_quotes",
+          "status": "waiting",
+          "data_date": "2026-10-29",
+          "error": "7 筆資料日期或必要欄位不完整"
+        },
+        {
+          "id": "tpex_quotes",
+          "status": "waiting",
+          "data_date": "2026-10-28",
+          "error": "23 筆資料日期或必要欄位不完整"
+        },
+        {
+          "id": "twse_valuations",
+          "status": "ok",
+          "data_date": "2026-10-28",
+          "error": null
+        },
+        {
+          "id": "twse_dated_valuations",
+          "status": "ok",
+          "data_date": "2026-10-28",
+          "error": null
+        },
+        {
+          "id": "tpex_valuations",
+          "status": "ok",
+          "data_date": "2026-10-28",
+          "error": null
+        },
+        {
+          "id": "twse_institutions",
+          "status": "ok",
+          "data_date": "2026-10-28",
+          "error": null
+        },
+        {
+          "id": "tpex_institutions",
+          "status": "ok",
+          "data_date": "2026-10-28",
+          "error": null
+        },
+        {
+          "id": "twse_calendar",
+          "status": "ok",
+          "data_date": "2026-12-25",
+          "error": null
+        },
+        {
+          "id": "twse_market_notices",
+          "status": "ok",
+          "data_date": "2026-10-28",
+          "error": null
+        },
+        {
+          "id": "tpex_market_notices",
+          "status": "ok",
+          "data_date": "2026-10-29",
+          "error": null
+        }
+      ]
+    },
+    "postclose": {
+      "phase": "postclose",
+      "as_of": "2026-10-29",
+      "data_date": "2026-10-29",
+      "generated_at": "2026-10-29T11:19:17.105044+00:00",
+      "status": "partial",
+      "source_mode": "fetched",
+      "institutional_status": {
+        "market_dates": {
+          "TPEX": "2026-10-29",
+          "TWSE": "2026-10-28"
+        },
+        "required_date": "2026-10-29",
+        "status": "waiting"
+      },
+      "readiness": {
+        "current_quotes": 20,
+        "current_valuations": 2,
+        "eligible": 0,
+        "history_ready": 20,
+        "observed_stocks": 20
+      },
+      "source_states": [
+        {
+          "id": "twse_companies",
+          "status": "ok",
+          "data_date": "2026-10-28",
+          "error": null
+        },
+        {
+          "id": "tpex_companies",
+          "status": "ok",
+          "data_date": "2026-10-29",
+          "error": null
+        },
+        {
+          "id": "twse_quotes",
+          "status": "waiting",
+          "data_date": "2026-10-28",
+          "error": "3 筆資料日期或必要欄位不完整"
+        },
+        {
+          "id": "twse_dated_quotes",
+          "status": "error",
+          "data_date": null,
+          "error": "JSONDecodeError"
+        },
+        {
+          "id": "tpex_quotes",
+          "status": "waiting",
+          "data_date": "2026-10-29",
+          "error": "24 筆資料日期或必要欄位不完整"
+        },
+        {
+          "id": "twse_valuations",
+          "status": "ok",
+          "data_date": "2026-10-28",
+          "error": null
+        },
+        {
+          "id": "twse_dated_valuations",
+          "status": "error",
+          "data_date": null,
+          "error": "JSONDecodeError"
+        },
+        {
+          "id": "tpex_valuations",
+          "status": "ok",
+          "data_date": "2026-10-29",
+          "error": null
+        },
+        {
+          "id": "twse_institutions",
+          "status": "error",
+          "data_date": null,
+          "error": "JSONDecodeError"
+        },
+        {
+          "id": "tpex_institutions",
+          "status": "ok",
+          "data_date": "2026-10-29",
+          "error": null
+        },
+        {
+          "id": "twse_calendar",
+          "status": "ok",
+          "data_date": "2026-12-25",
+          "error": null
+        },
+        {
+          "id": "twse_market_notices",
+          "status": "ok",
+          "data_date": "2026-10-29",
+          "error": null
+        },
+        {
+          "id": "tpex_market_notices",
+          "status": "ok",
+          "data_date": "2026-10-29",
+          "error": null
+        }
+      ]
+    }
+  },
+  "production_data": {
+    "postclose": {
+      "phase": "postclose",
+      "as_of": "2026-10-29",
+      "data_date": "2026-10-29",
+      "generated_at": "2026-10-29T11:43:15.935047+00:00",
+      "source_mode": "fetched",
+      "status": "partial",
+      "institutional_status": {
+        "market_dates": {
+          "TPEX": "2026-10-29",
+          "TWSE": "2026-10-29"
+        },
+        "required_date": "2026-10-29",
+        "status": "ready"
+      },
+      "scope_readiness": {
+        "current_quotes": 20,
+        "current_valuations": 20,
+        "eligible": 1,
+        "history_ready": 20,
+        "observed_stocks": 20
+      },
+      "scope_id": "ai_supply_chain",
+      "source_errors": []
+    },
+    "preopen": {
+      "phase": "preopen",
+      "as_of": "2026-10-29",
+      "data_date": "2026-10-28",
+      "generated_at": "2026-10-29T11:40:16.282715+00:00",
+      "source_mode": "fetched",
+      "status": "partial",
+      "institutional_status": {
+        "market_dates": {
+          "TPEX": "2026-10-28",
+          "TWSE": "2026-10-28"
+        },
+        "required_date": "2026-10-28",
+        "status": "ready"
+      },
+      "scope_readiness": {
+        "current_quotes": 20,
+        "current_valuations": 20,
+        "eligible": 4,
+        "history_ready": 20,
+        "observed_stocks": 20
+      },
+      "scope_id": "ai_supply_chain",
+      "source_errors": [
+        {
+          "id": "tpex_quotes",
+          "status": "error",
+          "error": "ChunkedEncodingError"
+        }
+      ]
+    }
+  },
+  "local_browser": {
+    "checked_at_utc": "2026-10-29T11:35:04.313304+00:00",
+    "delivery": "existing rendered files served at the GitHub Pages project subpath",
+    "browser": "Chromium desktop / mobile viewport emulation; not a physical Android",
+    "market_data_injected": false,
+    "viewports": [
+      {
+        "name": "small-phone",
+        "width": 360,
+        "height": 800,
+        "pages": [
+          {
+            "page": "index",
+            "report_phase": "postclose",
+            "as_of": "2026-10-29",
+            "data_date": "2026-10-29",
+            "scope": "ai_supply_chain",
+            "checks": {
+              "state": "populated",
+              "initial_visible_stocks": [
+                "TWSE:2308",
+                "TWSE:2317",
+                "TWSE:2330",
+                "TWSE:2345",
+                "TWSE:2356",
+                "TWSE:2357",
+                "TWSE:2376",
+                "TWSE:2383",
+                "TWSE:2421",
+                "TWSE:2454",
+                "TWSE:3231",
+                "TPEX:3260",
+                "TWSE:3443",
+                "TWSE:3653",
+                "TWSE:3661",
+                "TWSE:3706",
+                "TWSE:3711",
+                "TWSE:4967",
+                "TWSE:6669",
+                "TPEX:8299"
+              ],
+              "categories": [
+                {
+                  "category": "chip",
+                  "visible_stocks": 4
+                },
+                {
+                  "category": "packaging",
+                  "visible_stocks": 1
+                },
+                {
+                  "category": "server",
+                  "visible_stocks": 7
+                },
+                {
+                  "category": "cooling",
+                  "visible_stocks": 3
+                },
+                {
+                  "category": "power",
+                  "visible_stocks": 1
+                },
+                {
+                  "category": "pcb",
+                  "visible_stocks": 1
+                },
+                {
+                  "category": "networking",
+                  "visible_stocks": 1
+                },
+                {
+                  "category": "memory",
+                  "visible_stocks": 3
+                }
+              ],
+              "non_ai_watchlist_quote": "TPEX:1240",
+              "checks": [
+                "original price and date",
+                "search miss and reset",
+                "category membership",
+                "detail navigation",
+                "evidence links",
+                "missing plans remain unavailable",
+                "local watchlist add and reload persistence",
+                "non-AI holding quote isolation"
+              ]
+            }
+          },
+          {
+            "page": "preopen",
+            "report_phase": "preopen",
+            "as_of": "2026-10-29",
+            "data_date": "2026-10-28",
+            "scope": "ai_supply_chain",
+            "checks": {
+              "state": "independent phase page",
+              "checks": [
+                "original prices / phase metadata"
+              ]
+            }
+          },
+          {
+            "page": "postclose",
+            "report_phase": "postclose",
+            "as_of": "2026-10-29",
+            "data_date": "2026-10-29",
+            "scope": "ai_supply_chain",
+            "checks": {
+              "state": "independent phase page",
+              "checks": [
+                "original prices / phase metadata"
+              ]
+            }
+          },
+          {
+            "page": "final",
+            "report_phase": "final",
+            "as_of": "2026-10-28",
+            "data_date": "2026-10-28",
+            "scope": null,
+            "checks": {
+              "state": "independent phase page",
+              "checks": [
+                "original prices / phase metadata"
+              ]
+            }
+          }
+        ],
+        "js_errors": []
+      },
+      {
+        "name": "phone",
+        "width": 390,
+        "height": 844,
+        "pages": [
+          {
+            "page": "index",
+            "report_phase": "postclose",
+            "as_of": "2026-10-29",
+            "data_date": "2026-10-29",
+            "scope": "ai_supply_chain",
+            "checks": {
+              "state": "populated",
+              "initial_visible_stocks": [
+                "TWSE:2308",
+                "TWSE:2317",
+                "TWSE:2330",
+                "TWSE:2345",
+                "TWSE:2356",
+                "TWSE:2357",
+                "TWSE:2376",
+                "TWSE:2383",
+                "TWSE:2421",
+                "TWSE:2454",
+                "TWSE:3231",
+                "TPEX:3260",
+                "TWSE:3443",
+                "TWSE:3653",
+                "TWSE:3661",
+                "TWSE:3706",
+                "TWSE:3711",
+                "TWSE:4967",
+                "TWSE:6669",
+                "TPEX:8299"
+              ],
+              "categories": [
+                {
+                  "category": "chip",
+                  "visible_stocks": 4
+                },
+                {
+                  "category": "packaging",
+                  "visible_stocks": 1
+                },
+                {
+                  "category": "server",
+                  "visible_stocks": 7
+                },
+                {
+                  "category": "cooling",
+                  "visible_stocks": 3
+                },
+                {
+                  "category": "power",
+                  "visible_stocks": 1
+                },
+                {
+                  "category": "pcb",
+                  "visible_stocks": 1
+                },
+                {
+                  "category": "networking",
+                  "visible_stocks": 1
+                },
+                {
+                  "category": "memory",
+                  "visible_stocks": 3
+                }
+              ],
+              "non_ai_watchlist_quote": "TPEX:1240",
+              "checks": [
+                "original price and date",
+                "search miss and reset",
+                "category membership",
+                "detail navigation",
+                "evidence links",
+                "missing plans remain unavailable",
+                "local watchlist add and reload persistence",
+                "non-AI holding quote isolation"
+              ]
+            }
+          },
+          {
+            "page": "preopen",
+            "report_phase": "preopen",
+            "as_of": "2026-10-29",
+            "data_date": "2026-10-28",
+            "scope": "ai_supply_chain",
+            "checks": {
+              "state": "independent phase page",
+              "checks": [
+                "original prices / phase metadata"
+              ]
+            }
+          },
+          {
+            "page": "postclose",
+            "report_phase": "postclose",
+            "as_of": "2026-10-29",
+            "data_date": "2026-10-29",
+            "scope": "ai_supply_chain",
+            "checks": {
+              "state": "independent phase page",
+              "checks": [
+                "original prices / phase metadata"
+              ]
+            }
+          },
+          {
+            "page": "final",
+            "report_phase": "final",
+            "as_of": "2026-10-28",
+            "data_date": "2026-10-28",
+            "scope": null,
+            "checks": {
+              "state": "independent phase page",
+              "checks": [
+                "original prices / phase metadata"
+              ]
+            }
+          }
+        ],
+        "js_errors": []
+      },
+      {
+        "name": "landscape",
+        "width": 844,
+        "height": 390,
+        "pages": [
+          {
+            "page": "index",
+            "report_phase": "postclose",
+            "as_of": "2026-10-29",
+            "data_date": "2026-10-29",
+            "scope": "ai_supply_chain",
+            "checks": {
+              "state": "populated",
+              "initial_visible_stocks": [
+                "TWSE:2308",
+                "TWSE:2317",
+                "TWSE:2330",
+                "TWSE:2345",
+                "TWSE:2356",
+                "TWSE:2357",
+                "TWSE:2376",
+                "TWSE:2383",
+                "TWSE:2421",
+                "TWSE:2454",
+                "TWSE:3231",
+                "TPEX:3260",
+                "TWSE:3443",
+                "TWSE:3653",
+                "TWSE:3661",
+                "TWSE:3706",
+                "TWSE:3711",
+                "TWSE:4967",
+                "TWSE:6669",
+                "TPEX:8299"
+              ],
+              "categories": [
+                {
+                  "category": "chip",
+                  "visible_stocks": 4
+                },
+                {
+                  "category": "packaging",
+                  "visible_stocks": 1
+                },
+                {
+                  "category": "server",
+                  "visible_stocks": 7
+                },
+                {
+                  "category": "cooling",
+                  "visible_stocks": 3
+                },
+                {
+                  "category": "power",
+                  "visible_stocks": 1
+                },
+                {
+                  "category": "pcb",
+                  "visible_stocks": 1
+                },
+                {
+                  "category": "networking",
+                  "visible_stocks": 1
+                },
+                {
+                  "category": "memory",
+                  "visible_stocks": 3
+                }
+              ],
+              "non_ai_watchlist_quote": "TPEX:1240",
+              "checks": [
+                "original price and date",
+                "search miss and reset",
+                "category membership",
+                "detail navigation",
+                "evidence links",
+                "missing plans remain unavailable",
+                "local watchlist add and reload persistence",
+                "non-AI holding quote isolation"
+              ]
+            }
+          },
+          {
+            "page": "preopen",
+            "report_phase": "preopen",
+            "as_of": "2026-10-29",
+            "data_date": "2026-10-28",
+            "scope": "ai_supply_chain",
+            "checks": {
+              "state": "independent phase page",
+              "checks": [
+                "original prices / phase metadata"
+              ]
+            }
+          },
+          {
+            "page": "postclose",
+            "report_phase": "postclose",
+            "as_of": "2026-10-29",
+            "data_date": "2026-10-29",
+            "scope": "ai_supply_chain",
+            "checks": {
+              "state": "independent phase page",
+              "checks": [
+                "original prices / phase metadata"
+              ]
+            }
+          },
+          {
+            "page": "final",
+            "report_phase": "final",
+            "as_of": "2026-10-28",
+            "data_date": "2026-10-28",
+            "scope": null,
+            "checks": {
+              "state": "independent phase page",
+              "checks": [
+                "original prices / phase metadata"
+              ]
+            }
+          }
+        ],
+        "js_errors": []
+      },
+      {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1100,
+        "pages": [
+          {
+            "page": "index",
+            "report_phase": "postclose",
+            "as_of": "2026-10-29",
+            "data_date": "2026-10-29",
+            "scope": "ai_supply_chain",
+            "checks": {
+              "state": "populated",
+              "initial_visible_stocks": [
+                "TWSE:2308",
+                "TWSE:2317",
+                "TWSE:2330",
+                "TWSE:2345",
+                "TWSE:2356",
+                "TWSE:2357",
+                "TWSE:2376",
+                "TWSE:2383",
+                "TWSE:2421",
+                "TWSE:2454",
+                "TWSE:3231",
+                "TPEX:3260",
+                "TWSE:3443",
+                "TWSE:3653",
+                "TWSE:3661",
+                "TWSE:3706",
+                "TWSE:3711",
+                "TWSE:4967",
+                "TWSE:6669",
+                "TPEX:8299"
+              ],
+              "categories": [
+                {
+                  "category": "chip",
+                  "visible_stocks": 4
+                },
+                {
+                  "category": "packaging",
+                  "visible_stocks": 1
+                },
+                {
+                  "category": "server",
+                  "visible_stocks": 7
+                },
+                {
+                  "category": "cooling",
+                  "visible_stocks": 3
+                },
+                {
+                  "category": "power",
+                  "visible_stocks": 1
+                },
+                {
+                  "category": "pcb",
+                  "visible_stocks": 1
+                },
+                {
+                  "category": "networking",
+                  "visible_stocks": 1
+                },
+                {
+                  "category": "memory",
+                  "visible_stocks": 3
+                }
+              ],
+              "non_ai_watchlist_quote": "TPEX:1240",
+              "checks": [
+                "original price and date",
+                "search miss and reset",
+                "category membership",
+                "detail navigation",
+                "evidence links",
+                "missing plans remain unavailable",
+                "local watchlist add and reload persistence",
+                "non-AI holding quote isolation"
+              ]
+            }
+          },
+          {
+            "page": "preopen",
+            "report_phase": "preopen",
+            "as_of": "2026-10-29",
+            "data_date": "2026-10-28",
+            "scope": "ai_supply_chain",
+            "checks": {
+              "state": "independent phase page",
+              "checks": [
+                "original prices / phase metadata"
+              ]
+            }
+          },
+          {
+            "page": "postclose",
+            "report_phase": "postclose",
+            "as_of": "2026-10-29",
+            "data_date": "2026-10-29",
+            "scope": "ai_supply_chain",
+            "checks": {
+              "state": "independent phase page",
+              "checks": [
+                "original prices / phase metadata"
+              ]
+            }
+          },
+          {
+            "page": "final",
+            "report_phase": "final",
+            "as_of": "2026-10-28",
+            "data_date": "2026-10-28",
+            "scope": null,
+            "checks": {
+              "state": "independent phase page",
+              "checks": [
+                "original prices / phase metadata"
+              ]
+            }
+          }
+        ],
+        "js_errors": []
+      }
+    ],
+    "network": "public GET only; no analysis dispatch / watchlist upload / order submission",
+    "result": "passed"
+  },
+  "pwa_browser": {
+    "checked_at": "2026-10-29T11:35:04.270297+00:00",
+    "base_url": "http://127.0.0.1:39649/taiwan-stock-ai/",
+    "browser": "Chromium desktop/mobile emulation; not physical Android",
+    "report_inputs": "existing rendered report files; no simulated market prices",
+    "checks": [
+      "manifest scope, standalone display and actual 192/512 PNG dimensions",
+      "No POST/dispatch or watchlist upload; public content GET requests only"
+    ],
+    "viewports": [
+      {
+        "viewport": "desktop",
+        "width": 1440,
+        "height": 1000,
+        "scope": "http://127.0.0.1:39649/taiwan-stock-ai/",
+        "pages": [
+          {
+            "page": "index",
+            "data_date": "2026-10-29",
+            "candidate_count": 0
+          },
+          {
+            "page": "preopen",
+            "data_date": "2026-10-28",
+            "candidate_count": 4
+          },
+          {
+            "page": "postclose",
+            "data_date": "2026-10-29",
+            "candidate_count": 0
+          },
+          {
+            "page": "final",
+            "data_date": "2026-10-28",
+            "candidate_count": 15
+          }
+        ],
+        "js_errors": [],
+        "chromium_installability": {
+          "installabilityErrors": [
+            {
+              "errorId": "in-incognito",
+              "errorArguments": []
+            }
+          ]
+        },
+        "checks": [
+          "same/new publication",
+          "HTTP/error/malformed/timeout feedback",
+          "duplicate tap suppression",
+          "real offline cached report",
+          "unvisited offline fallback",
+          "HTTP outage while browser online",
+          "install event handler simulation",
+          "real waiting-worker update",
+          "watchlist persistence",
+          "other-app cache isolation",
+          "layout"
+        ]
+      },
+      {
+        "viewport": "android",
+        "width": 390,
+        "height": 844,
+        "scope": "http://127.0.0.1:39649/taiwan-stock-ai/",
+        "pages": [
+          {
+            "page": "index",
+            "data_date": "2026-10-29",
+            "candidate_count": 0
+          },
+          {
+            "page": "preopen",
+            "data_date": "2026-10-28",
+            "candidate_count": 4
+          },
+          {
+            "page": "postclose",
+            "data_date": "2026-10-29",
+            "candidate_count": 0
+          },
+          {
+            "page": "final",
+            "data_date": "2026-10-28",
+            "candidate_count": 15
+          }
+        ],
+        "js_errors": [],
+        "chromium_installability": {
+          "installabilityErrors": [
+            {
+              "errorId": "in-incognito",
+              "errorArguments": []
+            }
+          ]
+        },
+        "checks": [
+          "same/new publication",
+          "HTTP/error/malformed/timeout feedback",
+          "duplicate tap suppression",
+          "real offline cached report",
+          "unvisited offline fallback",
+          "HTTP outage while browser online",
+          "install event handler simulation",
+          "real waiting-worker update",
+          "watchlist persistence",
+          "other-app cache isolation",
+          "layout"
+        ]
+      }
+    ],
+    "persistent_profile_installability": {
+      "installabilityErrors": []
+    }
+  },
+  "public_http": {
+    "checked_at_utc": "2026-10-29T11:45:48.629707+00:00",
+    "base_url": "https://shen19772002-sketch.github.io/taiwan-stock-ai/",
+    "default_tls_verification": true,
+    "files": {
+      "index.html": {
+        "status": 200,
+        "bytes": 871385,
+        "sha256": "56f00294eaa04c147244c8ba3982f0dc4b41da41600698537d6450d71a8e148e",
+        "content_type": "text/html; charset=utf-8",
+        "cache_control": "max-age=600",
+        "etag": "W/\"6ae331d0-d4bd9\"",
+        "last_modified": "Thu, 29 Oct 2026 11:45:20 GMT"
+      },
+      "preopen.html": {
+        "status": 200,
+        "bytes": 879391,
+        "sha256": "f392b893f8472fa08e7dac1d2233ba831616a88a2f2c9f316316051d26aac9a6",
+        "content_type": "text/html; charset=utf-8",
+        "cache_control": "max-age=600",
+        "etag": "W/\"6ae331d3-d6b1f\"",
+        "last_modified": "Thu, 29 Oct 2026 11:45:23 GMT"
+      },
+      "postclose.html": {
+        "status": 200,
+        "bytes": 871396,
+        "sha256": "ac35937efac5aacf847ad04cfb00768084c9979c2c70bc32cadbf0b4752af0cf",
+        "content_type": "text/html; charset=utf-8",
+        "cache_control": "max-age=600",
+        "etag": "W/\"6ae331d0-d4be4\"",
+        "last_modified": "Thu, 29 Oct 2026 11:45:20 GMT"
+      },
+      "final.html": {
+        "status": 200,
+        "bytes": 6499263,
+        "sha256": "54b2ad5118dc9d8ba08dd567ea126e66a56aaa984bc48ed08f9a4de296b1070e",
+        "content_type": "text/html; charset=utf-8",
+        "cache_control": "max-age=600",
+        "etag": "W/\"6ae331d3-632bbf\"",
+        "last_modified": "Thu, 29 Oct 2026 11:45:23 GMT"
+      },
+      "assets/report.json": {
+        "status": 200,
+        "bytes": 805902,
+        "sha256": "48e32783593c6d04052a9de9658288e7fa98f501191196dc570a4a902dd20855",
+        "content_type": "application/json; charset=utf-8",
+        "cache_control": "max-age=600",
+        "etag": "W/\"6ae331d3-c4c0e\"",
+        "last_modified": "Thu, 29 Oct 2026 11:45:23 GMT"
+      },
+      "assets/preopen.json": {
+        "status": 200,
+        "bytes": 800859,
+        "sha256": "d51c7e298a153388900e42e5fa82d8b76c7a84939770207b4a7ee742434a419e",
+        "content_type": "application/json; charset=utf-8",
+        "cache_control": "max-age=600",
+        "etag": "W/\"6ae331d0-c385b\"",
+        "last_modified": "Thu, 29 Oct 2026 11:45:20 GMT"
+      },
+      "assets/postclose.json": {
+        "status": 200,
+        "bytes": 805902,
+        "sha256": "48e32783593c6d04052a9de9658288e7fa98f501191196dc570a4a902dd20855",
+        "content_type": "application/json; charset=utf-8",
+        "cache_control": "max-age=600",
+        "etag": "W/\"6ae331d0-c4c0e\"",
+        "last_modified": "Thu, 29 Oct 2026 11:45:20 GMT"
+      },
+      "assets/final.json": {
+        "status": 200,
+        "bytes": 7203752,
+        "sha256": "30438cc3d47cc1bd6377678ee16bd35b4e529c7a1e458906b1d61d55c1b1f89f",
+        "content_type": "application/json; charset=utf-8",
+        "cache_control": "max-age=600",
+        "etag": "W/\"6ae331d3-6deba8\"",
+        "last_modified": "Thu, 29 Oct 2026 11:45:23 GMT"
+      },
+      "assets/style.css": {
+        "status": 200,
+        "bytes": 42050,
+        "sha256": "093233bcec70968df3c1c904128d5d8aa49b87c332fc09b793551d36fa79e141",
+        "content_type": "text/css; charset=utf-8",
+        "cache_control": "max-age=600",
+        "etag": "W/\"6ae331d3-a442\"",
+        "last_modified": "Thu, 29 Oct 2026 11:45:23 GMT"
+      },
+      "assets/app.js": {
+        "status": 200,
+        "bytes": 20137,
+        "sha256": "35a242829a32d1d4c636cdc40f5de144619e394537ab02bfe09256bffd085679",
+        "content_type": "application/javascript; charset=utf-8",
+        "cache_control": "max-age=600",
+        "etag": "W/\"6ae331d0-4ea9\"",
+        "last_modified": "Thu, 29 Oct 2026 11:45:20 GMT"
+      },
+      "assets/ai-view.js": {
+        "status": 200,
+        "bytes": 5537,
+        "sha256": "2a26c3a2b06c87f58269818bb10c59c8171c99f71b542858256a36c164447d4e",
+        "content_type": "application/javascript; charset=utf-8",
+        "cache_control": "max-age=600",
+        "etag": "W/\"6ae331cf-15a1\"",
+        "last_modified": "Thu, 29 Oct 2026 11:45:19 GMT"
+      },
+      "assets/plotly.min.js": {
+        "status": 200,
+        "bytes": 4763993,
+        "sha256": "122e3be346d66616944d0b83eaaf7242581508c3c1cfa0995a17af0d83eff770",
+        "content_type": "application/javascript; charset=utf-8",
+        "cache_control": "max-age=600",
+        "etag": "W/\"6ae331d3-48b159\"",
+        "last_modified": "Thu, 29 Oct 2026 11:45:23 GMT"
+      },
+      "assets/pwa.js": {
+        "status": 200,
+        "bytes": 10193,
+        "sha256": "a6e9e5c0c946e8c95f747cee12ba83614da0ed863e10ca23d6f616fe3fc53290",
+        "content_type": "application/javascript; charset=utf-8",
+        "cache_control": "max-age=600",
+        "etag": "W/\"6ae331d3-27d1\"",
+        "last_modified": "Thu, 29 Oct 2026 11:45:23 GMT"
+      },
+      "assets/icon-192.png": {
+        "status": 200,
+        "bytes": 1222,
+        "sha256": "82f9e9cf2e608414072f3358e5fac3d4936967ec94db6a5710efed23d05eb73b",
+        "content_type": "image/png",
+        "cache_control": "max-age=600",
+        "etag": "\"6ae331d3-4c6\"",
+        "last_modified": "Thu, 29 Oct 2026 11:45:23 GMT"
+      },
+      "assets/icon-512.png": {
+        "status": 200,
+        "bytes": 4663,
+        "sha256": "14a25fb6c2acc5b5e7215565a4fa282923d21e2c8d6b9f4919f5d4cc35c1c178",
+        "content_type": "image/png",
+        "cache_control": "max-age=600",
+        "etag": "\"6ae331d3-1237\"",
+        "last_modified": "Thu, 29 Oct 2026 11:45:23 GMT"
+      },
+      "assets/icon-maskable-512.png": {
+        "status": 200,
+        "bytes": 3273,
+        "sha256": "31e9248c97c8f311d448f677ac5ff9bb8138113c11b5ee7f80e879372e2322df",
+        "content_type": "image/png",
+        "cache_control": "max-age=600",
+        "etag": "\"6ae331d0-cc9\"",
+        "last_modified": "Thu, 29 Oct 2026 11:45:20 GMT"
+      },
+      "manifest.webmanifest": {
+        "status": 200,
+        "bytes": 1061,
+        "sha256": "3ec43bccc2f237c8c0d93785127e4d5d535385e3d0cf94d3d5746a3eae9b1ae1",
+        "content_type": "application/manifest+json; charset=utf-8",
+        "cache_control": "max-age=600",
+        "etag": "W/\"6ae331d3-425\"",
+        "last_modified": "Thu, 29 Oct 2026 11:45:23 GMT"
+      },
+      "sw.js": {
+        "status": 200,
+        "bytes": 11136,
+        "sha256": "379235ed68f1680885e5f83b4bd0394d2212749a55ed3551ec2550b1dfa6f55f",
+        "content_type": "application/javascript; charset=utf-8",
+        "cache_control": "max-age=600",
+        "etag": "W/\"6ae331d0-2b80\"",
+        "last_modified": "Thu, 29 Oct 2026 11:45:20 GMT"
+      },
+      "offline.html": {
+        "status": 200,
+        "bytes": 2139,
+        "sha256": "5401e3e17efbcce705eb1981de1f75fd815b4a3fe4308cd1beb5b808b1104bcb",
+        "content_type": "text/html; charset=utf-8",
+        "cache_control": "max-age=600",
+        "etag": "W/\"6ae331d3-85b\"",
+        "last_modified": "Thu, 29 Oct 2026 11:45:23 GMT"
+      },
+      "assets/publication.json": {
+        "status": 200,
+        "bytes": 1211,
+        "sha256": "bce09833db2e10e79354652d2073be3079565087177e7329bd82fb24f61de854",
+        "content_type": "application/json; charset=utf-8",
+        "cache_control": "max-age=600",
+        "etag": "W/\"6ae331d3-4bb\"",
+        "last_modified": "Thu, 29 Oct 2026 11:45:23 GMT"
+      }
+    },
+    "public_registration_mimes_valid": true,
+    "app_version": "1c67cc888af861310d92",
+    "source_matches": {
+      "assets/style.css": true,
+      "assets/app.js": true,
+      "assets/ai-view.js": true,
+      "assets/pwa.js": true,
+      "assets/icon-192.png": true,
+      "assets/icon-512.png": true,
+      "assets/icon-maskable-512.png": true,
+      "manifest.webmanifest": true,
+      "offline.html": true,
+      "assets/plotly.min.js": true,
+      "sw.js": true
+    },
+    "manifest": {
+      "scope": "https://shen19772002-sketch.github.io/taiwan-stock-ai/",
+      "start_url": "https://shen19772002-sketch.github.io/taiwan-stock-ai/index.html",
+      "display": "standalone",
+      "icons": [
+        {
+          "src": "assets/icon-192.png",
+          "width": 192,
+          "height": 192,
+          "purpose": "any"
+        },
+        {
+          "src": "assets/icon-512.png",
+          "width": 512,
+          "height": 512,
+          "purpose": "any"
+        },
+        {
+          "src": "assets/icon-maskable-512.png",
+          "width": 512,
+          "height": 512,
+          "purpose": "maskable"
+        }
+      ]
+    },
+    "pages": {
+      "index": {
+        "embedded_matches_json": true,
+        "revision_matches_publication": true,
+        "install_and_refresh_controls": true,
+        "phase": "postclose",
+        "as_of": "2026-10-29",
+        "data_date": "2026-10-29",
+        "generated_at": "2026-10-29T11:43:15.935047+00:00",
+        "status": "partial",
+        "candidates": 1,
+        "scope": {
+          "categories": [
+            {
+              "description": "AI 晶片設計、製造及運算相關技術",
+              "id": "chip",
+              "member_count": 4,
+              "name": "晶片與先進製程"
+            },
+            {
+              "description": "AI／HPC 晶片的封裝整合與測試",
+              "id": "packaging",
+              "member_count": 1,
+              "name": "先進封裝與測試"
+            },
+            {
+              "description": "AI 伺服器、機櫃及相關系統整合",
+              "id": "server",
+              "member_count": 7,
+              "name": "AI 伺服器"
+            },
+            {
+              "description": "AI 伺服器散熱及液冷相關產品",
+              "id": "cooling",
+              "member_count": 2,
+              "name": "散熱"
+            },
+            {
+              "description": "AI 資料中心供電、電源及備援",
+              "id": "power",
+              "member_count": 1,
+              "name": "電源與備援"
+            },
+            {
+              "description": "AI 伺服器高階板、載板與基材",
+              "id": "pcb",
+              "member_count": 1,
+              "name": "PCB 與材料"
+            },
+            {
+              "description": "AI 資料中心網路、交換與光傳輸",
+              "id": "networking",
+              "member_count": 1,
+              "name": "高速傳輸與光通訊"
+            },
+            {
+              "description": "AI 工作負載相關記憶體與儲存",
+              "id": "memory",
+              "member_count": 3,
+              "name": "記憶體與儲存"
+            }
+          ],
+          "classification_as_of": "2026-10-29",
+          "id": "ai_supply_chain",
+          "label": "AI 核心與供應鏈",
+          "limitations": [
+            "AI 分類是附有公司業務來源的研究名單，不是交易所官方產業分類，也不表示 AI 營收占比。",
+            "業務證據採公司官網、官方申報或技術合作方官方公告；來源種類逐筆保留，不採社群傳聞。",
+            "採明確名單而非全產業關鍵字；未納入不代表公司沒有 AI 業務。",
+            "未驗證、尚未生效或晚於研究日才確認的關聯不納入；歷史原始報告與預測保持不變。",
+            "每檔以一個主要分類計算產業統計，次要標籤不重複計入成交額。"
+          ],
+          "member_count": 20,
+          "membership_rule": "依精確市場及代號、已驗證公司業務證據與研究日納入；非整個電子產業",
+          "registry_hash": "04cf2d3ba5c9723b4e3fff842ecc7a96a6fcbb62cc5b77bfe8976720a6110243",
+          "reviewed_at": "2026-10-29",
+          "version": "2026.10.29.1"
+        },
+        "observed_stocks": 20,
+        "institutional_status": {
+          "market_dates": {
+            "TPEX": "2026-10-29",
+            "TWSE": "2026-10-29"
+          },
+          "required_date": "2026-10-29",
+          "status": "ready"
+        }
+      },
+      "preopen": {
+        "embedded_matches_json": true,
+        "revision_matches_publication": true,
+        "install_and_refresh_controls": true,
+        "phase": "preopen",
+        "as_of": "2026-10-29",
+        "data_date": "2026-10-28",
+        "generated_at": "2026-10-29T11:40:16.282715+00:00",
+        "status": "partial",
+        "candidates": 4,
+        "scope": {
+          "categories": [
+            {
+              "description": "AI 晶片設計、製造及運算相關技術",
+              "id": "chip",
+              "member_count": 4,
+              "name": "晶片與先進製程"
+            },
+            {
+              "description": "AI／HPC 晶片的封裝整合與測試",
+              "id": "packaging",
+              "member_count": 1,
+              "name": "先進封裝與測試"
+            },
+            {
+              "description": "AI 伺服器、機櫃及相關系統整合",
+              "id": "server",
+              "member_count": 7,
+              "name": "AI 伺服器"
+            },
+            {
+              "description": "AI 伺服器散熱及液冷相關產品",
+              "id": "cooling",
+              "member_count": 2,
+              "name": "散熱"
+            },
+            {
+              "description": "AI 資料中心供電、電源及備援",
+              "id": "power",
+              "member_count": 1,
+              "name": "電源與備援"
+            },
+            {
+              "description": "AI 伺服器高階板、載板與基材",
+              "id": "pcb",
+              "member_count": 1,
+              "name": "PCB 與材料"
+            },
+            {
+              "description": "AI 資料中心網路、交換與光傳輸",
+              "id": "networking",
+              "member_count": 1,
+              "name": "高速傳輸與光通訊"
+            },
+            {
+              "description": "AI 工作負載相關記憶體與儲存",
+              "id": "memory",
+              "member_count": 3,
+              "name": "記憶體與儲存"
+            }
+          ],
+          "classification_as_of": "2026-10-29",
+          "id": "ai_supply_chain",
+          "label": "AI 核心與供應鏈",
+          "limitations": [
+            "AI 分類是附有公司業務來源的研究名單，不是交易所官方產業分類，也不表示 AI 營收占比。",
+            "業務證據採公司官網、官方申報或技術合作方官方公告；來源種類逐筆保留，不採社群傳聞。",
+            "採明確名單而非全產業關鍵字；未納入不代表公司沒有 AI 業務。",
+            "未驗證、尚未生效或晚於研究日才確認的關聯不納入；歷史原始報告與預測保持不變。",
+            "每檔以一個主要分類計算產業統計，次要標籤不重複計入成交額。"
+          ],
+          "member_count": 20,
+          "membership_rule": "依精確市場及代號、已驗證公司業務證據與研究日納入；非整個電子產業",
+          "registry_hash": "04cf2d3ba5c9723b4e3fff842ecc7a96a6fcbb62cc5b77bfe8976720a6110243",
+          "reviewed_at": "2026-10-29",
+          "version": "2026.10.29.1"
+        },
+        "observed_stocks": 20,
+        "institutional_status": {
+          "market_dates": {
+            "TPEX": "2026-10-28",
+            "TWSE": "2026-10-28"
+          },
+          "required_date": "2026-10-28",
+          "status": "ready"
+        }
+      },
+      "postclose": {
+        "embedded_matches_json": true,
+        "revision_matches_publication": true,
+        "install_and_refresh_controls": true,
+        "phase": "postclose",
+        "as_of": "2026-10-29",
+        "data_date": "2026-10-29",
+        "generated_at": "2026-10-29T11:43:15.935047+00:00",
+        "status": "partial",
+        "candidates": 1,
+        "scope": {
+          "categories": [
+            {
+              "description": "AI 晶片設計、製造及運算相關技術",
+              "id": "chip",
+              "member_count": 4,
+              "name": "晶片與先進製程"
+            },
+            {
+              "description": "AI／HPC 晶片的封裝整合與測試",
+              "id": "packaging",
+              "member_count": 1,
+              "name": "先進封裝與測試"
+            },
+            {
+              "description": "AI 伺服器、機櫃及相關系統整合",
+              "id": "server",
+              "member_count": 7,
+              "name": "AI 伺服器"
+            },
+            {
+              "description": "AI 伺服器散熱及液冷相關產品",
+              "id": "cooling",
+              "member_count": 2,
+              "name": "散熱"
+            },
+            {
+              "description": "AI 資料中心供電、電源及備援",
+              "id": "power",
+              "member_count": 1,
+              "name": "電源與備援"
+            },
+            {
+              "description": "AI 伺服器高階板、載板與基材",
+              "id": "pcb",
+              "member_count": 1,
+              "name": "PCB 與材料"
+            },
+            {
+              "description": "AI 資料中心網路、交換與光傳輸",
+              "id": "networking",
+              "member_count": 1,
+              "name": "高速傳輸與光通訊"
+            },
+            {
+              "description": "AI 工作負載相關記憶體與儲存",
+              "id": "memory",
+              "member_count": 3,
+              "name": "記憶體與儲存"
+            }
+          ],
+          "classification_as_of": "2026-10-29",
+          "id": "ai_supply_chain",
+          "label": "AI 核心與供應鏈",
+          "limitations": [
+            "AI 分類是附有公司業務來源的研究名單，不是交易所官方產業分類，也不表示 AI 營收占比。",
+            "業務證據採公司官網、官方申報或技術合作方官方公告；來源種類逐筆保留，不採社群傳聞。",
+            "採明確名單而非全產業關鍵字；未納入不代表公司沒有 AI 業務。",
+            "未驗證、尚未生效或晚於研究日才確認的關聯不納入；歷史原始報告與預測保持不變。",
+            "每檔以一個主要分類計算產業統計，次要標籤不重複計入成交額。"
+          ],
+          "member_count": 20,
+          "membership_rule": "依精確市場及代號、已驗證公司業務證據與研究日納入；非整個電子產業",
+          "registry_hash": "04cf2d3ba5c9723b4e3fff842ecc7a96a6fcbb62cc5b77bfe8976720a6110243",
+          "reviewed_at": "2026-10-29",
+          "version": "2026.10.29.1"
+        },
+        "observed_stocks": 20,
+        "institutional_status": {
+          "market_dates": {
+            "TPEX": "2026-10-29",
+            "TWSE": "2026-10-29"
+          },
+          "required_date": "2026-10-29",
+          "status": "ready"
+        }
+      },
+      "final": {
+        "embedded_matches_json": true,
+        "revision_matches_publication": true,
+        "install_and_refresh_controls": true,
+        "phase": "final",
+        "as_of": "2026-10-28",
+        "data_date": "2026-10-28",
+        "generated_at": "2026-10-28T18:31:13.777348+00:00",
+        "status": "partial",
+        "candidates": 15,
+        "scope": {},
+        "observed_stocks": 0,
+        "institutional_status": {
+          "market_dates": {
+            "TPEX": "2026-10-28",
+            "TWSE": "2026-10-28"
+          },
+          "required_date": "2026-10-28",
+          "status": "ready"
+        }
+      }
+    }
+  },
+  "public_browser": {
+    "checked_at_utc": "2026-10-29T11:46:23.090945+00:00",
+    "delivery": "existing rendered files served at the GitHub Pages project subpath",
+    "browser": "Chromium desktop / mobile viewport emulation; not a physical Android",
+    "market_data_injected": false,
+    "viewports": [
+      {
+        "name": "small-phone",
+        "width": 360,
+        "height": 800,
+        "pages": [
+          {
+            "page": "index",
+            "report_phase": "postclose",
+            "as_of": "2026-10-29",
+            "data_date": "2026-10-29",
+            "scope": "ai_supply_chain",
+            "checks": {
+              "state": "populated",
+              "initial_visible_stocks": [
+                "TWSE:2308",
+                "TWSE:2317",
+                "TWSE:2330",
+                "TWSE:2345",
+                "TWSE:2356",
+                "TWSE:2357",
+                "TWSE:2376",
+                "TWSE:2383",
+                "TWSE:2421",
+                "TWSE:2454",
+                "TWSE:3231",
+                "TPEX:3260",
+                "TWSE:3443",
+                "TWSE:3653",
+                "TWSE:3661",
+                "TWSE:3706",
+                "TWSE:3711",
+                "TWSE:4967",
+                "TWSE:6669",
+                "TPEX:8299"
+              ],
+              "categories": [
+                {
+                  "category": "chip",
+                  "visible_stocks": 4
+                },
+                {
+                  "category": "packaging",
+                  "visible_stocks": 1
+                },
+                {
+                  "category": "server",
+                  "visible_stocks": 7
+                },
+                {
+                  "category": "cooling",
+                  "visible_stocks": 3
+                },
+                {
+                  "category": "power",
+                  "visible_stocks": 1
+                },
+                {
+                  "category": "pcb",
+                  "visible_stocks": 1
+                },
+                {
+                  "category": "networking",
+                  "visible_stocks": 1
+                },
+                {
+                  "category": "memory",
+                  "visible_stocks": 3
+                }
+              ],
+              "non_ai_watchlist_quote": "TPEX:1240",
+              "checks": [
+                "original price and date",
+                "search miss and reset",
+                "category membership",
+                "detail navigation",
+                "evidence links",
+                "missing plans remain unavailable",
+                "local watchlist add and reload persistence",
+                "non-AI holding quote isolation"
+              ]
+            }
+          },
+          {
+            "page": "preopen",
+            "report_phase": "preopen",
+            "as_of": "2026-10-29",
+            "data_date": "2026-10-28",
+            "scope": "ai_supply_chain",
+            "checks": {
+              "state": "independent phase page",
+              "checks": [
+                "original prices / phase metadata"
+              ]
+            }
+          },
+          {
+            "page": "postclose",
+            "report_phase": "postclose",
+            "as_of": "2026-10-29",
+            "data_date": "2026-10-29",
+            "scope": "ai_supply_chain",
+            "checks": {
+              "state": "independent phase page",
+              "checks": [
+                "original prices / phase metadata"
+              ]
+            }
+          },
+          {
+            "page": "final",
+            "report_phase": "final",
+            "as_of": "2026-10-28",
+            "data_date": "2026-10-28",
+            "scope": null,
+            "checks": {
+              "state": "independent phase page",
+              "checks": [
+                "original prices / phase metadata"
+              ]
+            }
+          }
+        ],
+        "js_errors": []
+      },
+      {
+        "name": "phone",
+        "width": 390,
+        "height": 844,
+        "pages": [
+          {
+            "page": "index",
+            "report_phase": "postclose",
+            "as_of": "2026-10-29",
+            "data_date": "2026-10-29",
+            "scope": "ai_supply_chain",
+            "checks": {
+              "state": "populated",
+              "initial_visible_stocks": [
+                "TWSE:2308",
+                "TWSE:2317",
+                "TWSE:2330",
+                "TWSE:2345",
+                "TWSE:2356",
+                "TWSE:2357",
+                "TWSE:2376",
+                "TWSE:2383",
+                "TWSE:2421",
+                "TWSE:2454",
+                "TWSE:3231",
+                "TPEX:3260",
+                "TWSE:3443",
+                "TWSE:3653",
+                "TWSE:3661",
+                "TWSE:3706",
+                "TWSE:3711",
+                "TWSE:4967",
+                "TWSE:6669",
+                "TPEX:8299"
+              ],
+              "categories": [
+                {
+                  "category": "chip",
+                  "visible_stocks": 4
+                },
+                {
+                  "category": "packaging",
+                  "visible_stocks": 1
+                },
+                {
+                  "category": "server",
+                  "visible_stocks": 7
+                },
+                {
+                  "category": "cooling",
+                  "visible_stocks": 3
+                },
+                {
+                  "category": "power",
+                  "visible_stocks": 1
+                },
+                {
+                  "category": "pcb",
+                  "visible_stocks": 1
+                },
+                {
+                  "category": "networking",
+                  "visible_stocks": 1
+                },
+                {
+                  "category": "memory",
+                  "visible_stocks": 3
+                }
+              ],
+              "non_ai_watchlist_quote": "TPEX:1240",
+              "checks": [
+                "original price and date",
+                "search miss and reset",
+                "category membership",
+                "detail navigation",
+                "evidence links",
+                "missing plans remain unavailable",
+                "local watchlist add and reload persistence",
+                "non-AI holding quote isolation"
+              ]
+            }
+          },
+          {
+            "page": "preopen",
+            "report_phase": "preopen",
+            "as_of": "2026-10-29",
+            "data_date": "2026-10-28",
+            "scope": "ai_supply_chain",
+            "checks": {
+              "state": "independent phase page",
+              "checks": [
+                "original prices / phase metadata"
+              ]
+            }
+          },
+          {
+            "page": "postclose",
+            "report_phase": "postclose",
+            "as_of": "2026-10-29",
+            "data_date": "2026-10-29",
+            "scope": "ai_supply_chain",
+            "checks": {
+              "state": "independent phase page",
+              "checks": [
+                "original prices / phase metadata"
+              ]
+            }
+          },
+          {
+            "page": "final",
+            "report_phase": "final",
+            "as_of": "2026-10-28",
+            "data_date": "2026-10-28",
+            "scope": null,
+            "checks": {
+              "state": "independent phase page",
+              "checks": [
+                "original prices / phase metadata"
+              ]
+            }
+          }
+        ],
+        "js_errors": []
+      },
+      {
+        "name": "landscape",
+        "width": 844,
+        "height": 390,
+        "pages": [
+          {
+            "page": "index",
+            "report_phase": "postclose",
+            "as_of": "2026-10-29",
+            "data_date": "2026-10-29",
+            "scope": "ai_supply_chain",
+            "checks": {
+              "state": "populated",
+              "initial_visible_stocks": [
+                "TWSE:2308",
+                "TWSE:2317",
+                "TWSE:2330",
+                "TWSE:2345",
+                "TWSE:2356",
+                "TWSE:2357",
+                "TWSE:2376",
+                "TWSE:2383",
+                "TWSE:2421",
+                "TWSE:2454",
+                "TWSE:3231",
+                "TPEX:3260",
+                "TWSE:3443",
+                "TWSE:3653",
+                "TWSE:3661",
+                "TWSE:3706",
+                "TWSE:3711",
+                "TWSE:4967",
+                "TWSE:6669",
+                "TPEX:8299"
+              ],
+              "categories": [
+                {
+                  "category": "chip",
+                  "visible_stocks": 4
+                },
+                {
+                  "category": "packaging",
+                  "visible_stocks": 1
+                },
+                {
+                  "category": "server",
+                  "visible_stocks": 7
+                },
+                {
+                  "category": "cooling",
+                  "visible_stocks": 3
+                },
+                {
+                  "category": "power",
+                  "visible_stocks": 1
+                },
+                {
+                  "category": "pcb",
+                  "visible_stocks": 1
+                },
+                {
+                  "category": "networking",
+                  "visible_stocks": 1
+                },
+                {
+                  "category": "memory",
+                  "visible_stocks": 3
+                }
+              ],
+              "non_ai_watchlist_quote": "TPEX:1240",
+              "checks": [
+                "original price and date",
+                "search miss and reset",
+                "category membership",
+                "detail navigation",
+                "evidence links",
+                "missing plans remain unavailable",
+                "local watchlist add and reload persistence",
+                "non-AI holding quote isolation"
+              ]
+            }
+          },
+          {
+            "page": "preopen",
+            "report_phase": "preopen",
+            "as_of": "2026-10-29",
+            "data_date": "2026-10-28",
+            "scope": "ai_supply_chain",
+            "checks": {
+              "state": "independent phase page",
+              "checks": [
+                "original prices / phase metadata"
+              ]
+            }
+          },
+          {
+            "page": "postclose",
+            "report_phase": "postclose",
+            "as_of": "2026-10-29",
+            "data_date": "2026-10-29",
+            "scope": "ai_supply_chain",
+            "checks": {
+              "state": "independent phase page",
+              "checks": [
+                "original prices / phase metadata"
+              ]
+            }
+          },
+          {
+            "page": "final",
+            "report_phase": "final",
+            "as_of": "2026-10-28",
+            "data_date": "2026-10-28",
+            "scope": null,
+            "checks": {
+              "state": "independent phase page",
+              "checks": [
+                "original prices / phase metadata"
+              ]
+            }
+          }
+        ],
+        "js_errors": []
+      },
+      {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1100,
+        "pages": [
+          {
+            "page": "index",
+            "report_phase": "postclose",
+            "as_of": "2026-10-29",
+            "data_date": "2026-10-29",
+            "scope": "ai_supply_chain",
+            "checks": {
+              "state": "populated",
+              "initial_visible_stocks": [
+                "TWSE:2308",
+                "TWSE:2317",
+                "TWSE:2330",
+                "TWSE:2345",
+                "TWSE:2356",
+                "TWSE:2357",
+                "TWSE:2376",
+                "TWSE:2383",
+                "TWSE:2421",
+                "TWSE:2454",
+                "TWSE:3231",
+                "TPEX:3260",
+                "TWSE:3443",
+                "TWSE:3653",
+                "TWSE:3661",
+                "TWSE:3706",
+                "TWSE:3711",
+                "TWSE:4967",
+                "TWSE:6669",
+                "TPEX:8299"
+              ],
+              "categories": [
+                {
+                  "category": "chip",
+                  "visible_stocks": 4
+                },
+                {
+                  "category": "packaging",
+                  "visible_stocks": 1
+                },
+                {
+                  "category": "server",
+                  "visible_stocks": 7
+                },
+                {
+                  "category": "cooling",
+                  "visible_stocks": 3
+                },
+                {
+                  "category": "power",
+                  "visible_stocks": 1
+                },
+                {
+                  "category": "pcb",
+                  "visible_stocks": 1
+                },
+                {
+                  "category": "networking",
+                  "visible_stocks": 1
+                },
+                {
+                  "category": "memory",
+                  "visible_stocks": 3
+                }
+              ],
+              "non_ai_watchlist_quote": "TPEX:1240",
+              "checks": [
+                "original price and date",
+                "search miss and reset",
+                "category membership",
+                "detail navigation",
+                "evidence links",
+                "missing plans remain unavailable",
+                "local watchlist add and reload persistence",
+                "non-AI holding quote isolation"
+              ]
+            }
+          },
+          {
+            "page": "preopen",
+            "report_phase": "preopen",
+            "as_of": "2026-10-29",
+            "data_date": "2026-10-28",
+            "scope": "ai_supply_chain",
+            "checks": {
+              "state": "independent phase page",
+              "checks": [
+                "original prices / phase metadata"
+              ]
+            }
+          },
+          {
+            "page": "postclose",
+            "report_phase": "postclose",
+            "as_of": "2026-10-29",
+            "data_date": "2026-10-29",
+            "scope": "ai_supply_chain",
+            "checks": {
+              "state": "independent phase page",
+              "checks": [
+                "original prices / phase metadata"
+              ]
+            }
+          },
+          {
+            "page": "final",
+            "report_phase": "final",
+            "as_of": "2026-10-28",
+            "data_date": "2026-10-28",
+            "scope": null,
+            "checks": {
+              "state": "independent phase page",
+              "checks": [
+                "original prices / phase metadata"
+              ]
+            }
+          }
+        ],
+        "js_errors": []
+      }
+    ],
+    "network": "public GET only; no analysis dispatch / watchlist upload / order submission",
+    "result": "passed"
+  },
+  "history": {
+    "checked_at_utc": "2026-10-29T11:44:54.046707+00:00",
+    "baseline_branch": "df5e0622df1d5f64c564c1cb4718b7fa63d6cb3b",
+    "current_branch": "01b338e0537595f6ee3906692c052ae2a49b7eb1",
+    "baseline_report_count": 35,
+    "current_report_count": 37,
+    "original_reports_unchanged": true,
+    "original_report_blobs": {
+      "data/reports/2026-10-22-manual-1b09e60b1f1bb40f.json": "8578c3220c54e33df79f633531ee8d1372f29822",
+      "data/reports/2026-10-22-manual-ab61f20094cf50e4.json": "325c0febee807de6d3ce0f5787448499f111780c",
+      "data/reports/2026-10-23-final-e2b11871e51120fc.json": "35e5442392cb1b1e02833d61f6f6da4149c06331",
+      "data/reports/2026-10-23-manual-4d39c015949af352.json": "49ef9d4a5ef558b5bab4ca87114462197748580a",
+      "data/reports/2026-10-24-manual-5ddde5e05b679348.json": "58a54969d36f92f90ee9f65b0b50e3f0f61fa306",
+      "data/reports/2026-10-24-manual-d6ef473e0d0a5304.json": "21000ef68445bd890ec84eaa814998ae2991c729",
+      "data/reports/2026-10-25-manual-82270e78c05e9050.json": "3b73ce60a7e54db9bb279060369248e0ac6b11f1",
+      "data/reports/2026-10-25-manual-b5eba654bcb883f7.json": "b084cb9c8f6efe8611e9d2cd113b1e5b69c43df3",
+      "data/reports/2026-10-26-intraday-7d0d6606dda57ec2.json": "4b201746b56decf5747c81d68a352835d79bf370",
+      "data/reports/2026-10-26-preopen-75875450447a879b.json": "22f85917ee007aec2084aaf1125a39d2948a7fd8",
+      "data/reports/2026-10-27-final-896cab276ec02c8e.json": "d9c4c65b675fba4724035e3f85144dabebcac503",
+      "data/reports/2026-10-27-final-d458a34815fb2383.json": "a8feb4605f49c52032cb4c0ed04db0b419ad38dc",
+      "data/reports/2026-10-27-final-df84d3fbd457a2f4.json": "9aefed8ddd89f05c4f367e3d5353dceb4b2e848d",
+      "data/reports/2026-10-27-intraday-f922007447b4918d.json": "d99d69f31e7465be96ceb110864fd4b9de5844a7",
+      "data/reports/2026-10-27-postclose-780b356fc6037ad5.json": "81ede59d865bd271107b1093e7124602865b9acb",
+      "data/reports/2026-10-27-preopen-55b29840a6cef6c4.json": "14360ea58a13b5bda6184636a1ba1cf4d369f235",
+      "data/reports/2026-10-27-preopen-9075bf02477074ff.json": "81b11e16158a78ea8a9669a2045745ffcd59508c",
+      "data/reports/2026-10-28-final-224bcd20367dfff4.json": "ebf3b1cd51192724c04a768b236d309969b0761a",
+      "data/reports/2026-10-28-final-226c0f37ddf590ea.json": "c7c12eb8489a20bc8709936abdfd3982551f5b16",
+      "data/reports/2026-10-28-final-227ad6773f34aa19.json": "a0aae7dfc5cc14982fa6581b8bc22511fb59b391",
+      "data/reports/2026-10-28-intraday-4258cd93217a0cf5.json": "5a46b9eb86de7c987de46024ddd5468136acb1ef",
+      "data/reports/2026-10-28-manual-ab499e2f38dcdbec.json": "3a32fa59edb42658012124d2e1219074ccacb023",
+      "data/reports/2026-10-28-postclose-1ec420091d27463d.json": "36083d53b6c9806239ce1e28c171c415453227b4",
+      "data/reports/2026-10-28-postclose-6920e19366d7ca49.json": "ac39e85810d7a180b3aa5226e17d50980d4cc560",
+      "data/reports/2026-10-28-postclose-a19bed7ef36290a3.json": "ed1d574aef098d5022034fccf6f1f18cf85baef6",
+      "data/reports/2026-10-28-postclose-b1bc95c86eab099b.json": "e34ba9e1b0f1d1414670cafa0eb13d4a52c93cbb",
+      "data/reports/2026-10-28-postclose-b3a5887830ecd1b9.json": "524ef944b7763c5cb6e6bd51b9181c082b2d7b4f",
+      "data/reports/2026-10-28-preopen-2928117d8fb3372f.json": "df1a2ef04a30c40eca658e3cb45c38a8d4b3b3a6",
+      "data/reports/2026-10-28-preopen-9861b47794437738.json": "3ff516f37bb50693e90c8fe87903d6559a485456",
+      "data/reports/2026-10-28-preopen-a512f5ca24e90455.json": "998a1e05bdd0196a6b33d7276bd6465934f6bb59",
+      "data/reports/2026-10-28-preopen-ec31e726abb18d4f.json": "f8bf84740e10084c618c86e869cb5dd23aea77f2",
+      "data/reports/2026-10-29-intraday-513b7903018817c4.json": "212d64daa2b91dea584e9e0db5b9d1ecaf5d0ac7",
+      "data/reports/2026-10-29-postclose-2070c747537bd39c.json": "e62b742552a6a3f622b97f174f635a95ea06b585",
+      "data/reports/2026-10-29-preopen-6ee1aa5889d4c225.json": "cb234074c692044758d7954e52294e92306a8803",
+      "data/reports/2026-10-29-preopen-fe02ecbff68968df.json": "8d931042411ce2a99d94263d7173f6e7709881de"
+    },
+    "new_report_blobs": {
+      "data/reports/2026-10-29-postclose-f0c1e44be99b0435.json": "f1185c3dbbb13e73fee59ab014a60add07b8d917",
+      "data/reports/2026-10-29-preopen-01de2e5de9875194.json": "e2832a266c48b3b71f2e9d1ee67a3813171525ac"
+    }
+  },
+  "source_verification": {
+    "temporary_branch": "codex-ai-evidence-20261029",
+    "branch_deleted": true,
+    "main_modified": false,
+    "runs": [
+      {
+        "run_id": 40862473447,
+        "run_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40862473447",
+        "file": "/tmp/ai-universe-remote-evidence.json",
+        "sha256": "5e73acbb74355b908f9132562a962c3f1a277e044da9b555bd6d4f8754aa30b0"
+      },
+      {
+        "run_id": 40862756611,
+        "run_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40862756611",
+        "file": "/tmp/ai-universe-remote-evidence-round2.json",
+        "sha256": "7c3c94b0525142006fc2699270747fa3bb567da754d6563261d6c254a5f03898"
+      },
+      {
+        "run_id": 40862986627,
+        "run_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40862986627",
+        "file": "/tmp/ai-universe-remote-evidence-round3.json",
+        "sha256": "fd318eede8c6eb542a2e3de9cf6c743a6097c59794eb37b35370bca1c2f0dffa"
+      },
+      {
+        "run_id": 40863459675,
+        "run_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40863459675",
+        "file": "/tmp/ai-universe-targeted-evidence.json",
+        "sha256": "a44685c0ef46ddb84b1ba30fc82225052729e8b232906d0403926f6a8c0e727e"
+      },
+      {
+        "run_id": 40863699264,
+        "run_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40863699264",
+        "file": "/tmp/ai-universe-blackwell-evidence.json",
+        "sha256": "7cb5037188526cc8acde016c07567eb83c06190398a60faa830d4f0b708e5f51"
+      }
+    ],
+    "companies": 36,
+    "combined_file": "/tmp/ai-universe-remote-evidence-all.json",
+    "critical_verified_source": {
+      "url": "https://nvidianews.nvidia.com/news/nvidia-blackwell-platform-arrives-to-power-a-new-era-of-computing",
+      "company": "TSMC2330",
+      "role": "Custom4NPmanufacturingprocessforBlackwellAI-GPUs",
+      "evidence_kind": "technology_partner"
+    }
+  }
+}

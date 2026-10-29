@@ -71,3 +71,5 @@ python -m taiwan_stock_ai run --phase manual --scope all
 `--scope all` 會產生新的一次全市場研究，並更新相應的最新報告頁；已保存的 AI 報告與其他歷史保持不變。公開排程與免填參數手動入口使用預設 AI 範圍。
 
 分類驗證、日期限制與精確代號篩選由 [`ai_universe.py`](../src/taiwan_stock_ai/ai_universe.py) 管理；[`pipeline.py`](../src/taiwan_stock_ai/pipeline.py) 先保存全市場觀測，再將可用名單交給既有分析引擎。既有交易成本、滑價、資料調整限制與策略條件仍適用。系統僅供投資研究與模擬，不自動執行真實買賣。
+
+發布結果、實際資料狀態與歷史保存比對見 [正式版驗證](ai-validation.md)。
