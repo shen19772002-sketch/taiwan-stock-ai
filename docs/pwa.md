@@ -43,3 +43,5 @@ Chrome／Edge 桌面版也可使用瀏覽器提供的安裝功能。iPhone 可�
 `pwa.js` 管理安裝、更新、離線狀態與只讀更新檢查；既有 `app.js`、分析引擎與歷史資料格式保留。服務工作者僅處理本專案範圍內已列明的公開 GET 資源，不快取外部連結、其他網站或個人持股；清理快取不會刪除其他專案資料。
 
 程式測試涵蓋安裝資產、子路徑、圖示尺寸、各頁發布版本、未齊資料與原報告日期。瀏覽器測試使用真正的服務工作者驗證離線、更新、錯誤回饋與本機自選股保存；安裝按鈕的事件模擬與實際手機安裝會分開記錄。
+
+完整驗證結果見 [PWA 驗證紀錄](pwa-validation.md)。本機可用 `python scripts/pwa_smoke.py --site site --out pwa-evidence` 重驗，先安裝 `.[browser]` 與 Playwright Chromium；已有 Chromium 時可加上 `--chromium /path/to/chromium`。

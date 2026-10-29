@@ -1,0 +1,510 @@
+{
+  "checked_at_utc": "2026-10-29T05:58:32.161212+00:00",
+  "timezone": "Asia/Taipei",
+  "repository": "shen19772002-sketch/taiwan-stock-ai",
+  "pwa_source_commit": "329a05829f6aedfb8bb7886074d236d5d1cc0392",
+  "ci_runner_fix_commit": "67c945741ff09b6b040f6fa62cc134b8400ee6b8",
+  "public_url": "https://shen19772002-sketch.github.io/taiwan-stock-ai/",
+  "app_version": "060b4b244b56d282ac38",
+  "result": "passed",
+  "ci": {
+    "id": 40795455854,
+    "html_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40795455854",
+    "head_sha": "67c945741ff09b6b040f6fa62cc134b8400ee6b8",
+    "status": "completed",
+    "conclusion": "success",
+    "created_at": "2026-10-29T00:39:16Z",
+    "updated_at": "2026-10-29T00:41:09Z",
+    "logs_accessible": true,
+    "proof": {
+      "0_test (3.11).txt": [
+        "2026-10-29T00:39:38.4057960Z All checks passed!",
+        "2026-10-29T00:39:44.6115388Z 224 passed in 5.84s"
+      ],
+      "1_test (3.12).txt": [
+        "2026-10-29T00:39:40.2820011Z All checks passed!",
+        "2026-10-29T00:39:46.8927153Z 224 passed in 6.26s"
+      ]
+    }
+  },
+  "deployment": {
+    "id": 40795718213,
+    "html_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40795718213",
+    "head_sha": "67c945741ff09b6b040f6fa62cc134b8400ee6b8",
+    "event": "workflow_dispatch",
+    "status": "completed",
+    "conclusion": "success",
+    "created_at": "2026-10-29T00:41:40Z",
+    "updated_at": "2026-10-29T00:44:25Z",
+    "jobs": [
+      {
+        "name": "research / research",
+        "status": "completed",
+        "conclusion": "success",
+        "started_at": "2026-10-29T00:41:44Z",
+        "completed_at": "2026-10-29T00:44:12Z",
+        "html_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40795718213/job/123191602421"
+      },
+      {
+        "name": "research / deploy",
+        "status": "completed",
+        "conclusion": "success",
+        "started_at": "2026-10-29T00:44:15Z",
+        "completed_at": "2026-10-29T00:44:25Z",
+        "html_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40795718213/job/123192470467"
+      }
+    ]
+  },
+  "public_bytes": {
+    "checked_at_utc": "2026-10-29T05:56:10.986754+00:00",
+    "base_url": "https://shen19772002-sketch.github.io/taiwan-stock-ai/",
+    "default_tls_verification": true,
+    "files": {
+      "index.html": {
+        "status": 200,
+        "bytes": 6405053,
+        "sha256": "fa5f22fe3c9e3629f625cc6d160a426f57f454689e82028df37bb1f9d962301f",
+        "content_type": "text/html; charset=utf-8",
+        "cache_control": "max-age=600",
+        "etag": "W/\"6ae296e6-61bbbd\"",
+        "last_modified": "Thu, 29 Oct 2026 00:44:22 GMT"
+      },
+      "preopen.html": {
+        "status": 200,
+        "bytes": 6405058,
+        "sha256": "9ca375c68e4bb28d4adb572c6654677a97b06843e1287f64a6c8c61c1b70a9b2",
+        "content_type": "text/html; charset=utf-8",
+        "cache_control": "max-age=600",
+        "etag": "W/\"6ae296e6-61bbc2\"",
+        "last_modified": "Thu, 29 Oct 2026 00:44:22 GMT"
+      },
+      "postclose.html": {
+        "status": 200,
+        "bytes": 6429466,
+        "sha256": "46b57e590e004c40020e08b3cdb02b4b57510442e66053e4ac53ca5e64388b61",
+        "content_type": "text/html; charset=utf-8",
+        "cache_control": "max-age=600",
+        "etag": "W/\"6ae296e6-621b1a\"",
+        "last_modified": "Thu, 29 Oct 2026 00:44:22 GMT"
+      },
+      "final.html": {
+        "status": 200,
+        "bytes": 6429269,
+        "sha256": "0e951d5a568d5af103aee71966a05ce81a0058fc7b902a908c676f377d4537d3",
+        "content_type": "text/html; charset=utf-8",
+        "cache_control": "max-age=600",
+        "etag": "W/\"6ae296e6-621a55\"",
+        "last_modified": "Thu, 29 Oct 2026 00:44:22 GMT"
+      },
+      "assets/report.json": {
+        "status": 200,
+        "bytes": 7187245,
+        "sha256": "bf1dadaa82211c979c5e3c6952f6bcb8436f3e109cc54145383a1bbc0a56f05a",
+        "content_type": "application/json; charset=utf-8",
+        "cache_control": "max-age=600",
+        "etag": "W/\"6ae296e6-6dab2d\"",
+        "last_modified": "Thu, 29 Oct 2026 00:44:22 GMT"
+      },
+      "assets/preopen.json": {
+        "status": 200,
+        "bytes": 7187245,
+        "sha256": "bf1dadaa82211c979c5e3c6952f6bcb8436f3e109cc54145383a1bbc0a56f05a",
+        "content_type": "application/json; charset=utf-8",
+        "cache_control": "max-age=600",
+        "etag": "W/\"6ae296e6-6dab2d\"",
+        "last_modified": "Thu, 29 Oct 2026 00:44:22 GMT"
+      },
+      "assets/postclose.json": {
+        "status": 200,
+        "bytes": 7203752,
+        "sha256": "30438cc3d47cc1bd6377678ee16bd35b4e529c7a1e458906b1d61d55c1b1f89f",
+        "content_type": "application/json; charset=utf-8",
+        "cache_control": "max-age=600",
+        "etag": "W/\"6ae296e6-6deba8\"",
+        "last_modified": "Thu, 29 Oct 2026 00:44:22 GMT"
+      },
+      "assets/final.json": {
+        "status": 200,
+        "bytes": 7203752,
+        "sha256": "30438cc3d47cc1bd6377678ee16bd35b4e529c7a1e458906b1d61d55c1b1f89f",
+        "content_type": "application/json; charset=utf-8",
+        "cache_control": "max-age=600",
+        "etag": "W/\"6ae296e6-6deba8\"",
+        "last_modified": "Thu, 29 Oct 2026 00:44:22 GMT"
+      },
+      "assets/style.css": {
+        "status": 200,
+        "bytes": 20293,
+        "sha256": "187551b6c31267e900ee2508a9ae43c10892c397b5d47e9b486fbaf5c9cc0a45",
+        "content_type": "text/css; charset=utf-8",
+        "cache_control": "max-age=600",
+        "etag": "W/\"6ae296e6-4f45\"",
+        "last_modified": "Thu, 29 Oct 2026 00:44:22 GMT"
+      },
+      "assets/app.js": {
+        "status": 200,
+        "bytes": 17805,
+        "sha256": "506646e9e7ae68f0b8726be6e84de59c0df10bd3c210da7b9f78be0c16617069",
+        "content_type": "application/javascript; charset=utf-8",
+        "cache_control": "max-age=600",
+        "etag": "W/\"6ae296e6-458d\"",
+        "last_modified": "Thu, 29 Oct 2026 00:44:22 GMT"
+      },
+      "assets/plotly.min.js": {
+        "status": 200,
+        "bytes": 4763993,
+        "sha256": "122e3be346d66616944d0b83eaaf7242581508c3c1cfa0995a17af0d83eff770",
+        "content_type": "application/javascript; charset=utf-8",
+        "cache_control": "max-age=600",
+        "etag": "W/\"6ae296e6-48b159\"",
+        "last_modified": "Thu, 29 Oct 2026 00:44:22 GMT"
+      },
+      "assets/pwa.js": {
+        "status": 200,
+        "bytes": 10193,
+        "sha256": "a6e9e5c0c946e8c95f747cee12ba83614da0ed863e10ca23d6f616fe3fc53290",
+        "content_type": "application/javascript; charset=utf-8",
+        "cache_control": "max-age=600",
+        "etag": "W/\"6ae296e6-27d1\"",
+        "last_modified": "Thu, 29 Oct 2026 00:44:22 GMT"
+      },
+      "assets/icon-192.png": {
+        "status": 200,
+        "bytes": 1222,
+        "sha256": "82f9e9cf2e608414072f3358e5fac3d4936967ec94db6a5710efed23d05eb73b",
+        "content_type": "image/png",
+        "cache_control": "max-age=600",
+        "etag": "\"6ae296e6-4c6\"",
+        "last_modified": "Thu, 29 Oct 2026 00:44:22 GMT"
+      },
+      "assets/icon-512.png": {
+        "status": 200,
+        "bytes": 4663,
+        "sha256": "14a25fb6c2acc5b5e7215565a4fa282923d21e2c8d6b9f4919f5d4cc35c1c178",
+        "content_type": "image/png",
+        "cache_control": "max-age=600",
+        "etag": "\"6ae296e6-1237\"",
+        "last_modified": "Thu, 29 Oct 2026 00:44:22 GMT"
+      },
+      "assets/icon-maskable-512.png": {
+        "status": 200,
+        "bytes": 3273,
+        "sha256": "31e9248c97c8f311d448f677ac5ff9bb8138113c11b5ee7f80e879372e2322df",
+        "content_type": "image/png",
+        "cache_control": "max-age=600",
+        "etag": "\"6ae296e6-cc9\"",
+        "last_modified": "Thu, 29 Oct 2026 00:44:22 GMT"
+      },
+      "manifest.webmanifest": {
+        "status": 200,
+        "bytes": 1061,
+        "sha256": "3ec43bccc2f237c8c0d93785127e4d5d535385e3d0cf94d3d5746a3eae9b1ae1",
+        "content_type": "application/manifest+json; charset=utf-8",
+        "cache_control": "max-age=600",
+        "etag": "W/\"6ae296e6-425\"",
+        "last_modified": "Thu, 29 Oct 2026 00:44:22 GMT"
+      },
+      "sw.js": {
+        "status": 200,
+        "bytes": 11115,
+        "sha256": "28396b454943daf5a83178fcb4beafa0903add8b3219bb337daec7eab0de1985",
+        "content_type": "application/javascript; charset=utf-8",
+        "cache_control": "max-age=600",
+        "etag": "W/\"6ae296e6-2b6b\"",
+        "last_modified": "Thu, 29 Oct 2026 00:44:22 GMT"
+      },
+      "offline.html": {
+        "status": 200,
+        "bytes": 2139,
+        "sha256": "5401e3e17efbcce705eb1981de1f75fd815b4a3fe4308cd1beb5b808b1104bcb",
+        "content_type": "text/html; charset=utf-8",
+        "cache_control": "max-age=600",
+        "etag": "W/\"6ae296e6-85b\"",
+        "last_modified": "Thu, 29 Oct 2026 00:44:22 GMT"
+      },
+      "assets/publication.json": {
+        "status": 200,
+        "bytes": 1205,
+        "sha256": "17b41bf0b0c74f73b1988308c67b31193f7de8c884a0d48d97ed891e3fcf24e1",
+        "content_type": "application/json; charset=utf-8",
+        "cache_control": "max-age=600",
+        "etag": "W/\"6ae296e6-4b5\"",
+        "last_modified": "Thu, 29 Oct 2026 00:44:22 GMT"
+      }
+    },
+    "public_registration_mimes_valid": true,
+    "app_version": "060b4b244b56d282ac38",
+    "source_matches": {
+      "assets/style.css": true,
+      "assets/app.js": true,
+      "assets/pwa.js": true,
+      "assets/icon-192.png": true,
+      "assets/icon-512.png": true,
+      "assets/icon-maskable-512.png": true,
+      "manifest.webmanifest": true,
+      "offline.html": true,
+      "assets/plotly.min.js": true,
+      "sw.js": true
+    },
+    "manifest": {
+      "scope": "https://shen19772002-sketch.github.io/taiwan-stock-ai/",
+      "start_url": "https://shen19772002-sketch.github.io/taiwan-stock-ai/index.html",
+      "display": "standalone",
+      "icons": [
+        {
+          "src": "assets/icon-192.png",
+          "width": 192,
+          "height": 192,
+          "purpose": "any"
+        },
+        {
+          "src": "assets/icon-512.png",
+          "width": 512,
+          "height": 512,
+          "purpose": "any"
+        },
+        {
+          "src": "assets/icon-maskable-512.png",
+          "width": 512,
+          "height": 512,
+          "purpose": "maskable"
+        }
+      ]
+    },
+    "pages": {
+      "index": {
+        "embedded_matches_json": true,
+        "revision_matches_publication": true,
+        "install_and_refresh_controls": true,
+        "phase": "preopen",
+        "as_of": "2026-10-29",
+        "data_date": "2026-10-28",
+        "generated_at": "2026-10-29T00:42:56.141106+00:00",
+        "status": "partial",
+        "candidates": 15,
+        "institutional_status": {
+          "market_dates": {
+            "TPEX": "2026-10-28",
+            "TWSE": "2026-10-28"
+          },
+          "required_date": "2026-10-28",
+          "status": "ready"
+        }
+      },
+      "preopen": {
+        "embedded_matches_json": true,
+        "revision_matches_publication": true,
+        "install_and_refresh_controls": true,
+        "phase": "preopen",
+        "as_of": "2026-10-29",
+        "data_date": "2026-10-28",
+        "generated_at": "2026-10-29T00:42:56.141106+00:00",
+        "status": "partial",
+        "candidates": 15,
+        "institutional_status": {
+          "market_dates": {
+            "TPEX": "2026-10-28",
+            "TWSE": "2026-10-28"
+          },
+          "required_date": "2026-10-28",
+          "status": "ready"
+        }
+      },
+      "postclose": {
+        "embedded_matches_json": true,
+        "revision_matches_publication": true,
+        "install_and_refresh_controls": true,
+        "phase": "final",
+        "as_of": "2026-10-28",
+        "data_date": "2026-10-28",
+        "generated_at": "2026-10-28T18:31:13.777348+00:00",
+        "status": "partial",
+        "candidates": 15,
+        "institutional_status": {
+          "market_dates": {
+            "TPEX": "2026-10-28",
+            "TWSE": "2026-10-28"
+          },
+          "required_date": "2026-10-28",
+          "status": "ready"
+        }
+      },
+      "final": {
+        "embedded_matches_json": true,
+        "revision_matches_publication": true,
+        "install_and_refresh_controls": true,
+        "phase": "final",
+        "as_of": "2026-10-28",
+        "data_date": "2026-10-28",
+        "generated_at": "2026-10-28T18:31:13.777348+00:00",
+        "status": "partial",
+        "candidates": 15,
+        "institutional_status": {
+          "market_dates": {
+            "TPEX": "2026-10-28",
+            "TWSE": "2026-10-28"
+          },
+          "required_date": "2026-10-28",
+          "status": "ready"
+        }
+      }
+    }
+  },
+  "public_bytes_browser_verification": {
+    "delivery": "Exact HTTPS-downloaded publication served at the original /taiwan-stock-ai/ subpath on localhost",
+    "command": "python scripts/pwa_smoke.py --site PUBLIC_DOWNLOAD_DIRECTORY --out EVIDENCE_DIRECTORY --chromium /path/to/chromium",
+    "fault_injection": "Transport outages, publication revision metadata and SW comment only; market report JSON unmodified",
+    "checked_at": "2026-10-29T05:56:39.014550+00:00",
+    "base_url": "http://127.0.0.1:41707/taiwan-stock-ai/",
+    "browser": "Chromium desktop/mobile emulation; not physical Android",
+    "report_inputs": "existing rendered report files; no simulated market prices",
+    "checks": [
+      "manifest scope, standalone display and actual 192/512 PNG dimensions",
+      "No POST/dispatch or watchlist upload; public content GET requests only"
+    ],
+    "viewports": [
+      {
+        "viewport": "desktop",
+        "width": 1440,
+        "height": 1000,
+        "scope": "http://127.0.0.1:41707/taiwan-stock-ai/",
+        "pages": [
+          {
+            "page": "index",
+            "data_date": "2026-10-28",
+            "candidate_count": 15
+          },
+          {
+            "page": "preopen",
+            "data_date": "2026-10-28",
+            "candidate_count": 15
+          },
+          {
+            "page": "postclose",
+            "data_date": "2026-10-28",
+            "candidate_count": 15
+          },
+          {
+            "page": "final",
+            "data_date": "2026-10-28",
+            "candidate_count": 15
+          }
+        ],
+        "js_errors": [],
+        "chromium_installability": {
+          "installabilityErrors": [
+            {
+              "errorId": "in-incognito",
+              "errorArguments": []
+            }
+          ]
+        },
+        "checks": [
+          "same/new publication",
+          "HTTP/error/malformed/timeout feedback",
+          "duplicate tap suppression",
+          "real offline cached report",
+          "unvisited offline fallback",
+          "HTTP outage while browser online",
+          "install event handler simulation",
+          "real waiting-worker update",
+          "watchlist persistence",
+          "other-app cache isolation",
+          "layout"
+        ]
+      },
+      {
+        "viewport": "android",
+        "width": 390,
+        "height": 844,
+        "scope": "http://127.0.0.1:41707/taiwan-stock-ai/",
+        "pages": [
+          {
+            "page": "index",
+            "data_date": "2026-10-28",
+            "candidate_count": 15
+          },
+          {
+            "page": "preopen",
+            "data_date": "2026-10-28",
+            "candidate_count": 15
+          },
+          {
+            "page": "postclose",
+            "data_date": "2026-10-28",
+            "candidate_count": 15
+          },
+          {
+            "page": "final",
+            "data_date": "2026-10-28",
+            "candidate_count": 15
+          }
+        ],
+        "js_errors": [],
+        "chromium_installability": {
+          "installabilityErrors": [
+            {
+              "errorId": "in-incognito",
+              "errorArguments": []
+            }
+          ]
+        },
+        "checks": [
+          "same/new publication",
+          "HTTP/error/malformed/timeout feedback",
+          "duplicate tap suppression",
+          "real offline cached report",
+          "unvisited offline fallback",
+          "HTTP outage while browser online",
+          "install event handler simulation",
+          "real waiting-worker update",
+          "watchlist persistence",
+          "other-app cache isolation",
+          "layout"
+        ]
+      }
+    ],
+    "persistent_profile_installability": {
+      "installabilityErrors": []
+    }
+  },
+  "history": {
+    "checked_at": "2026-10-29T05:56:12.616907+00:00",
+    "repository": "shen19772002-sketch/taiwan-stock-ai",
+    "branch": "market-data",
+    "branch_sha": "318806160e5441e22bb590de56b3cdb40e53d785",
+    "tree_sha": "318806160e5441e22bb590de56b3cdb40e53d785",
+    "baseline_tree_sha": "84b349c045071bace92e78334a1e436d81cf2b48",
+    "baseline_report_count": 28,
+    "current_report_count": 32,
+    "unchanged_baseline_count": 28,
+    "missing": [],
+    "changed": [],
+    "new_report_paths": [
+      "data/reports/2026-10-28-final-224bcd20367dfff4.json",
+      "data/reports/2026-10-28-final-226c0f37ddf590ea.json",
+      "data/reports/2026-10-28-postclose-a19bed7ef36290a3.json",
+      "data/reports/2026-10-29-preopen-6ee1aa5889d4c225.json"
+    ],
+    "passed": true
+  },
+  "limitations": [
+    "Chromium desktop and Android viewport emulation verified; physical Android installation must be completed by the user.",
+    "Report refresh reads the publication only; manual recomputation still uses authenticated GitHub Actions.",
+    "No push notifications, cross-device watchlist synchronization, licensed intraday feed or live-order execution added.",
+    "Latest report remains partial: quote rows with incomplete fields are excluded and calendar completeness is not fully verified. No missing prices or dates are fabricated.",
+    "Existing GitHub schedule delivery delays and official source publication timing remain applicable."
+  ],
+  "screenshots": [
+    {
+      "file": "pwa-android-online-2026-10-29.png",
+      "sha256": "b94258a1d3e93b894b3c835fdc46cecad8fc757e719afcf38d3f3d796444d1fa",
+      "bytes": 110277
+    },
+    {
+      "file": "pwa-android-offline-2026-10-29.png",
+      "sha256": "ec94f6e05ead30685e0f456fe10ffe01145802c073cc0827e709cd2159729525",
+      "bytes": 112834
+    }
+  ]
+}
