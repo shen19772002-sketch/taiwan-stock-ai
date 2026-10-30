@@ -34,7 +34,7 @@
   <header class="topbar">
     <a class="brand" href="#ai-observation" aria-label="台股智慧研究首頁"><span class="brand-mark" aria-hidden="true">AI</span><span>台股智慧研究<small>TAIWAN AI RESEARCH</small></span></a>
     <span class="edition">AI SUPPLY CHAIN <b>官方資料研究</b></span>
-    <span class="live-tag"><span class="status-dot"></span>{{ report.data_mode }}・非即時報價</span>
+    <span class="live-tag"><span class="status-dot"></span><span class="live-mode">{{ report.data_mode }}・</span>非即時</span>
   </header>
   <div class="app-layout">
     <aside class="sidebar" aria-label="主要導覽">
@@ -51,26 +51,26 @@
     <main>
       <div id="pwa-offline" class="notice pwa-offline" role="status" hidden>目前無法確認最新資料；顯示已儲存的報告，請以原行情日期判讀。</div>
       <div class="research-head">
-        <div><div class="eyebrow">AI SUPPLY CHAIN / DAILY RESEARCH</div><h1>AI 產業鏈研究</h1><p>聚焦產業、個股與資料進度</p></div>
-        <div class="report-actions"><button id="report-refresh" class="primary-button" type="button"><span aria-hidden="true">↻</span> 檢查最新報告</button><button id="pwa-update" class="secondary-button" type="button" hidden>更新手機版</button></div>
+        <div class="research-intro"><div class="eyebrow">AI SUPPLY CHAIN / DAILY RESEARCH</div><h1>AI 產業鏈研究</h1><p>聚焦產業、個股與資料進度</p></div>
+        <div class="report-actions"><button id="report-refresh" class="primary-button" type="button"><span aria-hidden="true">↻</span> 檢查更新</button><button id="pwa-update" class="secondary-button" type="button" hidden>更新手機版</button><label class="theme-picker" for="theme-select"><span>底色</span><select id="theme-select" aria-label="選擇網頁底色"><option value="dark">深海藍</option><option value="light">明亮白</option><option value="sepia">柔和米色</option></select></label></div>
       </div>
-      <div class="display-preferences"><label class="theme-picker" for="theme-select"><span>網頁底色</span><select id="theme-select" aria-label="選擇網頁底色"><option value="dark">深海藍</option><option value="light">明亮白</option><option value="sepia">柔和米色</option></select></label></div>
+
       <div class="phase-date-row">
         <nav class="phase-nav" aria-label="研究報告時段">
           {% for slug, label, schedule in [('index', '最新', '最近執行'), ('preopen', '盤前', '08:20'), ('postclose', '盤後', '15:30'), ('final', '晚間', '18:30／20:30')] %}
           <a href="{{ slug }}.html"{% if page == slug %} aria-current="page"{% endif %}><span>{{ label }}</span><small>{{ schedule }}</small></a>
           {% endfor %}
         </nav>
-        <div class="report-date"><span>研究基準日</span><strong>{{ report.as_of or '等待資料' }}</strong></div>
       </div>
-      <div class="report-meta"><span>行情日 {{ report.data_date or '等待可驗證資料' }}</span><span>{{ view.get('report_scope_label', '原報告範圍') }}</span><details id="pwa-tools" class="pwa-tools"><summary>手機版與執行工具</summary><div class="pwa-toolbar" role="group" aria-label="手機版與報告更新"><div class="pwa-actions"><button id="pwa-install" class="secondary-button" type="button">安裝到手機</button></div><p id="pwa-install-help">Android 請用 Chrome 開啟本網站，選擇「安裝應用程式」或「新增至主畫面」。</p><p id="pwa-status" role="status" aria-live="polite">安裝後可從手機主畫面開啟；分析仍由雲端排程執行。</p>
+      <div class="report-meta"><span class="report-date-summary">行情日 <strong>{{ report.data_date or '等待資料' }}</strong></span><details id="pwa-tools" class="pwa-tools"><summary aria-label="手機版與執行工具">工具</summary><div class="pwa-toolbar" role="group" aria-label="手機版與報告更新"><div class="pwa-actions"><button id="pwa-install" class="secondary-button" type="button">安裝到手機</button></div><p id="pwa-install-help">Android 請用 Chrome 開啟本網站，選擇「安裝應用程式」或「新增至主畫面」。</p><p>檢查只讀取已發布內容，不會重新分析。</p><p id="pwa-status" role="status" aria-live="polite">安裝後可從手機主畫面開啟；分析仍由雲端排程執行。</p>
       <details class="manual-run"><summary>需要重新分析？開啟執行入口</summary><div class="manual-run-actions" role="group" aria-label="手動更新研究"><a class="secondary-button" href="https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/workflows/preopen.yml" target="_blank" rel="noopener noreferrer">到 GitHub 執行盤前 ↗</a><a class="secondary-button" href="https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/workflows/postclose.yml" target="_blank" rel="noopener noreferrer">到 GitHub 執行盤後 ↗</a></div><p>登入 GitHub 後，按「Run workflow」，再按綠色「Run workflow」，不用填參數。工作需要數分鐘；綠色勾勾表示完成，再回本頁按「檢查最新報告」。等待時不需重複送出。</p><p>若 GitHub App 點擊沒有回饋，請以 Chrome 開啟 GitHub 網頁操作。這些連結會開啟執行頁面，不會直接啟動分析。</p></details>
       <p class="phase-schedule-note">排程時間為台灣時間；遇官方休市日跳過交易分析，實際啟動時間可能因 GitHub 排程延遲。<a class="text-link" href="https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/workflows/research.yml?query=event%3Aschedule" target="_blank" rel="noopener noreferrer">查看自動執行紀錄 ↗</a></p></div></details></div>
-      <p id="report-refresh-feedback" class="refresh-feedback" role="status" aria-live="polite">檢查只讀取已發布內容，不會重新分析。</p>
+      <p id="report-refresh-feedback" class="refresh-feedback" role="status" aria-live="polite"></p>
       <div class="research-readiness readiness-{{ report.status }}" aria-label="研究資料更新進度">
-        <div class="readiness-heading"><div class="readiness-title"><span aria-hidden="true" class="readiness-icon">{{ '✓' if report.status == 'ready' else 'i' if report.status == 'non_trading_day' else '!' }}</span><strong>{{ view.get('summary_title', status_labels.get(report.status, report.status)) }}</strong></div><span class="badge status-{{ report.status }}">{{ status_labels.get(report.status, report.status) }}</span></div>
-        <p>{{ view.get('summary_text', '依可驗證的官方資料研究；缺漏項目不補值、不冒充完整排名。') }}</p>
-        <div class="readiness-bottom"><span>更新 {{ report.generated_at|taipei }}</span><details class="readiness-details"><summary>缺哪些資料與研究提醒 <span aria-hidden="true">⌄</span></summary><div class="readiness-content">
+        <div class="readiness-heading"><div class="readiness-title"><span aria-hidden="true" class="readiness-icon">{{ '✓' if report.status == 'ready' else 'i' if report.status == 'non_trading_day' else '!' }}</span><strong>{% if not report.as_of %}等待本時段報告{% elif report.status == 'non_trading_day' %}休市日{% elif not view.get('is_ai_report') %}舊版全市場報告{% elif visible_candidates %}{{ visible_candidates|length }} 檔符合條件{% elif not view.get('observations') %}等待觀察資料{% elif '等待' in view.get('summary_title', '') %}等待同日資料{% else %}暫無符合標的{% endif %}</strong></div><span class="badge readiness-status status-{{ report.status }}">{{ {'ready':'資料齊全','partial':'來源待補','waiting':'等待資料','non_trading_day':'休市'}.get(report.status, report.status) }}</span></div>
+        <div class="readiness-bottom"><details class="readiness-details"><summary>狀態與研究說明 <span aria-hidden="true">⌄</span></summary><div class="readiness-content">
+          <p>{{ view.get('summary_title', status_labels.get(report.status, report.status)) }}。{{ view.get('summary_text', '依可驗證的官方資料研究；缺漏項目不補值、不冒充完整排名。') }}</p>
+          <div class="report-date"><span>研究基準日</span><strong>{{ report.as_of or '等待資料' }}</strong></div><p>{{ view.get('report_scope_label', '原報告範圍') }} · 更新 {{ report.generated_at|taipei }}</p>
           {% for item in view.get('missing_items', []) %}<div class="readiness-item"><strong>{{ item.label }}</strong><span>{{ item.detail }}</span></div>{% endfor %}
           {% if is_postclose_supplement %}<p>本頁顯示最新盤後補充報告（完整資料更新）；原始報告仍依各次記錄保留。資料是否齊全，請見本次狀態與官方來源明細。</p>{% endif %}
           {% if phase_is_stale %}<p>此頁保留最近一次{{ phase_labels.get(report.phase, report.phase) }}：{{ report.as_of }}。最新排程基準日為 {{ latest_as_of }}；請以本頁標示的行情交易日與更新時間判讀。</p>{% endif %}
@@ -79,13 +79,14 @@
           {% for notice in report.get('notices', []) %}<p>{{ notice }}</p>{% endfor %}
           {% if report.get('institutional_status') %}{% set institutions = report.institutional_status %}<div class="institution-status" aria-label="法人資料完整性"><span>法人資料 <b>{{ '與行情日對齊' if institutions.status == 'ready' else '資料待齊' }}</b></span><span>行情基準：{{ institutions.required_date or '等待可驗證行情' }}</span><span>上市：{{ institutions.get('market_dates', {}).get('TWSE') or '尚未取得' }}</span><span>上櫃：{{ institutions.get('market_dates', {}).get('TPEX') or '尚未取得' }}</span>{% if institutions.status != 'ready' %}<small>缺漏資料不視為買賣超零；官方資料公布後由後續排程補充。</small>{% endif %}</div>{% endif %}
           <p>晚間 18:30、20:30 固定排程重新擷取資料；是否補齊取決於官方公布與資料檢查。若不符合完整選股條件，仍不產生排名或價位。</p><a href="#data-sources" class="text-link">查看官方來源完整性 ↗</a>
+          {% if last_usable %}<a class="previous-report-link" href="{{ last_usable.url }}">參考上次可用報告 {{ last_usable.date }} ↗ <small>保留原資料日期與狀態</small></a>{% endif %}
         </div></details></div>
-        {% if last_usable %}<a class="previous-report-link" href="{{ last_usable.url }}">參考上次可用報告 {{ last_usable.date }} ↗ <small>保留原資料日期與狀態</small></a>{% endif %}
+
         {% if phase_is_stale %}<p class="phase-retained-note">保留 {{ report.as_of }} 的{{ phase_labels.get(report.phase, report.phase) }}，尚未取得較新的本時段報告。</p>{% endif %}
       </div>
 
       <section id="ai-observation" class="section ai-observation-section">
-        <div class="section-heading"><div><h2>AI 個股觀察</h2><p>{{ view.get('constituents_count', 0) }} 家有來源依據 · 非推薦排名</p></div><a class="text-link" href="#ranking">完整選股排名 ↗</a></div>
+        <div class="section-heading"><div><h2>AI 個股觀察 <span class="observation-count">{{ view.get('constituents_count', 0) }} 家</span></h2><p>觀察清單 · 非推薦排名</p></div><a class="text-link" href="#ranking">選股排名 ↗</a></div>
         <div class="ai-observation-controls"><div id="ai-category-filters" class="ai-category-filters" role="group" aria-label="AI 產業類別"><button type="button" class="ai-category-button active" data-ai-category="all" aria-pressed="true"><span aria-hidden="true">●</span> 全部 AI</button>{% for category in categories %}<button type="button" class="ai-category-button" data-ai-category="{{ category.id }}" aria-pressed="false">{{ category.name }}</button>{% endfor %}</div><label class="search-box ai-search"><span aria-hidden="true">⌕</span><input id="ai-observation-search" type="search" placeholder="搜尋 AI 股票" aria-label="搜尋 AI 觀察股票"></label></div>
         <div id="ai-observation-list" class="ai-observation-list" aria-live="polite"></div>
         <p id="ai-observation-empty" class="ai-observation-empty">{{ '載入本次 AI 觀察範圍…' if view.get('observations') else '目前沒有可驗證的 AI 觀察行情。資料取得後才顯示個股，不補入示範資料。' }}</p>

@@ -10,6 +10,8 @@
 
 手機版支援大字閱讀與深海藍、明亮白、柔和米色三種底色；矽晶圓以 AI 上游間接題材另列觀察。[底色與矽晶圓說明](docs/appearance-and-wafer.md)。
 
+手機精簡版採 18px 正文與更大的股名、價格，首頁先顯示 6 家，可展開全部；完整資料與風險保留在詳情。[評估與使用方式](docs/readable-summary.md)。
+
 每日自動更新：[盤前研究](https://shen19772002-sketch.github.io/taiwan-stock-ai/preopen.html)（08:20）、[盤後研究](https://shen19772002-sketch.github.io/taiwan-stock-ai/postclose.html)（15:30，18:30／20:30 補充）；時間皆為台灣平日排程，GitHub 實際啟動可能延遲。[手動執行、歷史保存與診斷方式](docs/daily-automation.md)。
 
 免填參數手動更新：[執行盤前分析](https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/workflows/preopen.yml)／[執行盤後分析](https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/workflows/postclose.yml)。登入 GitHub，按 **Run workflow → 綠色 Run workflow**，完成後重新整理研究網站。

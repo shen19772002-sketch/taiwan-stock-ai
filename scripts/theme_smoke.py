@@ -12,7 +12,7 @@ from pathlib import Path
 
 from playwright.sync_api import sync_playwright
 
-from ai_ui_smoke import digest
+from ai_ui_smoke import digest, inspect_simple_surface
 from pwa_smoke import PREFIX, State, report_data, server_for, wait_cached, wait_controlled
 
 
@@ -41,8 +41,8 @@ def inspect_readability(page, mobile):
         return sum + (linear <= 0.04045 ? linear / 12.92 : ((linear + 0.055) / 1.055) ** 2.4)
           * [0.2126, 0.7152, 0.0722][i];
       }, 0);
-      const selectors = ['body', '.research-head p', '.research-readiness > p',
-        '.report-meta', '.report-date strong', '.ai-stock-meta', '.ai-stock-state', '.method-note'];
+      const selectors = ['body', '.research-head p', '.readiness-content p',
+        '.report-date-summary', '.readiness-status', '.ai-stock-meta', '.ai-stock-state', '.method-note'];
       const text = selectors.flatMap(selector => [...document.querySelectorAll(selector)].slice(0, 3)
         .filter(node => node.getClientRects().length).map(node => {
           const style = getComputedStyle(node), bg = background(node), fg = rgba(style.color);
@@ -62,11 +62,11 @@ def inspect_readability(page, mobile):
     for item in result["text"]:
         assert item["contrast"] >= 4.5, item
         if mobile:
-            minimum = 16 if item["selector"] in {"body", ".research-head p", ".research-readiness > p"} else 14
+            minimum = 18 if item["selector"] in {"body", ".research-head p", ".readiness-content p"} else 16
             assert item["size"] >= minimum, item
     if mobile:
         for item in result["controls"]:
-            assert item["height"] >= 44 and item["width"] >= 44, item
+            assert item["height"] >= 48 and item["width"] >= 44, item
     return result
 
 
@@ -107,7 +107,7 @@ def inspect_plotly(page):
         for axis in ("x", "y"):
             if chart[axis + "_grid_visible"]:
                 assert chart[axis + "_grid"] == palette["line"], chart
-        assert chart["font_size"] >= 14, chart
+        assert chart["font_size"] >= 16, chart
         for trace in chart["traces"]:
             for value, color in zip(trace["x"], trace["colors"], strict=True):
                 assert color == palette["red" if value >= 0 else "green"], trace
@@ -137,7 +137,8 @@ def main():
     try:
         with sync_playwright() as playwright:
             browser = playwright.chromium.launch(executable_path=args.chromium, channel="chromium", headless=True)
-            for name, width, height in (("small-phone", 360, 800), ("phone", 390, 844), ("desktop", 1440, 1000)):
+            for name, width, height in (("small-phone", 360, 800), ("phone", 390, 844),
+                                        ("landscape", 844, 390), ("desktop", 1440, 1000)):
                 context = browser.new_context(viewport={"width": width, "height": height},
                                               is_mobile=width < 600, has_touch=width < 600)
                 page = context.new_page()
@@ -147,6 +148,7 @@ def main():
                 wait_controlled(page)
                 wait_cached(page, PREFIX + "index.html")
                 original = digest(report_data(page))
+                view = json.loads(page.locator("#ai-view-data").text_content())
                 # Isolated browser-state fixture; never inserted into market/report data.
                 holdings = json.dumps([{"market": "TWSE", "symbol": "1101", "quantity": 7, "cost": 12.5}])
                 page.evaluate("([key,value])=>localStorage.setItem(key,value)", [WATCH_KEY, holdings])
@@ -159,6 +161,11 @@ def main():
                     assert_theme(page, theme)
                     assert page.evaluate("key=>localStorage.getItem(key)", THEME_KEY) == theme
                     readability = inspect_readability(page, width < 600)
+                    page.evaluate("""() => {document.documentElement.style.scrollBehavior='auto';
+                      window.scrollTo(0,0);}""")
+                    surface = inspect_simple_surface(
+                        page, view, report_data(page), first_screen=width <= 390,
+                    )
                     chart = inspect_plotly(page)
                     if original_chart is None:
                         original_chart = chart_values(chart)
@@ -170,7 +177,7 @@ def main():
                     page.reload(wait_until="networkidle")
                     assert_theme(page, theme)
                     assert chart_values(inspect_plotly(page)) == original_chart
-                    themes.append({"theme": theme, "readability": readability, "plotly": chart})
+                    themes.append({"theme": theme, "readability": readability, "surface": surface, "plotly": chart})
                 assert len({tuple(item["readability"]["background"]) for item in themes}) == 3
                 phases = []
                 for slug in ("preopen", "postclose", "final"):
@@ -178,6 +185,8 @@ def main():
                     assert_theme(page, "sepia")
                     assert page.evaluate("key=>localStorage.getItem(key)", WATCH_KEY) == holdings
                     inspect_plotly(page)
+                    phase_view = json.loads(page.locator("#ai-view-data").text_content())
+                    inspect_simple_surface(page, phase_view, report_data(page))
                     assert not page.evaluate("document.documentElement.scrollWidth > innerWidth")
                     phases.append(slug)
                 context.set_offline(True)

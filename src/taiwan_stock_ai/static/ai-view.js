@@ -10,6 +10,25 @@
   const search = document.getElementById("ai-observation-search");
   const empty = document.getElementById("ai-observation-empty");
   let category = "all";
+  let expanded = false;
+  const initialLimit = 6;
+  const listSummary = node("div", null, "ai-list-summary");
+  const listCount = node("p", null, "ai-list-count");
+  listCount.id = "ai-observation-count";
+  const more = node("button", null, "secondary-button ai-list-more");
+  more.id = "ai-observation-more"; more.type = "button";
+  more.setAttribute("aria-controls", list.id);
+  more.addEventListener("click", () => {
+    const priorScroll = window.scrollY;
+    expanded = !expanded;
+    render();
+    requestAnimationFrame(() => {
+      if (expanded) window.scrollTo({top: priorScroll, behavior: "instant"});
+      else listSummary.scrollIntoView({block: "center", behavior: "instant"});
+    });
+  });
+  listSummary.append(listCount, more);
+  list.after(listSummary);
   function key(stock) { return `${stock.market}:${stock.symbol}`; }
   function node(tag, text, className) {
     const element = document.createElement(tag);
@@ -28,38 +47,49 @@
     } catch (_) { return false; }
   }
   function stockState(stock) {
-    if (candidates.has(key(stock)) && stock.plan) return "符合本次條件 · 查看策略與風險";
-    if (stock.date !== view.data_date) return "保留原行情日 · 資料日期尚待對齊";
-    if (stock.fundamental_status !== "current") return "等待同日估值 · 暫不產生策略";
-    if (!stock.indicators) return "技術歷史不足 · 保留已驗證行情";
-    return "尚未符合趨勢或風險條件 · 可查看依據";
+    if (stock.date !== view.data_date) return "行情待更新";
+    if (stock.fundamental_status !== "current") return "估值待補";
+    if (!stock.indicators) return "歷史不足";
+    if (candidates.has(key(stock)) && stock.plan) return "符合選股條件";
+    if (!view.is_ai_report) return "舊報告觀察";
+    return "未符合選股條件";
   }
   function render() {
     const query = (search?.value || "").trim().toLowerCase();
     const filtered = observations.filter(stock => (
       category === "all" || (stock.ai_category_ids || []).includes(category)
     ) && `${stock.symbol} ${stock.name} ${(stock.ai_categories || []).join(" ")}`.toLowerCase().includes(query));
+    const isAll = category === "all" && !query;
+    const limited = isAll && !expanded && filtered.length > initialLimit;
+    const visible = limited ? filtered.slice(0, initialLimit) : filtered;
+    listCount.textContent = limited
+      ? `先顯示 ${visible.length} / ${filtered.length} 家 · 依代號排列`
+      : `共 ${filtered.length} 家${isAll ? " · 依代號排列" : ""}`;
+    more.hidden = !isAll || filtered.length <= initialLimit;
+    more.textContent = expanded ? `收合為 ${initialLimit} 家` : `查看全部 ${filtered.length} 家`;
+    more.setAttribute("aria-expanded", String(expanded));
     list.replaceChildren();
-    filtered.forEach(stock => {
+    visible.forEach(stock => {
       const card = node("article", null, "ai-stock-card");
       card.dataset.stockKey = key(stock);
       const main = node("div", null, "ai-stock-main");
       const heading = node("div", null, "ai-stock-heading");
       heading.append(node("strong", stock.name, "ai-stock-name"), node("span", stock.symbol, "ai-stock-code"));
       const tags = node("div", null, "ai-stock-tags");
-      (stock.ai_categories || []).forEach(name => tags.append(node("span", name, "ai-stock-tag")));
+      if (stock.ai_category) tags.append(node("span", stock.ai_category, "ai-stock-tag"));
       const meta = node("div", null, "ai-stock-meta");
-      meta.append(node("span", `收盤 ${stock.date || "待取得"}`), node("span", `${stock.bars || 0} 筆完整歷史`));
+      meta.append(node("span", `收盤 ${stock.date || "待取得"}`));
       main.append(heading, tags, meta);
       const price = node("div", null, "ai-stock-price");
       const change = stock.daily_return;
+      const direction = change > 0 ? "up" : change < 0 ? "down" : "muted";
       price.append(node("strong", number(stock.close)), node("span", change === null || change === undefined
         ? "漲跌待比較" : `${change > 0 ? "+" : ""}${number(change * 100)}%`,
-      `ai-stock-return ${change > 0 ? "up" : "down"}`));
+      `ai-stock-return ${direction}`));
       const footer = node("div", null, "ai-stock-footer");
       footer.append(node("span", stockState(stock), "ai-stock-state"));
       const actions = node("div", null, "ai-stock-actions");
-      const detail = node("a", "查看依據 ›", "ai-stock-detail");
+      const detail = node("a", "看詳情 ›", "ai-stock-detail");
       detail.href = "#stock-detail"; detail.dataset.aiDetail = key(stock);
       detail.addEventListener("click", event => {
         event.preventDefault();

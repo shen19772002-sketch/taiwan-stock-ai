@@ -92,8 +92,10 @@
     const evidence = $("detail-ai-evidence");
     if (context) {
       context.hidden = false;
+      const secondaryCategories = (stock.ai_categories || []).filter(name => name !== stock.ai_category);
+      const secondary = secondaryCategories.length ? ` 其他關聯：${secondaryCategories.join("、")}。` : "";
       context.textContent = stock.ai_category
-        ? `AI 主分類：${stock.ai_category} · 分類研究日 ${stock.ai_classification_as_of || report.as_of}。${stock.ai_rationale || ""} 原交易所產業：${stock.official_industry || "未記錄"}。`
+        ? `AI 主分類：${stock.ai_category} · 分類研究日 ${stock.ai_classification_as_of || report.as_of}。${secondary}${stock.ai_rationale || ""} 原交易所產業：${stock.official_industry || "未記錄"}。`
         : "本股來自原始全市場歷史報告；沒有據此宣稱已驗證 AI 業務關聯。";
     }
     if (evidence) {
@@ -143,7 +145,8 @@
       item.append(title, bar, el("p", component.explanation || ""));
       $("detail-scores").append(item);
     });
-    $("detail-coverage").textContent = `資料覆蓋：${typeof stock.coverage === "number" ? percent(stock.coverage) : asLines(stock.coverage).join("；") || "待確認"}。正本益比僅作為歷史獲利代理，不代表未來獲利。`;
+    const historyCount = Number.isInteger(stock.bars) && stock.bars >= 0 ? `${number(stock.bars, 0)} 筆` : "待確認";
+    $("detail-coverage").textContent = `有效歷史：${historyCount}。資料覆蓋：${typeof stock.coverage === "number" ? percent(stock.coverage) : asLines(stock.coverage).join("；") || "待確認"}。正本益比僅作為歷史獲利代理，不代表未來獲利。`;
   }
 
   function renderWatchlist() {
@@ -200,7 +203,7 @@
     Promise.all([
       Plotly.relayout(chart, {
         paper_bgcolor: colors.surface, plot_bgcolor: colors.surface,
-        "font.color": colors.text, "font.size": 14, "legend.font.color": colors.text,
+        "font.color": colors.text, "font.size": 16, "legend.font.color": colors.text,
         "xaxis.tickfont.color": colors.muted, "yaxis.tickfont.color": colors.muted,
         "xaxis.gridcolor": colors.line, "yaxis.gridcolor": colors.line,
         "xaxis.zerolinecolor": colors.muted, "yaxis.zerolinecolor": colors.muted,
@@ -219,7 +222,7 @@
     $("industry-chart-empty").hidden = true;
     const values = industries.map(item => Number(item.momentum20) * 100);
     const colors = chartColors();
-    Plotly.newPlot(chart, [{type: "bar", orientation: "h", x: values, y: industries.map(item => item.industry), marker: {color: values.map(value => value >= 0 ? colors.up : colors.down)}, hovertemplate: "%{y}<br>20 日動能 %{x:.2f}%<extra></extra>"}], {autosize: true, height: Math.max(280, industries.length * 42), paper_bgcolor: colors.surface, plot_bgcolor: colors.surface, font: {family: "Microsoft JhengHei, sans-serif", color: colors.text, size: 14}, margin: {l: 130, r: 15, t: 12, b: 45}, xaxis: {ticksuffix: "%", gridcolor: colors.line, zerolinecolor: colors.muted, tickfont: {color: colors.muted}}, yaxis: {automargin: true, tickfont: {color: colors.muted}}, bargap: 0.45}, {responsive: true, displayModeBar: false}).then(refreshChartTheme).catch(() => {
+    Plotly.newPlot(chart, [{type: "bar", orientation: "h", x: values, y: industries.map(item => item.industry), marker: {color: values.map(value => value >= 0 ? colors.up : colors.down)}, hovertemplate: "%{y}<br>20 日動能 %{x:.2f}%<extra></extra>"}], {autosize: true, height: Math.max(280, industries.length * 42), paper_bgcolor: colors.surface, plot_bgcolor: colors.surface, font: {family: "Microsoft JhengHei, sans-serif", color: colors.text, size: 16}, margin: {l: 130, r: 15, t: 12, b: 45}, xaxis: {ticksuffix: "%", gridcolor: colors.line, zerolinecolor: colors.muted, tickfont: {color: colors.muted}}, yaxis: {automargin: true, tickfont: {color: colors.muted}}, bargap: 0.45}, {responsive: true, displayModeBar: false}).then(refreshChartTheme).catch(() => {
       $("industry-chart-empty").hidden = false;
       $("industry-chart-empty").textContent = "互動圖表載入失敗，產業數據仍可於表格查看。";
     });

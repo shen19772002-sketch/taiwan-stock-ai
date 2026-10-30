@@ -125,6 +125,13 @@ def wait_controlled(page):
 def set_pwa_tools(page, opened):
     """Exercise the compact install menu while supporting older saved pages."""
     tools = page.locator("#pwa-tools")
+    if tools.count() and opened:
+        # The simplified view keeps infrequent tools inside the data details.
+        # Open the visible parent summaries in the same order as a reader.
+        parents = tools.locator("xpath=ancestor::details")
+        for parent in parents.all():
+            if not parent.evaluate("node => node.open"):
+                parent.locator(":scope > summary").click()
     if tools.count() and tools.evaluate("node => node.open") != opened:
         tools.locator(":scope > summary").click()
 
