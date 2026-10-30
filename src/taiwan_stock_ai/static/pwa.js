@@ -41,7 +41,7 @@
     notice.hidden = window.navigator.onLine && !cachedReport;
     if (!notice.hidden) {
       const prefix = cachedReport ? "目前顯示本機儲存的報告。" : "目前離線，畫面保留已載入的報告。";
-      notice.textContent = `${prefix}行情日：${dateLabel(currentReport.data_date)}。這不是即時行情；連線恢復後請按「檢查最新報告」。`;
+      notice.textContent = `${prefix}行情日：${dateLabel(currentReport.data_date)}。這不是即時行情；連線恢復後請按「檢查更新」。`;
       const workerNotice = byId("pwa-worker-cache-notice");
       if (workerNotice) workerNotice.hidden = true;
     }
@@ -213,7 +213,7 @@
   window.addEventListener("offline", syncOfflineNotice);
   window.addEventListener("online", () => {
     syncOfflineNotice();
-    setText("report-refresh-feedback", "網路已連接。按「檢查最新報告」確認網站是否有更新。");
+    setText("report-refresh-feedback", "網路已連接。按「檢查更新」確認網站是否有更新。");
   });
   syncInstallButton();
   syncOfflineNotice();
