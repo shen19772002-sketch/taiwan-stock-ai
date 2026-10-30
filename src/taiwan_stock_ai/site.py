@@ -211,7 +211,7 @@ def render_site(
         (assets / data_file).write_text(
             json.dumps(clean_report, ensure_ascii=False, allow_nan=False, indent=2), encoding="utf-8"
         )
-    for filename in ("style.css", "app.js", "ai-view.js", "pwa.js", "icon-192.png", "icon-512.png", "icon-maskable-512.png"):
+    for filename in ("style.css", "app.js", "ai-view.js", "theme.js", "pwa.js", "icon-192.png", "icon-512.png", "icon-maskable-512.png"):
         shutil.copyfile(root / "static" / filename, assets / filename)
     for filename in ("manifest.webmanifest", "offline.html"):
         shutil.copyfile(root / "static" / filename, output_dir / filename)

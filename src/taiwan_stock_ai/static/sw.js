@@ -11,7 +11,7 @@ const REPORT_PAGES = new Set(["index.html", "preopen.html", "postclose.html", "f
 const REPORT_JSON = new Set(["assets/report.json", "assets/preopen.json", "assets/postclose.json", "assets/final.json"]);
 const SHELL_FILES = [
   "offline.html", "manifest.webmanifest", "assets/style.css", "assets/app.js",
-  "assets/pwa.js", "assets/ai-view.js", "assets/plotly.min.js", "assets/icon-192.png",
+  "assets/pwa.js", "assets/ai-view.js", "assets/theme.js", "assets/plotly.min.js", "assets/icon-192.png",
   "assets/icon-512.png", "assets/icon-maskable-512.png",
 ];
 const SHELL_PATHS = new Set(SHELL_FILES);
@@ -103,7 +103,7 @@ async function markedFallback(response, html) {
   headers.delete("content-encoding");
   if (!html) return new Response(await response.arrayBuffer(), {status: response.status, headers});
   const original = await response.text();
-  const note = `<div id="pwa-worker-cache-notice" role="status" style="padding:14px 20px;border-bottom:2px solid #edc27b;background:#332a18;color:#ffe1a3;line-height:1.7">` +
+  const note = `<div id="pwa-worker-cache-notice" role="status" style="padding:14px 20px;border-bottom:2px solid var(--amber,#edc27b);background:var(--notice-bg,#332a18);color:var(--notice-text,#ffe1a3);font-size:16px;line-height:1.7">` +
     `<strong>目前顯示已儲存的離線副本。</strong> 無法確認網站最新內容，並非即時行情。<br>${escapeText(datesFromHtml(original))}</div>`;
   const body = original.replace(/<body\b([^>]*)>/i, `<body$1 data-report-cache="offline">${note}`);
   return new Response(body, {status: response.status, headers});

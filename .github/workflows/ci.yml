@@ -45,6 +45,9 @@ jobs:
       - name: Verify AI research cards, filters and preserved watchlists
         if: matrix.python == '3.12'
         run: python scripts/ai_ui_smoke.py --site site --out ai-evidence
+      - name: Verify readable themes, charts and saved appearance
+        if: matrix.python == '3.12'
+        run: python scripts/theme_smoke.py --site site --out theme-evidence
       - name: Retain PWA verification evidence
         if: always() && matrix.python == '3.12'
         uses: actions/upload-artifact@v4
@@ -53,6 +56,7 @@ jobs:
           path: |
             pwa-evidence/
             ai-evidence/
+            theme-evidence/
           if-no-files-found: ignore
           retention-days: 14
       - uses: actions/upload-artifact@v4

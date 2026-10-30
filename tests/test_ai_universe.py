@@ -144,5 +144,33 @@ def test_packaged_registry_is_valid_and_evidence_hash_is_reproducible():
     expected = hashlib.sha256(json.dumps(registry, ensure_ascii=False, sort_keys=True,
                                         separators=(",", ":")).encode()).hexdigest()
     assert scope._load_registry()["registry_hash"] == expected
-    assert len(registry["categories"]) == 8
+    assert len(registry["categories"]) == 9
     assert len({(member["market"], member["symbol"]) for member in registry["members"]}) == len(registry["members"])
+
+
+def test_wafer_evidence_is_not_applied_before_its_activation_day():
+    previous = scope.get_universe("2026-10-29")
+    current = scope.get_universe("2026-10-30")
+    assert len(previous["members"]) == 20
+    assert not any(member["primary_category"] == "wafer" for member in previous["members"])
+    wafers = [member for member in current["members"] if member["primary_category"] == "wafer"]
+    assert {(member["market"], member["symbol"]) for member in wafers} == {
+        ("TPEX", "6488"), ("TWSE", "3532"), ("TPEX", "6182"), ("TPEX", "5483"),
+    }
+    assert len(current["members"]) == 24
+    assert sum(category["member_count"] for category in scope.scope_metadata("2026-10-30")["categories"]) == 24
+    assert all("間接題材" in member["rationale"] for member in wafers)
+    parent = next(member for member in wafers if member["symbol"] == "5483")
+    assert "轉投資" in parent["rationale"] and "環球晶" in parent["rationale"]
+    assert all(evidence["verification_status"] == "verified" and evidence["kind"] == "issuer"
+               for member in wafers for evidence in member["evidence"])
+
+
+def test_wafer_annotation_keeps_the_original_quote_date_and_indirect_rationale():
+    quote = {"market": "TPEX", "symbol": "5483", "date": "2026-10-29", "close": 100}
+    assert scope.annotate_stocks([quote], "2026-10-29") == []
+    observed = scope.annotate_stocks([quote], "2026-10-30")[0]
+    assert observed["date"] == "2026-10-29"
+    assert observed["ai_category_id"] == "wafer"
+    assert "集團轉投資" in observed["ai_rationale"]
+    assert quote == {"market": "TPEX", "symbol": "5483", "date": "2026-10-29", "close": 100}

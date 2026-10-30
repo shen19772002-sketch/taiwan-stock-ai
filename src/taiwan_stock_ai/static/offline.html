@@ -4,14 +4,19 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#173f3b">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self'; object-src 'none'; base-uri 'self'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self'; object-src 'none'; base-uri 'self'">
   <title>目前無法取得報告｜台股智慧研究</title>
+  <script src="assets/theme.js"></script>
   <style>
-    :root{color-scheme:dark;font-family:"Microsoft JhengHei",system-ui,sans-serif;background:#0b141b;color:#e5edf0}*{box-sizing:border-box}body{margin:0;padding:32px 20px;line-height:1.8}main{max-width:540px;margin:8vh auto;padding:28px;border:1px solid #315449;border-radius:18px;background:#121e27}img{width:72px;height:72px;border-radius:18px}h1{font-size:24px;line-height:1.5}p{color:#b5c9d2}nav{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}a{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:8px 14px;border:1px solid #62d3b3;border-radius:10px;color:#62d3b3;text-decoration:none}a:focus-visible{outline:3px solid #edc27b;outline-offset:3px}.notice{padding:12px;border-left:3px solid #edc27b;color:#edc27b}small{display:block;margin-top:24px;color:#8da3b1}
+    :root{color-scheme:dark;--bg:#0b131b;--surface:#121e27;--text:#e5edf0;--muted:#b5c9d2;--line:#315449;--teal:#62d3b3;--amber:#edc27b;font-family:"Microsoft JhengHei",system-ui,sans-serif;background:var(--bg);color:var(--text)}
+    :root[data-theme="light"]{color-scheme:light;--bg:#f4f7fa;--surface:#fff;--text:#17313b;--muted:#526573;--line:#c5d4db;--teal:#09664f;--amber:#805b10}
+    :root[data-theme="sepia"]{color-scheme:light;--bg:#f4eddf;--surface:#fffaf0;--text:#3c3328;--muted:#6c5b47;--line:#d5c5af;--teal:#306443;--amber:#785316}
+    *{box-sizing:border-box}body{margin:0;padding:24px 18px;font-size:18px;line-height:1.8}main{max-width:640px;margin:5vh auto;padding:24px;border:1px solid var(--line);border-radius:18px;background:var(--surface)}img{width:72px;height:72px;border-radius:18px}h1{font-size:28px;line-height:1.5}p{color:var(--muted);overflow-wrap:anywhere}nav{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}a{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:8px 14px;border:1px solid var(--teal);border-radius:10px;color:var(--teal);text-decoration:none}a:focus-visible,select:focus-visible{outline:3px solid var(--amber);outline-offset:3px}.notice{padding:12px;border-left:3px solid var(--amber);color:var(--amber)}small{display:block;margin-top:24px;color:var(--muted);font-size:14px}.offline-preferences{display:flex;align-items:center;justify-content:flex-end;gap:10px;flex-wrap:wrap;margin-bottom:20px;font-size:16px}select{font:inherit;color:var(--text);background:var(--bg);border:1px solid var(--line);border-radius:8px;min-height:44px;padding:6px 12px;max-width:100%}@media(max-width:390px){main{padding:18px}h1{font-size:25px}}
   </style>
 </head>
 <body data-report-cache="offline">
   <main>
+    <label class="offline-preferences" for="theme-select">底色 <select id="theme-select" aria-label="選擇網頁底色"><option value="dark">深海藍</option><option value="light">明亮白</option><option value="sepia">柔和米色</option></select></label>
     <img src="assets/icon-192.png" alt="台股智慧研究圖示" width="72" height="72">
     <h1>目前無法取得這份報告</h1>
     <p class="notice" role="status">可能已離線或網站暫時無法連線，而且此裝置尚未儲存這一頁。此畫面沒有即時行情。</p>

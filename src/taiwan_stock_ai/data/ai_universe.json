@@ -1,7 +1,7 @@
 {
   "id": "ai_supply_chain",
-  "version": "2026.10.29.1",
-  "reviewed_at": "2026-10-29",
+  "version": "2026.10.30.1",
+  "reviewed_at": "2026-10-30",
   "categories": [
     {
       "id": "chip",
@@ -42,6 +42,11 @@
       "id": "memory",
       "name": "記憶體與儲存",
       "description": "AI 工作負載相關記憶體與儲存"
+    },
+    {
+      "id": "wafer",
+      "name": "矽晶圓",
+      "description": "半導體上游材料與集團轉投資的間接題材；非直接 AI 營收認定"
     }
   ],
   "members": [
@@ -971,6 +976,123 @@
           "known_since": "2026-10-29",
           "reviewed_at": "2026-10-29",
           "verification_status": "pending"
+        }
+      ]
+    },
+    {
+      "market": "TPEX",
+      "symbol": "6488",
+      "name": "環球晶",
+      "primary_category": "wafer",
+      "category_ids": [
+        "wafer"
+      ],
+      "known_since": "2026-10-30",
+      "rationale": "公司一手簡介揭露半導體晶圓材料與拋光、磊晶等製程。以 AI 上游矽晶圓材料的間接題材觀察，不認定全部營收來自 AI。",
+      "company_directory_source": "https://www.tpex.org.tw/openapi/v1/mopsfin_t187ap03_O",
+      "issuer_homepage": "https://www.sas-globalwafers.com",
+      "theme_relationship": "indirect_upstream_material",
+      "evidence": [
+        {
+          "url": "https://www.sas-globalwafers.com/profile-tw/",
+          "title": "公司簡介｜環球晶圓股份有限公司",
+          "kind": "issuer",
+          "known_since": "2026-10-30",
+          "reviewed_at": "2026-10-30",
+          "verification_status": "verified",
+          "source_sha256": "5334291252f72a01796e0addd20e769d7fbfdfae4e1633f3c54acd3d6f214177",
+          "excerpt": "環球晶圓為國內半導體產業最大、全球第三大、非日商第一大的3吋至12吋專業晶圓材料供應商",
+          "retrieved_at": "2026-10-29T13:19:31.400860+00:00",
+          "http_status": 200,
+          "verification_run_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40880865033"
+        }
+      ]
+    },
+    {
+      "market": "TWSE",
+      "symbol": "3532",
+      "name": "台勝科",
+      "primary_category": "wafer",
+      "category_ids": [
+        "wafer"
+      ],
+      "known_since": "2026-10-30",
+      "rationale": "公司官方產品頁原文明示「半導體用矽晶圓製品」，官網並標示 SILICON WAFER。以 AI 上游材料的間接題材觀察，不宣稱已核實 AI 營收、訂單或產品規格。",
+      "company_directory_source": "https://openapi.twse.com.tw/v1/opendata/t187ap03_L",
+      "issuer_homepage": "https://www.fstech.com.tw",
+      "theme_relationship": "indirect_upstream_material",
+      "evidence": [
+        {
+          "url": "https://www.fstech.com.tw/FPC_Fstech_Web/fst_products.html?page=pills-products",
+          "title": "半導體用矽晶圓製品｜台塑勝高科技官方產品頁",
+          "kind": "issuer",
+          "known_since": "2026-10-30",
+          "reviewed_at": "2026-10-30",
+          "verification_status": "verified",
+          "source_sha256": "22db7694759b42d83b0b75922413a49f6541dc3988e166a9990b9bf082bc5d5b",
+          "excerpt": "半導體用矽晶圓製品",
+          "retrieved_at": "2026-10-29T21:07:52.840648+00:00",
+          "http_status": 200,
+          "verification_run_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40955097598",
+          "excerpt_context": "官方產品頁 HTML 原文的產品分頁註記；動態產品規格及 AI 營收未據此認定。"
+        }
+      ]
+    },
+    {
+      "market": "TPEX",
+      "symbol": "6182",
+      "name": "合晶",
+      "primary_category": "wafer",
+      "category_ids": [
+        "wafer"
+      ],
+      "known_since": "2026-10-30",
+      "rationale": "公司官方服務頁揭露拋光、磊晶、SOI 等半導體晶圓與自主製程技術。以 AI 上游矽晶圓材料的間接題材觀察，不認定全部營收來自 AI。",
+      "company_directory_source": "https://www.tpex.org.tw/openapi/v1/mopsfin_t187ap03_O",
+      "issuer_homepage": "https://www.waferworks.com",
+      "theme_relationship": "indirect_upstream_material",
+      "evidence": [
+        {
+          "url": "https://www.waferworks.com/tw/products-and-service/service",
+          "title": "客製化矽晶圓服務，以客為本 的半導體材料供應商 - 合晶科技",
+          "kind": "issuer",
+          "known_since": "2026-10-30",
+          "reviewed_at": "2026-10-30",
+          "verification_status": "verified",
+          "source_sha256": "c263a6b053f41cbc18bedf673a4d08f27ed7f016b7fd4510ac61fd0f4cc4eb60",
+          "excerpt": "合晶科技期望成為國際級半導體晶圓領導供應商",
+          "retrieved_at": "2026-10-29T13:19:31.478797+00:00",
+          "http_status": 200,
+          "verification_run_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40880865033"
+        }
+      ]
+    },
+    {
+      "market": "TPEX",
+      "symbol": "5483",
+      "name": "中美晶",
+      "primary_category": "wafer",
+      "category_ids": [
+        "wafer"
+      ],
+      "known_since": "2026-10-30",
+      "rationale": "公司官方簡介說明半導體事業分割為環球晶，並透過環球晶布局半導體晶圓。屬 AI 上游材料的集團轉投資間接題材，與環球晶具共同集團曝險，不認定為母公司直接 AI 營收。",
+      "company_directory_source": "https://www.tpex.org.tw/openapi/v1/mopsfin_t187ap03_O",
+      "issuer_homepage": "https://www.saswafer.com",
+      "theme_relationship": "indirect_upstream_group_investment",
+      "evidence": [
+        {
+          "url": "https://www.saswafer.com/profile-tw/",
+          "title": "公司簡介 | 中美矽晶製品股份有限公司",
+          "kind": "issuer",
+          "known_since": "2026-10-30",
+          "reviewed_at": "2026-10-30",
+          "verification_status": "verified",
+          "source_sha256": "2afd372b124412e9d79ba00a9968a061f0c9f1233eb73175b3cfeb4f80344a74",
+          "excerpt": "在半導體領域，集團透過環球晶圓股份有限公司深耕全球半導體晶圓市場",
+          "retrieved_at": "2026-10-29T13:19:29.853945+00:00",
+          "http_status": 200,
+          "verification_run_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40880865033"
         }
       ]
     }

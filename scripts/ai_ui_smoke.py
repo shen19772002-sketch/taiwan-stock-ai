@@ -220,8 +220,15 @@ def main():
                         page.evaluate("() => window.scrollTo(0, 0)")
                         page.screenshot(path=str(args.out / f"{label}-overview.png"))
                         if view.get("observations") and width <= 390:
-                            first_card = page.locator("#ai-observation-list .ai-stock-card").first.bounding_box()
-                            assert first_card and 0 <= first_card["y"] < height - 50, "Phone first screen must reach observations"
+                            # Large readable text takes precedence over forcing
+                            # observations into a single small phone screen.
+                            first_card = page.locator("#ai-observation-list .ai-stock-card").first
+                            first_card.scroll_into_view_if_needed()
+                            bounds = first_card.bounding_box()
+                            assert bounds and 0 <= bounds["x"] and bounds["x"] + bounds["width"] <= width + 1
+                            assert first_card.locator(".ai-stock-meta").evaluate(
+                                "node => parseFloat(getComputedStyle(node).fontSize)") >= 14
+                            page.evaluate("() => window.scrollTo(0, 0)")
                     else:
                         assert_original_prices(page, view.get("observations", []))
                         interactions = {"state": "independent phase page", "checks": ["original prices / phase metadata"]}

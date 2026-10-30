@@ -182,6 +182,34 @@
     });
   }
 
+  function chartColors() {
+    const style = getComputedStyle(document.documentElement);
+    const color = (name, fallback) => style.getPropertyValue(name).trim() || fallback;
+    return {
+      surface: color("--surface", "#121e27"), text: color("--text", "#e5edf0"),
+      muted: color("--muted", "#8da3b1"), line: color("--line", "#243540"),
+      up: color("--red", "#e98080"), down: color("--green", "#62d3b3"),
+    };
+  }
+
+  function refreshChartTheme() {
+    const chart = $("industry-chart");
+    if (!window.Plotly || !chart?._fullLayout || !chart.data?.length) return;
+    const colors = chartColors();
+    // Only presentation changes; the original series and model stay untouched.
+    Promise.all([
+      Plotly.relayout(chart, {
+        paper_bgcolor: colors.surface, plot_bgcolor: colors.surface,
+        "font.color": colors.text, "font.size": 14, "legend.font.color": colors.text,
+        "xaxis.tickfont.color": colors.muted, "yaxis.tickfont.color": colors.muted,
+        "xaxis.gridcolor": colors.line, "yaxis.gridcolor": colors.line,
+        "xaxis.zerolinecolor": colors.muted, "yaxis.zerolinecolor": colors.muted,
+      }),
+      Plotly.restyle(chart, {"marker.color": [chart.data[0].x.map(value => value >= 0 ? colors.up : colors.down)]}, [0]),
+    ]).catch(() => { /* A removed chart must not interrupt page theme controls. */ });
+  }
+  document.addEventListener("themechange", refreshChartTheme);
+
   function renderIndustries() {
     const industries = (analysis.industries || []).filter(item => item.momentum20 != null && Number.isFinite(Number(item.momentum20))).slice(0, 10).reverse();
     const chart = $("industry-chart");
@@ -190,7 +218,11 @@
     if (!window.Plotly) { $("industry-chart-empty").hidden = false; $("industry-chart-empty").textContent = "互動圖表載入失敗，產業數據仍可於右側表格查看。"; return; }
     $("industry-chart-empty").hidden = true;
     const values = industries.map(item => Number(item.momentum20) * 100);
-    Plotly.newPlot(chart, [{type: "bar", orientation: "h", x: values, y: industries.map(item => item.industry), marker: {color: values.map(value => value >= 0 ? "#62d3b3" : "#edc27b")}, hovertemplate: "%{y}<br>20 日動能 %{x:.2f}%<extra></extra>"}], {autosize: true, height: 240, paper_bgcolor: "transparent", plot_bgcolor: "transparent", font: {family: "Microsoft JhengHei, sans-serif", color: "#8da3b1", size: 10}, margin: {l: 105, r: 15, t: 4, b: 30}, xaxis: {ticksuffix: "%", gridcolor: "#243540", zerolinecolor: "#42606c"}, yaxis: {automargin: true}, bargap: 0.45}, {responsive: true, displayModeBar: false});
+    const colors = chartColors();
+    Plotly.newPlot(chart, [{type: "bar", orientation: "h", x: values, y: industries.map(item => item.industry), marker: {color: values.map(value => value >= 0 ? colors.up : colors.down)}, hovertemplate: "%{y}<br>20 日動能 %{x:.2f}%<extra></extra>"}], {autosize: true, height: Math.max(280, industries.length * 42), paper_bgcolor: colors.surface, plot_bgcolor: colors.surface, font: {family: "Microsoft JhengHei, sans-serif", color: colors.text, size: 14}, margin: {l: 130, r: 15, t: 12, b: 45}, xaxis: {ticksuffix: "%", gridcolor: colors.line, zerolinecolor: colors.muted, tickfont: {color: colors.muted}}, yaxis: {automargin: true, tickfont: {color: colors.muted}}, bargap: 0.45}, {responsive: true, displayModeBar: false}).then(refreshChartTheme).catch(() => {
+      $("industry-chart-empty").hidden = false;
+      $("industry-chart-empty").textContent = "互動圖表載入失敗，產業數據仍可於表格查看。";
+    });
   }
 
   function renderPerformance() {

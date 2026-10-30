@@ -14,6 +14,7 @@
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="icon" type="image/png" href="assets/icon-192.png">
   <link rel="apple-touch-icon" href="assets/icon-192.png">
+  <script src="assets/theme.js?v={{ app_version }}"></script>
   <link rel="stylesheet" href="assets/style.css?v={{ app_version }}">
   <script src="assets/plotly.min.js" defer></script>
   <script src="assets/app.js?v={{ app_version }}" defer></script>
@@ -53,6 +54,7 @@
         <div><div class="eyebrow">AI SUPPLY CHAIN / DAILY RESEARCH</div><h1>AI 產業鏈研究</h1><p>聚焦產業、個股與資料進度</p></div>
         <div class="report-actions"><button id="report-refresh" class="primary-button" type="button"><span aria-hidden="true">↻</span> 檢查最新報告</button><button id="pwa-update" class="secondary-button" type="button" hidden>更新手機版</button></div>
       </div>
+      <div class="display-preferences"><label class="theme-picker" for="theme-select"><span>網頁底色</span><select id="theme-select" aria-label="選擇網頁底色"><option value="dark">深海藍</option><option value="light">明亮白</option><option value="sepia">柔和米色</option></select></label></div>
       <div class="phase-date-row">
         <nav class="phase-nav" aria-label="研究報告時段">
           {% for slug, label, schedule in [('index', '最新', '最近執行'), ('preopen', '盤前', '08:20'), ('postclose', '盤後', '15:30'), ('final', '晚間', '18:30／20:30')] %}
