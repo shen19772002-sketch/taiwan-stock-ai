@@ -3479,42 +3479,21 @@
   },
   "as_of": "2026-10-30",
   "calendar": {
-    "date": "2026-10-30",
-    "holiday_dates": [
-      "2026-01-01",
-      "2026-02-12",
-      "2026-02-13",
-      "2026-02-15",
-      "2026-02-16",
-      "2026-02-17",
-      "2026-02-18",
-      "2026-02-19",
-      "2026-02-20",
-      "2026-02-27",
-      "2026-02-28",
-      "2026-04-03",
-      "2026-04-04",
-      "2026-04-05",
-      "2026-04-06",
-      "2026-05-01",
-      "2026-06-19",
-      "2026-09-25",
-      "2026-09-28",
-      "2026-10-09",
-      "2026-10-10",
-      "2026-10-25",
-      "2026-10-26",
-      "2026-12-25"
-    ],
-    "reason": "官方當日成交行情已確認交易",
-    "source": "https://openapi.twse.com.tw/v1/holidaySchedule/holidaySchedule",
-    "status": "verified",
-    "trading_day": true
+    "status": "unknown",
+    "trading_day": null
   },
   "data_date": "2026-10-30",
   "data_mode": "盤後資料",
-  "generated_at": "2026-10-30T08:31:42.184009+00:00",
+  "generated_at": "2026-10-30T10:59:28.192003+00:00",
   "history": [
+    {
+      "as_of": "2026-10-30",
+      "candidate_count": 0,
+      "generated_at": "2026-10-30T08:31:42.184009+00:00",
+      "id": "7a2c766069d279c204ae1cf59bf98b11b62572c57654288fab33e5f5b9335ee2",
+      "phase": "postclose",
+      "status": "partial"
+    },
     {
       "as_of": "2026-10-30",
       "candidate_count": 0,
@@ -3746,14 +3725,6 @@
       "id": "55b29840a6cef6c45b0e66889bdff66dad0e5cda221dce4dc1c9958b985491e8",
       "phase": "preopen",
       "status": "partial"
-    },
-    {
-      "as_of": "2026-10-27",
-      "candidate_count": 15,
-      "generated_at": "2026-10-27T09:58:29.981812+00:00",
-      "id": "f922007447b4918d274ab912343ff4c0afdfbd92f04789c28b48be438c7b0217",
-      "phase": "intraday",
-      "status": "waiting"
     }
   ],
   "institutional_status": {
@@ -3765,6 +3736,9 @@
     "status": "ready"
   },
   "notices": [
+    "V1.0 尚未接入有授權的盤中來源；12:30 僅呈現已保存的盤後資料，不更新即時行情。",
+    "來源表保留最後一次擷取狀態與時間；本次沒有重新驗證官方來源。",
+    "交易日曆尚未完整驗證；不把缺少行情當成已確認休市。",
     "目前無符合完整條件的 AI 標的；可觀察 24 檔、技術歷史就緒 24 檔、同日估值 0 檔。資料缺漏與未符合趨勢／風險條件分開判讀，不代表必須重新累積 60 日。"
   ],
   "performance": {
@@ -4468,7 +4442,7 @@
     "total_signals": 31,
     "win_rate": null
   },
-  "phase": "postclose",
+  "phase": "intraday",
   "research_scope": {
     "categories": [
       {
@@ -4544,7 +4518,7 @@
     "version": "2026.10.30.1"
   },
   "schema_version": 1,
-  "source_mode": "fetched",
+  "source_mode": "retained",
   "sources": [
     {
       "data_date": "2026-10-29",
@@ -4717,7 +4691,7 @@
       "url": "https://www.tpex.org.tw/data/home/news_zh.json"
     }
   ],
-  "status": "partial",
+  "status": "waiting",
   "tracking_scope": {
     "id": "historical_and_ai",
     "label": "保留原始範圍的歷史訊號與新 AI 訊號；非 AI 專屬回測"
