@@ -1,0 +1,6148 @@
+{
+  "checked_at_utc": "2026-10-30T04:25:55.504791+00:00",
+  "implementation_commits": [
+    "45fa8fd0e4fa323c75687872debd12d9acfb804c",
+    "eaa30e802fa72c9ea5f36e75102442759051325a"
+  ],
+  "tests": {
+    "pytest_passed": 262,
+    "ruff": "passed",
+    "javascript_syntax": "passed"
+  },
+  "assessment_before": {
+    "firstCardY": 1098.296875,
+    "headerHeight": 96,
+    "bodyFont": "16px",
+    "dateFont": "14px",
+    "cardText": "台達電\n2308\n電源與備援\n散熱\n收盤 2026-10-29\n72 筆完整歷史\n1,480\n-4.52%\n尚未符合趨勢或風險條件 · 可查看依據\n查看依據 ›\n☆",
+    "initialScrollWidth": 390,
+    "viewportWidth": 390
+  },
+  "layout_after": [
+    {
+      "firstCardY": 568.1875,
+      "headerHeight": 64,
+      "bodyFont": "18px",
+      "dateFont": "16px",
+      "nameFont": "26px",
+      "priceFont": "34px",
+      "width": 390,
+      "scrollWidth": 390,
+      "cardText": "台達電\n2308\n電源與備援\n收盤 2026-10-29\n1,480\n-4.52%\n未符合選股條件\n看詳情 ›\n☆"
+    },
+    {
+      "firstCardY": 565.296875,
+      "headerHeight": 64,
+      "bodyFont": "18px",
+      "dateFont": "16px",
+      "nameFont": "26px",
+      "priceFont": "34px",
+      "width": 360,
+      "scrollWidth": 360,
+      "cardText": "台達電\n2308\n電源與備援\n收盤 2026-10-29\n1,480\n-4.52%\n未符合選股條件\n看詳情 ›\n☆"
+    },
+    {
+      "firstCardY": 705.390625,
+      "headerHeight": 84,
+      "bodyFont": "18px",
+      "dateFont": "16px",
+      "nameFont": "26px",
+      "priceFont": "36px",
+      "width": 844,
+      "scrollWidth": 844,
+      "cardText": "台達電\n2308\n電源與備援\n收盤 2026-10-29\n1,480\n-4.52%\n未符合選股條件\n看詳情 ›\n☆"
+    },
+    {
+      "firstCardY": 677.390625,
+      "headerHeight": 84,
+      "bodyFont": "18px",
+      "dateFont": "16px",
+      "nameFont": "26px",
+      "priceFont": "36px",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "cardText": "台達電\n2308\n電源與備援\n收盤 2026-10-29\n1,480\n-4.52%\n未符合選股條件\n看詳情 ›\n☆"
+    }
+  ],
+  "ci": {
+    "conclusion": "success",
+    "createdAt": "2026-10-30T04:19:25Z",
+    "databaseId": 41002246126,
+    "headSha": "eaa30e802fa72c9ea5f36e75102442759051325a",
+    "jobs": [
+      {
+        "completedAt": "2026-10-30T04:20:04Z",
+        "conclusion": "success",
+        "databaseId": 123889101131,
+        "name": "test (3.11)",
+        "startedAt": "2026-10-30T04:19:27Z",
+        "status": "completed",
+        "steps": [
+          {
+            "conclusion": "success",
+            "name": "Set up job",
+            "number": 1,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run actions/checkout@v4",
+            "number": 2,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run actions/setup-python@v5",
+            "number": 3,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run python -m pip install -r requirements.lock -e .",
+            "number": 4,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run python -m ruff check src tests scripts",
+            "number": 5,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run python -m pytest -q",
+            "number": 6,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Build truthful empty-state report without network",
+            "number": 7,
+            "status": "completed"
+          },
+          {
+            "conclusion": "skipped",
+            "name": "Install Chromium for PWA verification",
+            "number": 8,
+            "status": "completed"
+          },
+          {
+            "conclusion": "skipped",
+            "name": "Verify mobile PWA, offline reports and app updates",
+            "number": 9,
+            "status": "completed"
+          },
+          {
+            "conclusion": "skipped",
+            "name": "Verify AI research cards, filters and preserved watchlists",
+            "number": 10,
+            "status": "completed"
+          },
+          {
+            "conclusion": "skipped",
+            "name": "Verify readable themes, charts and saved appearance",
+            "number": 11,
+            "status": "completed"
+          },
+          {
+            "conclusion": "skipped",
+            "name": "Retain PWA verification evidence",
+            "number": 12,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run actions/upload-artifact@v4",
+            "number": 13,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Post Run actions/setup-python@v5",
+            "number": 25,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Post Run actions/checkout@v4",
+            "number": 26,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Complete job",
+            "number": 27,
+            "status": "completed"
+          }
+        ],
+        "url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/41002246126/job/123889101131"
+      },
+      {
+        "completedAt": "2026-10-30T04:21:41Z",
+        "conclusion": "success",
+        "databaseId": 123889101421,
+        "name": "test (3.12)",
+        "startedAt": "2026-10-30T04:19:27Z",
+        "status": "completed",
+        "steps": [
+          {
+            "conclusion": "success",
+            "name": "Set up job",
+            "number": 1,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run actions/checkout@v4",
+            "number": 2,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run actions/setup-python@v5",
+            "number": 3,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run python -m pip install -r requirements.lock -e .",
+            "number": 4,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run python -m ruff check src tests scripts",
+            "number": 5,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run python -m pytest -q",
+            "number": 6,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Build truthful empty-state report without network",
+            "number": 7,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Install Chromium for PWA verification",
+            "number": 8,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Verify mobile PWA, offline reports and app updates",
+            "number": 9,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Verify AI research cards, filters and preserved watchlists",
+            "number": 10,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Verify readable themes, charts and saved appearance",
+            "number": 11,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Retain PWA verification evidence",
+            "number": 12,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run actions/upload-artifact@v4",
+            "number": 13,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Post Run actions/setup-python@v5",
+            "number": 25,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Post Run actions/checkout@v4",
+            "number": 26,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Complete job",
+            "number": 27,
+            "status": "completed"
+          }
+        ],
+        "url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/41002246126/job/123889101421"
+      }
+    ],
+    "status": "completed",
+    "updatedAt": "2026-10-30T04:21:41Z",
+    "url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/41002246126"
+  },
+  "production": {
+    "conclusion": "success",
+    "createdAt": "2026-10-30T04:20:05Z",
+    "databaseId": 41002307203,
+    "headSha": "eaa30e802fa72c9ea5f36e75102442759051325a",
+    "jobs": [
+      {
+        "completedAt": "2026-10-30T04:22:42Z",
+        "conclusion": "success",
+        "databaseId": 123889301058,
+        "name": "research / research",
+        "startedAt": "2026-10-30T04:20:08Z",
+        "status": "completed",
+        "steps": [
+          {
+            "conclusion": "success",
+            "name": "Set up job",
+            "number": 1,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run actions/checkout@v4",
+            "number": 2,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Initialize diagnostics",
+            "number": 3,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run actions/setup-python@v5",
+            "number": 4,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Install pinned dependencies",
+            "number": 5,
+            "status": "completed"
+          },
+          {
+            "conclusion": "skipped",
+            "name": "Resolve original scheduled trading session",
+            "number": 6,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Restore permanent data branch",
+            "number": 7,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Optional initial historical warmup",
+            "number": 8,
+            "status": "completed"
+          },
+          {
+            "conclusion": "skipped",
+            "name": "Probe official sources for manual validation",
+            "number": 9,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Collect and generate research",
+            "number": 10,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Verify database before archive",
+            "number": 11,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Save permanent research history",
+            "number": 12,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Retain recovery artifact even if publication fails",
+            "number": 13,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Summarize command outcomes",
+            "number": 14,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Retain diagnostics even when setup or restore fails",
+            "number": 15,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run actions/upload-pages-artifact@v3",
+            "number": 16,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Downloadable research pages",
+            "number": 17,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Post Run actions/setup-python@v5",
+            "number": 33,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Post Run actions/checkout@v4",
+            "number": 34,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Complete job",
+            "number": 35,
+            "status": "completed"
+          }
+        ],
+        "url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/41002307203/job/123889301058"
+      },
+      {
+        "completedAt": "2026-10-30T04:22:56Z",
+        "conclusion": "success",
+        "databaseId": 123890068254,
+        "name": "research / deploy",
+        "startedAt": "2026-10-30T04:22:45Z",
+        "status": "completed",
+        "steps": [
+          {
+            "conclusion": "success",
+            "name": "Set up job",
+            "number": 1,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run actions/configure-pages@v5",
+            "number": 2,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run actions/deploy-pages@v4",
+            "number": 3,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Complete job",
+            "number": 4,
+            "status": "completed"
+          }
+        ],
+        "url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/41002307203/job/123890068254"
+      }
+    ],
+    "status": "completed",
+    "updatedAt": "2026-10-30T04:22:57Z",
+    "url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/41002307203"
+  },
+  "report_bytes": {
+    "report.json": {
+      "unchanged": true,
+      "sha256": "f2de0245738213945e561176e3f810b87bd334a86d9efa2b57f8d120a5dca30f",
+      "public_sha256": "f2de0245738213945e561176e3f810b87bd334a86d9efa2b57f8d120a5dca30f",
+      "public_unchanged": true
+    },
+    "preopen.json": {
+      "unchanged": true,
+      "sha256": "f2de0245738213945e561176e3f810b87bd334a86d9efa2b57f8d120a5dca30f",
+      "public_sha256": "f2de0245738213945e561176e3f810b87bd334a86d9efa2b57f8d120a5dca30f",
+      "public_unchanged": true
+    },
+    "postclose.json": {
+      "unchanged": true,
+      "sha256": "2e1b66c2c1c180e141588fba5a35a67202a0a3c04e13b8c683cac308863783a4",
+      "public_sha256": "2e1b66c2c1c180e141588fba5a35a67202a0a3c04e13b8c683cac308863783a4",
+      "public_unchanged": true
+    },
+    "final.json": {
+      "unchanged": true,
+      "sha256": "2e1b66c2c1c180e141588fba5a35a67202a0a3c04e13b8c683cac308863783a4",
+      "public_sha256": "2e1b66c2c1c180e141588fba5a35a67202a0a3c04e13b8c683cac308863783a4",
+      "public_unchanged": true
+    }
+  },
+  "public_http": {
+    "checked_at_utc": "2026-10-30T04:23:32.888415+00:00",
+    "base_url": "https://shen19772002-sketch.github.io/taiwan-stock-ai/",
+    "default_tls_verification": true,
+    "files": {
+      "index.html": {
+        "status": 200,
+        "bytes": 880727,
+        "sha256": "c5d7b3de713f4d95ec25787a9c01aa2559bad8df5f9003b9481eb4a812929545",
+        "content_type": "text/html; charset=utf-8",
+        "cache_control": "max-age=600",
+        "etag": "W/\"6ae41b9c-d7057\"",
+        "last_modified": "Fri, 30 Oct 2026 04:22:52 GMT"
+      },
+      "preopen.html": {
+        "status": 200,
+        "bytes": 880732,
+        "sha256": "b74917e88165c1d2493ffa5232812ffc549776e29c29cf123d1174fa4bc476e9",
+        "content_type": "text/html; charset=utf-8",
+        "cache_control": "max-age=600",
+        "etag": "W/\"6ae41b9c-d705c\"",
+        "last_modified": "Fri, 30 Oct 2026 04:22:52 GMT"
+      },
+      "postclose.html": {
+        "status": 200,
+        "bytes": 872471,
+        "sha256": "fd9aedf923ca83eb271df01846ad2e174e5aeff0dcbf57befc16b57c00e80127",
+        "content_type": "text/html; charset=utf-8",
+        "cache_control": "max-age=600",
+        "etag": "W/\"6ae41b9c-d5017\"",
+        "last_modified": "Fri, 30 Oct 2026 04:22:52 GMT"
+      },
+      "final.html": {
+        "status": 200,
+        "bytes": 872293,
+        "sha256": "773121b81a5604da7fcedea76cfc90a483a9f8f825898bdcee92aafca523e477",
+        "content_type": "text/html; charset=utf-8",
+        "cache_control": "max-age=600",
+        "etag": "W/\"6ae41b9c-d4f65\"",
+        "last_modified": "Fri, 30 Oct 2026 04:22:52 GMT"
+      },
+      "assets/report.json": {
+        "status": 200,
+        "bytes": 802549,
+        "sha256": "f2de0245738213945e561176e3f810b87bd334a86d9efa2b57f8d120a5dca30f",
+        "content_type": "application/json; charset=utf-8",
+        "cache_control": "max-age=600",
+        "etag": "W/\"6ae41b9c-c3ef5\"",
+        "last_modified": "Fri, 30 Oct 2026 04:22:52 GMT"
+      },
+      "assets/preopen.json": {
+        "status": 200,
+        "bytes": 802549,
+        "sha256": "f2de0245738213945e561176e3f810b87bd334a86d9efa2b57f8d120a5dca30f",
+        "content_type": "application/json; charset=utf-8",
+        "cache_control": "max-age=600",
+        "etag": "W/\"6ae41b9c-c3ef5\"",
+        "last_modified": "Fri, 30 Oct 2026 04:22:52 GMT"
+      },
+      "assets/postclose.json": {
+        "status": 200,
+        "bytes": 805994,
+        "sha256": "2e1b66c2c1c180e141588fba5a35a67202a0a3c04e13b8c683cac308863783a4",
+        "content_type": "application/json; charset=utf-8",
+        "cache_control": "max-age=600",
+        "etag": "W/\"6ae41b9c-c4c6a\"",
+        "last_modified": "Fri, 30 Oct 2026 04:22:52 GMT"
+      },
+      "assets/final.json": {
+        "status": 200,
+        "bytes": 805994,
+        "sha256": "2e1b66c2c1c180e141588fba5a35a67202a0a3c04e13b8c683cac308863783a4",
+        "content_type": "application/json; charset=utf-8",
+        "cache_control": "max-age=600",
+        "etag": "W/\"6ae41b9c-c4c6a\"",
+        "last_modified": "Fri, 30 Oct 2026 04:22:52 GMT"
+      },
+      "assets/style.css": {
+        "status": 200,
+        "bytes": 68244,
+        "sha256": "09d5adbe8b63667c3589d4f550bfa6975dedd0349dc228e8912e97dac23a691e",
+        "content_type": "text/css; charset=utf-8",
+        "cache_control": "max-age=600",
+        "etag": "W/\"6ae41b9c-10a94\"",
+        "last_modified": "Fri, 30 Oct 2026 04:22:52 GMT"
+      },
+      "assets/app.js": {
+        "status": 200,
+        "bytes": 22298,
+        "sha256": "6f06385a04bd0a8e82023925a988422118aea86c9ce873d1fb967cf6c1895841",
+        "content_type": "application/javascript; charset=utf-8",
+        "cache_control": "max-age=600",
+        "etag": "W/\"6ae41b9c-571a\"",
+        "last_modified": "Fri, 30 Oct 2026 04:22:52 GMT"
+      },
+      "assets/ai-view.js": {
+        "status": 200,
+        "bytes": 6824,
+        "sha256": "9043ad569cb1f7715550a749f6c571e997d3b8b568162b3cac6d25e46d64b1bf",
+        "content_type": "application/javascript; charset=utf-8",
+        "cache_control": "max-age=600",
+        "etag": "W/\"6ae41b9c-1aa8\"",
+        "last_modified": "Fri, 30 Oct 2026 04:22:52 GMT"
+      },
+      "assets/theme.js": {
+        "status": 200,
+        "bytes": 1767,
+        "sha256": "40119fdb3d7d67e7fc616175ba075f3fcbce76fe206b06c2b79d4de61aeecee6",
+        "content_type": "application/javascript; charset=utf-8",
+        "cache_control": "max-age=600",
+        "etag": "W/\"6ae41b9c-6e7\"",
+        "last_modified": "Fri, 30 Oct 2026 04:22:52 GMT"
+      },
+      "assets/plotly.min.js": {
+        "status": 200,
+        "bytes": 4763993,
+        "sha256": "122e3be346d66616944d0b83eaaf7242581508c3c1cfa0995a17af0d83eff770",
+        "content_type": "application/javascript; charset=utf-8",
+        "cache_control": "max-age=600",
+        "etag": "W/\"6ae41b9c-48b159\"",
+        "last_modified": "Fri, 30 Oct 2026 04:22:52 GMT"
+      },
+      "assets/pwa.js": {
+        "status": 200,
+        "bytes": 10181,
+        "sha256": "5d2e229a1937d331105a163907c38b156ecb43cf642d91fc8bccce6429553bf6",
+        "content_type": "application/javascript; charset=utf-8",
+        "cache_control": "max-age=600",
+        "etag": "W/\"6ae41b9c-27c5\"",
+        "last_modified": "Fri, 30 Oct 2026 04:22:52 GMT"
+      },
+      "assets/icon-192.png": {
+        "status": 200,
+        "bytes": 1222,
+        "sha256": "82f9e9cf2e608414072f3358e5fac3d4936967ec94db6a5710efed23d05eb73b",
+        "content_type": "image/png",
+        "cache_control": "max-age=600",
+        "etag": "\"6ae41b9c-4c6\"",
+        "last_modified": "Fri, 30 Oct 2026 04:22:52 GMT"
+      },
+      "assets/icon-512.png": {
+        "status": 200,
+        "bytes": 4663,
+        "sha256": "14a25fb6c2acc5b5e7215565a4fa282923d21e2c8d6b9f4919f5d4cc35c1c178",
+        "content_type": "image/png",
+        "cache_control": "max-age=600",
+        "etag": "\"6ae41b9c-1237\"",
+        "last_modified": "Fri, 30 Oct 2026 04:22:52 GMT"
+      },
+      "assets/icon-maskable-512.png": {
+        "status": 200,
+        "bytes": 3273,
+        "sha256": "31e9248c97c8f311d448f677ac5ff9bb8138113c11b5ee7f80e879372e2322df",
+        "content_type": "image/png",
+        "cache_control": "max-age=600",
+        "etag": "\"6ae41b9c-cc9\"",
+        "last_modified": "Fri, 30 Oct 2026 04:22:52 GMT"
+      },
+      "manifest.webmanifest": {
+        "status": 200,
+        "bytes": 1061,
+        "sha256": "3ec43bccc2f237c8c0d93785127e4d5d535385e3d0cf94d3d5746a3eae9b1ae1",
+        "content_type": "application/manifest+json; charset=utf-8",
+        "cache_control": "max-age=600",
+        "etag": "W/\"6ae41b9c-425\"",
+        "last_modified": "Fri, 30 Oct 2026 04:22:52 GMT"
+      },
+      "sw.js": {
+        "status": 200,
+        "bytes": 11219,
+        "sha256": "adf02745c9d91920a9b558f4555758170b557109e2c04be8ce5086d8e3317224",
+        "content_type": "application/javascript; charset=utf-8",
+        "cache_control": "max-age=600",
+        "etag": "W/\"6ae41b9c-2bd3\"",
+        "last_modified": "Fri, 30 Oct 2026 04:22:52 GMT"
+      },
+      "offline.html": {
+        "status": 200,
+        "bytes": 3364,
+        "sha256": "c8df2607cdc49ecc63373e567953f2b847863b5152a147283b03e884e5d4b7a7",
+        "content_type": "text/html; charset=utf-8",
+        "cache_control": "max-age=600",
+        "etag": "W/\"6ae41b9c-d24\"",
+        "last_modified": "Fri, 30 Oct 2026 04:22:52 GMT"
+      },
+      "assets/publication.json": {
+        "status": 200,
+        "bytes": 1205,
+        "sha256": "8a4dd8bc03f7a67516135bfcd5670aee693843c5e67e405e13145cc4efd77da7",
+        "content_type": "application/json; charset=utf-8",
+        "cache_control": "max-age=600",
+        "etag": "W/\"6ae41b9c-4b5\"",
+        "last_modified": "Fri, 30 Oct 2026 04:22:52 GMT"
+      }
+    },
+    "public_registration_mimes_valid": true,
+    "app_version": "5093ffc3e9307a955f34",
+    "source_matches": {
+      "assets/style.css": true,
+      "assets/app.js": true,
+      "assets/ai-view.js": true,
+      "assets/theme.js": true,
+      "assets/pwa.js": true,
+      "assets/icon-192.png": true,
+      "assets/icon-512.png": true,
+      "assets/icon-maskable-512.png": true,
+      "manifest.webmanifest": true,
+      "offline.html": true,
+      "assets/plotly.min.js": true,
+      "sw.js": true
+    },
+    "manifest": {
+      "scope": "https://shen19772002-sketch.github.io/taiwan-stock-ai/",
+      "start_url": "https://shen19772002-sketch.github.io/taiwan-stock-ai/index.html",
+      "display": "standalone",
+      "icons": [
+        {
+          "src": "assets/icon-192.png",
+          "width": 192,
+          "height": 192,
+          "purpose": "any"
+        },
+        {
+          "src": "assets/icon-512.png",
+          "width": 512,
+          "height": 512,
+          "purpose": "any"
+        },
+        {
+          "src": "assets/icon-maskable-512.png",
+          "width": 512,
+          "height": 512,
+          "purpose": "maskable"
+        }
+      ]
+    },
+    "pages": {
+      "index": {
+        "embedded_matches_json": true,
+        "revision_matches_publication": true,
+        "install_and_refresh_controls": true,
+        "phase": "preopen",
+        "as_of": "2026-10-30",
+        "data_date": "2026-10-29",
+        "generated_at": "2026-10-30T02:19:00.785511+00:00",
+        "status": "partial",
+        "candidates": 1,
+        "scope_version": "2026.10.30.1",
+        "member_count": 24,
+        "category_count": 9,
+        "readiness": {
+          "current_quotes": 24,
+          "current_valuations": 24,
+          "eligible": 1,
+          "history_ready": 24,
+          "observed_stocks": 24
+        },
+        "institutional_status": {
+          "market_dates": {
+            "TPEX": "2026-10-29",
+            "TWSE": "2026-10-29"
+          },
+          "required_date": "2026-10-29",
+          "status": "ready"
+        }
+      },
+      "preopen": {
+        "embedded_matches_json": true,
+        "revision_matches_publication": true,
+        "install_and_refresh_controls": true,
+        "phase": "preopen",
+        "as_of": "2026-10-30",
+        "data_date": "2026-10-29",
+        "generated_at": "2026-10-30T02:19:00.785511+00:00",
+        "status": "partial",
+        "candidates": 1,
+        "scope_version": "2026.10.30.1",
+        "member_count": 24,
+        "category_count": 9,
+        "readiness": {
+          "current_quotes": 24,
+          "current_valuations": 24,
+          "eligible": 1,
+          "history_ready": 24,
+          "observed_stocks": 24
+        },
+        "institutional_status": {
+          "market_dates": {
+            "TPEX": "2026-10-29",
+            "TWSE": "2026-10-29"
+          },
+          "required_date": "2026-10-29",
+          "status": "ready"
+        }
+      },
+      "postclose": {
+        "embedded_matches_json": true,
+        "revision_matches_publication": true,
+        "install_and_refresh_controls": true,
+        "phase": "final",
+        "as_of": "2026-10-29",
+        "data_date": "2026-10-29",
+        "generated_at": "2026-10-29T17:03:08.518018+00:00",
+        "status": "partial",
+        "candidates": 1,
+        "scope_version": "2026.10.29.1",
+        "member_count": 20,
+        "category_count": 8,
+        "readiness": {
+          "current_quotes": 20,
+          "current_valuations": 20,
+          "eligible": 1,
+          "history_ready": 20,
+          "observed_stocks": 20
+        },
+        "institutional_status": {
+          "market_dates": {
+            "TPEX": "2026-10-29",
+            "TWSE": "2026-10-29"
+          },
+          "required_date": "2026-10-29",
+          "status": "ready"
+        }
+      },
+      "final": {
+        "embedded_matches_json": true,
+        "revision_matches_publication": true,
+        "install_and_refresh_controls": true,
+        "phase": "final",
+        "as_of": "2026-10-29",
+        "data_date": "2026-10-29",
+        "generated_at": "2026-10-29T17:03:08.518018+00:00",
+        "status": "partial",
+        "candidates": 1,
+        "scope_version": "2026.10.29.1",
+        "member_count": 20,
+        "category_count": 8,
+        "readiness": {
+          "current_quotes": 20,
+          "current_valuations": 20,
+          "eligible": 1,
+          "history_ready": 20,
+          "observed_stocks": 20
+        },
+        "institutional_status": {
+          "market_dates": {
+            "TPEX": "2026-10-29",
+            "TWSE": "2026-10-29"
+          },
+          "required_date": "2026-10-29",
+          "status": "ready"
+        }
+      }
+    }
+  },
+  "public_ai_browser": {
+    "checked_at_utc": "2026-10-30T04:24:16.314501+00:00",
+    "delivery": "existing rendered files served at the GitHub Pages project subpath",
+    "browser": "Chromium desktop / mobile viewport emulation; not a physical Android",
+    "market_data_injected": false,
+    "viewports": [
+      {
+        "name": "small-phone",
+        "width": 360,
+        "height": 800,
+        "pages": [
+          {
+            "page": "index",
+            "report_phase": "preopen",
+            "as_of": "2026-10-30",
+            "data_date": "2026-10-29",
+            "scope": "ai_supply_chain",
+            "surface": {
+              "body_font": 18,
+              "date_font": 16,
+              "status_font": 16,
+              "name_font": 26,
+              "price_font": 34,
+              "meta_font": 16,
+              "first_card": {
+                "x": 14,
+                "y": 621.296875,
+                "width": 332,
+                "height": 206.984375,
+                "bottom": 828.28125
+              },
+              "first_name": {
+                "x": 31,
+                "y": 638.296875,
+                "width": 78.90625,
+                "height": 36.390625,
+                "bottom": 674.6875
+              },
+              "first_price": {
+                "x": 244.0625,
+                "y": 638.296875,
+                "width": 84.9375,
+                "height": 45.890625,
+                "bottom": 684.1875
+              },
+              "viewport_width": 360,
+              "viewport_height": 800
+            },
+            "checks": {
+              "state": "populated",
+              "initial_visible_stocks": [
+                "TWSE:2308",
+                "TWSE:2317",
+                "TWSE:2330",
+                "TWSE:2345",
+                "TWSE:2356",
+                "TWSE:2357"
+              ],
+              "categories": [
+                {
+                  "category": "chip",
+                  "visible_stocks": 4
+                },
+                {
+                  "category": "packaging",
+                  "visible_stocks": 1
+                },
+                {
+                  "category": "server",
+                  "visible_stocks": 7
+                },
+                {
+                  "category": "cooling",
+                  "visible_stocks": 3
+                },
+                {
+                  "category": "power",
+                  "visible_stocks": 1
+                },
+                {
+                  "category": "pcb",
+                  "visible_stocks": 1
+                },
+                {
+                  "category": "networking",
+                  "visible_stocks": 1
+                },
+                {
+                  "category": "memory",
+                  "visible_stocks": 3
+                },
+                {
+                  "category": "wafer",
+                  "visible_stocks": 4
+                }
+              ],
+              "progressive_list": {
+                "initial_count": 6,
+                "expanded_count": 24
+              },
+              "short_state_semantics": {
+                "TWSE:2308": "未符合選股條件",
+                "TWSE:2317": "未符合選股條件",
+                "TWSE:2330": "未符合選股條件",
+                "TWSE:2345": "未符合選股條件",
+                "TWSE:2356": "未符合選股條件",
+                "TWSE:2357": "未符合選股條件"
+              },
+              "non_ai_watchlist_quote": "TPEX:1240",
+              "checks": [
+                "original price and date",
+                "search miss and reset",
+                "category membership",
+                "detail navigation",
+                "evidence links",
+                "missing plans remain unavailable",
+                "six-card overview, complete expanded list and late-symbol search",
+                "local watchlist add and reload persistence",
+                "non-AI holding quote isolation"
+              ]
+            }
+          },
+          {
+            "page": "preopen",
+            "report_phase": "preopen",
+            "as_of": "2026-10-30",
+            "data_date": "2026-10-29",
+            "scope": "ai_supply_chain",
+            "surface": {
+              "body_font": 18,
+              "date_font": 16,
+              "status_font": 16,
+              "name_font": 26,
+              "price_font": 34,
+              "meta_font": 16,
+              "first_card": {
+                "x": 14,
+                "y": 565.296875,
+                "width": 332,
+                "height": 206.984375,
+                "bottom": 772.28125
+              },
+              "first_name": {
+                "x": 31,
+                "y": 582.296875,
+                "width": 78.90625,
+                "height": 36.390625,
+                "bottom": 618.6875
+              },
+              "first_price": {
+                "x": 244.0625,
+                "y": 582.296875,
+                "width": 84.9375,
+                "height": 45.890625,
+                "bottom": 628.1875
+              },
+              "viewport_width": 360,
+              "viewport_height": 800
+            },
+            "checks": {
+              "state": "independent phase page",
+              "checks": [
+                "original prices / phase metadata"
+              ]
+            }
+          },
+          {
+            "page": "postclose",
+            "report_phase": "final",
+            "as_of": "2026-10-29",
+            "data_date": "2026-10-29",
+            "scope": "ai_supply_chain",
+            "surface": {
+              "body_font": 18,
+              "date_font": 16,
+              "status_font": 16,
+              "name_font": 26,
+              "price_font": 34,
+              "meta_font": 16,
+              "first_card": {
+                "x": 14,
+                "y": 641.078125,
+                "width": 332,
+                "height": 206.984375,
+                "bottom": 848.0625
+              },
+              "first_name": {
+                "x": 31,
+                "y": 658.078125,
+                "width": 78.90625,
+                "height": 36.390625,
+                "bottom": 694.46875
+              },
+              "first_price": {
+                "x": 244.0625,
+                "y": 658.078125,
+                "width": 84.9375,
+                "height": 45.890625,
+                "bottom": 703.96875
+              },
+              "viewport_width": 360,
+              "viewport_height": 800
+            },
+            "checks": {
+              "state": "independent phase page",
+              "checks": [
+                "original prices / phase metadata"
+              ]
+            }
+          },
+          {
+            "page": "final",
+            "report_phase": "final",
+            "as_of": "2026-10-29",
+            "data_date": "2026-10-29",
+            "scope": "ai_supply_chain",
+            "surface": {
+              "body_font": 18,
+              "date_font": 16,
+              "status_font": 16,
+              "name_font": 26,
+              "price_font": 34,
+              "meta_font": 16,
+              "first_card": {
+                "x": 14,
+                "y": 641.078125,
+                "width": 332,
+                "height": 206.984375,
+                "bottom": 848.0625
+              },
+              "first_name": {
+                "x": 31,
+                "y": 658.078125,
+                "width": 78.90625,
+                "height": 36.390625,
+                "bottom": 694.46875
+              },
+              "first_price": {
+                "x": 244.0625,
+                "y": 658.078125,
+                "width": 84.9375,
+                "height": 45.890625,
+                "bottom": 703.96875
+              },
+              "viewport_width": 360,
+              "viewport_height": 800
+            },
+            "checks": {
+              "state": "independent phase page",
+              "checks": [
+                "original prices / phase metadata"
+              ]
+            }
+          }
+        ],
+        "js_errors": []
+      },
+      {
+        "name": "phone",
+        "width": 390,
+        "height": 844,
+        "pages": [
+          {
+            "page": "index",
+            "report_phase": "preopen",
+            "as_of": "2026-10-30",
+            "data_date": "2026-10-29",
+            "scope": "ai_supply_chain",
+            "surface": {
+              "body_font": 18,
+              "date_font": 16,
+              "status_font": 16,
+              "name_font": 26,
+              "price_font": 34,
+              "meta_font": 16,
+              "first_card": {
+                "x": 16,
+                "y": 626.1875,
+                "width": 358,
+                "height": 206.984375,
+                "bottom": 833.171875
+              },
+              "first_name": {
+                "x": 33,
+                "y": 643.1875,
+                "width": 78.90625,
+                "height": 36.390625,
+                "bottom": 679.578125
+              },
+              "first_price": {
+                "x": 272.0625,
+                "y": 643.1875,
+                "width": 84.9375,
+                "height": 45.890625,
+                "bottom": 689.078125
+              },
+              "viewport_width": 390,
+              "viewport_height": 844
+            },
+            "checks": {
+              "state": "populated",
+              "initial_visible_stocks": [
+                "TWSE:2308",
+                "TWSE:2317",
+                "TWSE:2330",
+                "TWSE:2345",
+                "TWSE:2356",
+                "TWSE:2357"
+              ],
+              "categories": [
+                {
+                  "category": "chip",
+                  "visible_stocks": 4
+                },
+                {
+                  "category": "packaging",
+                  "visible_stocks": 1
+                },
+                {
+                  "category": "server",
+                  "visible_stocks": 7
+                },
+                {
+                  "category": "cooling",
+                  "visible_stocks": 3
+                },
+                {
+                  "category": "power",
+                  "visible_stocks": 1
+                },
+                {
+                  "category": "pcb",
+                  "visible_stocks": 1
+                },
+                {
+                  "category": "networking",
+                  "visible_stocks": 1
+                },
+                {
+                  "category": "memory",
+                  "visible_stocks": 3
+                },
+                {
+                  "category": "wafer",
+                  "visible_stocks": 4
+                }
+              ],
+              "progressive_list": {
+                "initial_count": 6,
+                "expanded_count": 24
+              },
+              "short_state_semantics": {
+                "TWSE:2308": "未符合選股條件",
+                "TWSE:2317": "未符合選股條件",
+                "TWSE:2330": "未符合選股條件",
+                "TWSE:2345": "未符合選股條件",
+                "TWSE:2356": "未符合選股條件",
+                "TWSE:2357": "未符合選股條件"
+              },
+              "non_ai_watchlist_quote": "TPEX:1240",
+              "checks": [
+                "original price and date",
+                "search miss and reset",
+                "category membership",
+                "detail navigation",
+                "evidence links",
+                "missing plans remain unavailable",
+                "six-card overview, complete expanded list and late-symbol search",
+                "local watchlist add and reload persistence",
+                "non-AI holding quote isolation"
+              ]
+            }
+          },
+          {
+            "page": "preopen",
+            "report_phase": "preopen",
+            "as_of": "2026-10-30",
+            "data_date": "2026-10-29",
+            "scope": "ai_supply_chain",
+            "surface": {
+              "body_font": 18,
+              "date_font": 16,
+              "status_font": 16,
+              "name_font": 26,
+              "price_font": 34,
+              "meta_font": 16,
+              "first_card": {
+                "x": 16,
+                "y": 568.1875,
+                "width": 358,
+                "height": 206.984375,
+                "bottom": 775.171875
+              },
+              "first_name": {
+                "x": 33,
+                "y": 585.1875,
+                "width": 78.90625,
+                "height": 36.390625,
+                "bottom": 621.578125
+              },
+              "first_price": {
+                "x": 272.0625,
+                "y": 585.1875,
+                "width": 84.9375,
+                "height": 45.890625,
+                "bottom": 631.078125
+              },
+              "viewport_width": 390,
+              "viewport_height": 844
+            },
+            "checks": {
+              "state": "independent phase page",
+              "checks": [
+                "original prices / phase metadata"
+              ]
+            }
+          },
+          {
+            "page": "postclose",
+            "report_phase": "final",
+            "as_of": "2026-10-29",
+            "data_date": "2026-10-29",
+            "scope": "ai_supply_chain",
+            "surface": {
+              "body_font": 18,
+              "date_font": 16,
+              "status_font": 16,
+              "name_font": 26,
+              "price_font": 34,
+              "meta_font": 16,
+              "first_card": {
+                "x": 16,
+                "y": 643.96875,
+                "width": 358,
+                "height": 206.984375,
+                "bottom": 850.953125
+              },
+              "first_name": {
+                "x": 33,
+                "y": 660.96875,
+                "width": 78.90625,
+                "height": 36.390625,
+                "bottom": 697.359375
+              },
+              "first_price": {
+                "x": 272.0625,
+                "y": 660.96875,
+                "width": 84.9375,
+                "height": 45.890625,
+                "bottom": 706.859375
+              },
+              "viewport_width": 390,
+              "viewport_height": 844
+            },
+            "checks": {
+              "state": "independent phase page",
+              "checks": [
+                "original prices / phase metadata"
+              ]
+            }
+          },
+          {
+            "page": "final",
+            "report_phase": "final",
+            "as_of": "2026-10-29",
+            "data_date": "2026-10-29",
+            "scope": "ai_supply_chain",
+            "surface": {
+              "body_font": 18,
+              "date_font": 16,
+              "status_font": 16,
+              "name_font": 26,
+              "price_font": 34,
+              "meta_font": 16,
+              "first_card": {
+                "x": 16,
+                "y": 643.96875,
+                "width": 358,
+                "height": 206.984375,
+                "bottom": 850.953125
+              },
+              "first_name": {
+                "x": 33,
+                "y": 660.96875,
+                "width": 78.90625,
+                "height": 36.390625,
+                "bottom": 697.359375
+              },
+              "first_price": {
+                "x": 272.0625,
+                "y": 660.96875,
+                "width": 84.9375,
+                "height": 45.890625,
+                "bottom": 706.859375
+              },
+              "viewport_width": 390,
+              "viewport_height": 844
+            },
+            "checks": {
+              "state": "independent phase page",
+              "checks": [
+                "original prices / phase metadata"
+              ]
+            }
+          }
+        ],
+        "js_errors": []
+      },
+      {
+        "name": "landscape",
+        "width": 844,
+        "height": 390,
+        "pages": [
+          {
+            "page": "index",
+            "report_phase": "preopen",
+            "as_of": "2026-10-30",
+            "data_date": "2026-10-29",
+            "scope": "ai_supply_chain",
+            "surface": {
+              "body_font": 18,
+              "date_font": 16,
+              "status_font": 16,
+              "name_font": 26,
+              "price_font": 36,
+              "meta_font": 16,
+              "first_card": {
+                "x": 200,
+                "y": 705.390625,
+                "width": 619,
+                "height": 219.984375,
+                "bottom": 925.375
+              },
+              "first_name": {
+                "x": 221,
+                "y": 726.390625,
+                "width": 78.90625,
+                "height": 36.390625,
+                "bottom": 762.78125
+              },
+              "first_price": {
+                "x": 708.0625,
+                "y": 726.390625,
+                "width": 89.9375,
+                "height": 48.59375,
+                "bottom": 774.984375
+              },
+              "viewport_width": 844,
+              "viewport_height": 390
+            },
+            "checks": {
+              "state": "populated",
+              "initial_visible_stocks": [
+                "TWSE:2308",
+                "TWSE:2317",
+                "TWSE:2330",
+                "TWSE:2345",
+                "TWSE:2356",
+                "TWSE:2357"
+              ],
+              "categories": [
+                {
+                  "category": "chip",
+                  "visible_stocks": 4
+                },
+                {
+                  "category": "packaging",
+                  "visible_stocks": 1
+                },
+                {
+                  "category": "server",
+                  "visible_stocks": 7
+                },
+                {
+                  "category": "cooling",
+                  "visible_stocks": 3
+                },
+                {
+                  "category": "power",
+                  "visible_stocks": 1
+                },
+                {
+                  "category": "pcb",
+                  "visible_stocks": 1
+                },
+                {
+                  "category": "networking",
+                  "visible_stocks": 1
+                },
+                {
+                  "category": "memory",
+                  "visible_stocks": 3
+                },
+                {
+                  "category": "wafer",
+                  "visible_stocks": 4
+                }
+              ],
+              "progressive_list": {
+                "initial_count": 6,
+                "expanded_count": 24
+              },
+              "short_state_semantics": {
+                "TWSE:2308": "未符合選股條件",
+                "TWSE:2317": "未符合選股條件",
+                "TWSE:2330": "未符合選股條件",
+                "TWSE:2345": "未符合選股條件",
+                "TWSE:2356": "未符合選股條件",
+                "TWSE:2357": "未符合選股條件"
+              },
+              "non_ai_watchlist_quote": "TPEX:1240",
+              "checks": [
+                "original price and date",
+                "search miss and reset",
+                "category membership",
+                "detail navigation",
+                "evidence links",
+                "missing plans remain unavailable",
+                "six-card overview, complete expanded list and late-symbol search",
+                "local watchlist add and reload persistence",
+                "non-AI holding quote isolation"
+              ]
+            }
+          },
+          {
+            "page": "preopen",
+            "report_phase": "preopen",
+            "as_of": "2026-10-30",
+            "data_date": "2026-10-29",
+            "scope": "ai_supply_chain",
+            "surface": {
+              "body_font": 18,
+              "date_font": 16,
+              "status_font": 16,
+              "name_font": 26,
+              "price_font": 36,
+              "meta_font": 16,
+              "first_card": {
+                "x": 200,
+                "y": 705.390625,
+                "width": 619,
+                "height": 219.984375,
+                "bottom": 925.375
+              },
+              "first_name": {
+                "x": 221,
+                "y": 726.390625,
+                "width": 78.90625,
+                "height": 36.390625,
+                "bottom": 762.78125
+              },
+              "first_price": {
+                "x": 708.0625,
+                "y": 726.390625,
+                "width": 89.9375,
+                "height": 48.59375,
+                "bottom": 774.984375
+              },
+              "viewport_width": 844,
+              "viewport_height": 390
+            },
+            "checks": {
+              "state": "independent phase page",
+              "checks": [
+                "original prices / phase metadata"
+              ]
+            }
+          },
+          {
+            "page": "postclose",
+            "report_phase": "final",
+            "as_of": "2026-10-29",
+            "data_date": "2026-10-29",
+            "scope": "ai_supply_chain",
+            "surface": {
+              "body_font": 18,
+              "date_font": 16,
+              "status_font": 16,
+              "name_font": 26,
+              "price_font": 36,
+              "meta_font": 16,
+              "first_card": {
+                "x": 200,
+                "y": 750.78125,
+                "width": 619,
+                "height": 219.984375,
+                "bottom": 970.765625
+              },
+              "first_name": {
+                "x": 221,
+                "y": 771.78125,
+                "width": 78.90625,
+                "height": 36.390625,
+                "bottom": 808.171875
+              },
+              "first_price": {
+                "x": 708.0625,
+                "y": 771.78125,
+                "width": 89.9375,
+                "height": 48.59375,
+                "bottom": 820.375
+              },
+              "viewport_width": 844,
+              "viewport_height": 390
+            },
+            "checks": {
+              "state": "independent phase page",
+              "checks": [
+                "original prices / phase metadata"
+              ]
+            }
+          },
+          {
+            "page": "final",
+            "report_phase": "final",
+            "as_of": "2026-10-29",
+            "data_date": "2026-10-29",
+            "scope": "ai_supply_chain",
+            "surface": {
+              "body_font": 18,
+              "date_font": 16,
+              "status_font": 16,
+              "name_font": 26,
+              "price_font": 36,
+              "meta_font": 16,
+              "first_card": {
+                "x": 200,
+                "y": 750.78125,
+                "width": 619,
+                "height": 219.984375,
+                "bottom": 970.765625
+              },
+              "first_name": {
+                "x": 221,
+                "y": 771.78125,
+                "width": 78.90625,
+                "height": 36.390625,
+                "bottom": 808.171875
+              },
+              "first_price": {
+                "x": 708.0625,
+                "y": 771.78125,
+                "width": 89.9375,
+                "height": 48.59375,
+                "bottom": 820.375
+              },
+              "viewport_width": 844,
+              "viewport_height": 390
+            },
+            "checks": {
+              "state": "independent phase page",
+              "checks": [
+                "original prices / phase metadata"
+              ]
+            }
+          }
+        ],
+        "js_errors": []
+      },
+      {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1100,
+        "pages": [
+          {
+            "page": "index",
+            "report_phase": "preopen",
+            "as_of": "2026-10-30",
+            "data_date": "2026-10-29",
+            "scope": "ai_supply_chain",
+            "surface": {
+              "body_font": 18,
+              "date_font": 16,
+              "status_font": 16,
+              "name_font": 26,
+              "price_font": 36,
+              "meta_font": 16,
+              "first_card": {
+                "x": 244,
+                "y": 677.390625,
+                "width": 575,
+                "height": 219.984375,
+                "bottom": 897.375
+              },
+              "first_name": {
+                "x": 265,
+                "y": 698.390625,
+                "width": 78.90625,
+                "height": 36.390625,
+                "bottom": 734.78125
+              },
+              "first_price": {
+                "x": 708.0625,
+                "y": 698.390625,
+                "width": 89.9375,
+                "height": 48.59375,
+                "bottom": 746.984375
+              },
+              "viewport_width": 1440,
+              "viewport_height": 1100
+            },
+            "checks": {
+              "state": "populated",
+              "initial_visible_stocks": [
+                "TWSE:2308",
+                "TWSE:2317",
+                "TWSE:2330",
+                "TWSE:2345",
+                "TWSE:2356",
+                "TWSE:2357"
+              ],
+              "categories": [
+                {
+                  "category": "chip",
+                  "visible_stocks": 4
+                },
+                {
+                  "category": "packaging",
+                  "visible_stocks": 1
+                },
+                {
+                  "category": "server",
+                  "visible_stocks": 7
+                },
+                {
+                  "category": "cooling",
+                  "visible_stocks": 3
+                },
+                {
+                  "category": "power",
+                  "visible_stocks": 1
+                },
+                {
+                  "category": "pcb",
+                  "visible_stocks": 1
+                },
+                {
+                  "category": "networking",
+                  "visible_stocks": 1
+                },
+                {
+                  "category": "memory",
+                  "visible_stocks": 3
+                },
+                {
+                  "category": "wafer",
+                  "visible_stocks": 4
+                }
+              ],
+              "progressive_list": {
+                "initial_count": 6,
+                "expanded_count": 24
+              },
+              "short_state_semantics": {
+                "TWSE:2308": "未符合選股條件",
+                "TWSE:2317": "未符合選股條件",
+                "TWSE:2330": "未符合選股條件",
+                "TWSE:2345": "未符合選股條件",
+                "TWSE:2356": "未符合選股條件",
+                "TWSE:2357": "未符合選股條件"
+              },
+              "non_ai_watchlist_quote": "TPEX:1240",
+              "checks": [
+                "original price and date",
+                "search miss and reset",
+                "category membership",
+                "detail navigation",
+                "evidence links",
+                "missing plans remain unavailable",
+                "six-card overview, complete expanded list and late-symbol search",
+                "local watchlist add and reload persistence",
+                "non-AI holding quote isolation"
+              ]
+            }
+          },
+          {
+            "page": "preopen",
+            "report_phase": "preopen",
+            "as_of": "2026-10-30",
+            "data_date": "2026-10-29",
+            "scope": "ai_supply_chain",
+            "surface": {
+              "body_font": 18,
+              "date_font": 16,
+              "status_font": 16,
+              "name_font": 26,
+              "price_font": 36,
+              "meta_font": 16,
+              "first_card": {
+                "x": 244,
+                "y": 677.390625,
+                "width": 575,
+                "height": 219.984375,
+                "bottom": 897.375
+              },
+              "first_name": {
+                "x": 265,
+                "y": 698.390625,
+                "width": 78.90625,
+                "height": 36.390625,
+                "bottom": 734.78125
+              },
+              "first_price": {
+                "x": 708.0625,
+                "y": 698.390625,
+                "width": 89.9375,
+                "height": 48.59375,
+                "bottom": 746.984375
+              },
+              "viewport_width": 1440,
+              "viewport_height": 1100
+            },
+            "checks": {
+              "state": "independent phase page",
+              "checks": [
+                "original prices / phase metadata"
+              ]
+            }
+          },
+          {
+            "page": "postclose",
+            "report_phase": "final",
+            "as_of": "2026-10-29",
+            "data_date": "2026-10-29",
+            "scope": "ai_supply_chain",
+            "surface": {
+              "body_font": 18,
+              "date_font": 16,
+              "status_font": 16,
+              "name_font": 26,
+              "price_font": 36,
+              "meta_font": 16,
+              "first_card": {
+                "x": 244,
+                "y": 722.78125,
+                "width": 575,
+                "height": 219.984375,
+                "bottom": 942.765625
+              },
+              "first_name": {
+                "x": 265,
+                "y": 743.78125,
+                "width": 78.90625,
+                "height": 36.390625,
+                "bottom": 780.171875
+              },
+              "first_price": {
+                "x": 708.0625,
+                "y": 743.78125,
+                "width": 89.9375,
+                "height": 48.59375,
+                "bottom": 792.375
+              },
+              "viewport_width": 1440,
+              "viewport_height": 1100
+            },
+            "checks": {
+              "state": "independent phase page",
+              "checks": [
+                "original prices / phase metadata"
+              ]
+            }
+          },
+          {
+            "page": "final",
+            "report_phase": "final",
+            "as_of": "2026-10-29",
+            "data_date": "2026-10-29",
+            "scope": "ai_supply_chain",
+            "surface": {
+              "body_font": 18,
+              "date_font": 16,
+              "status_font": 16,
+              "name_font": 26,
+              "price_font": 36,
+              "meta_font": 16,
+              "first_card": {
+                "x": 244,
+                "y": 722.78125,
+                "width": 575,
+                "height": 219.984375,
+                "bottom": 942.765625
+              },
+              "first_name": {
+                "x": 265,
+                "y": 743.78125,
+                "width": 78.90625,
+                "height": 36.390625,
+                "bottom": 780.171875
+              },
+              "first_price": {
+                "x": 708.0625,
+                "y": 743.78125,
+                "width": 89.9375,
+                "height": 48.59375,
+                "bottom": 792.375
+              },
+              "viewport_width": 1440,
+              "viewport_height": 1100
+            },
+            "checks": {
+              "state": "independent phase page",
+              "checks": [
+                "original prices / phase metadata"
+              ]
+            }
+          }
+        ],
+        "js_errors": []
+      }
+    ],
+    "network": "public GET only; no analysis dispatch / watchlist upload / order submission",
+    "result": "passed"
+  },
+  "public_theme_browser": {
+    "checked_at_utc": "2026-10-30T04:24:16.327803+00:00",
+    "browser": "Chromium viewport emulation; not physical Android",
+    "market_data_injected": false,
+    "viewports": [
+      {
+        "name": "small-phone",
+        "width": 360,
+        "height": 800,
+        "themes": [
+          {
+            "theme": "dark",
+            "readability": {
+              "text": [
+                {
+                  "selector": "body",
+                  "size": 18,
+                  "color": "rgb(237, 243, 245)",
+                  "background": [
+                    11,
+                    19,
+                    27,
+                    1
+                  ],
+                  "contrast": 16.684095713610425
+                },
+                {
+                  "selector": ".readiness-content p",
+                  "size": 18,
+                  "color": "rgb(237, 243, 245)",
+                  "background": [
+                    11,
+                    19,
+                    27,
+                    1
+                  ],
+                  "contrast": 16.684095713610425
+                },
+                {
+                  "selector": ".readiness-content p",
+                  "size": 18,
+                  "color": "rgb(237, 243, 245)",
+                  "background": [
+                    11,
+                    19,
+                    27,
+                    1
+                  ],
+                  "contrast": 16.684095713610425
+                },
+                {
+                  "selector": ".readiness-content p",
+                  "size": 18,
+                  "color": "rgb(237, 243, 245)",
+                  "background": [
+                    11,
+                    19,
+                    27,
+                    1
+                  ],
+                  "contrast": 16.684095713610425
+                },
+                {
+                  "selector": ".report-date-summary",
+                  "size": 16,
+                  "color": "rgb(145, 167, 181)",
+                  "background": [
+                    11,
+                    19,
+                    27,
+                    1
+                  ],
+                  "contrast": 7.477420243128933
+                },
+                {
+                  "selector": ".readiness-status",
+                  "size": 16,
+                  "color": "rgb(233, 198, 135)",
+                  "background": [
+                    43,
+                    41,
+                    31,
+                    1
+                  ],
+                  "contrast": 8.9549213226422
+                },
+                {
+                  "selector": ".ai-stock-meta",
+                  "size": 16,
+                  "color": "rgb(145, 167, 181)",
+                  "background": [
+                    18,
+                    30,
+                    40,
+                    1
+                  ],
+                  "contrast": 6.761840937258403
+                },
+                {
+                  "selector": ".ai-stock-meta",
+                  "size": 16,
+                  "color": "rgb(145, 167, 181)",
+                  "background": [
+                    18,
+                    30,
+                    40,
+                    1
+                  ],
+                  "contrast": 6.761840937258403
+                },
+                {
+                  "selector": ".ai-stock-meta",
+                  "size": 16,
+                  "color": "rgb(145, 167, 181)",
+                  "background": [
+                    18,
+                    30,
+                    40,
+                    1
+                  ],
+                  "contrast": 6.761840937258403
+                },
+                {
+                  "selector": ".ai-stock-state",
+                  "size": 18,
+                  "color": "rgb(233, 198, 135)",
+                  "background": [
+                    18,
+                    30,
+                    40,
+                    1
+                  ],
+                  "contrast": 10.379627088039427
+                },
+                {
+                  "selector": ".ai-stock-state",
+                  "size": 18,
+                  "color": "rgb(233, 198, 135)",
+                  "background": [
+                    18,
+                    30,
+                    40,
+                    1
+                  ],
+                  "contrast": 10.379627088039427
+                },
+                {
+                  "selector": ".ai-stock-state",
+                  "size": 18,
+                  "color": "rgb(233, 198, 135)",
+                  "background": [
+                    18,
+                    30,
+                    40,
+                    1
+                  ],
+                  "contrast": 10.379627088039427
+                },
+                {
+                  "selector": ".method-note",
+                  "size": 16,
+                  "color": "rgb(145, 167, 181)",
+                  "background": [
+                    11,
+                    19,
+                    27,
+                    1
+                  ],
+                  "contrast": 7.477420243128933
+                },
+                {
+                  "selector": ".method-note",
+                  "size": 16,
+                  "color": "rgb(145, 167, 181)",
+                  "background": [
+                    11,
+                    19,
+                    27,
+                    1
+                  ],
+                  "contrast": 7.477420243128933
+                },
+                {
+                  "selector": ".method-note",
+                  "size": 16,
+                  "color": "rgb(145, 167, 181)",
+                  "background": [
+                    11,
+                    19,
+                    27,
+                    1
+                  ],
+                  "contrast": 7.477420243128933
+                }
+              ],
+              "controls": [
+                {
+                  "selector": "#theme-select",
+                  "height": 48,
+                  "width": 120
+                },
+                {
+                  "selector": "#report-refresh",
+                  "height": 48,
+                  "width": 113.859375
+                },
+                {
+                  "selector": ".phase-nav a",
+                  "height": 48,
+                  "width": 80.25
+                },
+                {
+                  "selector": ".phase-nav a",
+                  "height": 48,
+                  "width": 80.25
+                },
+                {
+                  "selector": ".phase-nav a",
+                  "height": 48,
+                  "width": 80.25
+                },
+                {
+                  "selector": ".ai-category-button",
+                  "height": 49.5,
+                  "width": 108.3125
+                },
+                {
+                  "selector": ".ai-category-button",
+                  "height": 49.5,
+                  "width": 154
+                },
+                {
+                  "selector": ".ai-category-button",
+                  "height": 49.5,
+                  "width": 154
+                }
+              ],
+              "background": [
+                11,
+                19,
+                27,
+                1
+              ],
+              "overflow": false
+            },
+            "surface": {
+              "body_font": 18,
+              "date_font": 16,
+              "status_font": 16,
+              "name_font": 26,
+              "price_font": 34,
+              "meta_font": 16,
+              "first_card": {
+                "x": 14,
+                "y": 565.296875,
+                "width": 332,
+                "height": 206.984375,
+                "bottom": 772.28125
+              },
+              "first_name": {
+                "x": 31,
+                "y": 582.296875,
+                "width": 78.90625,
+                "height": 36.390625,
+                "bottom": 618.6875
+              },
+              "first_price": {
+                "x": 244.0625,
+                "y": 582.296875,
+                "width": 84.9375,
+                "height": 45.890625,
+                "bottom": 628.1875
+              },
+              "viewport_width": 360,
+              "viewport_height": 800
+            },
+            "plotly": {
+              "palette": {
+                "surface": "#121e28",
+                "text": "#edf3f5",
+                "muted": "#91a7b5",
+                "line": "#283945",
+                "red": "#f48d8d",
+                "green": "#83cbb7"
+              },
+              "charts": [
+                {
+                  "id": "industry-chart",
+                  "paper": "#121e28",
+                  "plot": "#121e28",
+                  "font": "#edf3f5",
+                  "font_size": 16,
+                  "legend_visible": false,
+                  "legend": "#edf3f5",
+                  "x_tick": "#91a7b5",
+                  "y_tick": "#91a7b5",
+                  "x_grid_visible": true,
+                  "y_grid_visible": true,
+                  "x_grid": "#283945",
+                  "y_grid": "#283945",
+                  "traces": [
+                    {
+                      "x": [
+                        -11.484369733252683,
+                        -9.66384302136315,
+                        -22.5130890052356,
+                        -7.387862796833778,
+                        -5.966607247931882,
+                        -2.288984263233196,
+                        -0.8748671062036769,
+                        -0.08071407004263861,
+                        -0.7920792079207928
+                      ],
+                      "y": [
+                        "矽晶圓",
+                        "晶片與先進製程",
+                        "電源與備援",
+                        "高速傳輸與光通訊",
+                        "散熱",
+                        "先進封裝與測試",
+                        "記憶體與儲存",
+                        "AI 伺服器",
+                        "PCB 與材料"
+                      ],
+                      "colors": [
+                        "#83cbb7",
+                        "#83cbb7",
+                        "#83cbb7",
+                        "#83cbb7",
+                        "#83cbb7",
+                        "#83cbb7",
+                        "#83cbb7",
+                        "#83cbb7",
+                        "#83cbb7"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "theme": "light",
+            "readability": {
+              "text": [
+                {
+                  "selector": "body",
+                  "size": 18,
+                  "color": "rgb(23, 49, 59)",
+                  "background": [
+                    244,
+                    247,
+                    250,
+                    1
+                  ],
+                  "contrast": 12.691676986056372
+                },
+                {
+                  "selector": ".readiness-content p",
+                  "size": 18,
+                  "color": "rgb(23, 49, 59)",
+                  "background": [
+                    244,
+                    247,
+                    250,
+                    1
+                  ],
+                  "contrast": 12.691676986056372
+                },
+                {
+                  "selector": ".readiness-content p",
+                  "size": 18,
+                  "color": "rgb(23, 49, 59)",
+                  "background": [
+                    244,
+                    247,
+                    250,
+                    1
+                  ],
+                  "contrast": 12.691676986056372
+                },
+                {
+                  "selector": ".readiness-content p",
+                  "size": 18,
+                  "color": "rgb(23, 49, 59)",
+                  "background": [
+                    244,
+                    247,
+                    250,
+                    1
+                  ],
+                  "contrast": 12.691676986056372
+                },
+                {
+                  "selector": ".report-date-summary",
+                  "size": 16,
+                  "color": "rgb(82, 101, 115)",
+                  "background": [
+                    244,
+                    247,
+                    250,
+                    1
+                  ],
+                  "contrast": 5.632200892061513
+                },
+                {
+                  "selector": ".readiness-status",
+                  "size": 16,
+                  "color": "rgb(131, 86, 0)",
+                  "background": [
+                    255,
+                    246,
+                    230,
+                    1
+                  ],
+                  "contrast": 5.939291834661031
+                },
+                {
+                  "selector": ".ai-stock-meta",
+                  "size": 16,
+                  "color": "rgb(82, 101, 115)",
+                  "background": [
+                    255,
+                    255,
+                    255,
+                    1
+                  ],
+                  "contrast": 6.055711222194442
+                },
+                {
+                  "selector": ".ai-stock-meta",
+                  "size": 16,
+                  "color": "rgb(82, 101, 115)",
+                  "background": [
+                    255,
+                    255,
+                    255,
+                    1
+                  ],
+                  "contrast": 6.055711222194442
+                },
+                {
+                  "selector": ".ai-stock-meta",
+                  "size": 16,
+                  "color": "rgb(82, 101, 115)",
+                  "background": [
+                    255,
+                    255,
+                    255,
+                    1
+                  ],
+                  "contrast": 6.055711222194442
+                },
+                {
+                  "selector": ".ai-stock-state",
+                  "size": 18,
+                  "color": "rgb(121, 83, 21)",
+                  "background": [
+                    255,
+                    255,
+                    255,
+                    1
+                  ],
+                  "contrast": 6.86023244541609
+                },
+                {
+                  "selector": ".ai-stock-state",
+                  "size": 18,
+                  "color": "rgb(121, 83, 21)",
+                  "background": [
+                    255,
+                    255,
+                    255,
+                    1
+                  ],
+                  "contrast": 6.86023244541609
+                },
+                {
+                  "selector": ".ai-stock-state",
+                  "size": 18,
+                  "color": "rgb(121, 83, 21)",
+                  "background": [
+                    255,
+                    255,
+                    255,
+                    1
+                  ],
+                  "contrast": 6.86023244541609
+                },
+                {
+                  "selector": ".method-note",
+                  "size": 16,
+                  "color": "rgb(82, 101, 115)",
+                  "background": [
+                    244,
+                    247,
+                    250,
+                    1
+                  ],
+                  "contrast": 5.632200892061513
+                },
+                {
+                  "selector": ".method-note",
+                  "size": 16,
+                  "color": "rgb(82, 101, 115)",
+                  "background": [
+                    244,
+                    247,
+                    250,
+                    1
+                  ],
+                  "contrast": 5.632200892061513
+                },
+                {
+                  "selector": ".method-note",
+                  "size": 16,
+                  "color": "rgb(82, 101, 115)",
+                  "background": [
+                    244,
+                    247,
+                    250,
+                    1
+                  ],
+                  "contrast": 5.632200892061513
+                }
+              ],
+              "controls": [
+                {
+                  "selector": "#theme-select",
+                  "height": 48,
+                  "width": 120
+                },
+                {
+                  "selector": "#report-refresh",
+                  "height": 48,
+                  "width": 113.859375
+                },
+                {
+                  "selector": ".phase-nav a",
+                  "height": 48,
+                  "width": 80.25
+                },
+                {
+                  "selector": ".phase-nav a",
+                  "height": 48,
+                  "width": 80.25
+                },
+                {
+                  "selector": ".phase-nav a",
+                  "height": 48,
+                  "width": 80.25
+                },
+                {
+                  "selector": ".ai-category-button",
+                  "height": 49.5,
+                  "width": 108.3125
+                },
+                {
+                  "selector": ".ai-category-button",
+                  "height": 49.5,
+                  "width": 154
+                },
+                {
+                  "selector": ".ai-category-button",
+                  "height": 49.5,
+                  "width": 154
+                }
+              ],
+              "background": [
+                244,
+                247,
+                250,
+                1
+              ],
+              "overflow": false
+            },
+            "surface": {
+              "body_font": 18,
+              "date_font": 16,
+              "status_font": 16,
+              "name_font": 26,
+              "price_font": 34,
+              "meta_font": 16,
+              "first_card": {
+                "x": 14,
+                "y": 565.296875,
+                "width": 332,
+                "height": 206.984375,
+                "bottom": 772.28125
+              },
+              "first_name": {
+                "x": 31,
+                "y": 582.296875,
+                "width": 78.90625,
+                "height": 36.390625,
+                "bottom": 618.6875
+              },
+              "first_price": {
+                "x": 244.0625,
+                "y": 582.296875,
+                "width": 84.9375,
+                "height": 45.890625,
+                "bottom": 628.1875
+              },
+              "viewport_width": 360,
+              "viewport_height": 800
+            },
+            "plotly": {
+              "palette": {
+                "surface": "#ffffff",
+                "text": "#17313b",
+                "muted": "#526573",
+                "line": "#c6d2da",
+                "red": "#b22d3b",
+                "green": "#16734f"
+              },
+              "charts": [
+                {
+                  "id": "industry-chart",
+                  "paper": "#ffffff",
+                  "plot": "#ffffff",
+                  "font": "#17313b",
+                  "font_size": 16,
+                  "legend_visible": false,
+                  "legend": "#17313b",
+                  "x_tick": "#526573",
+                  "y_tick": "#526573",
+                  "x_grid_visible": true,
+                  "y_grid_visible": true,
+                  "x_grid": "#c6d2da",
+                  "y_grid": "#c6d2da",
+                  "traces": [
+                    {
+                      "x": [
+                        -11.484369733252683,
+                        -9.66384302136315,
+                        -22.5130890052356,
+                        -7.387862796833778,
+                        -5.966607247931882,
+                        -2.288984263233196,
+                        -0.8748671062036769,
+                        -0.08071407004263861,
+                        -0.7920792079207928
+                      ],
+                      "y": [
+                        "矽晶圓",
+                        "晶片與先進製程",
+                        "電源與備援",
+                        "高速傳輸與光通訊",
+                        "散熱",
+                        "先進封裝與測試",
+                        "記憶體與儲存",
+                        "AI 伺服器",
+                        "PCB 與材料"
+                      ],
+                      "colors": [
+                        "#16734f",
+                        "#16734f",
+                        "#16734f",
+                        "#16734f",
+                        "#16734f",
+                        "#16734f",
+                        "#16734f",
+                        "#16734f",
+                        "#16734f"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "theme": "sepia",
+            "readability": {
+              "text": [
+                {
+                  "selector": "body",
+                  "size": 18,
+                  "color": "rgb(60, 51, 40)",
+                  "background": [
+                    244,
+                    237,
+                    223,
+                    1
+                  ],
+                  "contrast": 10.626545601926708
+                },
+                {
+                  "selector": ".readiness-content p",
+                  "size": 18,
+                  "color": "rgb(60, 51, 40)",
+                  "background": [
+                    244,
+                    237,
+                    223,
+                    1
+                  ],
+                  "contrast": 10.626545601926708
+                },
+                {
+                  "selector": ".readiness-content p",
+                  "size": 18,
+                  "color": "rgb(60, 51, 40)",
+                  "background": [
+                    244,
+                    237,
+                    223,
+                    1
+                  ],
+                  "contrast": 10.626545601926708
+                },
+                {
+                  "selector": ".readiness-content p",
+                  "size": 18,
+                  "color": "rgb(60, 51, 40)",
+                  "background": [
+                    244,
+                    237,
+                    223,
+                    1
+                  ],
+                  "contrast": 10.626545601926708
+                },
+                {
+                  "selector": ".report-date-summary",
+                  "size": 16,
+                  "color": "rgb(108, 91, 71)",
+                  "background": [
+                    244,
+                    237,
+                    223,
+                    1
+                  ],
+                  "contrast": 5.589320610450253
+                },
+                {
+                  "selector": ".readiness-status",
+                  "size": 16,
+                  "color": "rgb(128, 85, 18)",
+                  "background": [
+                    246,
+                    233,
+                    204,
+                    1
+                  ],
+                  "contrast": 5.407998463612043
+                },
+                {
+                  "selector": ".ai-stock-meta",
+                  "size": 16,
+                  "color": "rgb(108, 91, 71)",
+                  "background": [
+                    255,
+                    250,
+                    240,
+                    1
+                  ],
+                  "contrast": 6.258662335929536
+                },
+                {
+                  "selector": ".ai-stock-meta",
+                  "size": 16,
+                  "color": "rgb(108, 91, 71)",
+                  "background": [
+                    255,
+                    250,
+                    240,
+                    1
+                  ],
+                  "contrast": 6.258662335929536
+                },
+                {
+                  "selector": ".ai-stock-meta",
+                  "size": 16,
+                  "color": "rgb(108, 91, 71)",
+                  "background": [
+                    255,
+                    250,
+                    240,
+                    1
+                  ],
+                  "contrast": 6.258662335929536
+                },
+                {
+                  "selector": ".ai-stock-state",
+                  "size": 18,
+                  "color": "rgb(112, 80, 24)",
+                  "background": [
+                    255,
+                    250,
+                    240,
+                    1
+                  ],
+                  "contrast": 7.083266831090331
+                },
+                {
+                  "selector": ".ai-stock-state",
+                  "size": 18,
+                  "color": "rgb(112, 80, 24)",
+                  "background": [
+                    255,
+                    250,
+                    240,
+                    1
+                  ],
+                  "contrast": 7.083266831090331
+                },
+                {
+                  "selector": ".ai-stock-state",
+                  "size": 18,
+                  "color": "rgb(112, 80, 24)",
+                  "background": [
+                    255,
+                    250,
+                    240,
+                    1
+                  ],
+                  "contrast": 7.083266831090331
+                },
+                {
+                  "selector": ".method-note",
+                  "size": 16,
+                  "color": "rgb(108, 91, 71)",
+                  "background": [
+                    244,
+                    237,
+                    223,
+                    1
+                  ],
+                  "contrast": 5.589320610450253
+                },
+                {
+                  "selector": ".method-note",
+                  "size": 16,
+                  "color": "rgb(108, 91, 71)",
+                  "background": [
+                    244,
+                    237,
+                    223,
+                    1
+                  ],
+                  "contrast": 5.589320610450253
+                },
+                {
+                  "selector": ".method-note",
+                  "size": 16,
+                  "color": "rgb(108, 91, 71)",
+                  "background": [
+                    244,
+                    237,
+                    223,
+                    1
+                  ],
+                  "contrast": 5.589320610450253
+                }
+              ],
+              "controls": [
+                {
+                  "selector": "#theme-select",
+                  "height": 48,
+                  "width": 120
+                },
+                {
+                  "selector": "#report-refresh",
+                  "height": 48,
+                  "width": 113.859375
+                },
+                {
+                  "selector": ".phase-nav a",
+                  "height": 48,
+                  "width": 80.25
+                },
+                {
+                  "selector": ".phase-nav a",
+                  "height": 48,
+                  "width": 80.25
+                },
+                {
+                  "selector": ".phase-nav a",
+                  "height": 48,
+                  "width": 80.25
+                },
+                {
+                  "selector": ".ai-category-button",
+                  "height": 49.5,
+                  "width": 108.3125
+                },
+                {
+                  "selector": ".ai-category-button",
+                  "height": 49.5,
+                  "width": 154
+                },
+                {
+                  "selector": ".ai-category-button",
+                  "height": 49.5,
+                  "width": 154
+                }
+              ],
+              "background": [
+                244,
+                237,
+                223,
+                1
+              ],
+              "overflow": false
+            },
+            "surface": {
+              "body_font": 18,
+              "date_font": 16,
+              "status_font": 16,
+              "name_font": 26,
+              "price_font": 34,
+              "meta_font": 16,
+              "first_card": {
+                "x": 14,
+                "y": 565.296875,
+                "width": 332,
+                "height": 206.984375,
+                "bottom": 772.28125
+              },
+              "first_name": {
+                "x": 31,
+                "y": 582.296875,
+                "width": 78.90625,
+                "height": 36.390625,
+                "bottom": 618.6875
+              },
+              "first_price": {
+                "x": 244.0625,
+                "y": 582.296875,
+                "width": 84.9375,
+                "height": 45.890625,
+                "bottom": 628.1875
+              },
+              "viewport_width": 360,
+              "viewport_height": 800
+            },
+            "plotly": {
+              "palette": {
+                "surface": "#fffaf0",
+                "text": "#3c3328",
+                "muted": "#6c5b47",
+                "line": "#c9baa1",
+                "red": "#a52e32",
+                "green": "#296743"
+              },
+              "charts": [
+                {
+                  "id": "industry-chart",
+                  "paper": "#fffaf0",
+                  "plot": "#fffaf0",
+                  "font": "#3c3328",
+                  "font_size": 16,
+                  "legend_visible": false,
+                  "legend": "#3c3328",
+                  "x_tick": "#6c5b47",
+                  "y_tick": "#6c5b47",
+                  "x_grid_visible": true,
+                  "y_grid_visible": true,
+                  "x_grid": "#c9baa1",
+                  "y_grid": "#c9baa1",
+                  "traces": [
+                    {
+                      "x": [
+                        -11.484369733252683,
+                        -9.66384302136315,
+                        -22.5130890052356,
+                        -7.387862796833778,
+                        -5.966607247931882,
+                        -2.288984263233196,
+                        -0.8748671062036769,
+                        -0.08071407004263861,
+                        -0.7920792079207928
+                      ],
+                      "y": [
+                        "矽晶圓",
+                        "晶片與先進製程",
+                        "電源與備援",
+                        "高速傳輸與光通訊",
+                        "散熱",
+                        "先進封裝與測試",
+                        "記憶體與儲存",
+                        "AI 伺服器",
+                        "PCB 與材料"
+                      ],
+                      "colors": [
+                        "#296743",
+                        "#296743",
+                        "#296743",
+                        "#296743",
+                        "#296743",
+                        "#296743",
+                        "#296743",
+                        "#296743",
+                        "#296743"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ],
+        "persisted_phase_pages": [
+          "preopen",
+          "postclose",
+          "final"
+        ],
+        "offline_preference": "passed",
+        "unvisited_page_fallback": "passed",
+        "watchlist_unchanged": true,
+        "js_errors": []
+      },
+      {
+        "name": "phone",
+        "width": 390,
+        "height": 844,
+        "themes": [
+          {
+            "theme": "dark",
+            "readability": {
+              "text": [
+                {
+                  "selector": "body",
+                  "size": 18,
+                  "color": "rgb(237, 243, 245)",
+                  "background": [
+                    11,
+                    19,
+                    27,
+                    1
+                  ],
+                  "contrast": 16.684095713610425
+                },
+                {
+                  "selector": ".readiness-content p",
+                  "size": 18,
+                  "color": "rgb(237, 243, 245)",
+                  "background": [
+                    11,
+                    19,
+                    27,
+                    1
+                  ],
+                  "contrast": 16.684095713610425
+                },
+                {
+                  "selector": ".readiness-content p",
+                  "size": 18,
+                  "color": "rgb(237, 243, 245)",
+                  "background": [
+                    11,
+                    19,
+                    27,
+                    1
+                  ],
+                  "contrast": 16.684095713610425
+                },
+                {
+                  "selector": ".readiness-content p",
+                  "size": 18,
+                  "color": "rgb(237, 243, 245)",
+                  "background": [
+                    11,
+                    19,
+                    27,
+                    1
+                  ],
+                  "contrast": 16.684095713610425
+                },
+                {
+                  "selector": ".report-date-summary",
+                  "size": 16,
+                  "color": "rgb(145, 167, 181)",
+                  "background": [
+                    11,
+                    19,
+                    27,
+                    1
+                  ],
+                  "contrast": 7.477420243128933
+                },
+                {
+                  "selector": ".readiness-status",
+                  "size": 16,
+                  "color": "rgb(233, 198, 135)",
+                  "background": [
+                    43,
+                    41,
+                    31,
+                    1
+                  ],
+                  "contrast": 8.9549213226422
+                },
+                {
+                  "selector": ".ai-stock-meta",
+                  "size": 16,
+                  "color": "rgb(145, 167, 181)",
+                  "background": [
+                    18,
+                    30,
+                    40,
+                    1
+                  ],
+                  "contrast": 6.761840937258403
+                },
+                {
+                  "selector": ".ai-stock-meta",
+                  "size": 16,
+                  "color": "rgb(145, 167, 181)",
+                  "background": [
+                    18,
+                    30,
+                    40,
+                    1
+                  ],
+                  "contrast": 6.761840937258403
+                },
+                {
+                  "selector": ".ai-stock-meta",
+                  "size": 16,
+                  "color": "rgb(145, 167, 181)",
+                  "background": [
+                    18,
+                    30,
+                    40,
+                    1
+                  ],
+                  "contrast": 6.761840937258403
+                },
+                {
+                  "selector": ".ai-stock-state",
+                  "size": 18,
+                  "color": "rgb(233, 198, 135)",
+                  "background": [
+                    18,
+                    30,
+                    40,
+                    1
+                  ],
+                  "contrast": 10.379627088039427
+                },
+                {
+                  "selector": ".ai-stock-state",
+                  "size": 18,
+                  "color": "rgb(233, 198, 135)",
+                  "background": [
+                    18,
+                    30,
+                    40,
+                    1
+                  ],
+                  "contrast": 10.379627088039427
+                },
+                {
+                  "selector": ".ai-stock-state",
+                  "size": 18,
+                  "color": "rgb(233, 198, 135)",
+                  "background": [
+                    18,
+                    30,
+                    40,
+                    1
+                  ],
+                  "contrast": 10.379627088039427
+                },
+                {
+                  "selector": ".method-note",
+                  "size": 16,
+                  "color": "rgb(145, 167, 181)",
+                  "background": [
+                    11,
+                    19,
+                    27,
+                    1
+                  ],
+                  "contrast": 7.477420243128933
+                },
+                {
+                  "selector": ".method-note",
+                  "size": 16,
+                  "color": "rgb(145, 167, 181)",
+                  "background": [
+                    11,
+                    19,
+                    27,
+                    1
+                  ],
+                  "contrast": 7.477420243128933
+                },
+                {
+                  "selector": ".method-note",
+                  "size": 16,
+                  "color": "rgb(145, 167, 181)",
+                  "background": [
+                    11,
+                    19,
+                    27,
+                    1
+                  ],
+                  "contrast": 7.477420243128933
+                }
+              ],
+              "controls": [
+                {
+                  "selector": "#theme-select",
+                  "height": 48,
+                  "width": 128
+                },
+                {
+                  "selector": "#report-refresh",
+                  "height": 48,
+                  "width": 117.859375
+                },
+                {
+                  "selector": ".phase-nav a",
+                  "height": 48,
+                  "width": 86.75
+                },
+                {
+                  "selector": ".phase-nav a",
+                  "height": 48,
+                  "width": 86.75
+                },
+                {
+                  "selector": ".phase-nav a",
+                  "height": 48,
+                  "width": 86.75
+                },
+                {
+                  "selector": ".ai-category-button",
+                  "height": 49.5,
+                  "width": 108.3125
+                },
+                {
+                  "selector": ".ai-category-button",
+                  "height": 49.5,
+                  "width": 154
+                },
+                {
+                  "selector": ".ai-category-button",
+                  "height": 49.5,
+                  "width": 154
+                }
+              ],
+              "background": [
+                11,
+                19,
+                27,
+                1
+              ],
+              "overflow": false
+            },
+            "surface": {
+              "body_font": 18,
+              "date_font": 16,
+              "status_font": 16,
+              "name_font": 26,
+              "price_font": 34,
+              "meta_font": 16,
+              "first_card": {
+                "x": 16,
+                "y": 568.1875,
+                "width": 358,
+                "height": 206.984375,
+                "bottom": 775.171875
+              },
+              "first_name": {
+                "x": 33,
+                "y": 585.1875,
+                "width": 78.90625,
+                "height": 36.390625,
+                "bottom": 621.578125
+              },
+              "first_price": {
+                "x": 272.0625,
+                "y": 585.1875,
+                "width": 84.9375,
+                "height": 45.890625,
+                "bottom": 631.078125
+              },
+              "viewport_width": 390,
+              "viewport_height": 844
+            },
+            "plotly": {
+              "palette": {
+                "surface": "#121e28",
+                "text": "#edf3f5",
+                "muted": "#91a7b5",
+                "line": "#283945",
+                "red": "#f48d8d",
+                "green": "#83cbb7"
+              },
+              "charts": [
+                {
+                  "id": "industry-chart",
+                  "paper": "#121e28",
+                  "plot": "#121e28",
+                  "font": "#edf3f5",
+                  "font_size": 16,
+                  "legend_visible": false,
+                  "legend": "#edf3f5",
+                  "x_tick": "#91a7b5",
+                  "y_tick": "#91a7b5",
+                  "x_grid_visible": true,
+                  "y_grid_visible": true,
+                  "x_grid": "#283945",
+                  "y_grid": "#283945",
+                  "traces": [
+                    {
+                      "x": [
+                        -11.484369733252683,
+                        -9.66384302136315,
+                        -22.5130890052356,
+                        -7.387862796833778,
+                        -5.966607247931882,
+                        -2.288984263233196,
+                        -0.8748671062036769,
+                        -0.08071407004263861,
+                        -0.7920792079207928
+                      ],
+                      "y": [
+                        "矽晶圓",
+                        "晶片與先進製程",
+                        "電源與備援",
+                        "高速傳輸與光通訊",
+                        "散熱",
+                        "先進封裝與測試",
+                        "記憶體與儲存",
+                        "AI 伺服器",
+                        "PCB 與材料"
+                      ],
+                      "colors": [
+                        "#83cbb7",
+                        "#83cbb7",
+                        "#83cbb7",
+                        "#83cbb7",
+                        "#83cbb7",
+                        "#83cbb7",
+                        "#83cbb7",
+                        "#83cbb7",
+                        "#83cbb7"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "theme": "light",
+            "readability": {
+              "text": [
+                {
+                  "selector": "body",
+                  "size": 18,
+                  "color": "rgb(23, 49, 59)",
+                  "background": [
+                    244,
+                    247,
+                    250,
+                    1
+                  ],
+                  "contrast": 12.691676986056372
+                },
+                {
+                  "selector": ".readiness-content p",
+                  "size": 18,
+                  "color": "rgb(23, 49, 59)",
+                  "background": [
+                    244,
+                    247,
+                    250,
+                    1
+                  ],
+                  "contrast": 12.691676986056372
+                },
+                {
+                  "selector": ".readiness-content p",
+                  "size": 18,
+                  "color": "rgb(23, 49, 59)",
+                  "background": [
+                    244,
+                    247,
+                    250,
+                    1
+                  ],
+                  "contrast": 12.691676986056372
+                },
+                {
+                  "selector": ".readiness-content p",
+                  "size": 18,
+                  "color": "rgb(23, 49, 59)",
+                  "background": [
+                    244,
+                    247,
+                    250,
+                    1
+                  ],
+                  "contrast": 12.691676986056372
+                },
+                {
+                  "selector": ".report-date-summary",
+                  "size": 16,
+                  "color": "rgb(82, 101, 115)",
+                  "background": [
+                    244,
+                    247,
+                    250,
+                    1
+                  ],
+                  "contrast": 5.632200892061513
+                },
+                {
+                  "selector": ".readiness-status",
+                  "size": 16,
+                  "color": "rgb(131, 86, 0)",
+                  "background": [
+                    255,
+                    246,
+                    230,
+                    1
+                  ],
+                  "contrast": 5.939291834661031
+                },
+                {
+                  "selector": ".ai-stock-meta",
+                  "size": 16,
+                  "color": "rgb(82, 101, 115)",
+                  "background": [
+                    255,
+                    255,
+                    255,
+                    1
+                  ],
+                  "contrast": 6.055711222194442
+                },
+                {
+                  "selector": ".ai-stock-meta",
+                  "size": 16,
+                  "color": "rgb(82, 101, 115)",
+                  "background": [
+                    255,
+                    255,
+                    255,
+                    1
+                  ],
+                  "contrast": 6.055711222194442
+                },
+                {
+                  "selector": ".ai-stock-meta",
+                  "size": 16,
+                  "color": "rgb(82, 101, 115)",
+                  "background": [
+                    255,
+                    255,
+                    255,
+                    1
+                  ],
+                  "contrast": 6.055711222194442
+                },
+                {
+                  "selector": ".ai-stock-state",
+                  "size": 18,
+                  "color": "rgb(121, 83, 21)",
+                  "background": [
+                    255,
+                    255,
+                    255,
+                    1
+                  ],
+                  "contrast": 6.86023244541609
+                },
+                {
+                  "selector": ".ai-stock-state",
+                  "size": 18,
+                  "color": "rgb(121, 83, 21)",
+                  "background": [
+                    255,
+                    255,
+                    255,
+                    1
+                  ],
+                  "contrast": 6.86023244541609
+                },
+                {
+                  "selector": ".ai-stock-state",
+                  "size": 18,
+                  "color": "rgb(121, 83, 21)",
+                  "background": [
+                    255,
+                    255,
+                    255,
+                    1
+                  ],
+                  "contrast": 6.86023244541609
+                },
+                {
+                  "selector": ".method-note",
+                  "size": 16,
+                  "color": "rgb(82, 101, 115)",
+                  "background": [
+                    244,
+                    247,
+                    250,
+                    1
+                  ],
+                  "contrast": 5.632200892061513
+                },
+                {
+                  "selector": ".method-note",
+                  "size": 16,
+                  "color": "rgb(82, 101, 115)",
+                  "background": [
+                    244,
+                    247,
+                    250,
+                    1
+                  ],
+                  "contrast": 5.632200892061513
+                },
+                {
+                  "selector": ".method-note",
+                  "size": 16,
+                  "color": "rgb(82, 101, 115)",
+                  "background": [
+                    244,
+                    247,
+                    250,
+                    1
+                  ],
+                  "contrast": 5.632200892061513
+                }
+              ],
+              "controls": [
+                {
+                  "selector": "#theme-select",
+                  "height": 48,
+                  "width": 128
+                },
+                {
+                  "selector": "#report-refresh",
+                  "height": 48,
+                  "width": 117.859375
+                },
+                {
+                  "selector": ".phase-nav a",
+                  "height": 48,
+                  "width": 86.75
+                },
+                {
+                  "selector": ".phase-nav a",
+                  "height": 48,
+                  "width": 86.75
+                },
+                {
+                  "selector": ".phase-nav a",
+                  "height": 48,
+                  "width": 86.75
+                },
+                {
+                  "selector": ".ai-category-button",
+                  "height": 49.5,
+                  "width": 108.3125
+                },
+                {
+                  "selector": ".ai-category-button",
+                  "height": 49.5,
+                  "width": 154
+                },
+                {
+                  "selector": ".ai-category-button",
+                  "height": 49.5,
+                  "width": 154
+                }
+              ],
+              "background": [
+                244,
+                247,
+                250,
+                1
+              ],
+              "overflow": false
+            },
+            "surface": {
+              "body_font": 18,
+              "date_font": 16,
+              "status_font": 16,
+              "name_font": 26,
+              "price_font": 34,
+              "meta_font": 16,
+              "first_card": {
+                "x": 16,
+                "y": 568.1875,
+                "width": 358,
+                "height": 206.984375,
+                "bottom": 775.171875
+              },
+              "first_name": {
+                "x": 33,
+                "y": 585.1875,
+                "width": 78.90625,
+                "height": 36.390625,
+                "bottom": 621.578125
+              },
+              "first_price": {
+                "x": 272.0625,
+                "y": 585.1875,
+                "width": 84.9375,
+                "height": 45.890625,
+                "bottom": 631.078125
+              },
+              "viewport_width": 390,
+              "viewport_height": 844
+            },
+            "plotly": {
+              "palette": {
+                "surface": "#ffffff",
+                "text": "#17313b",
+                "muted": "#526573",
+                "line": "#c6d2da",
+                "red": "#b22d3b",
+                "green": "#16734f"
+              },
+              "charts": [
+                {
+                  "id": "industry-chart",
+                  "paper": "#ffffff",
+                  "plot": "#ffffff",
+                  "font": "#17313b",
+                  "font_size": 16,
+                  "legend_visible": false,
+                  "legend": "#17313b",
+                  "x_tick": "#526573",
+                  "y_tick": "#526573",
+                  "x_grid_visible": true,
+                  "y_grid_visible": true,
+                  "x_grid": "#c6d2da",
+                  "y_grid": "#c6d2da",
+                  "traces": [
+                    {
+                      "x": [
+                        -11.484369733252683,
+                        -9.66384302136315,
+                        -22.5130890052356,
+                        -7.387862796833778,
+                        -5.966607247931882,
+                        -2.288984263233196,
+                        -0.8748671062036769,
+                        -0.08071407004263861,
+                        -0.7920792079207928
+                      ],
+                      "y": [
+                        "矽晶圓",
+                        "晶片與先進製程",
+                        "電源與備援",
+                        "高速傳輸與光通訊",
+                        "散熱",
+                        "先進封裝與測試",
+                        "記憶體與儲存",
+                        "AI 伺服器",
+                        "PCB 與材料"
+                      ],
+                      "colors": [
+                        "#16734f",
+                        "#16734f",
+                        "#16734f",
+                        "#16734f",
+                        "#16734f",
+                        "#16734f",
+                        "#16734f",
+                        "#16734f",
+                        "#16734f"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "theme": "sepia",
+            "readability": {
+              "text": [
+                {
+                  "selector": "body",
+                  "size": 18,
+                  "color": "rgb(60, 51, 40)",
+                  "background": [
+                    244,
+                    237,
+                    223,
+                    1
+                  ],
+                  "contrast": 10.626545601926708
+                },
+                {
+                  "selector": ".readiness-content p",
+                  "size": 18,
+                  "color": "rgb(60, 51, 40)",
+                  "background": [
+                    244,
+                    237,
+                    223,
+                    1
+                  ],
+                  "contrast": 10.626545601926708
+                },
+                {
+                  "selector": ".readiness-content p",
+                  "size": 18,
+                  "color": "rgb(60, 51, 40)",
+                  "background": [
+                    244,
+                    237,
+                    223,
+                    1
+                  ],
+                  "contrast": 10.626545601926708
+                },
+                {
+                  "selector": ".readiness-content p",
+                  "size": 18,
+                  "color": "rgb(60, 51, 40)",
+                  "background": [
+                    244,
+                    237,
+                    223,
+                    1
+                  ],
+                  "contrast": 10.626545601926708
+                },
+                {
+                  "selector": ".report-date-summary",
+                  "size": 16,
+                  "color": "rgb(108, 91, 71)",
+                  "background": [
+                    244,
+                    237,
+                    223,
+                    1
+                  ],
+                  "contrast": 5.589320610450253
+                },
+                {
+                  "selector": ".readiness-status",
+                  "size": 16,
+                  "color": "rgb(128, 85, 18)",
+                  "background": [
+                    246,
+                    233,
+                    204,
+                    1
+                  ],
+                  "contrast": 5.407998463612043
+                },
+                {
+                  "selector": ".ai-stock-meta",
+                  "size": 16,
+                  "color": "rgb(108, 91, 71)",
+                  "background": [
+                    255,
+                    250,
+                    240,
+                    1
+                  ],
+                  "contrast": 6.258662335929536
+                },
+                {
+                  "selector": ".ai-stock-meta",
+                  "size": 16,
+                  "color": "rgb(108, 91, 71)",
+                  "background": [
+                    255,
+                    250,
+                    240,
+                    1
+                  ],
+                  "contrast": 6.258662335929536
+                },
+                {
+                  "selector": ".ai-stock-meta",
+                  "size": 16,
+                  "color": "rgb(108, 91, 71)",
+                  "background": [
+                    255,
+                    250,
+                    240,
+                    1
+                  ],
+                  "contrast": 6.258662335929536
+                },
+                {
+                  "selector": ".ai-stock-state",
+                  "size": 18,
+                  "color": "rgb(112, 80, 24)",
+                  "background": [
+                    255,
+                    250,
+                    240,
+                    1
+                  ],
+                  "contrast": 7.083266831090331
+                },
+                {
+                  "selector": ".ai-stock-state",
+                  "size": 18,
+                  "color": "rgb(112, 80, 24)",
+                  "background": [
+                    255,
+                    250,
+                    240,
+                    1
+                  ],
+                  "contrast": 7.083266831090331
+                },
+                {
+                  "selector": ".ai-stock-state",
+                  "size": 18,
+                  "color": "rgb(112, 80, 24)",
+                  "background": [
+                    255,
+                    250,
+                    240,
+                    1
+                  ],
+                  "contrast": 7.083266831090331
+                },
+                {
+                  "selector": ".method-note",
+                  "size": 16,
+                  "color": "rgb(108, 91, 71)",
+                  "background": [
+                    244,
+                    237,
+                    223,
+                    1
+                  ],
+                  "contrast": 5.589320610450253
+                },
+                {
+                  "selector": ".method-note",
+                  "size": 16,
+                  "color": "rgb(108, 91, 71)",
+                  "background": [
+                    244,
+                    237,
+                    223,
+                    1
+                  ],
+                  "contrast": 5.589320610450253
+                },
+                {
+                  "selector": ".method-note",
+                  "size": 16,
+                  "color": "rgb(108, 91, 71)",
+                  "background": [
+                    244,
+                    237,
+                    223,
+                    1
+                  ],
+                  "contrast": 5.589320610450253
+                }
+              ],
+              "controls": [
+                {
+                  "selector": "#theme-select",
+                  "height": 48,
+                  "width": 128
+                },
+                {
+                  "selector": "#report-refresh",
+                  "height": 48,
+                  "width": 117.859375
+                },
+                {
+                  "selector": ".phase-nav a",
+                  "height": 48,
+                  "width": 86.75
+                },
+                {
+                  "selector": ".phase-nav a",
+                  "height": 48,
+                  "width": 86.75
+                },
+                {
+                  "selector": ".phase-nav a",
+                  "height": 48,
+                  "width": 86.75
+                },
+                {
+                  "selector": ".ai-category-button",
+                  "height": 49.5,
+                  "width": 108.3125
+                },
+                {
+                  "selector": ".ai-category-button",
+                  "height": 49.5,
+                  "width": 154
+                },
+                {
+                  "selector": ".ai-category-button",
+                  "height": 49.5,
+                  "width": 154
+                }
+              ],
+              "background": [
+                244,
+                237,
+                223,
+                1
+              ],
+              "overflow": false
+            },
+            "surface": {
+              "body_font": 18,
+              "date_font": 16,
+              "status_font": 16,
+              "name_font": 26,
+              "price_font": 34,
+              "meta_font": 16,
+              "first_card": {
+                "x": 16,
+                "y": 568.1875,
+                "width": 358,
+                "height": 206.984375,
+                "bottom": 775.171875
+              },
+              "first_name": {
+                "x": 33,
+                "y": 585.1875,
+                "width": 78.90625,
+                "height": 36.390625,
+                "bottom": 621.578125
+              },
+              "first_price": {
+                "x": 272.0625,
+                "y": 585.1875,
+                "width": 84.9375,
+                "height": 45.890625,
+                "bottom": 631.078125
+              },
+              "viewport_width": 390,
+              "viewport_height": 844
+            },
+            "plotly": {
+              "palette": {
+                "surface": "#fffaf0",
+                "text": "#3c3328",
+                "muted": "#6c5b47",
+                "line": "#c9baa1",
+                "red": "#a52e32",
+                "green": "#296743"
+              },
+              "charts": [
+                {
+                  "id": "industry-chart",
+                  "paper": "#fffaf0",
+                  "plot": "#fffaf0",
+                  "font": "#3c3328",
+                  "font_size": 16,
+                  "legend_visible": false,
+                  "legend": "#3c3328",
+                  "x_tick": "#6c5b47",
+                  "y_tick": "#6c5b47",
+                  "x_grid_visible": true,
+                  "y_grid_visible": true,
+                  "x_grid": "#c9baa1",
+                  "y_grid": "#c9baa1",
+                  "traces": [
+                    {
+                      "x": [
+                        -11.484369733252683,
+                        -9.66384302136315,
+                        -22.5130890052356,
+                        -7.387862796833778,
+                        -5.966607247931882,
+                        -2.288984263233196,
+                        -0.8748671062036769,
+                        -0.08071407004263861,
+                        -0.7920792079207928
+                      ],
+                      "y": [
+                        "矽晶圓",
+                        "晶片與先進製程",
+                        "電源與備援",
+                        "高速傳輸與光通訊",
+                        "散熱",
+                        "先進封裝與測試",
+                        "記憶體與儲存",
+                        "AI 伺服器",
+                        "PCB 與材料"
+                      ],
+                      "colors": [
+                        "#296743",
+                        "#296743",
+                        "#296743",
+                        "#296743",
+                        "#296743",
+                        "#296743",
+                        "#296743",
+                        "#296743",
+                        "#296743"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ],
+        "persisted_phase_pages": [
+          "preopen",
+          "postclose",
+          "final"
+        ],
+        "offline_preference": "passed",
+        "unvisited_page_fallback": "passed",
+        "watchlist_unchanged": true,
+        "js_errors": []
+      },
+      {
+        "name": "landscape",
+        "width": 844,
+        "height": 390,
+        "themes": [
+          {
+            "theme": "dark",
+            "readability": {
+              "text": [
+                {
+                  "selector": "body",
+                  "size": 18,
+                  "color": "rgb(237, 243, 245)",
+                  "background": [
+                    11,
+                    19,
+                    27,
+                    1
+                  ],
+                  "contrast": 16.684095713610425
+                },
+                {
+                  "selector": ".research-head p",
+                  "size": 18,
+                  "color": "rgb(145, 167, 181)",
+                  "background": [
+                    11,
+                    19,
+                    27,
+                    1
+                  ],
+                  "contrast": 7.477420243128933
+                },
+                {
+                  "selector": ".readiness-content p",
+                  "size": 18,
+                  "color": "rgb(237, 243, 245)",
+                  "background": [
+                    11,
+                    19,
+                    27,
+                    1
+                  ],
+                  "contrast": 16.684095713610425
+                },
+                {
+                  "selector": ".readiness-content p",
+                  "size": 18,
+                  "color": "rgb(237, 243, 245)",
+                  "background": [
+                    11,
+                    19,
+                    27,
+                    1
+                  ],
+                  "contrast": 16.684095713610425
+                },
+                {
+                  "selector": ".readiness-content p",
+                  "size": 18,
+                  "color": "rgb(237, 243, 245)",
+                  "background": [
+                    11,
+                    19,
+                    27,
+                    1
+                  ],
+                  "contrast": 16.684095713610425
+                },
+                {
+                  "selector": ".report-date-summary",
+                  "size": 16,
+                  "color": "rgb(145, 167, 181)",
+                  "background": [
+                    11,
+                    19,
+                    27,
+                    1
+                  ],
+                  "contrast": 7.477420243128933
+                },
+                {
+                  "selector": ".readiness-status",
+                  "size": 16,
+                  "color": "rgb(233, 198, 135)",
+                  "background": [
+                    43,
+                    41,
+                    31,
+                    1
+                  ],
+                  "contrast": 8.9549213226422
+                },
+                {
+                  "selector": ".ai-stock-meta",
+                  "size": 16,
+                  "color": "rgb(145, 167, 181)",
+                  "background": [
+                    18,
+                    30,
+                    40,
+                    1
+                  ],
+                  "contrast": 6.761840937258403
+                },
+                {
+                  "selector": ".ai-stock-meta",
+                  "size": 16,
+                  "color": "rgb(145, 167, 181)",
+                  "background": [
+                    18,
+                    30,
+                    40,
+                    1
+                  ],
+                  "contrast": 6.761840937258403
+                },
+                {
+                  "selector": ".ai-stock-meta",
+                  "size": 16,
+                  "color": "rgb(145, 167, 181)",
+                  "background": [
+                    18,
+                    30,
+                    40,
+                    1
+                  ],
+                  "contrast": 6.761840937258403
+                },
+                {
+                  "selector": ".ai-stock-state",
+                  "size": 18,
+                  "color": "rgb(233, 198, 135)",
+                  "background": [
+                    18,
+                    30,
+                    40,
+                    1
+                  ],
+                  "contrast": 10.379627088039427
+                },
+                {
+                  "selector": ".ai-stock-state",
+                  "size": 18,
+                  "color": "rgb(233, 198, 135)",
+                  "background": [
+                    18,
+                    30,
+                    40,
+                    1
+                  ],
+                  "contrast": 10.379627088039427
+                },
+                {
+                  "selector": ".ai-stock-state",
+                  "size": 18,
+                  "color": "rgb(233, 198, 135)",
+                  "background": [
+                    18,
+                    30,
+                    40,
+                    1
+                  ],
+                  "contrast": 10.379627088039427
+                },
+                {
+                  "selector": ".method-note",
+                  "size": 16,
+                  "color": "rgb(145, 167, 181)",
+                  "background": [
+                    11,
+                    19,
+                    27,
+                    1
+                  ],
+                  "contrast": 7.477420243128933
+                },
+                {
+                  "selector": ".method-note",
+                  "size": 16,
+                  "color": "rgb(145, 167, 181)",
+                  "background": [
+                    11,
+                    19,
+                    27,
+                    1
+                  ],
+                  "contrast": 7.477420243128933
+                },
+                {
+                  "selector": ".method-note",
+                  "size": 16,
+                  "color": "rgb(145, 167, 181)",
+                  "background": [
+                    11,
+                    19,
+                    27,
+                    1
+                  ],
+                  "contrast": 7.477420243128933
+                }
+              ],
+              "controls": [
+                {
+                  "selector": "#theme-select",
+                  "height": 48,
+                  "width": 135
+                },
+                {
+                  "selector": "#report-refresh",
+                  "height": 51.5,
+                  "width": 123.015625
+                },
+                {
+                  "selector": ".phase-nav a",
+                  "height": 48,
+                  "width": 66
+                },
+                {
+                  "selector": ".phase-nav a",
+                  "height": 48,
+                  "width": 66
+                },
+                {
+                  "selector": ".phase-nav a",
+                  "height": 48,
+                  "width": 66
+                },
+                {
+                  "selector": ".ai-category-button",
+                  "height": 58.5,
+                  "width": 110.3125
+                },
+                {
+                  "selector": ".ai-category-button",
+                  "height": 58.5,
+                  "width": 156
+                },
+                {
+                  "selector": ".ai-category-button",
+                  "height": 58.5,
+                  "width": 156
+                }
+              ],
+              "background": [
+                11,
+                19,
+                27,
+                1
+              ],
+              "overflow": false
+            },
+            "surface": {
+              "body_font": 18,
+              "date_font": 16,
+              "status_font": 16,
+              "name_font": 26,
+              "price_font": 36,
+              "meta_font": 16,
+              "first_card": {
+                "x": 200,
+                "y": 705.390625,
+                "width": 619,
+                "height": 219.984375,
+                "bottom": 925.375
+              },
+              "first_name": {
+                "x": 221,
+                "y": 726.390625,
+                "width": 78.90625,
+                "height": 36.390625,
+                "bottom": 762.78125
+              },
+              "first_price": {
+                "x": 708.0625,
+                "y": 726.390625,
+                "width": 89.9375,
+                "height": 48.59375,
+                "bottom": 774.984375
+              },
+              "viewport_width": 844,
+              "viewport_height": 390
+            },
+            "plotly": {
+              "palette": {
+                "surface": "#121e28",
+                "text": "#edf3f5",
+                "muted": "#91a7b5",
+                "line": "#283945",
+                "red": "#f48d8d",
+                "green": "#83cbb7"
+              },
+              "charts": [
+                {
+                  "id": "industry-chart",
+                  "paper": "#121e28",
+                  "plot": "#121e28",
+                  "font": "#edf3f5",
+                  "font_size": 16,
+                  "legend_visible": false,
+                  "legend": "#edf3f5",
+                  "x_tick": "#91a7b5",
+                  "y_tick": "#91a7b5",
+                  "x_grid_visible": true,
+                  "y_grid_visible": true,
+                  "x_grid": "#283945",
+                  "y_grid": "#283945",
+                  "traces": [
+                    {
+                      "x": [
+                        -11.484369733252683,
+                        -9.66384302136315,
+                        -22.5130890052356,
+                        -7.387862796833778,
+                        -5.966607247931882,
+                        -2.288984263233196,
+                        -0.8748671062036769,
+                        -0.08071407004263861,
+                        -0.7920792079207928
+                      ],
+                      "y": [
+                        "矽晶圓",
+                        "晶片與先進製程",
+                        "電源與備援",
+                        "高速傳輸與光通訊",
+                        "散熱",
+                        "先進封裝與測試",
+                        "記憶體與儲存",
+                        "AI 伺服器",
+                        "PCB 與材料"
+                      ],
+                      "colors": [
+                        "#83cbb7",
+                        "#83cbb7",
+                        "#83cbb7",
+                        "#83cbb7",
+                        "#83cbb7",
+                        "#83cbb7",
+                        "#83cbb7",
+                        "#83cbb7",
+                        "#83cbb7"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "theme": "light",
+            "readability": {
+              "text": [
+                {
+                  "selector": "body",
+                  "size": 18,
+                  "color": "rgb(23, 49, 59)",
+                  "background": [
+                    244,
+                    247,
+                    250,
+                    1
+                  ],
+                  "contrast": 12.691676986056372
+                },
+                {
+                  "selector": ".research-head p",
+                  "size": 18,
+                  "color": "rgb(82, 101, 115)",
+                  "background": [
+                    244,
+                    247,
+                    250,
+                    1
+                  ],
+                  "contrast": 5.632200892061513
+                },
+                {
+                  "selector": ".readiness-content p",
+                  "size": 18,
+                  "color": "rgb(23, 49, 59)",
+                  "background": [
+                    244,
+                    247,
+                    250,
+                    1
+                  ],
+                  "contrast": 12.691676986056372
+                },
+                {
+                  "selector": ".readiness-content p",
+                  "size": 18,
+                  "color": "rgb(23, 49, 59)",
+                  "background": [
+                    244,
+                    247,
+                    250,
+                    1
+                  ],
+                  "contrast": 12.691676986056372
+                },
+                {
+                  "selector": ".readiness-content p",
+                  "size": 18,
+                  "color": "rgb(23, 49, 59)",
+                  "background": [
+                    244,
+                    247,
+                    250,
+                    1
+                  ],
+                  "contrast": 12.691676986056372
+                },
+                {
+                  "selector": ".report-date-summary",
+                  "size": 16,
+                  "color": "rgb(82, 101, 115)",
+                  "background": [
+                    244,
+                    247,
+                    250,
+                    1
+                  ],
+                  "contrast": 5.632200892061513
+                },
+                {
+                  "selector": ".readiness-status",
+                  "size": 16,
+                  "color": "rgb(131, 86, 0)",
+                  "background": [
+                    255,
+                    246,
+                    230,
+                    1
+                  ],
+                  "contrast": 5.939291834661031
+                },
+                {
+                  "selector": ".ai-stock-meta",
+                  "size": 16,
+                  "color": "rgb(82, 101, 115)",
+                  "background": [
+                    255,
+                    255,
+                    255,
+                    1
+                  ],
+                  "contrast": 6.055711222194442
+                },
+                {
+                  "selector": ".ai-stock-meta",
+                  "size": 16,
+                  "color": "rgb(82, 101, 115)",
+                  "background": [
+                    255,
+                    255,
+                    255,
+                    1
+                  ],
+                  "contrast": 6.055711222194442
+                },
+                {
+                  "selector": ".ai-stock-meta",
+                  "size": 16,
+                  "color": "rgb(82, 101, 115)",
+                  "background": [
+                    255,
+                    255,
+                    255,
+                    1
+                  ],
+                  "contrast": 6.055711222194442
+                },
+                {
+                  "selector": ".ai-stock-state",
+                  "size": 18,
+                  "color": "rgb(121, 83, 21)",
+                  "background": [
+                    255,
+                    255,
+                    255,
+                    1
+                  ],
+                  "contrast": 6.86023244541609
+                },
+                {
+                  "selector": ".ai-stock-state",
+                  "size": 18,
+                  "color": "rgb(121, 83, 21)",
+                  "background": [
+                    255,
+                    255,
+                    255,
+                    1
+                  ],
+                  "contrast": 6.86023244541609
+                },
+                {
+                  "selector": ".ai-stock-state",
+                  "size": 18,
+                  "color": "rgb(121, 83, 21)",
+                  "background": [
+                    255,
+                    255,
+                    255,
+                    1
+                  ],
+                  "contrast": 6.86023244541609
+                },
+                {
+                  "selector": ".method-note",
+                  "size": 16,
+                  "color": "rgb(82, 101, 115)",
+                  "background": [
+                    244,
+                    247,
+                    250,
+                    1
+                  ],
+                  "contrast": 5.632200892061513
+                },
+                {
+                  "selector": ".method-note",
+                  "size": 16,
+                  "color": "rgb(82, 101, 115)",
+                  "background": [
+                    244,
+                    247,
+                    250,
+                    1
+                  ],
+                  "contrast": 5.632200892061513
+                },
+                {
+                  "selector": ".method-note",
+                  "size": 16,
+                  "color": "rgb(82, 101, 115)",
+                  "background": [
+                    244,
+                    247,
+                    250,
+                    1
+                  ],
+                  "contrast": 5.632200892061513
+                }
+              ],
+              "controls": [
+                {
+                  "selector": "#theme-select",
+                  "height": 48,
+                  "width": 135
+                },
+                {
+                  "selector": "#report-refresh",
+                  "height": 51.5,
+                  "width": 123.015625
+                },
+                {
+                  "selector": ".phase-nav a",
+                  "height": 48,
+                  "width": 66
+                },
+                {
+                  "selector": ".phase-nav a",
+                  "height": 48,
+                  "width": 66
+                },
+                {
+                  "selector": ".phase-nav a",
+                  "height": 48,
+                  "width": 66
+                },
+                {
+                  "selector": ".ai-category-button",
+                  "height": 58.5,
+                  "width": 110.3125
+                },
+                {
+                  "selector": ".ai-category-button",
+                  "height": 58.5,
+                  "width": 156
+                },
+                {
+                  "selector": ".ai-category-button",
+                  "height": 58.5,
+                  "width": 156
+                }
+              ],
+              "background": [
+                244,
+                247,
+                250,
+                1
+              ],
+              "overflow": false
+            },
+            "surface": {
+              "body_font": 18,
+              "date_font": 16,
+              "status_font": 16,
+              "name_font": 26,
+              "price_font": 36,
+              "meta_font": 16,
+              "first_card": {
+                "x": 200,
+                "y": 705.390625,
+                "width": 619,
+                "height": 219.984375,
+                "bottom": 925.375
+              },
+              "first_name": {
+                "x": 221,
+                "y": 726.390625,
+                "width": 78.90625,
+                "height": 36.390625,
+                "bottom": 762.78125
+              },
+              "first_price": {
+                "x": 708.0625,
+                "y": 726.390625,
+                "width": 89.9375,
+                "height": 48.59375,
+                "bottom": 774.984375
+              },
+              "viewport_width": 844,
+              "viewport_height": 390
+            },
+            "plotly": {
+              "palette": {
+                "surface": "#ffffff",
+                "text": "#17313b",
+                "muted": "#526573",
+                "line": "#c6d2da",
+                "red": "#b22d3b",
+                "green": "#16734f"
+              },
+              "charts": [
+                {
+                  "id": "industry-chart",
+                  "paper": "#ffffff",
+                  "plot": "#ffffff",
+                  "font": "#17313b",
+                  "font_size": 16,
+                  "legend_visible": false,
+                  "legend": "#17313b",
+                  "x_tick": "#526573",
+                  "y_tick": "#526573",
+                  "x_grid_visible": true,
+                  "y_grid_visible": true,
+                  "x_grid": "#c6d2da",
+                  "y_grid": "#c6d2da",
+                  "traces": [
+                    {
+                      "x": [
+                        -11.484369733252683,
+                        -9.66384302136315,
+                        -22.5130890052356,
+                        -7.387862796833778,
+                        -5.966607247931882,
+                        -2.288984263233196,
+                        -0.8748671062036769,
+                        -0.08071407004263861,
+                        -0.7920792079207928
+                      ],
+                      "y": [
+                        "矽晶圓",
+                        "晶片與先進製程",
+                        "電源與備援",
+                        "高速傳輸與光通訊",
+                        "散熱",
+                        "先進封裝與測試",
+                        "記憶體與儲存",
+                        "AI 伺服器",
+                        "PCB 與材料"
+                      ],
+                      "colors": [
+                        "#16734f",
+                        "#16734f",
+                        "#16734f",
+                        "#16734f",
+                        "#16734f",
+                        "#16734f",
+                        "#16734f",
+                        "#16734f",
+                        "#16734f"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "theme": "sepia",
+            "readability": {
+              "text": [
+                {
+                  "selector": "body",
+                  "size": 18,
+                  "color": "rgb(60, 51, 40)",
+                  "background": [
+                    244,
+                    237,
+                    223,
+                    1
+                  ],
+                  "contrast": 10.626545601926708
+                },
+                {
+                  "selector": ".research-head p",
+                  "size": 18,
+                  "color": "rgb(108, 91, 71)",
+                  "background": [
+                    244,
+                    237,
+                    223,
+                    1
+                  ],
+                  "contrast": 5.589320610450253
+                },
+                {
+                  "selector": ".readiness-content p",
+                  "size": 18,
+                  "color": "rgb(60, 51, 40)",
+                  "background": [
+                    244,
+                    237,
+                    223,
+                    1
+                  ],
+                  "contrast": 10.626545601926708
+                },
+                {
+                  "selector": ".readiness-content p",
+                  "size": 18,
+                  "color": "rgb(60, 51, 40)",
+                  "background": [
+                    244,
+                    237,
+                    223,
+                    1
+                  ],
+                  "contrast": 10.626545601926708
+                },
+                {
+                  "selector": ".readiness-content p",
+                  "size": 18,
+                  "color": "rgb(60, 51, 40)",
+                  "background": [
+                    244,
+                    237,
+                    223,
+                    1
+                  ],
+                  "contrast": 10.626545601926708
+                },
+                {
+                  "selector": ".report-date-summary",
+                  "size": 16,
+                  "color": "rgb(108, 91, 71)",
+                  "background": [
+                    244,
+                    237,
+                    223,
+                    1
+                  ],
+                  "contrast": 5.589320610450253
+                },
+                {
+                  "selector": ".readiness-status",
+                  "size": 16,
+                  "color": "rgb(128, 85, 18)",
+                  "background": [
+                    246,
+                    233,
+                    204,
+                    1
+                  ],
+                  "contrast": 5.407998463612043
+                },
+                {
+                  "selector": ".ai-stock-meta",
+                  "size": 16,
+                  "color": "rgb(108, 91, 71)",
+                  "background": [
+                    255,
+                    250,
+                    240,
+                    1
+                  ],
+                  "contrast": 6.258662335929536
+                },
+                {
+                  "selector": ".ai-stock-meta",
+                  "size": 16,
+                  "color": "rgb(108, 91, 71)",
+                  "background": [
+                    255,
+                    250,
+                    240,
+                    1
+                  ],
+                  "contrast": 6.258662335929536
+                },
+                {
+                  "selector": ".ai-stock-meta",
+                  "size": 16,
+                  "color": "rgb(108, 91, 71)",
+                  "background": [
+                    255,
+                    250,
+                    240,
+                    1
+                  ],
+                  "contrast": 6.258662335929536
+                },
+                {
+                  "selector": ".ai-stock-state",
+                  "size": 18,
+                  "color": "rgb(112, 80, 24)",
+                  "background": [
+                    255,
+                    250,
+                    240,
+                    1
+                  ],
+                  "contrast": 7.083266831090331
+                },
+                {
+                  "selector": ".ai-stock-state",
+                  "size": 18,
+                  "color": "rgb(112, 80, 24)",
+                  "background": [
+                    255,
+                    250,
+                    240,
+                    1
+                  ],
+                  "contrast": 7.083266831090331
+                },
+                {
+                  "selector": ".ai-stock-state",
+                  "size": 18,
+                  "color": "rgb(112, 80, 24)",
+                  "background": [
+                    255,
+                    250,
+                    240,
+                    1
+                  ],
+                  "contrast": 7.083266831090331
+                },
+                {
+                  "selector": ".method-note",
+                  "size": 16,
+                  "color": "rgb(108, 91, 71)",
+                  "background": [
+                    244,
+                    237,
+                    223,
+                    1
+                  ],
+                  "contrast": 5.589320610450253
+                },
+                {
+                  "selector": ".method-note",
+                  "size": 16,
+                  "color": "rgb(108, 91, 71)",
+                  "background": [
+                    244,
+                    237,
+                    223,
+                    1
+                  ],
+                  "contrast": 5.589320610450253
+                },
+                {
+                  "selector": ".method-note",
+                  "size": 16,
+                  "color": "rgb(108, 91, 71)",
+                  "background": [
+                    244,
+                    237,
+                    223,
+                    1
+                  ],
+                  "contrast": 5.589320610450253
+                }
+              ],
+              "controls": [
+                {
+                  "selector": "#theme-select",
+                  "height": 48,
+                  "width": 135
+                },
+                {
+                  "selector": "#report-refresh",
+                  "height": 51.5,
+                  "width": 123.015625
+                },
+                {
+                  "selector": ".phase-nav a",
+                  "height": 48,
+                  "width": 66
+                },
+                {
+                  "selector": ".phase-nav a",
+                  "height": 48,
+                  "width": 66
+                },
+                {
+                  "selector": ".phase-nav a",
+                  "height": 48,
+                  "width": 66
+                },
+                {
+                  "selector": ".ai-category-button",
+                  "height": 58.5,
+                  "width": 110.3125
+                },
+                {
+                  "selector": ".ai-category-button",
+                  "height": 58.5,
+                  "width": 156
+                },
+                {
+                  "selector": ".ai-category-button",
+                  "height": 58.5,
+                  "width": 156
+                }
+              ],
+              "background": [
+                244,
+                237,
+                223,
+                1
+              ],
+              "overflow": false
+            },
+            "surface": {
+              "body_font": 18,
+              "date_font": 16,
+              "status_font": 16,
+              "name_font": 26,
+              "price_font": 36,
+              "meta_font": 16,
+              "first_card": {
+                "x": 200,
+                "y": 705.390625,
+                "width": 619,
+                "height": 219.984375,
+                "bottom": 925.375
+              },
+              "first_name": {
+                "x": 221,
+                "y": 726.390625,
+                "width": 78.90625,
+                "height": 36.390625,
+                "bottom": 762.78125
+              },
+              "first_price": {
+                "x": 708.0625,
+                "y": 726.390625,
+                "width": 89.9375,
+                "height": 48.59375,
+                "bottom": 774.984375
+              },
+              "viewport_width": 844,
+              "viewport_height": 390
+            },
+            "plotly": {
+              "palette": {
+                "surface": "#fffaf0",
+                "text": "#3c3328",
+                "muted": "#6c5b47",
+                "line": "#c9baa1",
+                "red": "#a52e32",
+                "green": "#296743"
+              },
+              "charts": [
+                {
+                  "id": "industry-chart",
+                  "paper": "#fffaf0",
+                  "plot": "#fffaf0",
+                  "font": "#3c3328",
+                  "font_size": 16,
+                  "legend_visible": false,
+                  "legend": "#3c3328",
+                  "x_tick": "#6c5b47",
+                  "y_tick": "#6c5b47",
+                  "x_grid_visible": true,
+                  "y_grid_visible": true,
+                  "x_grid": "#c9baa1",
+                  "y_grid": "#c9baa1",
+                  "traces": [
+                    {
+                      "x": [
+                        -11.484369733252683,
+                        -9.66384302136315,
+                        -22.5130890052356,
+                        -7.387862796833778,
+                        -5.966607247931882,
+                        -2.288984263233196,
+                        -0.8748671062036769,
+                        -0.08071407004263861,
+                        -0.7920792079207928
+                      ],
+                      "y": [
+                        "矽晶圓",
+                        "晶片與先進製程",
+                        "電源與備援",
+                        "高速傳輸與光通訊",
+                        "散熱",
+                        "先進封裝與測試",
+                        "記憶體與儲存",
+                        "AI 伺服器",
+                        "PCB 與材料"
+                      ],
+                      "colors": [
+                        "#296743",
+                        "#296743",
+                        "#296743",
+                        "#296743",
+                        "#296743",
+                        "#296743",
+                        "#296743",
+                        "#296743",
+                        "#296743"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ],
+        "persisted_phase_pages": [
+          "preopen",
+          "postclose",
+          "final"
+        ],
+        "offline_preference": "passed",
+        "unvisited_page_fallback": "passed",
+        "watchlist_unchanged": true,
+        "js_errors": []
+      },
+      {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000,
+        "themes": [
+          {
+            "theme": "dark",
+            "readability": {
+              "text": [
+                {
+                  "selector": "body",
+                  "size": 18,
+                  "color": "rgb(237, 243, 245)",
+                  "background": [
+                    11,
+                    19,
+                    27,
+                    1
+                  ],
+                  "contrast": 16.684095713610425
+                },
+                {
+                  "selector": ".research-head p",
+                  "size": 18,
+                  "color": "rgb(145, 167, 181)",
+                  "background": [
+                    11,
+                    19,
+                    27,
+                    1
+                  ],
+                  "contrast": 7.477420243128933
+                },
+                {
+                  "selector": ".readiness-content p",
+                  "size": 18,
+                  "color": "rgb(237, 243, 245)",
+                  "background": [
+                    11,
+                    19,
+                    27,
+                    1
+                  ],
+                  "contrast": 16.684095713610425
+                },
+                {
+                  "selector": ".readiness-content p",
+                  "size": 18,
+                  "color": "rgb(237, 243, 245)",
+                  "background": [
+                    11,
+                    19,
+                    27,
+                    1
+                  ],
+                  "contrast": 16.684095713610425
+                },
+                {
+                  "selector": ".readiness-content p",
+                  "size": 18,
+                  "color": "rgb(237, 243, 245)",
+                  "background": [
+                    11,
+                    19,
+                    27,
+                    1
+                  ],
+                  "contrast": 16.684095713610425
+                },
+                {
+                  "selector": ".report-date-summary",
+                  "size": 16,
+                  "color": "rgb(145, 167, 181)",
+                  "background": [
+                    11,
+                    19,
+                    27,
+                    1
+                  ],
+                  "contrast": 7.477420243128933
+                },
+                {
+                  "selector": ".readiness-status",
+                  "size": 16,
+                  "color": "rgb(233, 198, 135)",
+                  "background": [
+                    43,
+                    41,
+                    31,
+                    1
+                  ],
+                  "contrast": 8.9549213226422
+                },
+                {
+                  "selector": ".ai-stock-meta",
+                  "size": 16,
+                  "color": "rgb(145, 167, 181)",
+                  "background": [
+                    18,
+                    30,
+                    40,
+                    1
+                  ],
+                  "contrast": 6.761840937258403
+                },
+                {
+                  "selector": ".ai-stock-meta",
+                  "size": 16,
+                  "color": "rgb(145, 167, 181)",
+                  "background": [
+                    18,
+                    30,
+                    40,
+                    1
+                  ],
+                  "contrast": 6.761840937258403
+                },
+                {
+                  "selector": ".ai-stock-meta",
+                  "size": 16,
+                  "color": "rgb(145, 167, 181)",
+                  "background": [
+                    18,
+                    30,
+                    40,
+                    1
+                  ],
+                  "contrast": 6.761840937258403
+                },
+                {
+                  "selector": ".ai-stock-state",
+                  "size": 18,
+                  "color": "rgb(233, 198, 135)",
+                  "background": [
+                    18,
+                    30,
+                    40,
+                    1
+                  ],
+                  "contrast": 10.379627088039427
+                },
+                {
+                  "selector": ".ai-stock-state",
+                  "size": 18,
+                  "color": "rgb(233, 198, 135)",
+                  "background": [
+                    18,
+                    30,
+                    40,
+                    1
+                  ],
+                  "contrast": 10.379627088039427
+                },
+                {
+                  "selector": ".ai-stock-state",
+                  "size": 18,
+                  "color": "rgb(233, 198, 135)",
+                  "background": [
+                    18,
+                    30,
+                    40,
+                    1
+                  ],
+                  "contrast": 10.379627088039427
+                },
+                {
+                  "selector": ".method-note",
+                  "size": 16,
+                  "color": "rgb(145, 167, 181)",
+                  "background": [
+                    11,
+                    19,
+                    27,
+                    1
+                  ],
+                  "contrast": 7.477420243128933
+                },
+                {
+                  "selector": ".method-note",
+                  "size": 16,
+                  "color": "rgb(145, 167, 181)",
+                  "background": [
+                    11,
+                    19,
+                    27,
+                    1
+                  ],
+                  "contrast": 7.477420243128933
+                },
+                {
+                  "selector": ".method-note",
+                  "size": 16,
+                  "color": "rgb(145, 167, 181)",
+                  "background": [
+                    11,
+                    19,
+                    27,
+                    1
+                  ],
+                  "contrast": 7.477420243128933
+                }
+              ],
+              "controls": [
+                {
+                  "selector": "#theme-select",
+                  "height": 48,
+                  "width": 135
+                },
+                {
+                  "selector": "#report-refresh",
+                  "height": 51.5,
+                  "width": 123.015625
+                },
+                {
+                  "selector": ".phase-nav a",
+                  "height": 48,
+                  "width": 136.015625
+                },
+                {
+                  "selector": ".phase-nav a",
+                  "height": 48,
+                  "width": 111.96875
+                },
+                {
+                  "selector": ".phase-nav a",
+                  "height": 48,
+                  "width": 111.96875
+                },
+                {
+                  "selector": ".ai-category-button",
+                  "height": 58.5,
+                  "width": 110.3125
+                },
+                {
+                  "selector": ".ai-category-button",
+                  "height": 58.5,
+                  "width": 156
+                },
+                {
+                  "selector": ".ai-category-button",
+                  "height": 58.5,
+                  "width": 156
+                }
+              ],
+              "background": [
+                11,
+                19,
+                27,
+                1
+              ],
+              "overflow": false
+            },
+            "surface": {
+              "body_font": 18,
+              "date_font": 16,
+              "status_font": 16,
+              "name_font": 26,
+              "price_font": 36,
+              "meta_font": 16,
+              "first_card": {
+                "x": 244,
+                "y": 677.390625,
+                "width": 575,
+                "height": 219.984375,
+                "bottom": 897.375
+              },
+              "first_name": {
+                "x": 265,
+                "y": 698.390625,
+                "width": 78.90625,
+                "height": 36.390625,
+                "bottom": 734.78125
+              },
+              "first_price": {
+                "x": 708.0625,
+                "y": 698.390625,
+                "width": 89.9375,
+                "height": 48.59375,
+                "bottom": 746.984375
+              },
+              "viewport_width": 1440,
+              "viewport_height": 1000
+            },
+            "plotly": {
+              "palette": {
+                "surface": "#121e28",
+                "text": "#edf3f5",
+                "muted": "#91a7b5",
+                "line": "#283945",
+                "red": "#f48d8d",
+                "green": "#83cbb7"
+              },
+              "charts": [
+                {
+                  "id": "industry-chart",
+                  "paper": "#121e28",
+                  "plot": "#121e28",
+                  "font": "#edf3f5",
+                  "font_size": 16,
+                  "legend_visible": false,
+                  "legend": "#edf3f5",
+                  "x_tick": "#91a7b5",
+                  "y_tick": "#91a7b5",
+                  "x_grid_visible": true,
+                  "y_grid_visible": true,
+                  "x_grid": "#283945",
+                  "y_grid": "#283945",
+                  "traces": [
+                    {
+                      "x": [
+                        -11.484369733252683,
+                        -9.66384302136315,
+                        -22.5130890052356,
+                        -7.387862796833778,
+                        -5.966607247931882,
+                        -2.288984263233196,
+                        -0.8748671062036769,
+                        -0.08071407004263861,
+                        -0.7920792079207928
+                      ],
+                      "y": [
+                        "矽晶圓",
+                        "晶片與先進製程",
+                        "電源與備援",
+                        "高速傳輸與光通訊",
+                        "散熱",
+                        "先進封裝與測試",
+                        "記憶體與儲存",
+                        "AI 伺服器",
+                        "PCB 與材料"
+                      ],
+                      "colors": [
+                        "#83cbb7",
+                        "#83cbb7",
+                        "#83cbb7",
+                        "#83cbb7",
+                        "#83cbb7",
+                        "#83cbb7",
+                        "#83cbb7",
+                        "#83cbb7",
+                        "#83cbb7"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "theme": "light",
+            "readability": {
+              "text": [
+                {
+                  "selector": "body",
+                  "size": 18,
+                  "color": "rgb(23, 49, 59)",
+                  "background": [
+                    244,
+                    247,
+                    250,
+                    1
+                  ],
+                  "contrast": 12.691676986056372
+                },
+                {
+                  "selector": ".research-head p",
+                  "size": 18,
+                  "color": "rgb(82, 101, 115)",
+                  "background": [
+                    244,
+                    247,
+                    250,
+                    1
+                  ],
+                  "contrast": 5.632200892061513
+                },
+                {
+                  "selector": ".readiness-content p",
+                  "size": 18,
+                  "color": "rgb(23, 49, 59)",
+                  "background": [
+                    244,
+                    247,
+                    250,
+                    1
+                  ],
+                  "contrast": 12.691676986056372
+                },
+                {
+                  "selector": ".readiness-content p",
+                  "size": 18,
+                  "color": "rgb(23, 49, 59)",
+                  "background": [
+                    244,
+                    247,
+                    250,
+                    1
+                  ],
+                  "contrast": 12.691676986056372
+                },
+                {
+                  "selector": ".readiness-content p",
+                  "size": 18,
+                  "color": "rgb(23, 49, 59)",
+                  "background": [
+                    244,
+                    247,
+                    250,
+                    1
+                  ],
+                  "contrast": 12.691676986056372
+                },
+                {
+                  "selector": ".report-date-summary",
+                  "size": 16,
+                  "color": "rgb(82, 101, 115)",
+                  "background": [
+                    244,
+                    247,
+                    250,
+                    1
+                  ],
+                  "contrast": 5.632200892061513
+                },
+                {
+                  "selector": ".readiness-status",
+                  "size": 16,
+                  "color": "rgb(131, 86, 0)",
+                  "background": [
+                    255,
+                    246,
+                    230,
+                    1
+                  ],
+                  "contrast": 5.939291834661031
+                },
+                {
+                  "selector": ".ai-stock-meta",
+                  "size": 16,
+                  "color": "rgb(82, 101, 115)",
+                  "background": [
+                    255,
+                    255,
+                    255,
+                    1
+                  ],
+                  "contrast": 6.055711222194442
+                },
+                {
+                  "selector": ".ai-stock-meta",
+                  "size": 16,
+                  "color": "rgb(82, 101, 115)",
+                  "background": [
+                    255,
+                    255,
+                    255,
+                    1
+                  ],
+                  "contrast": 6.055711222194442
+                },
+                {
+                  "selector": ".ai-stock-meta",
+                  "size": 16,
+                  "color": "rgb(82, 101, 115)",
+                  "background": [
+                    255,
+                    255,
+                    255,
+                    1
+                  ],
+                  "contrast": 6.055711222194442
+                },
+                {
+                  "selector": ".ai-stock-state",
+                  "size": 18,
+                  "color": "rgb(121, 83, 21)",
+                  "background": [
+                    255,
+                    255,
+                    255,
+                    1
+                  ],
+                  "contrast": 6.86023244541609
+                },
+                {
+                  "selector": ".ai-stock-state",
+                  "size": 18,
+                  "color": "rgb(121, 83, 21)",
+                  "background": [
+                    255,
+                    255,
+                    255,
+                    1
+                  ],
+                  "contrast": 6.86023244541609
+                },
+                {
+                  "selector": ".ai-stock-state",
+                  "size": 18,
+                  "color": "rgb(121, 83, 21)",
+                  "background": [
+                    255,
+                    255,
+                    255,
+                    1
+                  ],
+                  "contrast": 6.86023244541609
+                },
+                {
+                  "selector": ".method-note",
+                  "size": 16,
+                  "color": "rgb(82, 101, 115)",
+                  "background": [
+                    244,
+                    247,
+                    250,
+                    1
+                  ],
+                  "contrast": 5.632200892061513
+                },
+                {
+                  "selector": ".method-note",
+                  "size": 16,
+                  "color": "rgb(82, 101, 115)",
+                  "background": [
+                    244,
+                    247,
+                    250,
+                    1
+                  ],
+                  "contrast": 5.632200892061513
+                },
+                {
+                  "selector": ".method-note",
+                  "size": 16,
+                  "color": "rgb(82, 101, 115)",
+                  "background": [
+                    244,
+                    247,
+                    250,
+                    1
+                  ],
+                  "contrast": 5.632200892061513
+                }
+              ],
+              "controls": [
+                {
+                  "selector": "#theme-select",
+                  "height": 48,
+                  "width": 135
+                },
+                {
+                  "selector": "#report-refresh",
+                  "height": 51.5,
+                  "width": 123.015625
+                },
+                {
+                  "selector": ".phase-nav a",
+                  "height": 48,
+                  "width": 136.015625
+                },
+                {
+                  "selector": ".phase-nav a",
+                  "height": 48,
+                  "width": 111.96875
+                },
+                {
+                  "selector": ".phase-nav a",
+                  "height": 48,
+                  "width": 111.96875
+                },
+                {
+                  "selector": ".ai-category-button",
+                  "height": 58.5,
+                  "width": 110.3125
+                },
+                {
+                  "selector": ".ai-category-button",
+                  "height": 58.5,
+                  "width": 156
+                },
+                {
+                  "selector": ".ai-category-button",
+                  "height": 58.5,
+                  "width": 156
+                }
+              ],
+              "background": [
+                244,
+                247,
+                250,
+                1
+              ],
+              "overflow": false
+            },
+            "surface": {
+              "body_font": 18,
+              "date_font": 16,
+              "status_font": 16,
+              "name_font": 26,
+              "price_font": 36,
+              "meta_font": 16,
+              "first_card": {
+                "x": 244,
+                "y": 677.390625,
+                "width": 575,
+                "height": 219.984375,
+                "bottom": 897.375
+              },
+              "first_name": {
+                "x": 265,
+                "y": 698.390625,
+                "width": 78.90625,
+                "height": 36.390625,
+                "bottom": 734.78125
+              },
+              "first_price": {
+                "x": 708.0625,
+                "y": 698.390625,
+                "width": 89.9375,
+                "height": 48.59375,
+                "bottom": 746.984375
+              },
+              "viewport_width": 1440,
+              "viewport_height": 1000
+            },
+            "plotly": {
+              "palette": {
+                "surface": "#ffffff",
+                "text": "#17313b",
+                "muted": "#526573",
+                "line": "#c6d2da",
+                "red": "#b22d3b",
+                "green": "#16734f"
+              },
+              "charts": [
+                {
+                  "id": "industry-chart",
+                  "paper": "#ffffff",
+                  "plot": "#ffffff",
+                  "font": "#17313b",
+                  "font_size": 16,
+                  "legend_visible": false,
+                  "legend": "#17313b",
+                  "x_tick": "#526573",
+                  "y_tick": "#526573",
+                  "x_grid_visible": true,
+                  "y_grid_visible": true,
+                  "x_grid": "#c6d2da",
+                  "y_grid": "#c6d2da",
+                  "traces": [
+                    {
+                      "x": [
+                        -11.484369733252683,
+                        -9.66384302136315,
+                        -22.5130890052356,
+                        -7.387862796833778,
+                        -5.966607247931882,
+                        -2.288984263233196,
+                        -0.8748671062036769,
+                        -0.08071407004263861,
+                        -0.7920792079207928
+                      ],
+                      "y": [
+                        "矽晶圓",
+                        "晶片與先進製程",
+                        "電源與備援",
+                        "高速傳輸與光通訊",
+                        "散熱",
+                        "先進封裝與測試",
+                        "記憶體與儲存",
+                        "AI 伺服器",
+                        "PCB 與材料"
+                      ],
+                      "colors": [
+                        "#16734f",
+                        "#16734f",
+                        "#16734f",
+                        "#16734f",
+                        "#16734f",
+                        "#16734f",
+                        "#16734f",
+                        "#16734f",
+                        "#16734f"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "theme": "sepia",
+            "readability": {
+              "text": [
+                {
+                  "selector": "body",
+                  "size": 18,
+                  "color": "rgb(60, 51, 40)",
+                  "background": [
+                    244,
+                    237,
+                    223,
+                    1
+                  ],
+                  "contrast": 10.626545601926708
+                },
+                {
+                  "selector": ".research-head p",
+                  "size": 18,
+                  "color": "rgb(108, 91, 71)",
+                  "background": [
+                    244,
+                    237,
+                    223,
+                    1
+                  ],
+                  "contrast": 5.589320610450253
+                },
+                {
+                  "selector": ".readiness-content p",
+                  "size": 18,
+                  "color": "rgb(60, 51, 40)",
+                  "background": [
+                    244,
+                    237,
+                    223,
+                    1
+                  ],
+                  "contrast": 10.626545601926708
+                },
+                {
+                  "selector": ".readiness-content p",
+                  "size": 18,
+                  "color": "rgb(60, 51, 40)",
+                  "background": [
+                    244,
+                    237,
+                    223,
+                    1
+                  ],
+                  "contrast": 10.626545601926708
+                },
+                {
+                  "selector": ".readiness-content p",
+                  "size": 18,
+                  "color": "rgb(60, 51, 40)",
+                  "background": [
+                    244,
+                    237,
+                    223,
+                    1
+                  ],
+                  "contrast": 10.626545601926708
+                },
+                {
+                  "selector": ".report-date-summary",
+                  "size": 16,
+                  "color": "rgb(108, 91, 71)",
+                  "background": [
+                    244,
+                    237,
+                    223,
+                    1
+                  ],
+                  "contrast": 5.589320610450253
+                },
+                {
+                  "selector": ".readiness-status",
+                  "size": 16,
+                  "color": "rgb(128, 85, 18)",
+                  "background": [
+                    246,
+                    233,
+                    204,
+                    1
+                  ],
+                  "contrast": 5.407998463612043
+                },
+                {
+                  "selector": ".ai-stock-meta",
+                  "size": 16,
+                  "color": "rgb(108, 91, 71)",
+                  "background": [
+                    255,
+                    250,
+                    240,
+                    1
+                  ],
+                  "contrast": 6.258662335929536
+                },
+                {
+                  "selector": ".ai-stock-meta",
+                  "size": 16,
+                  "color": "rgb(108, 91, 71)",
+                  "background": [
+                    255,
+                    250,
+                    240,
+                    1
+                  ],
+                  "contrast": 6.258662335929536
+                },
+                {
+                  "selector": ".ai-stock-meta",
+                  "size": 16,
+                  "color": "rgb(108, 91, 71)",
+                  "background": [
+                    255,
+                    250,
+                    240,
+                    1
+                  ],
+                  "contrast": 6.258662335929536
+                },
+                {
+                  "selector": ".ai-stock-state",
+                  "size": 18,
+                  "color": "rgb(112, 80, 24)",
+                  "background": [
+                    255,
+                    250,
+                    240,
+                    1
+                  ],
+                  "contrast": 7.083266831090331
+                },
+                {
+                  "selector": ".ai-stock-state",
+                  "size": 18,
+                  "color": "rgb(112, 80, 24)",
+                  "background": [
+                    255,
+                    250,
+                    240,
+                    1
+                  ],
+                  "contrast": 7.083266831090331
+                },
+                {
+                  "selector": ".ai-stock-state",
+                  "size": 18,
+                  "color": "rgb(112, 80, 24)",
+                  "background": [
+                    255,
+                    250,
+                    240,
+                    1
+                  ],
+                  "contrast": 7.083266831090331
+                },
+                {
+                  "selector": ".method-note",
+                  "size": 16,
+                  "color": "rgb(108, 91, 71)",
+                  "background": [
+                    244,
+                    237,
+                    223,
+                    1
+                  ],
+                  "contrast": 5.589320610450253
+                },
+                {
+                  "selector": ".method-note",
+                  "size": 16,
+                  "color": "rgb(108, 91, 71)",
+                  "background": [
+                    244,
+                    237,
+                    223,
+                    1
+                  ],
+                  "contrast": 5.589320610450253
+                },
+                {
+                  "selector": ".method-note",
+                  "size": 16,
+                  "color": "rgb(108, 91, 71)",
+                  "background": [
+                    244,
+                    237,
+                    223,
+                    1
+                  ],
+                  "contrast": 5.589320610450253
+                }
+              ],
+              "controls": [
+                {
+                  "selector": "#theme-select",
+                  "height": 48,
+                  "width": 135
+                },
+                {
+                  "selector": "#report-refresh",
+                  "height": 51.5,
+                  "width": 123.015625
+                },
+                {
+                  "selector": ".phase-nav a",
+                  "height": 48,
+                  "width": 136.015625
+                },
+                {
+                  "selector": ".phase-nav a",
+                  "height": 48,
+                  "width": 111.96875
+                },
+                {
+                  "selector": ".phase-nav a",
+                  "height": 48,
+                  "width": 111.96875
+                },
+                {
+                  "selector": ".ai-category-button",
+                  "height": 58.5,
+                  "width": 110.3125
+                },
+                {
+                  "selector": ".ai-category-button",
+                  "height": 58.5,
+                  "width": 156
+                },
+                {
+                  "selector": ".ai-category-button",
+                  "height": 58.5,
+                  "width": 156
+                }
+              ],
+              "background": [
+                244,
+                237,
+                223,
+                1
+              ],
+              "overflow": false
+            },
+            "surface": {
+              "body_font": 18,
+              "date_font": 16,
+              "status_font": 16,
+              "name_font": 26,
+              "price_font": 36,
+              "meta_font": 16,
+              "first_card": {
+                "x": 244,
+                "y": 677.390625,
+                "width": 575,
+                "height": 219.984375,
+                "bottom": 897.375
+              },
+              "first_name": {
+                "x": 265,
+                "y": 698.390625,
+                "width": 78.90625,
+                "height": 36.390625,
+                "bottom": 734.78125
+              },
+              "first_price": {
+                "x": 708.0625,
+                "y": 698.390625,
+                "width": 89.9375,
+                "height": 48.59375,
+                "bottom": 746.984375
+              },
+              "viewport_width": 1440,
+              "viewport_height": 1000
+            },
+            "plotly": {
+              "palette": {
+                "surface": "#fffaf0",
+                "text": "#3c3328",
+                "muted": "#6c5b47",
+                "line": "#c9baa1",
+                "red": "#a52e32",
+                "green": "#296743"
+              },
+              "charts": [
+                {
+                  "id": "industry-chart",
+                  "paper": "#fffaf0",
+                  "plot": "#fffaf0",
+                  "font": "#3c3328",
+                  "font_size": 16,
+                  "legend_visible": false,
+                  "legend": "#3c3328",
+                  "x_tick": "#6c5b47",
+                  "y_tick": "#6c5b47",
+                  "x_grid_visible": true,
+                  "y_grid_visible": true,
+                  "x_grid": "#c9baa1",
+                  "y_grid": "#c9baa1",
+                  "traces": [
+                    {
+                      "x": [
+                        -11.484369733252683,
+                        -9.66384302136315,
+                        -22.5130890052356,
+                        -7.387862796833778,
+                        -5.966607247931882,
+                        -2.288984263233196,
+                        -0.8748671062036769,
+                        -0.08071407004263861,
+                        -0.7920792079207928
+                      ],
+                      "y": [
+                        "矽晶圓",
+                        "晶片與先進製程",
+                        "電源與備援",
+                        "高速傳輸與光通訊",
+                        "散熱",
+                        "先進封裝與測試",
+                        "記憶體與儲存",
+                        "AI 伺服器",
+                        "PCB 與材料"
+                      ],
+                      "colors": [
+                        "#296743",
+                        "#296743",
+                        "#296743",
+                        "#296743",
+                        "#296743",
+                        "#296743",
+                        "#296743",
+                        "#296743",
+                        "#296743"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ],
+        "persisted_phase_pages": [
+          "preopen",
+          "postclose",
+          "final"
+        ],
+        "offline_preference": "passed",
+        "unvisited_page_fallback": "passed",
+        "watchlist_unchanged": true,
+        "js_errors": []
+      }
+    ],
+    "preference_storage_failure": "safe default and live switching still work; persistence unavailable",
+    "network": "GET only; no report dispatch, watchlist upload, or trading request",
+    "result": "passed"
+  },
+  "pwa": {
+    "checked_at": "2026-10-30T04:14:34.919748+00:00",
+    "base_url": "http://127.0.0.1:37455/taiwan-stock-ai/",
+    "browser": "Chromium desktop/mobile emulation; not physical Android",
+    "report_inputs": "existing rendered report files; no simulated market prices",
+    "checks": [
+      "manifest scope, standalone display and actual 192/512 PNG dimensions",
+      "No POST/dispatch or watchlist upload; public content GET requests only"
+    ],
+    "viewports": [
+      {
+        "viewport": "desktop",
+        "width": 1440,
+        "height": 1000,
+        "scope": "http://127.0.0.1:37455/taiwan-stock-ai/",
+        "pages": [
+          {
+            "page": "index",
+            "data_date": "2026-10-29",
+            "candidate_count": 1
+          },
+          {
+            "page": "preopen",
+            "data_date": "2026-10-29",
+            "candidate_count": 1
+          },
+          {
+            "page": "postclose",
+            "data_date": "2026-10-29",
+            "candidate_count": 1
+          },
+          {
+            "page": "final",
+            "data_date": "2026-10-29",
+            "candidate_count": 1
+          }
+        ],
+        "js_errors": [],
+        "chromium_installability": {
+          "installabilityErrors": [
+            {
+              "errorId": "in-incognito",
+              "errorArguments": []
+            }
+          ]
+        },
+        "checks": [
+          "same/new publication",
+          "HTTP/error/malformed/timeout feedback",
+          "duplicate tap suppression",
+          "real offline cached report",
+          "unvisited offline fallback",
+          "HTTP outage while browser online",
+          "install event handler simulation",
+          "real waiting-worker update",
+          "watchlist persistence",
+          "other-app cache isolation",
+          "layout"
+        ]
+      },
+      {
+        "viewport": "android",
+        "width": 390,
+        "height": 844,
+        "scope": "http://127.0.0.1:37455/taiwan-stock-ai/",
+        "pages": [
+          {
+            "page": "index",
+            "data_date": "2026-10-29",
+            "candidate_count": 1
+          },
+          {
+            "page": "preopen",
+            "data_date": "2026-10-29",
+            "candidate_count": 1
+          },
+          {
+            "page": "postclose",
+            "data_date": "2026-10-29",
+            "candidate_count": 1
+          },
+          {
+            "page": "final",
+            "data_date": "2026-10-29",
+            "candidate_count": 1
+          }
+        ],
+        "js_errors": [],
+        "chromium_installability": {
+          "installabilityErrors": [
+            {
+              "errorId": "in-incognito",
+              "errorArguments": []
+            }
+          ]
+        },
+        "checks": [
+          "same/new publication",
+          "HTTP/error/malformed/timeout feedback",
+          "duplicate tap suppression",
+          "real offline cached report",
+          "unvisited offline fallback",
+          "HTTP outage while browser online",
+          "install event handler simulation",
+          "real waiting-worker update",
+          "watchlist persistence",
+          "other-app cache isolation",
+          "layout"
+        ]
+      }
+    ],
+    "persistent_profile_installability": {
+      "installabilityErrors": []
+    }
+  },
+  "history": {
+    "checked_at_utc": "2026-10-30T04:22:49.881589+00:00",
+    "baseline_branch": "ba3c08bd81bf833d6092341844ed920ab25d05b3",
+    "current_branch": "c8bd80656eed3f9651237341067a91158176f235",
+    "baseline_report_count": 40,
+    "current_report_count": 40,
+    "original_reports_unchanged": true,
+    "original_report_blobs": {
+      "data/reports/2026-10-22-manual-1b09e60b1f1bb40f.json": "8578c3220c54e33df79f633531ee8d1372f29822",
+      "data/reports/2026-10-22-manual-ab61f20094cf50e4.json": "325c0febee807de6d3ce0f5787448499f111780c",
+      "data/reports/2026-10-23-final-e2b11871e51120fc.json": "35e5442392cb1b1e02833d61f6f6da4149c06331",
+      "data/reports/2026-10-23-manual-4d39c015949af352.json": "49ef9d4a5ef558b5bab4ca87114462197748580a",
+      "data/reports/2026-10-24-manual-5ddde5e05b679348.json": "58a54969d36f92f90ee9f65b0b50e3f0f61fa306",
+      "data/reports/2026-10-24-manual-d6ef473e0d0a5304.json": "21000ef68445bd890ec84eaa814998ae2991c729",
+      "data/reports/2026-10-25-manual-82270e78c05e9050.json": "3b73ce60a7e54db9bb279060369248e0ac6b11f1",
+      "data/reports/2026-10-25-manual-b5eba654bcb883f7.json": "b084cb9c8f6efe8611e9d2cd113b1e5b69c43df3",
+      "data/reports/2026-10-26-intraday-7d0d6606dda57ec2.json": "4b201746b56decf5747c81d68a352835d79bf370",
+      "data/reports/2026-10-26-preopen-75875450447a879b.json": "22f85917ee007aec2084aaf1125a39d2948a7fd8",
+      "data/reports/2026-10-27-final-896cab276ec02c8e.json": "d9c4c65b675fba4724035e3f85144dabebcac503",
+      "data/reports/2026-10-27-final-d458a34815fb2383.json": "a8feb4605f49c52032cb4c0ed04db0b419ad38dc",
+      "data/reports/2026-10-27-final-df84d3fbd457a2f4.json": "9aefed8ddd89f05c4f367e3d5353dceb4b2e848d",
+      "data/reports/2026-10-27-intraday-f922007447b4918d.json": "d99d69f31e7465be96ceb110864fd4b9de5844a7",
+      "data/reports/2026-10-27-postclose-780b356fc6037ad5.json": "81ede59d865bd271107b1093e7124602865b9acb",
+      "data/reports/2026-10-27-preopen-55b29840a6cef6c4.json": "14360ea58a13b5bda6184636a1ba1cf4d369f235",
+      "data/reports/2026-10-27-preopen-9075bf02477074ff.json": "81b11e16158a78ea8a9669a2045745ffcd59508c",
+      "data/reports/2026-10-28-final-224bcd20367dfff4.json": "ebf3b1cd51192724c04a768b236d309969b0761a",
+      "data/reports/2026-10-28-final-226c0f37ddf590ea.json": "c7c12eb8489a20bc8709936abdfd3982551f5b16",
+      "data/reports/2026-10-28-final-227ad6773f34aa19.json": "a0aae7dfc5cc14982fa6581b8bc22511fb59b391",
+      "data/reports/2026-10-28-intraday-4258cd93217a0cf5.json": "5a46b9eb86de7c987de46024ddd5468136acb1ef",
+      "data/reports/2026-10-28-manual-ab499e2f38dcdbec.json": "3a32fa59edb42658012124d2e1219074ccacb023",
+      "data/reports/2026-10-28-postclose-1ec420091d27463d.json": "36083d53b6c9806239ce1e28c171c415453227b4",
+      "data/reports/2026-10-28-postclose-6920e19366d7ca49.json": "ac39e85810d7a180b3aa5226e17d50980d4cc560",
+      "data/reports/2026-10-28-postclose-a19bed7ef36290a3.json": "ed1d574aef098d5022034fccf6f1f18cf85baef6",
+      "data/reports/2026-10-28-postclose-b1bc95c86eab099b.json": "e34ba9e1b0f1d1414670cafa0eb13d4a52c93cbb",
+      "data/reports/2026-10-28-postclose-b3a5887830ecd1b9.json": "524ef944b7763c5cb6e6bd51b9181c082b2d7b4f",
+      "data/reports/2026-10-28-preopen-2928117d8fb3372f.json": "df1a2ef04a30c40eca658e3cb45c38a8d4b3b3a6",
+      "data/reports/2026-10-28-preopen-9861b47794437738.json": "3ff516f37bb50693e90c8fe87903d6559a485456",
+      "data/reports/2026-10-28-preopen-a512f5ca24e90455.json": "998a1e05bdd0196a6b33d7276bd6465934f6bb59",
+      "data/reports/2026-10-28-preopen-ec31e726abb18d4f.json": "f8bf84740e10084c618c86e869cb5dd23aea77f2",
+      "data/reports/2026-10-29-final-f0e0c1899c5e31af.json": "f9facef89b41a752d2fdc43d79ed3dd576bd0747",
+      "data/reports/2026-10-29-intraday-513b7903018817c4.json": "212d64daa2b91dea584e9e0db5b9d1ecaf5d0ac7",
+      "data/reports/2026-10-29-postclose-2070c747537bd39c.json": "e62b742552a6a3f622b97f174f635a95ea06b585",
+      "data/reports/2026-10-29-postclose-dfc1f7abf6070821.json": "b79cffc8a0f0c4506c8cd7f96ce216e7fbce7730",
+      "data/reports/2026-10-29-postclose-f0c1e44be99b0435.json": "f1185c3dbbb13e73fee59ab014a60add07b8d917",
+      "data/reports/2026-10-29-preopen-01de2e5de9875194.json": "e2832a266c48b3b71f2e9d1ee67a3813171525ac",
+      "data/reports/2026-10-29-preopen-6ee1aa5889d4c225.json": "cb234074c692044758d7954e52294e92306a8803",
+      "data/reports/2026-10-29-preopen-fe02ecbff68968df.json": "8d931042411ce2a99d94263d7173f6e7709881de",
+      "data/reports/2026-10-30-preopen-503a5f4f7e4e062b.json": "e6d3dd3be8de77980cdc81722ce2b2f6f2604ef5"
+    },
+    "new_report_blobs": {}
+  }
+}

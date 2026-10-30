@@ -20,3 +20,21 @@
 ## 資料與驗證
 
 本次不更動研究引擎、價格、評分或選股規則。相同四份報告以新介面重建後，公開 JSON 檔案逐位元組相同；改變的是 HTML 與顯示方式。缺漏、過期行情、非即時標示及風險資訊仍可查閱。
+
+
+## 正式發布
+
+程式變更 [`45fa8fd`](https://github.com/shen19772002-sketch/taiwan-stock-ai/commit/45fa8fd0e4fa323c75687872debd12d9acfb804c) 與按鈕說明統一 [`eaa30e8`](https://github.com/shen19772002-sketch/taiwan-stock-ai/commit/eaa30e802fa72c9ea5f36e75102442759051325a) 已發布。
+
+[最新版 CI 41002246126](https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/41002246126) 成功：Python 3.11／3.12、262 項測試、AI 操作、三色與 PWA 瀏覽器驗證均通過。[正式工作 41002307203](https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/41002307203) 完成資料收集、資料庫驗證、歷史保存與 GitHub Pages 部署。
+
+公開網站 21 個檔案以預設 TLS 憑證驗證下載，皆回傳 HTTP 200；腳本、樣式、圖示、服務工作者與來源一致。四頁報告 JSON 與改版前逐位元組相同，行情日期與原報告產生時間保持原值。介面版本為 `5093ffc3e9307a955f34`。
+
+永久資料分支比對確認原有 40 份報告的路徑與 Git blob SHA 全部保持不變，這次相同資料沒有新增重複報告。
+
+
+最後使用正式網站下載檔執行 AI 操作與三種底色的四尺寸、四頁 Chromium 驗證，皆通過。覆蓋價格／日期逐股核對、6→24→6、末檔搜尋、次分類完整篩選、歷史筆數與風險詳情、自選股、離線與儲存例外處理；沒有 JavaScript 錯誤或寫入請求。
+
+機讀結果見 [完整驗證 JSON](evidence/simple-display-2026-10-30.json)。下圖為正式網站檔案的 390×844 Chromium 模擬，非實體手機截圖。
+
+![手機精簡閱讀版](evidence/simple-phone-2026-10-30.png)
