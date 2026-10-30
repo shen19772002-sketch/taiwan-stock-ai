@@ -1,0 +1,4444 @@
+{
+  "checked_at_utc": "2026-10-30T02:23:37.217480+00:00",
+  "implementation_commit": "549aab38e818cadfe777df8841a7bd323d4766bf",
+  "tests": {
+    "pytest_passed": 262,
+    "ruff": "passed",
+    "javascript_syntax": "passed"
+  },
+  "source_registry": {
+    "version": "2026.10.30.1",
+    "registry_hash": "054b368a319e2d4217e26b9e0b9607565e3812e53a2987adad3ed9c034666f38",
+    "active_members": 24,
+    "pending_members": 16,
+    "categories": 9,
+    "known_since": "2026-10-30",
+    "wafer_members": [
+      {
+        "market": "TPEX",
+        "symbol": "6488",
+        "name": "環球晶",
+        "primary_category": "wafer",
+        "category_ids": [
+          "wafer"
+        ],
+        "known_since": "2026-10-30",
+        "rationale": "公司一手簡介揭露半導體晶圓材料與拋光、磊晶等製程。以 AI 上游矽晶圓材料的間接題材觀察，不認定全部營收來自 AI。",
+        "company_directory_source": "https://www.tpex.org.tw/openapi/v1/mopsfin_t187ap03_O",
+        "issuer_homepage": "https://www.sas-globalwafers.com",
+        "theme_relationship": "indirect_upstream_material",
+        "evidence": [
+          {
+            "url": "https://www.sas-globalwafers.com/profile-tw/",
+            "title": "公司簡介｜環球晶圓股份有限公司",
+            "kind": "issuer",
+            "known_since": "2026-10-30",
+            "reviewed_at": "2026-10-30",
+            "verification_status": "verified",
+            "source_sha256": "5334291252f72a01796e0addd20e769d7fbfdfae4e1633f3c54acd3d6f214177",
+            "excerpt": "環球晶圓為國內半導體產業最大、全球第三大、非日商第一大的3吋至12吋專業晶圓材料供應商",
+            "retrieved_at": "2026-10-29T13:19:31.400860+00:00",
+            "http_status": 200,
+            "verification_run_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40880865033"
+          }
+        ],
+        "category": "矽晶圓",
+        "categories": [
+          "矽晶圓"
+        ]
+      },
+      {
+        "market": "TWSE",
+        "symbol": "3532",
+        "name": "台勝科",
+        "primary_category": "wafer",
+        "category_ids": [
+          "wafer"
+        ],
+        "known_since": "2026-10-30",
+        "rationale": "公司官方產品頁原文明示「半導體用矽晶圓製品」，官網並標示 SILICON WAFER。以 AI 上游材料的間接題材觀察，不宣稱已核實 AI 營收、訂單或產品規格。",
+        "company_directory_source": "https://openapi.twse.com.tw/v1/opendata/t187ap03_L",
+        "issuer_homepage": "https://www.fstech.com.tw",
+        "theme_relationship": "indirect_upstream_material",
+        "evidence": [
+          {
+            "url": "https://www.fstech.com.tw/FPC_Fstech_Web/fst_products.html?page=pills-products",
+            "title": "半導體用矽晶圓製品｜台塑勝高科技官方產品頁",
+            "kind": "issuer",
+            "known_since": "2026-10-30",
+            "reviewed_at": "2026-10-30",
+            "verification_status": "verified",
+            "source_sha256": "22db7694759b42d83b0b75922413a49f6541dc3988e166a9990b9bf082bc5d5b",
+            "excerpt": "半導體用矽晶圓製品",
+            "retrieved_at": "2026-10-29T21:07:52.840648+00:00",
+            "http_status": 200,
+            "verification_run_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40955097598",
+            "excerpt_context": "官方產品頁 HTML 原文的產品分頁註記；動態產品規格及 AI 營收未據此認定。"
+          }
+        ],
+        "category": "矽晶圓",
+        "categories": [
+          "矽晶圓"
+        ]
+      },
+      {
+        "market": "TPEX",
+        "symbol": "6182",
+        "name": "合晶",
+        "primary_category": "wafer",
+        "category_ids": [
+          "wafer"
+        ],
+        "known_since": "2026-10-30",
+        "rationale": "公司官方服務頁揭露拋光、磊晶、SOI 等半導體晶圓與自主製程技術。以 AI 上游矽晶圓材料的間接題材觀察，不認定全部營收來自 AI。",
+        "company_directory_source": "https://www.tpex.org.tw/openapi/v1/mopsfin_t187ap03_O",
+        "issuer_homepage": "https://www.waferworks.com",
+        "theme_relationship": "indirect_upstream_material",
+        "evidence": [
+          {
+            "url": "https://www.waferworks.com/tw/products-and-service/service",
+            "title": "客製化矽晶圓服務，以客為本 的半導體材料供應商 - 合晶科技",
+            "kind": "issuer",
+            "known_since": "2026-10-30",
+            "reviewed_at": "2026-10-30",
+            "verification_status": "verified",
+            "source_sha256": "c263a6b053f41cbc18bedf673a4d08f27ed7f016b7fd4510ac61fd0f4cc4eb60",
+            "excerpt": "合晶科技期望成為國際級半導體晶圓領導供應商",
+            "retrieved_at": "2026-10-29T13:19:31.478797+00:00",
+            "http_status": 200,
+            "verification_run_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40880865033"
+          }
+        ],
+        "category": "矽晶圓",
+        "categories": [
+          "矽晶圓"
+        ]
+      },
+      {
+        "market": "TPEX",
+        "symbol": "5483",
+        "name": "中美晶",
+        "primary_category": "wafer",
+        "category_ids": [
+          "wafer"
+        ],
+        "known_since": "2026-10-30",
+        "rationale": "公司官方簡介說明半導體事業分割為環球晶，並透過環球晶布局半導體晶圓。屬 AI 上游材料的集團轉投資間接題材，與環球晶具共同集團曝險，不認定為母公司直接 AI 營收。",
+        "company_directory_source": "https://www.tpex.org.tw/openapi/v1/mopsfin_t187ap03_O",
+        "issuer_homepage": "https://www.saswafer.com",
+        "theme_relationship": "indirect_upstream_group_investment",
+        "evidence": [
+          {
+            "url": "https://www.saswafer.com/profile-tw/",
+            "title": "公司簡介 | 中美矽晶製品股份有限公司",
+            "kind": "issuer",
+            "known_since": "2026-10-30",
+            "reviewed_at": "2026-10-30",
+            "verification_status": "verified",
+            "source_sha256": "2afd372b124412e9d79ba00a9968a061f0c9f1233eb73175b3cfeb4f80344a74",
+            "excerpt": "在半導體領域，集團透過環球晶圓股份有限公司深耕全球半導體晶圓市場",
+            "retrieved_at": "2026-10-29T13:19:29.853945+00:00",
+            "http_status": 200,
+            "verification_run_url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40880865033"
+          }
+        ],
+        "category": "矽晶圓",
+        "categories": [
+          "矽晶圓"
+        ]
+      }
+    ],
+    "verification_runs": [
+      40880865033,
+      40954868242,
+      40955097598
+    ],
+    "temporary_branch": "codex-wafer-evidence-20261029",
+    "branch_deleted": true,
+    "main_unchanged": true,
+    "main_sha": "0256537b57de2ed8318f522753d69ca7ddbceee0",
+    "evidence_files": {
+      "remote.json": "2817c765fbe101b788b5a28b2c65932f68ad87bc967ccf562926a81bf0cb9b5f",
+      "fst-remote.json": "be079b1b3c72c0f4c68bfde80d9ba7b9d7cb3524b172ca1e85ab93c247568c45",
+      "fst-products-remote.json": "a29e52123b8d82334208cc06dd09e30313d877430603590a832d966fc2afd0cc"
+    }
+  },
+  "ci": {
+    "conclusion": "success",
+    "createdAt": "2026-10-30T02:14:17Z",
+    "databaseId": 40990507105,
+    "headSha": "549aab38e818cadfe777df8841a7bd323d4766bf",
+    "jobs": [
+      {
+        "completedAt": "2026-10-30T02:14:56Z",
+        "conclusion": "success",
+        "databaseId": 123851481986,
+        "name": "test (3.11)",
+        "startedAt": "2026-10-30T02:14:19Z",
+        "status": "completed",
+        "steps": [
+          {
+            "conclusion": "success",
+            "name": "Set up job",
+            "number": 1,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run actions/checkout@v4",
+            "number": 2,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run actions/setup-python@v5",
+            "number": 3,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run python -m pip install -r requirements.lock -e .",
+            "number": 4,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run python -m ruff check src tests scripts",
+            "number": 5,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run python -m pytest -q",
+            "number": 6,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Build truthful empty-state report without network",
+            "number": 7,
+            "status": "completed"
+          },
+          {
+            "conclusion": "skipped",
+            "name": "Install Chromium for PWA verification",
+            "number": 8,
+            "status": "completed"
+          },
+          {
+            "conclusion": "skipped",
+            "name": "Verify mobile PWA, offline reports and app updates",
+            "number": 9,
+            "status": "completed"
+          },
+          {
+            "conclusion": "skipped",
+            "name": "Verify AI research cards, filters and preserved watchlists",
+            "number": 10,
+            "status": "completed"
+          },
+          {
+            "conclusion": "skipped",
+            "name": "Verify readable themes, charts and saved appearance",
+            "number": 11,
+            "status": "completed"
+          },
+          {
+            "conclusion": "skipped",
+            "name": "Retain PWA verification evidence",
+            "number": 12,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run actions/upload-artifact@v4",
+            "number": 13,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Post Run actions/setup-python@v5",
+            "number": 25,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Post Run actions/checkout@v4",
+            "number": 26,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Complete job",
+            "number": 27,
+            "status": "completed"
+          }
+        ],
+        "url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40990507105/job/123851481986"
+      },
+      {
+        "completedAt": "2026-10-30T02:17:29Z",
+        "conclusion": "success",
+        "databaseId": 123851482277,
+        "name": "test (3.12)",
+        "startedAt": "2026-10-30T02:14:20Z",
+        "status": "completed",
+        "steps": [
+          {
+            "conclusion": "success",
+            "name": "Set up job",
+            "number": 1,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run actions/checkout@v4",
+            "number": 2,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run actions/setup-python@v5",
+            "number": 3,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run python -m pip install -r requirements.lock -e .",
+            "number": 4,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run python -m ruff check src tests scripts",
+            "number": 5,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run python -m pytest -q",
+            "number": 6,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Build truthful empty-state report without network",
+            "number": 7,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Install Chromium for PWA verification",
+            "number": 8,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Verify mobile PWA, offline reports and app updates",
+            "number": 9,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Verify AI research cards, filters and preserved watchlists",
+            "number": 10,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Verify readable themes, charts and saved appearance",
+            "number": 11,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Retain PWA verification evidence",
+            "number": 12,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run actions/upload-artifact@v4",
+            "number": 13,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Post Run actions/setup-python@v5",
+            "number": 25,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Post Run actions/checkout@v4",
+            "number": 26,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Complete job",
+            "number": 27,
+            "status": "completed"
+          }
+        ],
+        "url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40990507105/job/123851482277"
+      }
+    ],
+    "status": "completed",
+    "updatedAt": "2026-10-30T02:17:29Z",
+    "url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40990507105"
+  },
+  "production": {
+    "conclusion": "success",
+    "createdAt": "2026-10-30T02:17:47Z",
+    "databaseId": 40990847197,
+    "headSha": "549aab38e818cadfe777df8841a7bd323d4766bf",
+    "jobs": [
+      {
+        "completedAt": "2026-10-30T02:20:20Z",
+        "conclusion": "success",
+        "databaseId": 123852611699,
+        "name": "research / research",
+        "startedAt": "2026-10-30T02:17:50Z",
+        "status": "completed",
+        "steps": [
+          {
+            "conclusion": "success",
+            "name": "Set up job",
+            "number": 1,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run actions/checkout@v4",
+            "number": 2,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Initialize diagnostics",
+            "number": 3,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run actions/setup-python@v5",
+            "number": 4,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Install pinned dependencies",
+            "number": 5,
+            "status": "completed"
+          },
+          {
+            "conclusion": "skipped",
+            "name": "Resolve original scheduled trading session",
+            "number": 6,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Restore permanent data branch",
+            "number": 7,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Optional initial historical warmup",
+            "number": 8,
+            "status": "completed"
+          },
+          {
+            "conclusion": "skipped",
+            "name": "Probe official sources for manual validation",
+            "number": 9,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Collect and generate research",
+            "number": 10,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Verify database before archive",
+            "number": 11,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Save permanent research history",
+            "number": 12,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Retain recovery artifact even if publication fails",
+            "number": 13,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Summarize command outcomes",
+            "number": 14,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Retain diagnostics even when setup or restore fails",
+            "number": 15,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run actions/upload-pages-artifact@v3",
+            "number": 16,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Downloadable research pages",
+            "number": 17,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Post Run actions/setup-python@v5",
+            "number": 33,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Post Run actions/checkout@v4",
+            "number": 34,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Complete job",
+            "number": 35,
+            "status": "completed"
+          }
+        ],
+        "url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40990847197/job/123852611699"
+      },
+      {
+        "completedAt": "2026-10-30T02:21:12Z",
+        "conclusion": "success",
+        "databaseId": 123853419044,
+        "name": "research / deploy",
+        "startedAt": "2026-10-30T02:20:24Z",
+        "status": "completed",
+        "steps": [
+          {
+            "conclusion": "success",
+            "name": "Set up job",
+            "number": 1,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run actions/configure-pages@v5",
+            "number": 2,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run actions/deploy-pages@v4",
+            "number": 3,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Complete job",
+            "number": 4,
+            "status": "completed"
+          }
+        ],
+        "url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40990847197/job/123853419044"
+      }
+    ],
+    "status": "completed",
+    "updatedAt": "2026-10-30T02:21:13Z",
+    "url": "https://github.com/shen19772002-sketch/taiwan-stock-ai/actions/runs/40990847197"
+  },
+  "production_data": {
+    "preopen": {
+      "phase": "preopen",
+      "as_of": "2026-10-30",
+      "data_date": "2026-10-29",
+      "generated_at": "2026-10-30T02:19:00.785511+00:00",
+      "source_mode": "fetched",
+      "status": "partial",
+      "institutional_status": {
+        "market_dates": {
+          "TPEX": "2026-10-29",
+          "TWSE": "2026-10-29"
+        },
+        "required_date": "2026-10-29",
+        "status": "ready"
+      },
+      "scope": {
+        "categories": [
+          {
+            "description": "AI 晶片設計、製造及運算相關技術",
+            "id": "chip",
+            "member_count": 4,
+            "name": "晶片與先進製程"
+          },
+          {
+            "description": "AI／HPC 晶片的封裝整合與測試",
+            "id": "packaging",
+            "member_count": 1,
+            "name": "先進封裝與測試"
+          },
+          {
+            "description": "AI 伺服器、機櫃及相關系統整合",
+            "id": "server",
+            "member_count": 7,
+            "name": "AI 伺服器"
+          },
+          {
+            "description": "AI 伺服器散熱及液冷相關產品",
+            "id": "cooling",
+            "member_count": 2,
+            "name": "散熱"
+          },
+          {
+            "description": "AI 資料中心供電、電源及備援",
+            "id": "power",
+            "member_count": 1,
+            "name": "電源與備援"
+          },
+          {
+            "description": "AI 伺服器高階板、載板與基材",
+            "id": "pcb",
+            "member_count": 1,
+            "name": "PCB 與材料"
+          },
+          {
+            "description": "AI 資料中心網路、交換與光傳輸",
+            "id": "networking",
+            "member_count": 1,
+            "name": "高速傳輸與光通訊"
+          },
+          {
+            "description": "AI 工作負載相關記憶體與儲存",
+            "id": "memory",
+            "member_count": 3,
+            "name": "記憶體與儲存"
+          },
+          {
+            "description": "半導體上游材料與集團轉投資的間接題材；非直接 AI 營收認定",
+            "id": "wafer",
+            "member_count": 4,
+            "name": "矽晶圓"
+          }
+        ],
+        "classification_as_of": "2026-10-30",
+        "id": "ai_supply_chain",
+        "label": "AI 核心與供應鏈",
+        "limitations": [
+          "AI 分類是附有公司業務來源的研究名單，不是交易所官方產業分類，也不表示 AI 營收占比。",
+          "業務證據採公司官網、官方申報或技術合作方官方公告；來源種類逐筆保留，不採社群傳聞。",
+          "採明確名單而非全產業關鍵字；未納入不代表公司沒有 AI 業務。",
+          "未驗證、尚未生效或晚於研究日才確認的關聯不納入；歷史原始報告與預測保持不變。",
+          "每檔以一個主要分類計算產業統計，次要標籤不重複計入成交額。",
+          "矽晶圓為 AI 上游材料及集團轉投資的間接題材，業務證據不表示直接 AI 營收或訂單；中美晶與環球晶具有共同集團曝險。"
+        ],
+        "member_count": 24,
+        "membership_rule": "依精確市場及代號、已驗證公司業務證據與研究日納入；非整個電子產業",
+        "registry_hash": "054b368a319e2d4217e26b9e0b9607565e3812e53a2987adad3ed9c034666f38",
+        "reviewed_at": "2026-10-30",
+        "version": "2026.10.30.1"
+      },
+      "readiness": {
+        "current_quotes": 24,
+        "current_valuations": 24,
+        "eligible": 1,
+        "history_ready": 24,
+        "observed_stocks": 24
+      },
+      "source_states": [
+        {
+          "id": "twse_quotes",
+          "status": "waiting",
+          "error": "7 筆資料日期或必要欄位不完整"
+        },
+        {
+          "id": "twse_dated_quotes",
+          "status": "waiting",
+          "error": "7 筆資料日期或必要欄位不完整"
+        },
+        {
+          "id": "tpex_quotes",
+          "status": "waiting",
+          "error": "24 筆資料日期或必要欄位不完整"
+        }
+      ],
+      "wafer_stocks": [
+        {
+          "symbol": "5483",
+          "name": "中美晶",
+          "date": "2026-10-29",
+          "bars": 72,
+          "fundamental_status": "current",
+          "ai_rationale": "公司官方簡介說明半導體事業分割為環球晶，並透過環球晶布局半導體晶圓。屬 AI 上游材料的集團轉投資間接題材，與環球晶具共同集團曝險，不認定為母公司直接 AI 營收。"
+        },
+        {
+          "symbol": "6182",
+          "name": "合晶",
+          "date": "2026-10-29",
+          "bars": 72,
+          "fundamental_status": "current",
+          "ai_rationale": "公司官方服務頁揭露拋光、磊晶、SOI 等半導體晶圓與自主製程技術。以 AI 上游矽晶圓材料的間接題材觀察，不認定全部營收來自 AI。"
+        },
+        {
+          "symbol": "6488",
+          "name": "環球晶",
+          "date": "2026-10-29",
+          "bars": 72,
+          "fundamental_status": "current",
+          "ai_rationale": "公司一手簡介揭露半導體晶圓材料與拋光、磊晶等製程。以 AI 上游矽晶圓材料的間接題材觀察，不認定全部營收來自 AI。"
+        },
+        {
+          "symbol": "3532",
+          "name": "台勝科",
+          "date": "2026-10-29",
+          "bars": 72,
+          "fundamental_status": "current",
+          "ai_rationale": "公司官方產品頁原文明示「半導體用矽晶圓製品」，官網並標示 SILICON WAFER。以 AI 上游材料的間接題材觀察，不宣稱已核實 AI 營收、訂單或產品規格。"
+        }
+      ]
+    }
+  },
+  "public_http": {
+    "checked_at_utc": "2026-10-30T02:21:50.009543+00:00",
+    "base_url": "https://shen19772002-sketch.github.io/taiwan-stock-ai/",
+    "default_tls_verification": true,
+    "files": {
+      "index.html": {
+        "status": 200,
+        "bytes": 880625,
+        "sha256": "f163872820fdbe3e21e3ac941b25c03e2c095f3c1157570c27914c95ff07798b",
+        "content_type": "text/html; charset=utf-8",
+        "cache_control": "max-age=600",
+        "etag": "W/\"6ae3ff11-d6ff1\"",
+        "last_modified": "Fri, 30 Oct 2026 02:21:05 GMT"
+      },
+      "preopen.html": {
+        "status": 200,
+        "bytes": 880630,
+        "sha256": "56f69f8f826380c74ca5b729468dea4afd7c30613ee4ee723785af7e07eedbe0",
+        "content_type": "text/html; charset=utf-8",
+        "cache_control": "max-age=600",
+        "etag": "W/\"6ae3ff11-d6ff6\"",
+        "last_modified": "Fri, 30 Oct 2026 02:21:05 GMT"
+      },
+      "postclose.html": {
+        "status": 200,
+        "bytes": 872369,
+        "sha256": "0701bc1c1da7f827904716be2e36ebf937293b8ce67933c19d38507660e03e7a",
+        "content_type": "text/html; charset=utf-8",
+        "cache_control": "max-age=600",
+        "etag": "W/\"6ae3ff11-d4fb1\"",
+        "last_modified": "Fri, 30 Oct 2026 02:21:05 GMT"
+      },
+      "final.html": {
+        "status": 200,
+        "bytes": 872191,
+        "sha256": "70d2b0db4a878908d1fc69149f0bf67c753af2d2103c7ba19fccb6782032f18f",
+        "content_type": "text/html; charset=utf-8",
+        "cache_control": "max-age=600",
+        "etag": "W/\"6ae3ff11-d4eff\"",
+        "last_modified": "Fri, 30 Oct 2026 02:21:05 GMT"
+      },
+      "assets/report.json": {
+        "status": 200,
+        "bytes": 802549,
+        "sha256": "f2de0245738213945e561176e3f810b87bd334a86d9efa2b57f8d120a5dca30f",
+        "content_type": "application/json; charset=utf-8",
+        "cache_control": "max-age=600",
+        "etag": "W/\"6ae3ff11-c3ef5\"",
+        "last_modified": "Fri, 30 Oct 2026 02:21:05 GMT"
+      },
+      "assets/preopen.json": {
+        "status": 200,
+        "bytes": 802549,
+        "sha256": "f2de0245738213945e561176e3f810b87bd334a86d9efa2b57f8d120a5dca30f",
+        "content_type": "application/json; charset=utf-8",
+        "cache_control": "max-age=600",
+        "etag": "W/\"6ae3ff11-c3ef5\"",
+        "last_modified": "Fri, 30 Oct 2026 02:21:05 GMT"
+      },
+      "assets/postclose.json": {
+        "status": 200,
+        "bytes": 805994,
+        "sha256": "2e1b66c2c1c180e141588fba5a35a67202a0a3c04e13b8c683cac308863783a4",
+        "content_type": "application/json; charset=utf-8",
+        "cache_control": "max-age=600",
+        "etag": "W/\"6ae3ff11-c4c6a\"",
+        "last_modified": "Fri, 30 Oct 2026 02:21:05 GMT"
+      },
+      "assets/final.json": {
+        "status": 200,
+        "bytes": 805994,
+        "sha256": "2e1b66c2c1c180e141588fba5a35a67202a0a3c04e13b8c683cac308863783a4",
+        "content_type": "application/json; charset=utf-8",
+        "cache_control": "max-age=600",
+        "etag": "W/\"6ae3ff11-c4c6a\"",
+        "last_modified": "Fri, 30 Oct 2026 02:21:05 GMT"
+      },
+      "assets/style.css": {
+        "status": 200,
+        "bytes": 57097,
+        "sha256": "643e01d0b399ea8eb5abff5e0142e7d4527de6180429b8a131a1dd679a2354ce",
+        "content_type": "text/css; charset=utf-8",
+        "cache_control": "max-age=600",
+        "etag": "W/\"6ae3ff11-df09\"",
+        "last_modified": "Fri, 30 Oct 2026 02:21:05 GMT"
+      },
+      "assets/app.js": {
+        "status": 200,
+        "bytes": 21911,
+        "sha256": "b90bb36854d6eb40055a784bfc96325ed6f1b33d570a643030d4f5b807d91a5f",
+        "content_type": "application/javascript; charset=utf-8",
+        "cache_control": "max-age=600",
+        "etag": "W/\"6ae3ff11-5597\"",
+        "last_modified": "Fri, 30 Oct 2026 02:21:05 GMT"
+      },
+      "assets/ai-view.js": {
+        "status": 200,
+        "bytes": 5537,
+        "sha256": "2a26c3a2b06c87f58269818bb10c59c8171c99f71b542858256a36c164447d4e",
+        "content_type": "application/javascript; charset=utf-8",
+        "cache_control": "max-age=600",
+        "etag": "W/\"6ae3ff11-15a1\"",
+        "last_modified": "Fri, 30 Oct 2026 02:21:05 GMT"
+      },
+      "assets/theme.js": {
+        "status": 200,
+        "bytes": 1767,
+        "sha256": "40119fdb3d7d67e7fc616175ba075f3fcbce76fe206b06c2b79d4de61aeecee6",
+        "content_type": "application/javascript; charset=utf-8",
+        "cache_control": "max-age=600",
+        "etag": "W/\"6ae3ff11-6e7\"",
+        "last_modified": "Fri, 30 Oct 2026 02:21:05 GMT"
+      },
+      "assets/plotly.min.js": {
+        "status": 200,
+        "bytes": 4763993,
+        "sha256": "122e3be346d66616944d0b83eaaf7242581508c3c1cfa0995a17af0d83eff770",
+        "content_type": "application/javascript; charset=utf-8",
+        "cache_control": "max-age=600",
+        "etag": "W/\"6ae3ff11-48b159\"",
+        "last_modified": "Fri, 30 Oct 2026 02:21:05 GMT"
+      },
+      "assets/pwa.js": {
+        "status": 200,
+        "bytes": 10193,
+        "sha256": "a6e9e5c0c946e8c95f747cee12ba83614da0ed863e10ca23d6f616fe3fc53290",
+        "content_type": "application/javascript; charset=utf-8",
+        "cache_control": "max-age=600",
+        "etag": "W/\"6ae3ff11-27d1\"",
+        "last_modified": "Fri, 30 Oct 2026 02:21:05 GMT"
+      },
+      "assets/icon-192.png": {
+        "status": 200,
+        "bytes": 1222,
+        "sha256": "82f9e9cf2e608414072f3358e5fac3d4936967ec94db6a5710efed23d05eb73b",
+        "content_type": "image/png",
+        "cache_control": "max-age=600",
+        "etag": "\"6ae3ff11-4c6\"",
+        "last_modified": "Fri, 30 Oct 2026 02:21:05 GMT"
+      },
+      "assets/icon-512.png": {
+        "status": 200,
+        "bytes": 4663,
+        "sha256": "14a25fb6c2acc5b5e7215565a4fa282923d21e2c8d6b9f4919f5d4cc35c1c178",
+        "content_type": "image/png",
+        "cache_control": "max-age=600",
+        "etag": "\"6ae3ff11-1237\"",
+        "last_modified": "Fri, 30 Oct 2026 02:21:05 GMT"
+      },
+      "assets/icon-maskable-512.png": {
+        "status": 200,
+        "bytes": 3273,
+        "sha256": "31e9248c97c8f311d448f677ac5ff9bb8138113c11b5ee7f80e879372e2322df",
+        "content_type": "image/png",
+        "cache_control": "max-age=600",
+        "etag": "\"6ae3ff11-cc9\"",
+        "last_modified": "Fri, 30 Oct 2026 02:21:05 GMT"
+      },
+      "manifest.webmanifest": {
+        "status": 200,
+        "bytes": 1061,
+        "sha256": "3ec43bccc2f237c8c0d93785127e4d5d535385e3d0cf94d3d5746a3eae9b1ae1",
+        "content_type": "application/manifest+json; charset=utf-8",
+        "cache_control": "max-age=600",
+        "etag": "W/\"6ae3ff11-425\"",
+        "last_modified": "Fri, 30 Oct 2026 02:21:05 GMT"
+      },
+      "sw.js": {
+        "status": 200,
+        "bytes": 11219,
+        "sha256": "05ca31120c15ba674cb1379d07a7bbb26c551a6eb34fa2043d29c81b79dac1bc",
+        "content_type": "application/javascript; charset=utf-8",
+        "cache_control": "max-age=600",
+        "etag": "W/\"6ae3ff11-2bd3\"",
+        "last_modified": "Fri, 30 Oct 2026 02:21:05 GMT"
+      },
+      "offline.html": {
+        "status": 200,
+        "bytes": 3364,
+        "sha256": "bdc18d5c989788c79cc3952a83b1786b33c19997f77401e3769f3de3513ec4d9",
+        "content_type": "text/html; charset=utf-8",
+        "cache_control": "max-age=600",
+        "etag": "W/\"6ae3ff11-d24\"",
+        "last_modified": "Fri, 30 Oct 2026 02:21:05 GMT"
+      },
+      "assets/publication.json": {
+        "status": 200,
+        "bytes": 1205,
+        "sha256": "ae01039e5c47acb91a89c784a80766e0afdc872eb82143a913e91543fd983cbb",
+        "content_type": "application/json; charset=utf-8",
+        "cache_control": "max-age=600",
+        "etag": "W/\"6ae3ff11-4b5\"",
+        "last_modified": "Fri, 30 Oct 2026 02:21:05 GMT"
+      }
+    },
+    "public_registration_mimes_valid": true,
+    "app_version": "ecf3e6381f69284a11f3",
+    "source_matches": {
+      "assets/style.css": true,
+      "assets/app.js": true,
+      "assets/ai-view.js": true,
+      "assets/theme.js": true,
+      "assets/pwa.js": true,
+      "assets/icon-192.png": true,
+      "assets/icon-512.png": true,
+      "assets/icon-maskable-512.png": true,
+      "manifest.webmanifest": true,
+      "offline.html": true,
+      "assets/plotly.min.js": true,
+      "sw.js": true
+    },
+    "manifest": {
+      "scope": "https://shen19772002-sketch.github.io/taiwan-stock-ai/",
+      "start_url": "https://shen19772002-sketch.github.io/taiwan-stock-ai/index.html",
+      "display": "standalone",
+      "icons": [
+        {
+          "src": "assets/icon-192.png",
+          "width": 192,
+          "height": 192,
+          "purpose": "any"
+        },
+        {
+          "src": "assets/icon-512.png",
+          "width": 512,
+          "height": 512,
+          "purpose": "any"
+        },
+        {
+          "src": "assets/icon-maskable-512.png",
+          "width": 512,
+          "height": 512,
+          "purpose": "maskable"
+        }
+      ]
+    },
+    "pages": {
+      "index": {
+        "embedded_matches_json": true,
+        "revision_matches_publication": true,
+        "install_and_refresh_controls": true,
+        "phase": "preopen",
+        "as_of": "2026-10-30",
+        "data_date": "2026-10-29",
+        "generated_at": "2026-10-30T02:19:00.785511+00:00",
+        "status": "partial",
+        "candidates": 1,
+        "scope_version": "2026.10.30.1",
+        "member_count": 24,
+        "category_count": 9,
+        "readiness": {
+          "current_quotes": 24,
+          "current_valuations": 24,
+          "eligible": 1,
+          "history_ready": 24,
+          "observed_stocks": 24
+        },
+        "institutional_status": {
+          "market_dates": {
+            "TPEX": "2026-10-29",
+            "TWSE": "2026-10-29"
+          },
+          "required_date": "2026-10-29",
+          "status": "ready"
+        }
+      },
+      "preopen": {
+        "embedded_matches_json": true,
+        "revision_matches_publication": true,
+        "install_and_refresh_controls": true,
+        "phase": "preopen",
+        "as_of": "2026-10-30",
+        "data_date": "2026-10-29",
+        "generated_at": "2026-10-30T02:19:00.785511+00:00",
+        "status": "partial",
+        "candidates": 1,
+        "scope_version": "2026.10.30.1",
+        "member_count": 24,
+        "category_count": 9,
+        "readiness": {
+          "current_quotes": 24,
+          "current_valuations": 24,
+          "eligible": 1,
+          "history_ready": 24,
+          "observed_stocks": 24
+        },
+        "institutional_status": {
+          "market_dates": {
+            "TPEX": "2026-10-29",
+            "TWSE": "2026-10-29"
+          },
+          "required_date": "2026-10-29",
+          "status": "ready"
+        }
+      },
+      "postclose": {
+        "embedded_matches_json": true,
+        "revision_matches_publication": true,
+        "install_and_refresh_controls": true,
+        "phase": "final",
+        "as_of": "2026-10-29",
+        "data_date": "2026-10-29",
+        "generated_at": "2026-10-29T17:03:08.518018+00:00",
+        "status": "partial",
+        "candidates": 1,
+        "scope_version": "2026.10.29.1",
+        "member_count": 20,
+        "category_count": 8,
+        "readiness": {
+          "current_quotes": 20,
+          "current_valuations": 20,
+          "eligible": 1,
+          "history_ready": 20,
+          "observed_stocks": 20
+        },
+        "institutional_status": {
+          "market_dates": {
+            "TPEX": "2026-10-29",
+            "TWSE": "2026-10-29"
+          },
+          "required_date": "2026-10-29",
+          "status": "ready"
+        }
+      },
+      "final": {
+        "embedded_matches_json": true,
+        "revision_matches_publication": true,
+        "install_and_refresh_controls": true,
+        "phase": "final",
+        "as_of": "2026-10-29",
+        "data_date": "2026-10-29",
+        "generated_at": "2026-10-29T17:03:08.518018+00:00",
+        "status": "partial",
+        "candidates": 1,
+        "scope_version": "2026.10.29.1",
+        "member_count": 20,
+        "category_count": 8,
+        "readiness": {
+          "current_quotes": 20,
+          "current_valuations": 20,
+          "eligible": 1,
+          "history_ready": 20,
+          "observed_stocks": 20
+        },
+        "institutional_status": {
+          "market_dates": {
+            "TPEX": "2026-10-29",
+            "TWSE": "2026-10-29"
+          },
+          "required_date": "2026-10-29",
+          "status": "ready"
+        }
+      }
+    }
+  },
+  "public_wafer": {
+    "result": "passed",
+    "keys": [
+      "TWSE:3532",
+      "TPEX:5483",
+      "TPEX:6182",
+      "TPEX:6488"
+    ],
+    "group_investment_rationale_visible": true,
+    "business_source_links_visible": true,
+    "market_data_injected": false,
+    "browser": "Chromium 390x844 viewport simulation",
+    "js_errors": [],
+    "data_date": "2026-10-29",
+    "research_day": "2026-10-30"
+  },
+  "public_themes": {
+    "checked_at_utc": "2026-10-30T02:22:28.113463+00:00",
+    "browser": "Chromium viewport emulation; not physical Android",
+    "market_data_injected": false,
+    "viewports": [
+      {
+        "name": "small-phone",
+        "width": 360,
+        "height": 800,
+        "themes": [
+          {
+            "theme": "dark",
+            "readability": {
+              "text": [
+                {
+                  "selector": "body",
+                  "size": 16,
+                  "color": "rgb(237, 243, 245)",
+                  "background": [
+                    11,
+                    19,
+                    27,
+                    1
+                  ],
+                  "contrast": 16.684095713610425
+                },
+                {
+                  "selector": ".research-head p",
+                  "size": 16,
+                  "color": "rgb(145, 167, 181)",
+                  "background": [
+                    11,
+                    19,
+                    27,
+                    1
+                  ],
+                  "contrast": 7.477420243128933
+                },
+                {
+                  "selector": ".research-readiness > p",
+                  "size": 16,
+                  "color": "rgb(237, 243, 245)",
+                  "background": [
+                    11,
+                    19,
+                    27,
+                    1
+                  ],
+                  "contrast": 16.684095713610425
+                },
+                {
+                  "selector": ".report-meta",
+                  "size": 14,
+                  "color": "rgb(145, 167, 181)",
+                  "background": [
+                    11,
+                    19,
+                    27,
+                    1
+                  ],
+                  "contrast": 7.477420243128933
+                },
+                {
+                  "selector": ".report-date strong",
+                  "size": 18,
+                  "color": "rgb(237, 243, 245)",
+                  "background": [
+                    11,
+                    19,
+                    27,
+                    1
+                  ],
+                  "contrast": 16.684095713610425
+                },
+                {
+                  "selector": ".ai-stock-meta",
+                  "size": 14,
+                  "color": "rgb(145, 167, 181)",
+                  "background": [
+                    18,
+                    30,
+                    40,
+                    1
+                  ],
+                  "contrast": 6.761840937258403
+                },
+                {
+                  "selector": ".ai-stock-meta",
+                  "size": 14,
+                  "color": "rgb(145, 167, 181)",
+                  "background": [
+                    18,
+                    30,
+                    40,
+                    1
+                  ],
+                  "contrast": 6.761840937258403
+                },
+                {
+                  "selector": ".ai-stock-meta",
+                  "size": 14,
+                  "color": "rgb(145, 167, 181)",
+                  "background": [
+                    18,
+                    30,
+                    40,
+                    1
+                  ],
+                  "contrast": 6.761840937258403
+                },
+                {
+                  "selector": ".ai-stock-state",
+                  "size": 16,
+                  "color": "rgb(233, 198, 135)",
+                  "background": [
+                    18,
+                    30,
+                    40,
+                    1
+                  ],
+                  "contrast": 10.379627088039427
+                },
+                {
+                  "selector": ".ai-stock-state",
+                  "size": 16,
+                  "color": "rgb(233, 198, 135)",
+                  "background": [
+                    18,
+                    30,
+                    40,
+                    1
+                  ],
+                  "contrast": 10.379627088039427
+                },
+                {
+                  "selector": ".ai-stock-state",
+                  "size": 16,
+                  "color": "rgb(233, 198, 135)",
+                  "background": [
+                    18,
+                    30,
+                    40,
+                    1
+                  ],
+                  "contrast": 10.379627088039427
+                },
+                {
+                  "selector": ".method-note",
+                  "size": 14,
+                  "color": "rgb(145, 167, 181)",
+                  "background": [
+                    11,
+                    19,
+                    27,
+                    1
+                  ],
+                  "contrast": 7.477420243128933
+                },
+                {
+                  "selector": ".method-note",
+                  "size": 14,
+                  "color": "rgb(145, 167, 181)",
+                  "background": [
+                    11,
+                    19,
+                    27,
+                    1
+                  ],
+                  "contrast": 7.477420243128933
+                },
+                {
+                  "selector": ".method-note",
+                  "size": 14,
+                  "color": "rgb(145, 167, 181)",
+                  "background": [
+                    11,
+                    19,
+                    27,
+                    1
+                  ],
+                  "contrast": 7.477420243128933
+                }
+              ],
+              "controls": [
+                {
+                  "selector": "#theme-select",
+                  "height": 48,
+                  "width": 170
+                },
+                {
+                  "selector": "#report-refresh",
+                  "height": 48,
+                  "width": 145.40625
+                },
+                {
+                  "selector": ".phase-nav a",
+                  "height": 48,
+                  "width": 78.75
+                },
+                {
+                  "selector": ".phase-nav a",
+                  "height": 48,
+                  "width": 78.75
+                },
+                {
+                  "selector": ".phase-nav a",
+                  "height": 48,
+                  "width": 78.75
+                },
+                {
+                  "selector": ".ai-category-button",
+                  "height": 48.796875,
+                  "width": 101.59375
+                },
+                {
+                  "selector": ".ai-category-button",
+                  "height": 48.796875,
+                  "width": 142.015625
+                },
+                {
+                  "selector": ".ai-category-button",
+                  "height": 48.796875,
+                  "width": 142.015625
+                }
+              ],
+              "background": [
+                11,
+                19,
+                27,
+                1
+              ],
+              "overflow": false
+            },
+            "plotly": {
+              "palette": {
+                "surface": "#121e28",
+                "text": "#edf3f5",
+                "muted": "#91a7b5",
+                "line": "#283945",
+                "red": "#f48d8d",
+                "green": "#83cbb7"
+              },
+              "charts": [
+                {
+                  "id": "industry-chart",
+                  "paper": "#121e28",
+                  "plot": "#121e28",
+                  "font": "#edf3f5",
+                  "font_size": 14,
+                  "legend_visible": false,
+                  "legend": "#edf3f5",
+                  "x_tick": "#91a7b5",
+                  "y_tick": "#91a7b5",
+                  "x_grid_visible": true,
+                  "y_grid_visible": true,
+                  "x_grid": "#283945",
+                  "y_grid": "#283945",
+                  "traces": [
+                    {
+                      "x": [
+                        -11.484369733252683,
+                        -9.66384302136315,
+                        -22.5130890052356,
+                        -7.387862796833778,
+                        -5.966607247931882,
+                        -2.288984263233196,
+                        -0.8748671062036769,
+                        -0.08071407004263861,
+                        -0.7920792079207928
+                      ],
+                      "y": [
+                        "矽晶圓",
+                        "晶片與先進製程",
+                        "電源與備援",
+                        "高速傳輸與光通訊",
+                        "散熱",
+                        "先進封裝與測試",
+                        "記憶體與儲存",
+                        "AI 伺服器",
+                        "PCB 與材料"
+                      ],
+                      "colors": [
+                        "#83cbb7",
+                        "#83cbb7",
+                        "#83cbb7",
+                        "#83cbb7",
+                        "#83cbb7",
+                        "#83cbb7",
+                        "#83cbb7",
+                        "#83cbb7",
+                        "#83cbb7"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "theme": "light",
+            "readability": {
+              "text": [
+                {
+                  "selector": "body",
+                  "size": 16,
+                  "color": "rgb(23, 49, 59)",
+                  "background": [
+                    244,
+                    247,
+                    250,
+                    1
+                  ],
+                  "contrast": 12.691676986056372
+                },
+                {
+                  "selector": ".research-head p",
+                  "size": 16,
+                  "color": "rgb(82, 101, 115)",
+                  "background": [
+                    244,
+                    247,
+                    250,
+                    1
+                  ],
+                  "contrast": 5.632200892061513
+                },
+                {
+                  "selector": ".research-readiness > p",
+                  "size": 16,
+                  "color": "rgb(23, 49, 59)",
+                  "background": [
+                    244,
+                    247,
+                    250,
+                    1
+                  ],
+                  "contrast": 12.691676986056372
+                },
+                {
+                  "selector": ".report-meta",
+                  "size": 14,
+                  "color": "rgb(82, 101, 115)",
+                  "background": [
+                    244,
+                    247,
+                    250,
+                    1
+                  ],
+                  "contrast": 5.632200892061513
+                },
+                {
+                  "selector": ".report-date strong",
+                  "size": 18,
+                  "color": "rgb(23, 49, 59)",
+                  "background": [
+                    244,
+                    247,
+                    250,
+                    1
+                  ],
+                  "contrast": 12.691676986056372
+                },
+                {
+                  "selector": ".ai-stock-meta",
+                  "size": 14,
+                  "color": "rgb(82, 101, 115)",
+                  "background": [
+                    255,
+                    255,
+                    255,
+                    1
+                  ],
+                  "contrast": 6.055711222194442
+                },
+                {
+                  "selector": ".ai-stock-meta",
+                  "size": 14,
+                  "color": "rgb(82, 101, 115)",
+                  "background": [
+                    255,
+                    255,
+                    255,
+                    1
+                  ],
+                  "contrast": 6.055711222194442
+                },
+                {
+                  "selector": ".ai-stock-meta",
+                  "size": 14,
+                  "color": "rgb(82, 101, 115)",
+                  "background": [
+                    255,
+                    255,
+                    255,
+                    1
+                  ],
+                  "contrast": 6.055711222194442
+                },
+                {
+                  "selector": ".ai-stock-state",
+                  "size": 16,
+                  "color": "rgb(121, 83, 21)",
+                  "background": [
+                    255,
+                    255,
+                    255,
+                    1
+                  ],
+                  "contrast": 6.86023244541609
+                },
+                {
+                  "selector": ".ai-stock-state",
+                  "size": 16,
+                  "color": "rgb(121, 83, 21)",
+                  "background": [
+                    255,
+                    255,
+                    255,
+                    1
+                  ],
+                  "contrast": 6.86023244541609
+                },
+                {
+                  "selector": ".ai-stock-state",
+                  "size": 16,
+                  "color": "rgb(121, 83, 21)",
+                  "background": [
+                    255,
+                    255,
+                    255,
+                    1
+                  ],
+                  "contrast": 6.86023244541609
+                },
+                {
+                  "selector": ".method-note",
+                  "size": 14,
+                  "color": "rgb(82, 101, 115)",
+                  "background": [
+                    244,
+                    247,
+                    250,
+                    1
+                  ],
+                  "contrast": 5.632200892061513
+                },
+                {
+                  "selector": ".method-note",
+                  "size": 14,
+                  "color": "rgb(82, 101, 115)",
+                  "background": [
+                    244,
+                    247,
+                    250,
+                    1
+                  ],
+                  "contrast": 5.632200892061513
+                },
+                {
+                  "selector": ".method-note",
+                  "size": 14,
+                  "color": "rgb(82, 101, 115)",
+                  "background": [
+                    244,
+                    247,
+                    250,
+                    1
+                  ],
+                  "contrast": 5.632200892061513
+                }
+              ],
+              "controls": [
+                {
+                  "selector": "#theme-select",
+                  "height": 48,
+                  "width": 170
+                },
+                {
+                  "selector": "#report-refresh",
+                  "height": 48,
+                  "width": 145.40625
+                },
+                {
+                  "selector": ".phase-nav a",
+                  "height": 48,
+                  "width": 78.75
+                },
+                {
+                  "selector": ".phase-nav a",
+                  "height": 48,
+                  "width": 78.75
+                },
+                {
+                  "selector": ".phase-nav a",
+                  "height": 48,
+                  "width": 78.75
+                },
+                {
+                  "selector": ".ai-category-button",
+                  "height": 48.796875,
+                  "width": 101.59375
+                },
+                {
+                  "selector": ".ai-category-button",
+                  "height": 48.796875,
+                  "width": 142.015625
+                },
+                {
+                  "selector": ".ai-category-button",
+                  "height": 48.796875,
+                  "width": 142.015625
+                }
+              ],
+              "background": [
+                244,
+                247,
+                250,
+                1
+              ],
+              "overflow": false
+            },
+            "plotly": {
+              "palette": {
+                "surface": "#ffffff",
+                "text": "#17313b",
+                "muted": "#526573",
+                "line": "#c6d2da",
+                "red": "#b22d3b",
+                "green": "#16734f"
+              },
+              "charts": [
+                {
+                  "id": "industry-chart",
+                  "paper": "#ffffff",
+                  "plot": "#ffffff",
+                  "font": "#17313b",
+                  "font_size": 14,
+                  "legend_visible": false,
+                  "legend": "#17313b",
+                  "x_tick": "#526573",
+                  "y_tick": "#526573",
+                  "x_grid_visible": true,
+                  "y_grid_visible": true,
+                  "x_grid": "#c6d2da",
+                  "y_grid": "#c6d2da",
+                  "traces": [
+                    {
+                      "x": [
+                        -11.484369733252683,
+                        -9.66384302136315,
+                        -22.5130890052356,
+                        -7.387862796833778,
+                        -5.966607247931882,
+                        -2.288984263233196,
+                        -0.8748671062036769,
+                        -0.08071407004263861,
+                        -0.7920792079207928
+                      ],
+                      "y": [
+                        "矽晶圓",
+                        "晶片與先進製程",
+                        "電源與備援",
+                        "高速傳輸與光通訊",
+                        "散熱",
+                        "先進封裝與測試",
+                        "記憶體與儲存",
+                        "AI 伺服器",
+                        "PCB 與材料"
+                      ],
+                      "colors": [
+                        "#16734f",
+                        "#16734f",
+                        "#16734f",
+                        "#16734f",
+                        "#16734f",
+                        "#16734f",
+                        "#16734f",
+                        "#16734f",
+                        "#16734f"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "theme": "sepia",
+            "readability": {
+              "text": [
+                {
+                  "selector": "body",
+                  "size": 16,
+                  "color": "rgb(60, 51, 40)",
+                  "background": [
+                    244,
+                    237,
+                    223,
+                    1
+                  ],
+                  "contrast": 10.626545601926708
+                },
+                {
+                  "selector": ".research-head p",
+                  "size": 16,
+                  "color": "rgb(108, 91, 71)",
+                  "background": [
+                    244,
+                    237,
+                    223,
+                    1
+                  ],
+                  "contrast": 5.589320610450253
+                },
+                {
+                  "selector": ".research-readiness > p",
+                  "size": 16,
+                  "color": "rgb(60, 51, 40)",
+                  "background": [
+                    244,
+                    237,
+                    223,
+                    1
+                  ],
+                  "contrast": 10.626545601926708
+                },
+                {
+                  "selector": ".report-meta",
+                  "size": 14,
+                  "color": "rgb(108, 91, 71)",
+                  "background": [
+                    244,
+                    237,
+                    223,
+                    1
+                  ],
+                  "contrast": 5.589320610450253
+                },
+                {
+                  "selector": ".report-date strong",
+                  "size": 18,
+                  "color": "rgb(60, 51, 40)",
+                  "background": [
+                    244,
+                    237,
+                    223,
+                    1
+                  ],
+                  "contrast": 10.626545601926708
+                },
+                {
+                  "selector": ".ai-stock-meta",
+                  "size": 14,
+                  "color": "rgb(108, 91, 71)",
+                  "background": [
+                    255,
+                    250,
+                    240,
+                    1
+                  ],
+                  "contrast": 6.258662335929536
+                },
+                {
+                  "selector": ".ai-stock-meta",
+                  "size": 14,
+                  "color": "rgb(108, 91, 71)",
+                  "background": [
+                    255,
+                    250,
+                    240,
+                    1
+                  ],
+                  "contrast": 6.258662335929536
+                },
+                {
+                  "selector": ".ai-stock-meta",
+                  "size": 14,
+                  "color": "rgb(108, 91, 71)",
+                  "background": [
+                    255,
+                    250,
+                    240,
+                    1
+                  ],
+                  "contrast": 6.258662335929536
+                },
+                {
+                  "selector": ".ai-stock-state",
+                  "size": 16,
+                  "color": "rgb(112, 80, 24)",
+                  "background": [
+                    255,
+                    250,
+                    240,
+                    1
+                  ],
+                  "contrast": 7.083266831090331
+                },
+                {
+                  "selector": ".ai-stock-state",
+                  "size": 16,
+                  "color": "rgb(112, 80, 24)",
+                  "background": [
+                    255,
+                    250,
+                    240,
+                    1
+                  ],
+                  "contrast": 7.083266831090331
+                },
+                {
+                  "selector": ".ai-stock-state",
+                  "size": 16,
+                  "color": "rgb(112, 80, 24)",
+                  "background": [
+                    255,
+                    250,
+                    240,
+                    1
+                  ],
+                  "contrast": 7.083266831090331
+                },
+                {
+                  "selector": ".method-note",
+                  "size": 14,
+                  "color": "rgb(108, 91, 71)",
+                  "background": [
+                    244,
+                    237,
+                    223,
+                    1
+                  ],
+                  "contrast": 5.589320610450253
+                },
+                {
+                  "selector": ".method-note",
+                  "size": 14,
+                  "color": "rgb(108, 91, 71)",
+                  "background": [
+                    244,
+                    237,
+                    223,
+                    1
+                  ],
+                  "contrast": 5.589320610450253
+                },
+                {
+                  "selector": ".method-note",
+                  "size": 14,
+                  "color": "rgb(108, 91, 71)",
+                  "background": [
+                    244,
+                    237,
+                    223,
+                    1
+                  ],
+                  "contrast": 5.589320610450253
+                }
+              ],
+              "controls": [
+                {
+                  "selector": "#theme-select",
+                  "height": 48,
+                  "width": 170
+                },
+                {
+                  "selector": "#report-refresh",
+                  "height": 48,
+                  "width": 145.40625
+                },
+                {
+                  "selector": ".phase-nav a",
+                  "height": 48,
+                  "width": 78.75
+                },
+                {
+                  "selector": ".phase-nav a",
+                  "height": 48,
+                  "width": 78.75
+                },
+                {
+                  "selector": ".phase-nav a",
+                  "height": 48,
+                  "width": 78.75
+                },
+                {
+                  "selector": ".ai-category-button",
+                  "height": 48.796875,
+                  "width": 101.59375
+                },
+                {
+                  "selector": ".ai-category-button",
+                  "height": 48.796875,
+                  "width": 142.015625
+                },
+                {
+                  "selector": ".ai-category-button",
+                  "height": 48.796875,
+                  "width": 142.015625
+                }
+              ],
+              "background": [
+                244,
+                237,
+                223,
+                1
+              ],
+              "overflow": false
+            },
+            "plotly": {
+              "palette": {
+                "surface": "#fffaf0",
+                "text": "#3c3328",
+                "muted": "#6c5b47",
+                "line": "#c9baa1",
+                "red": "#a52e32",
+                "green": "#296743"
+              },
+              "charts": [
+                {
+                  "id": "industry-chart",
+                  "paper": "#fffaf0",
+                  "plot": "#fffaf0",
+                  "font": "#3c3328",
+                  "font_size": 14,
+                  "legend_visible": false,
+                  "legend": "#3c3328",
+                  "x_tick": "#6c5b47",
+                  "y_tick": "#6c5b47",
+                  "x_grid_visible": true,
+                  "y_grid_visible": true,
+                  "x_grid": "#c9baa1",
+                  "y_grid": "#c9baa1",
+                  "traces": [
+                    {
+                      "x": [
+                        -11.484369733252683,
+                        -9.66384302136315,
+                        -22.5130890052356,
+                        -7.387862796833778,
+                        -5.966607247931882,
+                        -2.288984263233196,
+                        -0.8748671062036769,
+                        -0.08071407004263861,
+                        -0.7920792079207928
+                      ],
+                      "y": [
+                        "矽晶圓",
+                        "晶片與先進製程",
+                        "電源與備援",
+                        "高速傳輸與光通訊",
+                        "散熱",
+                        "先進封裝與測試",
+                        "記憶體與儲存",
+                        "AI 伺服器",
+                        "PCB 與材料"
+                      ],
+                      "colors": [
+                        "#296743",
+                        "#296743",
+                        "#296743",
+                        "#296743",
+                        "#296743",
+                        "#296743",
+                        "#296743",
+                        "#296743",
+                        "#296743"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ],
+        "persisted_phase_pages": [
+          "preopen",
+          "postclose",
+          "final"
+        ],
+        "offline_preference": "passed",
+        "unvisited_page_fallback": "passed",
+        "watchlist_unchanged": true,
+        "js_errors": []
+      },
+      {
+        "name": "phone",
+        "width": 390,
+        "height": 844,
+        "themes": [
+          {
+            "theme": "dark",
+            "readability": {
+              "text": [
+                {
+                  "selector": "body",
+                  "size": 16,
+                  "color": "rgb(237, 243, 245)",
+                  "background": [
+                    11,
+                    19,
+                    27,
+                    1
+                  ],
+                  "contrast": 16.684095713610425
+                },
+                {
+                  "selector": ".research-head p",
+                  "size": 16,
+                  "color": "rgb(145, 167, 181)",
+                  "background": [
+                    11,
+                    19,
+                    27,
+                    1
+                  ],
+                  "contrast": 7.477420243128933
+                },
+                {
+                  "selector": ".research-readiness > p",
+                  "size": 16,
+                  "color": "rgb(237, 243, 245)",
+                  "background": [
+                    11,
+                    19,
+                    27,
+                    1
+                  ],
+                  "contrast": 16.684095713610425
+                },
+                {
+                  "selector": ".report-meta",
+                  "size": 14,
+                  "color": "rgb(145, 167, 181)",
+                  "background": [
+                    11,
+                    19,
+                    27,
+                    1
+                  ],
+                  "contrast": 7.477420243128933
+                },
+                {
+                  "selector": ".report-date strong",
+                  "size": 18,
+                  "color": "rgb(237, 243, 245)",
+                  "background": [
+                    11,
+                    19,
+                    27,
+                    1
+                  ],
+                  "contrast": 16.684095713610425
+                },
+                {
+                  "selector": ".ai-stock-meta",
+                  "size": 14,
+                  "color": "rgb(145, 167, 181)",
+                  "background": [
+                    18,
+                    30,
+                    40,
+                    1
+                  ],
+                  "contrast": 6.761840937258403
+                },
+                {
+                  "selector": ".ai-stock-meta",
+                  "size": 14,
+                  "color": "rgb(145, 167, 181)",
+                  "background": [
+                    18,
+                    30,
+                    40,
+                    1
+                  ],
+                  "contrast": 6.761840937258403
+                },
+                {
+                  "selector": ".ai-stock-meta",
+                  "size": 14,
+                  "color": "rgb(145, 167, 181)",
+                  "background": [
+                    18,
+                    30,
+                    40,
+                    1
+                  ],
+                  "contrast": 6.761840937258403
+                },
+                {
+                  "selector": ".ai-stock-state",
+                  "size": 16,
+                  "color": "rgb(233, 198, 135)",
+                  "background": [
+                    18,
+                    30,
+                    40,
+                    1
+                  ],
+                  "contrast": 10.379627088039427
+                },
+                {
+                  "selector": ".ai-stock-state",
+                  "size": 16,
+                  "color": "rgb(233, 198, 135)",
+                  "background": [
+                    18,
+                    30,
+                    40,
+                    1
+                  ],
+                  "contrast": 10.379627088039427
+                },
+                {
+                  "selector": ".ai-stock-state",
+                  "size": 16,
+                  "color": "rgb(233, 198, 135)",
+                  "background": [
+                    18,
+                    30,
+                    40,
+                    1
+                  ],
+                  "contrast": 10.379627088039427
+                },
+                {
+                  "selector": ".method-note",
+                  "size": 14,
+                  "color": "rgb(145, 167, 181)",
+                  "background": [
+                    11,
+                    19,
+                    27,
+                    1
+                  ],
+                  "contrast": 7.477420243128933
+                },
+                {
+                  "selector": ".method-note",
+                  "size": 14,
+                  "color": "rgb(145, 167, 181)",
+                  "background": [
+                    11,
+                    19,
+                    27,
+                    1
+                  ],
+                  "contrast": 7.477420243128933
+                },
+                {
+                  "selector": ".method-note",
+                  "size": 14,
+                  "color": "rgb(145, 167, 181)",
+                  "background": [
+                    11,
+                    19,
+                    27,
+                    1
+                  ],
+                  "contrast": 7.477420243128933
+                }
+              ],
+              "controls": [
+                {
+                  "selector": "#theme-select",
+                  "height": 48,
+                  "width": 170
+                },
+                {
+                  "selector": "#report-refresh",
+                  "height": 48,
+                  "width": 145.40625
+                },
+                {
+                  "selector": ".phase-nav a",
+                  "height": 48,
+                  "width": 86.25
+                },
+                {
+                  "selector": ".phase-nav a",
+                  "height": 48,
+                  "width": 86.25
+                },
+                {
+                  "selector": ".phase-nav a",
+                  "height": 48,
+                  "width": 86.25
+                },
+                {
+                  "selector": ".ai-category-button",
+                  "height": 48.796875,
+                  "width": 101.59375
+                },
+                {
+                  "selector": ".ai-category-button",
+                  "height": 48.796875,
+                  "width": 142.015625
+                },
+                {
+                  "selector": ".ai-category-button",
+                  "height": 48.796875,
+                  "width": 142.015625
+                }
+              ],
+              "background": [
+                11,
+                19,
+                27,
+                1
+              ],
+              "overflow": false
+            },
+            "plotly": {
+              "palette": {
+                "surface": "#121e28",
+                "text": "#edf3f5",
+                "muted": "#91a7b5",
+                "line": "#283945",
+                "red": "#f48d8d",
+                "green": "#83cbb7"
+              },
+              "charts": [
+                {
+                  "id": "industry-chart",
+                  "paper": "#121e28",
+                  "plot": "#121e28",
+                  "font": "#edf3f5",
+                  "font_size": 14,
+                  "legend_visible": false,
+                  "legend": "#edf3f5",
+                  "x_tick": "#91a7b5",
+                  "y_tick": "#91a7b5",
+                  "x_grid_visible": true,
+                  "y_grid_visible": true,
+                  "x_grid": "#283945",
+                  "y_grid": "#283945",
+                  "traces": [
+                    {
+                      "x": [
+                        -11.484369733252683,
+                        -9.66384302136315,
+                        -22.5130890052356,
+                        -7.387862796833778,
+                        -5.966607247931882,
+                        -2.288984263233196,
+                        -0.8748671062036769,
+                        -0.08071407004263861,
+                        -0.7920792079207928
+                      ],
+                      "y": [
+                        "矽晶圓",
+                        "晶片與先進製程",
+                        "電源與備援",
+                        "高速傳輸與光通訊",
+                        "散熱",
+                        "先進封裝與測試",
+                        "記憶體與儲存",
+                        "AI 伺服器",
+                        "PCB 與材料"
+                      ],
+                      "colors": [
+                        "#83cbb7",
+                        "#83cbb7",
+                        "#83cbb7",
+                        "#83cbb7",
+                        "#83cbb7",
+                        "#83cbb7",
+                        "#83cbb7",
+                        "#83cbb7",
+                        "#83cbb7"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "theme": "light",
+            "readability": {
+              "text": [
+                {
+                  "selector": "body",
+                  "size": 16,
+                  "color": "rgb(23, 49, 59)",
+                  "background": [
+                    244,
+                    247,
+                    250,
+                    1
+                  ],
+                  "contrast": 12.691676986056372
+                },
+                {
+                  "selector": ".research-head p",
+                  "size": 16,
+                  "color": "rgb(82, 101, 115)",
+                  "background": [
+                    244,
+                    247,
+                    250,
+                    1
+                  ],
+                  "contrast": 5.632200892061513
+                },
+                {
+                  "selector": ".research-readiness > p",
+                  "size": 16,
+                  "color": "rgb(23, 49, 59)",
+                  "background": [
+                    244,
+                    247,
+                    250,
+                    1
+                  ],
+                  "contrast": 12.691676986056372
+                },
+                {
+                  "selector": ".report-meta",
+                  "size": 14,
+                  "color": "rgb(82, 101, 115)",
+                  "background": [
+                    244,
+                    247,
+                    250,
+                    1
+                  ],
+                  "contrast": 5.632200892061513
+                },
+                {
+                  "selector": ".report-date strong",
+                  "size": 18,
+                  "color": "rgb(23, 49, 59)",
+                  "background": [
+                    244,
+                    247,
+                    250,
+                    1
+                  ],
+                  "contrast": 12.691676986056372
+                },
+                {
+                  "selector": ".ai-stock-meta",
+                  "size": 14,
+                  "color": "rgb(82, 101, 115)",
+                  "background": [
+                    255,
+                    255,
+                    255,
+                    1
+                  ],
+                  "contrast": 6.055711222194442
+                },
+                {
+                  "selector": ".ai-stock-meta",
+                  "size": 14,
+                  "color": "rgb(82, 101, 115)",
+                  "background": [
+                    255,
+                    255,
+                    255,
+                    1
+                  ],
+                  "contrast": 6.055711222194442
+                },
+                {
+                  "selector": ".ai-stock-meta",
+                  "size": 14,
+                  "color": "rgb(82, 101, 115)",
+                  "background": [
+                    255,
+                    255,
+                    255,
+                    1
+                  ],
+                  "contrast": 6.055711222194442
+                },
+                {
+                  "selector": ".ai-stock-state",
+                  "size": 16,
+                  "color": "rgb(121, 83, 21)",
+                  "background": [
+                    255,
+                    255,
+                    255,
+                    1
+                  ],
+                  "contrast": 6.86023244541609
+                },
+                {
+                  "selector": ".ai-stock-state",
+                  "size": 16,
+                  "color": "rgb(121, 83, 21)",
+                  "background": [
+                    255,
+                    255,
+                    255,
+                    1
+                  ],
+                  "contrast": 6.86023244541609
+                },
+                {
+                  "selector": ".ai-stock-state",
+                  "size": 16,
+                  "color": "rgb(121, 83, 21)",
+                  "background": [
+                    255,
+                    255,
+                    255,
+                    1
+                  ],
+                  "contrast": 6.86023244541609
+                },
+                {
+                  "selector": ".method-note",
+                  "size": 14,
+                  "color": "rgb(82, 101, 115)",
+                  "background": [
+                    244,
+                    247,
+                    250,
+                    1
+                  ],
+                  "contrast": 5.632200892061513
+                },
+                {
+                  "selector": ".method-note",
+                  "size": 14,
+                  "color": "rgb(82, 101, 115)",
+                  "background": [
+                    244,
+                    247,
+                    250,
+                    1
+                  ],
+                  "contrast": 5.632200892061513
+                },
+                {
+                  "selector": ".method-note",
+                  "size": 14,
+                  "color": "rgb(82, 101, 115)",
+                  "background": [
+                    244,
+                    247,
+                    250,
+                    1
+                  ],
+                  "contrast": 5.632200892061513
+                }
+              ],
+              "controls": [
+                {
+                  "selector": "#theme-select",
+                  "height": 48,
+                  "width": 170
+                },
+                {
+                  "selector": "#report-refresh",
+                  "height": 48,
+                  "width": 145.40625
+                },
+                {
+                  "selector": ".phase-nav a",
+                  "height": 48,
+                  "width": 86.25
+                },
+                {
+                  "selector": ".phase-nav a",
+                  "height": 48,
+                  "width": 86.25
+                },
+                {
+                  "selector": ".phase-nav a",
+                  "height": 48,
+                  "width": 86.25
+                },
+                {
+                  "selector": ".ai-category-button",
+                  "height": 48.796875,
+                  "width": 101.59375
+                },
+                {
+                  "selector": ".ai-category-button",
+                  "height": 48.796875,
+                  "width": 142.015625
+                },
+                {
+                  "selector": ".ai-category-button",
+                  "height": 48.796875,
+                  "width": 142.015625
+                }
+              ],
+              "background": [
+                244,
+                247,
+                250,
+                1
+              ],
+              "overflow": false
+            },
+            "plotly": {
+              "palette": {
+                "surface": "#ffffff",
+                "text": "#17313b",
+                "muted": "#526573",
+                "line": "#c6d2da",
+                "red": "#b22d3b",
+                "green": "#16734f"
+              },
+              "charts": [
+                {
+                  "id": "industry-chart",
+                  "paper": "#ffffff",
+                  "plot": "#ffffff",
+                  "font": "#17313b",
+                  "font_size": 14,
+                  "legend_visible": false,
+                  "legend": "#17313b",
+                  "x_tick": "#526573",
+                  "y_tick": "#526573",
+                  "x_grid_visible": true,
+                  "y_grid_visible": true,
+                  "x_grid": "#c6d2da",
+                  "y_grid": "#c6d2da",
+                  "traces": [
+                    {
+                      "x": [
+                        -11.484369733252683,
+                        -9.66384302136315,
+                        -22.5130890052356,
+                        -7.387862796833778,
+                        -5.966607247931882,
+                        -2.288984263233196,
+                        -0.8748671062036769,
+                        -0.08071407004263861,
+                        -0.7920792079207928
+                      ],
+                      "y": [
+                        "矽晶圓",
+                        "晶片與先進製程",
+                        "電源與備援",
+                        "高速傳輸與光通訊",
+                        "散熱",
+                        "先進封裝與測試",
+                        "記憶體與儲存",
+                        "AI 伺服器",
+                        "PCB 與材料"
+                      ],
+                      "colors": [
+                        "#16734f",
+                        "#16734f",
+                        "#16734f",
+                        "#16734f",
+                        "#16734f",
+                        "#16734f",
+                        "#16734f",
+                        "#16734f",
+                        "#16734f"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "theme": "sepia",
+            "readability": {
+              "text": [
+                {
+                  "selector": "body",
+                  "size": 16,
+                  "color": "rgb(60, 51, 40)",
+                  "background": [
+                    244,
+                    237,
+                    223,
+                    1
+                  ],
+                  "contrast": 10.626545601926708
+                },
+                {
+                  "selector": ".research-head p",
+                  "size": 16,
+                  "color": "rgb(108, 91, 71)",
+                  "background": [
+                    244,
+                    237,
+                    223,
+                    1
+                  ],
+                  "contrast": 5.589320610450253
+                },
+                {
+                  "selector": ".research-readiness > p",
+                  "size": 16,
+                  "color": "rgb(60, 51, 40)",
+                  "background": [
+                    244,
+                    237,
+                    223,
+                    1
+                  ],
+                  "contrast": 10.626545601926708
+                },
+                {
+                  "selector": ".report-meta",
+                  "size": 14,
+                  "color": "rgb(108, 91, 71)",
+                  "background": [
+                    244,
+                    237,
+                    223,
+                    1
+                  ],
+                  "contrast": 5.589320610450253
+                },
+                {
+                  "selector": ".report-date strong",
+                  "size": 18,
+                  "color": "rgb(60, 51, 40)",
+                  "background": [
+                    244,
+                    237,
+                    223,
+                    1
+                  ],
+                  "contrast": 10.626545601926708
+                },
+                {
+                  "selector": ".ai-stock-meta",
+                  "size": 14,
+                  "color": "rgb(108, 91, 71)",
+                  "background": [
+                    255,
+                    250,
+                    240,
+                    1
+                  ],
+                  "contrast": 6.258662335929536
+                },
+                {
+                  "selector": ".ai-stock-meta",
+                  "size": 14,
+                  "color": "rgb(108, 91, 71)",
+                  "background": [
+                    255,
+                    250,
+                    240,
+                    1
+                  ],
+                  "contrast": 6.258662335929536
+                },
+                {
+                  "selector": ".ai-stock-meta",
+                  "size": 14,
+                  "color": "rgb(108, 91, 71)",
+                  "background": [
+                    255,
+                    250,
+                    240,
+                    1
+                  ],
+                  "contrast": 6.258662335929536
+                },
+                {
+                  "selector": ".ai-stock-state",
+                  "size": 16,
+                  "color": "rgb(112, 80, 24)",
+                  "background": [
+                    255,
+                    250,
+                    240,
+                    1
+                  ],
+                  "contrast": 7.083266831090331
+                },
+                {
+                  "selector": ".ai-stock-state",
+                  "size": 16,
+                  "color": "rgb(112, 80, 24)",
+                  "background": [
+                    255,
+                    250,
+                    240,
+                    1
+                  ],
+                  "contrast": 7.083266831090331
+                },
+                {
+                  "selector": ".ai-stock-state",
+                  "size": 16,
+                  "color": "rgb(112, 80, 24)",
+                  "background": [
+                    255,
+                    250,
+                    240,
+                    1
+                  ],
+                  "contrast": 7.083266831090331
+                },
+                {
+                  "selector": ".method-note",
+                  "size": 14,
+                  "color": "rgb(108, 91, 71)",
+                  "background": [
+                    244,
+                    237,
+                    223,
+                    1
+                  ],
+                  "contrast": 5.589320610450253
+                },
+                {
+                  "selector": ".method-note",
+                  "size": 14,
+                  "color": "rgb(108, 91, 71)",
+                  "background": [
+                    244,
+                    237,
+                    223,
+                    1
+                  ],
+                  "contrast": 5.589320610450253
+                },
+                {
+                  "selector": ".method-note",
+                  "size": 14,
+                  "color": "rgb(108, 91, 71)",
+                  "background": [
+                    244,
+                    237,
+                    223,
+                    1
+                  ],
+                  "contrast": 5.589320610450253
+                }
+              ],
+              "controls": [
+                {
+                  "selector": "#theme-select",
+                  "height": 48,
+                  "width": 170
+                },
+                {
+                  "selector": "#report-refresh",
+                  "height": 48,
+                  "width": 145.40625
+                },
+                {
+                  "selector": ".phase-nav a",
+                  "height": 48,
+                  "width": 86.25
+                },
+                {
+                  "selector": ".phase-nav a",
+                  "height": 48,
+                  "width": 86.25
+                },
+                {
+                  "selector": ".phase-nav a",
+                  "height": 48,
+                  "width": 86.25
+                },
+                {
+                  "selector": ".ai-category-button",
+                  "height": 48.796875,
+                  "width": 101.59375
+                },
+                {
+                  "selector": ".ai-category-button",
+                  "height": 48.796875,
+                  "width": 142.015625
+                },
+                {
+                  "selector": ".ai-category-button",
+                  "height": 48.796875,
+                  "width": 142.015625
+                }
+              ],
+              "background": [
+                244,
+                237,
+                223,
+                1
+              ],
+              "overflow": false
+            },
+            "plotly": {
+              "palette": {
+                "surface": "#fffaf0",
+                "text": "#3c3328",
+                "muted": "#6c5b47",
+                "line": "#c9baa1",
+                "red": "#a52e32",
+                "green": "#296743"
+              },
+              "charts": [
+                {
+                  "id": "industry-chart",
+                  "paper": "#fffaf0",
+                  "plot": "#fffaf0",
+                  "font": "#3c3328",
+                  "font_size": 14,
+                  "legend_visible": false,
+                  "legend": "#3c3328",
+                  "x_tick": "#6c5b47",
+                  "y_tick": "#6c5b47",
+                  "x_grid_visible": true,
+                  "y_grid_visible": true,
+                  "x_grid": "#c9baa1",
+                  "y_grid": "#c9baa1",
+                  "traces": [
+                    {
+                      "x": [
+                        -11.484369733252683,
+                        -9.66384302136315,
+                        -22.5130890052356,
+                        -7.387862796833778,
+                        -5.966607247931882,
+                        -2.288984263233196,
+                        -0.8748671062036769,
+                        -0.08071407004263861,
+                        -0.7920792079207928
+                      ],
+                      "y": [
+                        "矽晶圓",
+                        "晶片與先進製程",
+                        "電源與備援",
+                        "高速傳輸與光通訊",
+                        "散熱",
+                        "先進封裝與測試",
+                        "記憶體與儲存",
+                        "AI 伺服器",
+                        "PCB 與材料"
+                      ],
+                      "colors": [
+                        "#296743",
+                        "#296743",
+                        "#296743",
+                        "#296743",
+                        "#296743",
+                        "#296743",
+                        "#296743",
+                        "#296743",
+                        "#296743"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ],
+        "persisted_phase_pages": [
+          "preopen",
+          "postclose",
+          "final"
+        ],
+        "offline_preference": "passed",
+        "unvisited_page_fallback": "passed",
+        "watchlist_unchanged": true,
+        "js_errors": []
+      },
+      {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000,
+        "themes": [
+          {
+            "theme": "dark",
+            "readability": {
+              "text": [
+                {
+                  "selector": "body",
+                  "size": 16,
+                  "color": "rgb(237, 243, 245)",
+                  "background": [
+                    11,
+                    19,
+                    27,
+                    1
+                  ],
+                  "contrast": 16.684095713610425
+                },
+                {
+                  "selector": ".research-head p",
+                  "size": 16,
+                  "color": "rgb(145, 167, 181)",
+                  "background": [
+                    11,
+                    19,
+                    27,
+                    1
+                  ],
+                  "contrast": 7.477420243128933
+                },
+                {
+                  "selector": ".research-readiness > p",
+                  "size": 16,
+                  "color": "rgb(237, 243, 245)",
+                  "background": [
+                    11,
+                    19,
+                    27,
+                    1
+                  ],
+                  "contrast": 16.684095713610425
+                },
+                {
+                  "selector": ".report-meta",
+                  "size": 14,
+                  "color": "rgb(145, 167, 181)",
+                  "background": [
+                    11,
+                    19,
+                    27,
+                    1
+                  ],
+                  "contrast": 7.477420243128933
+                },
+                {
+                  "selector": ".report-date strong",
+                  "size": 18,
+                  "color": "rgb(237, 243, 245)",
+                  "background": [
+                    11,
+                    19,
+                    27,
+                    1
+                  ],
+                  "contrast": 16.684095713610425
+                },
+                {
+                  "selector": ".ai-stock-meta",
+                  "size": 14,
+                  "color": "rgb(145, 167, 181)",
+                  "background": [
+                    18,
+                    30,
+                    40,
+                    1
+                  ],
+                  "contrast": 6.761840937258403
+                },
+                {
+                  "selector": ".ai-stock-meta",
+                  "size": 14,
+                  "color": "rgb(145, 167, 181)",
+                  "background": [
+                    18,
+                    30,
+                    40,
+                    1
+                  ],
+                  "contrast": 6.761840937258403
+                },
+                {
+                  "selector": ".ai-stock-meta",
+                  "size": 14,
+                  "color": "rgb(145, 167, 181)",
+                  "background": [
+                    18,
+                    30,
+                    40,
+                    1
+                  ],
+                  "contrast": 6.761840937258403
+                },
+                {
+                  "selector": ".ai-stock-state",
+                  "size": 16,
+                  "color": "rgb(233, 198, 135)",
+                  "background": [
+                    18,
+                    30,
+                    40,
+                    1
+                  ],
+                  "contrast": 10.379627088039427
+                },
+                {
+                  "selector": ".ai-stock-state",
+                  "size": 16,
+                  "color": "rgb(233, 198, 135)",
+                  "background": [
+                    18,
+                    30,
+                    40,
+                    1
+                  ],
+                  "contrast": 10.379627088039427
+                },
+                {
+                  "selector": ".ai-stock-state",
+                  "size": 16,
+                  "color": "rgb(233, 198, 135)",
+                  "background": [
+                    18,
+                    30,
+                    40,
+                    1
+                  ],
+                  "contrast": 10.379627088039427
+                },
+                {
+                  "selector": ".method-note",
+                  "size": 14,
+                  "color": "rgb(145, 167, 181)",
+                  "background": [
+                    11,
+                    19,
+                    27,
+                    1
+                  ],
+                  "contrast": 7.477420243128933
+                },
+                {
+                  "selector": ".method-note",
+                  "size": 14,
+                  "color": "rgb(145, 167, 181)",
+                  "background": [
+                    11,
+                    19,
+                    27,
+                    1
+                  ],
+                  "contrast": 7.477420243128933
+                },
+                {
+                  "selector": ".method-note",
+                  "size": 14,
+                  "color": "rgb(145, 167, 181)",
+                  "background": [
+                    11,
+                    19,
+                    27,
+                    1
+                  ],
+                  "contrast": 7.477420243128933
+                }
+              ],
+              "controls": [
+                {
+                  "selector": "#theme-select",
+                  "height": 48,
+                  "width": 160
+                },
+                {
+                  "selector": "#report-refresh",
+                  "height": 50.796875,
+                  "width": 148.5625
+                },
+                {
+                  "selector": ".phase-nav a",
+                  "height": 48,
+                  "width": 124.015625
+                },
+                {
+                  "selector": ".phase-nav a",
+                  "height": 48,
+                  "width": 103
+                },
+                {
+                  "selector": ".phase-nav a",
+                  "height": 48,
+                  "width": 103
+                },
+                {
+                  "selector": ".ai-category-button",
+                  "height": 55.796875,
+                  "width": 103.59375
+                },
+                {
+                  "selector": ".ai-category-button",
+                  "height": 55.796875,
+                  "width": 144.015625
+                },
+                {
+                  "selector": ".ai-category-button",
+                  "height": 55.796875,
+                  "width": 144.015625
+                }
+              ],
+              "background": [
+                11,
+                19,
+                27,
+                1
+              ],
+              "overflow": false
+            },
+            "plotly": {
+              "palette": {
+                "surface": "#121e28",
+                "text": "#edf3f5",
+                "muted": "#91a7b5",
+                "line": "#283945",
+                "red": "#f48d8d",
+                "green": "#83cbb7"
+              },
+              "charts": [
+                {
+                  "id": "industry-chart",
+                  "paper": "#121e28",
+                  "plot": "#121e28",
+                  "font": "#edf3f5",
+                  "font_size": 14,
+                  "legend_visible": false,
+                  "legend": "#edf3f5",
+                  "x_tick": "#91a7b5",
+                  "y_tick": "#91a7b5",
+                  "x_grid_visible": true,
+                  "y_grid_visible": true,
+                  "x_grid": "#283945",
+                  "y_grid": "#283945",
+                  "traces": [
+                    {
+                      "x": [
+                        -11.484369733252683,
+                        -9.66384302136315,
+                        -22.5130890052356,
+                        -7.387862796833778,
+                        -5.966607247931882,
+                        -2.288984263233196,
+                        -0.8748671062036769,
+                        -0.08071407004263861,
+                        -0.7920792079207928
+                      ],
+                      "y": [
+                        "矽晶圓",
+                        "晶片與先進製程",
+                        "電源與備援",
+                        "高速傳輸與光通訊",
+                        "散熱",
+                        "先進封裝與測試",
+                        "記憶體與儲存",
+                        "AI 伺服器",
+                        "PCB 與材料"
+                      ],
+                      "colors": [
+                        "#83cbb7",
+                        "#83cbb7",
+                        "#83cbb7",
+                        "#83cbb7",
+                        "#83cbb7",
+                        "#83cbb7",
+                        "#83cbb7",
+                        "#83cbb7",
+                        "#83cbb7"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "theme": "light",
+            "readability": {
+              "text": [
+                {
+                  "selector": "body",
+                  "size": 16,
+                  "color": "rgb(23, 49, 59)",
+                  "background": [
+                    244,
+                    247,
+                    250,
+                    1
+                  ],
+                  "contrast": 12.691676986056372
+                },
+                {
+                  "selector": ".research-head p",
+                  "size": 16,
+                  "color": "rgb(82, 101, 115)",
+                  "background": [
+                    244,
+                    247,
+                    250,
+                    1
+                  ],
+                  "contrast": 5.632200892061513
+                },
+                {
+                  "selector": ".research-readiness > p",
+                  "size": 16,
+                  "color": "rgb(23, 49, 59)",
+                  "background": [
+                    244,
+                    247,
+                    250,
+                    1
+                  ],
+                  "contrast": 12.691676986056372
+                },
+                {
+                  "selector": ".report-meta",
+                  "size": 14,
+                  "color": "rgb(82, 101, 115)",
+                  "background": [
+                    244,
+                    247,
+                    250,
+                    1
+                  ],
+                  "contrast": 5.632200892061513
+                },
+                {
+                  "selector": ".report-date strong",
+                  "size": 18,
+                  "color": "rgb(23, 49, 59)",
+                  "background": [
+                    244,
+                    247,
+                    250,
+                    1
+                  ],
+                  "contrast": 12.691676986056372
+                },
+                {
+                  "selector": ".ai-stock-meta",
+                  "size": 14,
+                  "color": "rgb(82, 101, 115)",
+                  "background": [
+                    255,
+                    255,
+                    255,
+                    1
+                  ],
+                  "contrast": 6.055711222194442
+                },
+                {
+                  "selector": ".ai-stock-meta",
+                  "size": 14,
+                  "color": "rgb(82, 101, 115)",
+                  "background": [
+                    255,
+                    255,
+                    255,
+                    1
+                  ],
+                  "contrast": 6.055711222194442
+                },
+                {
+                  "selector": ".ai-stock-meta",
+                  "size": 14,
+                  "color": "rgb(82, 101, 115)",
+                  "background": [
+                    255,
+                    255,
+                    255,
+                    1
+                  ],
+                  "contrast": 6.055711222194442
+                },
+                {
+                  "selector": ".ai-stock-state",
+                  "size": 16,
+                  "color": "rgb(121, 83, 21)",
+                  "background": [
+                    255,
+                    255,
+                    255,
+                    1
+                  ],
+                  "contrast": 6.86023244541609
+                },
+                {
+                  "selector": ".ai-stock-state",
+                  "size": 16,
+                  "color": "rgb(121, 83, 21)",
+                  "background": [
+                    255,
+                    255,
+                    255,
+                    1
+                  ],
+                  "contrast": 6.86023244541609
+                },
+                {
+                  "selector": ".ai-stock-state",
+                  "size": 16,
+                  "color": "rgb(121, 83, 21)",
+                  "background": [
+                    255,
+                    255,
+                    255,
+                    1
+                  ],
+                  "contrast": 6.86023244541609
+                },
+                {
+                  "selector": ".method-note",
+                  "size": 14,
+                  "color": "rgb(82, 101, 115)",
+                  "background": [
+                    244,
+                    247,
+                    250,
+                    1
+                  ],
+                  "contrast": 5.632200892061513
+                },
+                {
+                  "selector": ".method-note",
+                  "size": 14,
+                  "color": "rgb(82, 101, 115)",
+                  "background": [
+                    244,
+                    247,
+                    250,
+                    1
+                  ],
+                  "contrast": 5.632200892061513
+                },
+                {
+                  "selector": ".method-note",
+                  "size": 14,
+                  "color": "rgb(82, 101, 115)",
+                  "background": [
+                    244,
+                    247,
+                    250,
+                    1
+                  ],
+                  "contrast": 5.632200892061513
+                }
+              ],
+              "controls": [
+                {
+                  "selector": "#theme-select",
+                  "height": 48,
+                  "width": 160
+                },
+                {
+                  "selector": "#report-refresh",
+                  "height": 50.796875,
+                  "width": 148.5625
+                },
+                {
+                  "selector": ".phase-nav a",
+                  "height": 48,
+                  "width": 124.015625
+                },
+                {
+                  "selector": ".phase-nav a",
+                  "height": 48,
+                  "width": 103
+                },
+                {
+                  "selector": ".phase-nav a",
+                  "height": 48,
+                  "width": 103
+                },
+                {
+                  "selector": ".ai-category-button",
+                  "height": 55.796875,
+                  "width": 103.59375
+                },
+                {
+                  "selector": ".ai-category-button",
+                  "height": 55.796875,
+                  "width": 144.015625
+                },
+                {
+                  "selector": ".ai-category-button",
+                  "height": 55.796875,
+                  "width": 144.015625
+                }
+              ],
+              "background": [
+                244,
+                247,
+                250,
+                1
+              ],
+              "overflow": false
+            },
+            "plotly": {
+              "palette": {
+                "surface": "#ffffff",
+                "text": "#17313b",
+                "muted": "#526573",
+                "line": "#c6d2da",
+                "red": "#b22d3b",
+                "green": "#16734f"
+              },
+              "charts": [
+                {
+                  "id": "industry-chart",
+                  "paper": "#ffffff",
+                  "plot": "#ffffff",
+                  "font": "#17313b",
+                  "font_size": 14,
+                  "legend_visible": false,
+                  "legend": "#17313b",
+                  "x_tick": "#526573",
+                  "y_tick": "#526573",
+                  "x_grid_visible": true,
+                  "y_grid_visible": true,
+                  "x_grid": "#c6d2da",
+                  "y_grid": "#c6d2da",
+                  "traces": [
+                    {
+                      "x": [
+                        -11.484369733252683,
+                        -9.66384302136315,
+                        -22.5130890052356,
+                        -7.387862796833778,
+                        -5.966607247931882,
+                        -2.288984263233196,
+                        -0.8748671062036769,
+                        -0.08071407004263861,
+                        -0.7920792079207928
+                      ],
+                      "y": [
+                        "矽晶圓",
+                        "晶片與先進製程",
+                        "電源與備援",
+                        "高速傳輸與光通訊",
+                        "散熱",
+                        "先進封裝與測試",
+                        "記憶體與儲存",
+                        "AI 伺服器",
+                        "PCB 與材料"
+                      ],
+                      "colors": [
+                        "#16734f",
+                        "#16734f",
+                        "#16734f",
+                        "#16734f",
+                        "#16734f",
+                        "#16734f",
+                        "#16734f",
+                        "#16734f",
+                        "#16734f"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "theme": "sepia",
+            "readability": {
+              "text": [
+                {
+                  "selector": "body",
+                  "size": 16,
+                  "color": "rgb(60, 51, 40)",
+                  "background": [
+                    244,
+                    237,
+                    223,
+                    1
+                  ],
+                  "contrast": 10.626545601926708
+                },
+                {
+                  "selector": ".research-head p",
+                  "size": 16,
+                  "color": "rgb(108, 91, 71)",
+                  "background": [
+                    244,
+                    237,
+                    223,
+                    1
+                  ],
+                  "contrast": 5.589320610450253
+                },
+                {
+                  "selector": ".research-readiness > p",
+                  "size": 16,
+                  "color": "rgb(60, 51, 40)",
+                  "background": [
+                    244,
+                    237,
+                    223,
+                    1
+                  ],
+                  "contrast": 10.626545601926708
+                },
+                {
+                  "selector": ".report-meta",
+                  "size": 14,
+                  "color": "rgb(108, 91, 71)",
+                  "background": [
+                    244,
+                    237,
+                    223,
+                    1
+                  ],
+                  "contrast": 5.589320610450253
+                },
+                {
+                  "selector": ".report-date strong",
+                  "size": 18,
+                  "color": "rgb(60, 51, 40)",
+                  "background": [
+                    244,
+                    237,
+                    223,
+                    1
+                  ],
+                  "contrast": 10.626545601926708
+                },
+                {
+                  "selector": ".ai-stock-meta",
+                  "size": 14,
+                  "color": "rgb(108, 91, 71)",
+                  "background": [
+                    255,
+                    250,
+                    240,
+                    1
+                  ],
+                  "contrast": 6.258662335929536
+                },
+                {
+                  "selector": ".ai-stock-meta",
+                  "size": 14,
+                  "color": "rgb(108, 91, 71)",
+                  "background": [
+                    255,
+                    250,
+                    240,
+                    1
+                  ],
+                  "contrast": 6.258662335929536
+                },
+                {
+                  "selector": ".ai-stock-meta",
+                  "size": 14,
+                  "color": "rgb(108, 91, 71)",
+                  "background": [
+                    255,
+                    250,
+                    240,
+                    1
+                  ],
+                  "contrast": 6.258662335929536
+                },
+                {
+                  "selector": ".ai-stock-state",
+                  "size": 16,
+                  "color": "rgb(112, 80, 24)",
+                  "background": [
+                    255,
+                    250,
+                    240,
+                    1
+                  ],
+                  "contrast": 7.083266831090331
+                },
+                {
+                  "selector": ".ai-stock-state",
+                  "size": 16,
+                  "color": "rgb(112, 80, 24)",
+                  "background": [
+                    255,
+                    250,
+                    240,
+                    1
+                  ],
+                  "contrast": 7.083266831090331
+                },
+                {
+                  "selector": ".ai-stock-state",
+                  "size": 16,
+                  "color": "rgb(112, 80, 24)",
+                  "background": [
+                    255,
+                    250,
+                    240,
+                    1
+                  ],
+                  "contrast": 7.083266831090331
+                },
+                {
+                  "selector": ".method-note",
+                  "size": 14,
+                  "color": "rgb(108, 91, 71)",
+                  "background": [
+                    244,
+                    237,
+                    223,
+                    1
+                  ],
+                  "contrast": 5.589320610450253
+                },
+                {
+                  "selector": ".method-note",
+                  "size": 14,
+                  "color": "rgb(108, 91, 71)",
+                  "background": [
+                    244,
+                    237,
+                    223,
+                    1
+                  ],
+                  "contrast": 5.589320610450253
+                },
+                {
+                  "selector": ".method-note",
+                  "size": 14,
+                  "color": "rgb(108, 91, 71)",
+                  "background": [
+                    244,
+                    237,
+                    223,
+                    1
+                  ],
+                  "contrast": 5.589320610450253
+                }
+              ],
+              "controls": [
+                {
+                  "selector": "#theme-select",
+                  "height": 48,
+                  "width": 160
+                },
+                {
+                  "selector": "#report-refresh",
+                  "height": 50.796875,
+                  "width": 148.5625
+                },
+                {
+                  "selector": ".phase-nav a",
+                  "height": 48,
+                  "width": 124.015625
+                },
+                {
+                  "selector": ".phase-nav a",
+                  "height": 48,
+                  "width": 103
+                },
+                {
+                  "selector": ".phase-nav a",
+                  "height": 48,
+                  "width": 103
+                },
+                {
+                  "selector": ".ai-category-button",
+                  "height": 55.796875,
+                  "width": 103.59375
+                },
+                {
+                  "selector": ".ai-category-button",
+                  "height": 55.796875,
+                  "width": 144.015625
+                },
+                {
+                  "selector": ".ai-category-button",
+                  "height": 55.796875,
+                  "width": 144.015625
+                }
+              ],
+              "background": [
+                244,
+                237,
+                223,
+                1
+              ],
+              "overflow": false
+            },
+            "plotly": {
+              "palette": {
+                "surface": "#fffaf0",
+                "text": "#3c3328",
+                "muted": "#6c5b47",
+                "line": "#c9baa1",
+                "red": "#a52e32",
+                "green": "#296743"
+              },
+              "charts": [
+                {
+                  "id": "industry-chart",
+                  "paper": "#fffaf0",
+                  "plot": "#fffaf0",
+                  "font": "#3c3328",
+                  "font_size": 14,
+                  "legend_visible": false,
+                  "legend": "#3c3328",
+                  "x_tick": "#6c5b47",
+                  "y_tick": "#6c5b47",
+                  "x_grid_visible": true,
+                  "y_grid_visible": true,
+                  "x_grid": "#c9baa1",
+                  "y_grid": "#c9baa1",
+                  "traces": [
+                    {
+                      "x": [
+                        -11.484369733252683,
+                        -9.66384302136315,
+                        -22.5130890052356,
+                        -7.387862796833778,
+                        -5.966607247931882,
+                        -2.288984263233196,
+                        -0.8748671062036769,
+                        -0.08071407004263861,
+                        -0.7920792079207928
+                      ],
+                      "y": [
+                        "矽晶圓",
+                        "晶片與先進製程",
+                        "電源與備援",
+                        "高速傳輸與光通訊",
+                        "散熱",
+                        "先進封裝與測試",
+                        "記憶體與儲存",
+                        "AI 伺服器",
+                        "PCB 與材料"
+                      ],
+                      "colors": [
+                        "#296743",
+                        "#296743",
+                        "#296743",
+                        "#296743",
+                        "#296743",
+                        "#296743",
+                        "#296743",
+                        "#296743",
+                        "#296743"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ],
+        "persisted_phase_pages": [
+          "preopen",
+          "postclose",
+          "final"
+        ],
+        "offline_preference": "passed",
+        "unvisited_page_fallback": "passed",
+        "watchlist_unchanged": true,
+        "js_errors": []
+      }
+    ],
+    "preference_storage_failure": "safe default and live switching still work; persistence unavailable",
+    "network": "GET only; no report dispatch, watchlist upload, or trading request",
+    "result": "passed"
+  },
+  "local_wafer_browser": {
+    "checked_at_utc": "2026-10-30T02:11:44.340969+00:00",
+    "delivery": "existing rendered files served at the GitHub Pages project subpath",
+    "browser": "Chromium desktop / mobile viewport emulation; not a physical Android",
+    "market_data_injected": false,
+    "viewports": [
+      {
+        "name": "small-phone",
+        "width": 360,
+        "height": 800,
+        "pages": [
+          {
+            "page": "index",
+            "report_phase": "preopen",
+            "as_of": "2026-10-30",
+            "data_date": "2026-10-29",
+            "scope": "ai_supply_chain",
+            "checks": {
+              "state": "populated",
+              "initial_visible_stocks": [
+                "TWSE:2308",
+                "TWSE:2317",
+                "TWSE:2330",
+                "TWSE:2345",
+                "TWSE:2356",
+                "TWSE:2357",
+                "TWSE:2376",
+                "TWSE:2383",
+                "TWSE:2421",
+                "TWSE:2454",
+                "TWSE:3231",
+                "TPEX:3260",
+                "TWSE:3443",
+                "TWSE:3532",
+                "TWSE:3653",
+                "TWSE:3661",
+                "TWSE:3706",
+                "TWSE:3711",
+                "TWSE:4967",
+                "TPEX:5483",
+                "TPEX:6182",
+                "TPEX:6488",
+                "TWSE:6669",
+                "TPEX:8299"
+              ],
+              "categories": [
+                {
+                  "category": "chip",
+                  "visible_stocks": 4
+                },
+                {
+                  "category": "packaging",
+                  "visible_stocks": 1
+                },
+                {
+                  "category": "server",
+                  "visible_stocks": 7
+                },
+                {
+                  "category": "cooling",
+                  "visible_stocks": 3
+                },
+                {
+                  "category": "power",
+                  "visible_stocks": 1
+                },
+                {
+                  "category": "pcb",
+                  "visible_stocks": 1
+                },
+                {
+                  "category": "networking",
+                  "visible_stocks": 1
+                },
+                {
+                  "category": "memory",
+                  "visible_stocks": 3
+                },
+                {
+                  "category": "wafer",
+                  "visible_stocks": 4
+                }
+              ],
+              "non_ai_watchlist_quote": "TPEX:1240",
+              "checks": [
+                "original price and date",
+                "search miss and reset",
+                "category membership",
+                "detail navigation",
+                "evidence links",
+                "missing plans remain unavailable",
+                "local watchlist add and reload persistence",
+                "non-AI holding quote isolation"
+              ]
+            }
+          },
+          {
+            "page": "preopen",
+            "report_phase": "preopen",
+            "as_of": "2026-10-30",
+            "data_date": "2026-10-29",
+            "scope": "ai_supply_chain",
+            "checks": {
+              "state": "independent phase page",
+              "checks": [
+                "original prices / phase metadata"
+              ]
+            }
+          },
+          {
+            "page": "postclose",
+            "report_phase": "final",
+            "as_of": "2026-10-29",
+            "data_date": "2026-10-29",
+            "scope": "ai_supply_chain",
+            "checks": {
+              "state": "independent phase page",
+              "checks": [
+                "original prices / phase metadata"
+              ]
+            }
+          },
+          {
+            "page": "final",
+            "report_phase": "final",
+            "as_of": "2026-10-29",
+            "data_date": "2026-10-29",
+            "scope": "ai_supply_chain",
+            "checks": {
+              "state": "independent phase page",
+              "checks": [
+                "original prices / phase metadata"
+              ]
+            }
+          }
+        ],
+        "js_errors": []
+      },
+      {
+        "name": "phone",
+        "width": 390,
+        "height": 844,
+        "pages": [
+          {
+            "page": "index",
+            "report_phase": "preopen",
+            "as_of": "2026-10-30",
+            "data_date": "2026-10-29",
+            "scope": "ai_supply_chain",
+            "checks": {
+              "state": "populated",
+              "initial_visible_stocks": [
+                "TWSE:2308",
+                "TWSE:2317",
+                "TWSE:2330",
+                "TWSE:2345",
+                "TWSE:2356",
+                "TWSE:2357",
+                "TWSE:2376",
+                "TWSE:2383",
+                "TWSE:2421",
+                "TWSE:2454",
+                "TWSE:3231",
+                "TPEX:3260",
+                "TWSE:3443",
+                "TWSE:3532",
+                "TWSE:3653",
+                "TWSE:3661",
+                "TWSE:3706",
+                "TWSE:3711",
+                "TWSE:4967",
+                "TPEX:5483",
+                "TPEX:6182",
+                "TPEX:6488",
+                "TWSE:6669",
+                "TPEX:8299"
+              ],
+              "categories": [
+                {
+                  "category": "chip",
+                  "visible_stocks": 4
+                },
+                {
+                  "category": "packaging",
+                  "visible_stocks": 1
+                },
+                {
+                  "category": "server",
+                  "visible_stocks": 7
+                },
+                {
+                  "category": "cooling",
+                  "visible_stocks": 3
+                },
+                {
+                  "category": "power",
+                  "visible_stocks": 1
+                },
+                {
+                  "category": "pcb",
+                  "visible_stocks": 1
+                },
+                {
+                  "category": "networking",
+                  "visible_stocks": 1
+                },
+                {
+                  "category": "memory",
+                  "visible_stocks": 3
+                },
+                {
+                  "category": "wafer",
+                  "visible_stocks": 4
+                }
+              ],
+              "non_ai_watchlist_quote": "TPEX:1240",
+              "checks": [
+                "original price and date",
+                "search miss and reset",
+                "category membership",
+                "detail navigation",
+                "evidence links",
+                "missing plans remain unavailable",
+                "local watchlist add and reload persistence",
+                "non-AI holding quote isolation"
+              ]
+            }
+          },
+          {
+            "page": "preopen",
+            "report_phase": "preopen",
+            "as_of": "2026-10-30",
+            "data_date": "2026-10-29",
+            "scope": "ai_supply_chain",
+            "checks": {
+              "state": "independent phase page",
+              "checks": [
+                "original prices / phase metadata"
+              ]
+            }
+          },
+          {
+            "page": "postclose",
+            "report_phase": "final",
+            "as_of": "2026-10-29",
+            "data_date": "2026-10-29",
+            "scope": "ai_supply_chain",
+            "checks": {
+              "state": "independent phase page",
+              "checks": [
+                "original prices / phase metadata"
+              ]
+            }
+          },
+          {
+            "page": "final",
+            "report_phase": "final",
+            "as_of": "2026-10-29",
+            "data_date": "2026-10-29",
+            "scope": "ai_supply_chain",
+            "checks": {
+              "state": "independent phase page",
+              "checks": [
+                "original prices / phase metadata"
+              ]
+            }
+          }
+        ],
+        "js_errors": []
+      },
+      {
+        "name": "landscape",
+        "width": 844,
+        "height": 390,
+        "pages": [
+          {
+            "page": "index",
+            "report_phase": "preopen",
+            "as_of": "2026-10-30",
+            "data_date": "2026-10-29",
+            "scope": "ai_supply_chain",
+            "checks": {
+              "state": "populated",
+              "initial_visible_stocks": [
+                "TWSE:2308",
+                "TWSE:2317",
+                "TWSE:2330",
+                "TWSE:2345",
+                "TWSE:2356",
+                "TWSE:2357",
+                "TWSE:2376",
+                "TWSE:2383",
+                "TWSE:2421",
+                "TWSE:2454",
+                "TWSE:3231",
+                "TPEX:3260",
+                "TWSE:3443",
+                "TWSE:3532",
+                "TWSE:3653",
+                "TWSE:3661",
+                "TWSE:3706",
+                "TWSE:3711",
+                "TWSE:4967",
+                "TPEX:5483",
+                "TPEX:6182",
+                "TPEX:6488",
+                "TWSE:6669",
+                "TPEX:8299"
+              ],
+              "categories": [
+                {
+                  "category": "chip",
+                  "visible_stocks": 4
+                },
+                {
+                  "category": "packaging",
+                  "visible_stocks": 1
+                },
+                {
+                  "category": "server",
+                  "visible_stocks": 7
+                },
+                {
+                  "category": "cooling",
+                  "visible_stocks": 3
+                },
+                {
+                  "category": "power",
+                  "visible_stocks": 1
+                },
+                {
+                  "category": "pcb",
+                  "visible_stocks": 1
+                },
+                {
+                  "category": "networking",
+                  "visible_stocks": 1
+                },
+                {
+                  "category": "memory",
+                  "visible_stocks": 3
+                },
+                {
+                  "category": "wafer",
+                  "visible_stocks": 4
+                }
+              ],
+              "non_ai_watchlist_quote": "TPEX:1240",
+              "checks": [
+                "original price and date",
+                "search miss and reset",
+                "category membership",
+                "detail navigation",
+                "evidence links",
+                "missing plans remain unavailable",
+                "local watchlist add and reload persistence",
+                "non-AI holding quote isolation"
+              ]
+            }
+          },
+          {
+            "page": "preopen",
+            "report_phase": "preopen",
+            "as_of": "2026-10-30",
+            "data_date": "2026-10-29",
+            "scope": "ai_supply_chain",
+            "checks": {
+              "state": "independent phase page",
+              "checks": [
+                "original prices / phase metadata"
+              ]
+            }
+          },
+          {
+            "page": "postclose",
+            "report_phase": "final",
+            "as_of": "2026-10-29",
+            "data_date": "2026-10-29",
+            "scope": "ai_supply_chain",
+            "checks": {
+              "state": "independent phase page",
+              "checks": [
+                "original prices / phase metadata"
+              ]
+            }
+          },
+          {
+            "page": "final",
+            "report_phase": "final",
+            "as_of": "2026-10-29",
+            "data_date": "2026-10-29",
+            "scope": "ai_supply_chain",
+            "checks": {
+              "state": "independent phase page",
+              "checks": [
+                "original prices / phase metadata"
+              ]
+            }
+          }
+        ],
+        "js_errors": []
+      },
+      {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1100,
+        "pages": [
+          {
+            "page": "index",
+            "report_phase": "preopen",
+            "as_of": "2026-10-30",
+            "data_date": "2026-10-29",
+            "scope": "ai_supply_chain",
+            "checks": {
+              "state": "populated",
+              "initial_visible_stocks": [
+                "TWSE:2308",
+                "TWSE:2317",
+                "TWSE:2330",
+                "TWSE:2345",
+                "TWSE:2356",
+                "TWSE:2357",
+                "TWSE:2376",
+                "TWSE:2383",
+                "TWSE:2421",
+                "TWSE:2454",
+                "TWSE:3231",
+                "TPEX:3260",
+                "TWSE:3443",
+                "TWSE:3532",
+                "TWSE:3653",
+                "TWSE:3661",
+                "TWSE:3706",
+                "TWSE:3711",
+                "TWSE:4967",
+                "TPEX:5483",
+                "TPEX:6182",
+                "TPEX:6488",
+                "TWSE:6669",
+                "TPEX:8299"
+              ],
+              "categories": [
+                {
+                  "category": "chip",
+                  "visible_stocks": 4
+                },
+                {
+                  "category": "packaging",
+                  "visible_stocks": 1
+                },
+                {
+                  "category": "server",
+                  "visible_stocks": 7
+                },
+                {
+                  "category": "cooling",
+                  "visible_stocks": 3
+                },
+                {
+                  "category": "power",
+                  "visible_stocks": 1
+                },
+                {
+                  "category": "pcb",
+                  "visible_stocks": 1
+                },
+                {
+                  "category": "networking",
+                  "visible_stocks": 1
+                },
+                {
+                  "category": "memory",
+                  "visible_stocks": 3
+                },
+                {
+                  "category": "wafer",
+                  "visible_stocks": 4
+                }
+              ],
+              "non_ai_watchlist_quote": "TPEX:1240",
+              "checks": [
+                "original price and date",
+                "search miss and reset",
+                "category membership",
+                "detail navigation",
+                "evidence links",
+                "missing plans remain unavailable",
+                "local watchlist add and reload persistence",
+                "non-AI holding quote isolation"
+              ]
+            }
+          },
+          {
+            "page": "preopen",
+            "report_phase": "preopen",
+            "as_of": "2026-10-30",
+            "data_date": "2026-10-29",
+            "scope": "ai_supply_chain",
+            "checks": {
+              "state": "independent phase page",
+              "checks": [
+                "original prices / phase metadata"
+              ]
+            }
+          },
+          {
+            "page": "postclose",
+            "report_phase": "final",
+            "as_of": "2026-10-29",
+            "data_date": "2026-10-29",
+            "scope": "ai_supply_chain",
+            "checks": {
+              "state": "independent phase page",
+              "checks": [
+                "original prices / phase metadata"
+              ]
+            }
+          },
+          {
+            "page": "final",
+            "report_phase": "final",
+            "as_of": "2026-10-29",
+            "data_date": "2026-10-29",
+            "scope": "ai_supply_chain",
+            "checks": {
+              "state": "independent phase page",
+              "checks": [
+                "original prices / phase metadata"
+              ]
+            }
+          }
+        ],
+        "js_errors": []
+      }
+    ],
+    "network": "public GET only; no analysis dispatch / watchlist upload / order submission",
+    "result": "passed"
+  },
+  "pwa": {
+    "checked_at": "2026-10-30T02:11:44.323832+00:00",
+    "base_url": "http://127.0.0.1:39249/taiwan-stock-ai/",
+    "browser": "Chromium desktop/mobile emulation; not physical Android",
+    "report_inputs": "existing rendered report files; no simulated market prices",
+    "checks": [
+      "manifest scope, standalone display and actual 192/512 PNG dimensions",
+      "No POST/dispatch or watchlist upload; public content GET requests only"
+    ],
+    "viewports": [
+      {
+        "viewport": "desktop",
+        "width": 1440,
+        "height": 1000,
+        "scope": "http://127.0.0.1:39249/taiwan-stock-ai/",
+        "pages": [
+          {
+            "page": "index",
+            "data_date": "2026-10-29",
+            "candidate_count": 1
+          },
+          {
+            "page": "preopen",
+            "data_date": "2026-10-29",
+            "candidate_count": 1
+          },
+          {
+            "page": "postclose",
+            "data_date": "2026-10-29",
+            "candidate_count": 1
+          },
+          {
+            "page": "final",
+            "data_date": "2026-10-29",
+            "candidate_count": 1
+          }
+        ],
+        "js_errors": [],
+        "chromium_installability": {
+          "installabilityErrors": [
+            {
+              "errorId": "in-incognito",
+              "errorArguments": []
+            }
+          ]
+        },
+        "checks": [
+          "same/new publication",
+          "HTTP/error/malformed/timeout feedback",
+          "duplicate tap suppression",
+          "real offline cached report",
+          "unvisited offline fallback",
+          "HTTP outage while browser online",
+          "install event handler simulation",
+          "real waiting-worker update",
+          "watchlist persistence",
+          "other-app cache isolation",
+          "layout"
+        ]
+      },
+      {
+        "viewport": "android",
+        "width": 390,
+        "height": 844,
+        "scope": "http://127.0.0.1:39249/taiwan-stock-ai/",
+        "pages": [
+          {
+            "page": "index",
+            "data_date": "2026-10-29",
+            "candidate_count": 1
+          },
+          {
+            "page": "preopen",
+            "data_date": "2026-10-29",
+            "candidate_count": 1
+          },
+          {
+            "page": "postclose",
+            "data_date": "2026-10-29",
+            "candidate_count": 1
+          },
+          {
+            "page": "final",
+            "data_date": "2026-10-29",
+            "candidate_count": 1
+          }
+        ],
+        "js_errors": [],
+        "chromium_installability": {
+          "installabilityErrors": [
+            {
+              "errorId": "in-incognito",
+              "errorArguments": []
+            }
+          ]
+        },
+        "checks": [
+          "same/new publication",
+          "HTTP/error/malformed/timeout feedback",
+          "duplicate tap suppression",
+          "real offline cached report",
+          "unvisited offline fallback",
+          "HTTP outage while browser online",
+          "install event handler simulation",
+          "real waiting-worker update",
+          "watchlist persistence",
+          "other-app cache isolation",
+          "layout"
+        ]
+      }
+    ],
+    "persistent_profile_installability": {
+      "installabilityErrors": []
+    }
+  },
+  "history": {
+    "checked_at_utc": "2026-10-30T02:20:18.547678+00:00",
+    "baseline_branch": "ea052de3f9ad17f296cd2936193147ca9e639f11",
+    "current_branch": "3f99b63b515406531c8c4084475d762c617f3a72",
+    "baseline_report_count": 39,
+    "current_report_count": 40,
+    "original_reports_unchanged": true,
+    "original_report_blobs": {
+      "data/reports/2026-10-22-manual-1b09e60b1f1bb40f.json": "8578c3220c54e33df79f633531ee8d1372f29822",
+      "data/reports/2026-10-22-manual-ab61f20094cf50e4.json": "325c0febee807de6d3ce0f5787448499f111780c",
+      "data/reports/2026-10-23-final-e2b11871e51120fc.json": "35e5442392cb1b1e02833d61f6f6da4149c06331",
+      "data/reports/2026-10-23-manual-4d39c015949af352.json": "49ef9d4a5ef558b5bab4ca87114462197748580a",
+      "data/reports/2026-10-24-manual-5ddde5e05b679348.json": "58a54969d36f92f90ee9f65b0b50e3f0f61fa306",
+      "data/reports/2026-10-24-manual-d6ef473e0d0a5304.json": "21000ef68445bd890ec84eaa814998ae2991c729",
+      "data/reports/2026-10-25-manual-82270e78c05e9050.json": "3b73ce60a7e54db9bb279060369248e0ac6b11f1",
+      "data/reports/2026-10-25-manual-b5eba654bcb883f7.json": "b084cb9c8f6efe8611e9d2cd113b1e5b69c43df3",
+      "data/reports/2026-10-26-intraday-7d0d6606dda57ec2.json": "4b201746b56decf5747c81d68a352835d79bf370",
+      "data/reports/2026-10-26-preopen-75875450447a879b.json": "22f85917ee007aec2084aaf1125a39d2948a7fd8",
+      "data/reports/2026-10-27-final-896cab276ec02c8e.json": "d9c4c65b675fba4724035e3f85144dabebcac503",
+      "data/reports/2026-10-27-final-d458a34815fb2383.json": "a8feb4605f49c52032cb4c0ed04db0b419ad38dc",
+      "data/reports/2026-10-27-final-df84d3fbd457a2f4.json": "9aefed8ddd89f05c4f367e3d5353dceb4b2e848d",
+      "data/reports/2026-10-27-intraday-f922007447b4918d.json": "d99d69f31e7465be96ceb110864fd4b9de5844a7",
+      "data/reports/2026-10-27-postclose-780b356fc6037ad5.json": "81ede59d865bd271107b1093e7124602865b9acb",
+      "data/reports/2026-10-27-preopen-55b29840a6cef6c4.json": "14360ea58a13b5bda6184636a1ba1cf4d369f235",
+      "data/reports/2026-10-27-preopen-9075bf02477074ff.json": "81b11e16158a78ea8a9669a2045745ffcd59508c",
+      "data/reports/2026-10-28-final-224bcd20367dfff4.json": "ebf3b1cd51192724c04a768b236d309969b0761a",
+      "data/reports/2026-10-28-final-226c0f37ddf590ea.json": "c7c12eb8489a20bc8709936abdfd3982551f5b16",
+      "data/reports/2026-10-28-final-227ad6773f34aa19.json": "a0aae7dfc5cc14982fa6581b8bc22511fb59b391",
+      "data/reports/2026-10-28-intraday-4258cd93217a0cf5.json": "5a46b9eb86de7c987de46024ddd5468136acb1ef",
+      "data/reports/2026-10-28-manual-ab499e2f38dcdbec.json": "3a32fa59edb42658012124d2e1219074ccacb023",
+      "data/reports/2026-10-28-postclose-1ec420091d27463d.json": "36083d53b6c9806239ce1e28c171c415453227b4",
+      "data/reports/2026-10-28-postclose-6920e19366d7ca49.json": "ac39e85810d7a180b3aa5226e17d50980d4cc560",
+      "data/reports/2026-10-28-postclose-a19bed7ef36290a3.json": "ed1d574aef098d5022034fccf6f1f18cf85baef6",
+      "data/reports/2026-10-28-postclose-b1bc95c86eab099b.json": "e34ba9e1b0f1d1414670cafa0eb13d4a52c93cbb",
+      "data/reports/2026-10-28-postclose-b3a5887830ecd1b9.json": "524ef944b7763c5cb6e6bd51b9181c082b2d7b4f",
+      "data/reports/2026-10-28-preopen-2928117d8fb3372f.json": "df1a2ef04a30c40eca658e3cb45c38a8d4b3b3a6",
+      "data/reports/2026-10-28-preopen-9861b47794437738.json": "3ff516f37bb50693e90c8fe87903d6559a485456",
+      "data/reports/2026-10-28-preopen-a512f5ca24e90455.json": "998a1e05bdd0196a6b33d7276bd6465934f6bb59",
+      "data/reports/2026-10-28-preopen-ec31e726abb18d4f.json": "f8bf84740e10084c618c86e869cb5dd23aea77f2",
+      "data/reports/2026-10-29-final-f0e0c1899c5e31af.json": "f9facef89b41a752d2fdc43d79ed3dd576bd0747",
+      "data/reports/2026-10-29-intraday-513b7903018817c4.json": "212d64daa2b91dea584e9e0db5b9d1ecaf5d0ac7",
+      "data/reports/2026-10-29-postclose-2070c747537bd39c.json": "e62b742552a6a3f622b97f174f635a95ea06b585",
+      "data/reports/2026-10-29-postclose-dfc1f7abf6070821.json": "b79cffc8a0f0c4506c8cd7f96ce216e7fbce7730",
+      "data/reports/2026-10-29-postclose-f0c1e44be99b0435.json": "f1185c3dbbb13e73fee59ab014a60add07b8d917",
+      "data/reports/2026-10-29-preopen-01de2e5de9875194.json": "e2832a266c48b3b71f2e9d1ee67a3813171525ac",
+      "data/reports/2026-10-29-preopen-6ee1aa5889d4c225.json": "cb234074c692044758d7954e52294e92306a8803",
+      "data/reports/2026-10-29-preopen-fe02ecbff68968df.json": "8d931042411ce2a99d94263d7173f6e7709881de"
+    },
+    "new_report_blobs": {
+      "data/reports/2026-10-30-preopen-503a5f4f7e4e062b.json": "e6d3dd3be8de77980cdc81722ce2b2f6f2604ef5"
+    }
+  }
+}
