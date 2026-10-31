@@ -3438,8 +3438,16 @@
   },
   "data_date": "2026-10-30",
   "data_mode": "盤後資料",
-  "generated_at": "2026-10-31T02:23:12.070411+00:00",
+  "generated_at": "2026-10-31T03:04:48.912851+00:00",
   "history": [
+    {
+      "as_of": "2026-10-31",
+      "candidate_count": 0,
+      "generated_at": "2026-10-31T02:23:12.070411+00:00",
+      "id": "6735135ccb2e3fd754fa9364013385c62114d7d11f69e503814c45f15efa2dbe",
+      "phase": "manual",
+      "status": "non_trading_day"
+    },
     {
       "as_of": "2026-10-30",
       "candidate_count": 0,
@@ -3671,14 +3679,6 @@
       "id": "ec31e726abb18d4f5bc31cbadb297209d7018240798754e9e3cd7a49d65cb5c3",
       "phase": "preopen",
       "status": "partial"
-    },
-    {
-      "as_of": "2026-10-28",
-      "candidate_count": 15,
-      "generated_at": "2026-10-27T18:11:09.405384+00:00",
-      "id": "227ad6773f34aa19326fcbb469b1d3b1f60aa5ca031a5ba011edecf06706b91c",
-      "phase": "final",
-      "status": "partial"
     }
   ],
   "institutional_status": {
@@ -3693,7 +3693,8 @@
     "非交易日：跳過當日交易分析，保留最近可驗證的歷史行情。",
     "來源表保留最後一次擷取狀態與時間；本次沒有重新驗證官方來源。",
     "官方行事曆或休市公告已確認休市；未執行當日選股模型，畫面保留歷史研究。",
-    "最新可驗證交易日期為 2026-10-30；本報告日期為 2026-10-31。"
+    "最新可驗證交易日期為 2026-10-30；本報告日期為 2026-10-31。",
+    "盤前分析只採用報告日期之前的盤後資料；手動或延遲執行也不混入當日收盤價。"
   ],
   "performance": {
     "average_return": null,
@@ -4396,7 +4397,7 @@
     "total_signals": 31,
     "win_rate": null
   },
-  "phase": "manual",
+  "phase": "preopen",
   "research_scope": {
     "categories": [
       {
